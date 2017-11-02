@@ -1,0 +1,53 @@
+{
+  "name": "jugando-last-day-on-earth",
+  "version": "0.0.1",
+  "description": "Jugando Last Day On Earth Website",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config webpack.dev.js --inline --hot --progress --colors",
+    "build": "webpack --config webpack.prod.js",
+    "babel": "babel --presets=es2015,react -d bin/ src/",
+    "lint": "eslint src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bblassingame/jugando-last-day-on-earth.git"
+  },
+  "author": "Bo Blassingame",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bblassingame/jugando-last-day-on-earth/issues"
+  },
+  "homepage": "https://github.com/bblassingame/jugando-last-day-on-earth#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-ga": "^2.3.5",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.2.0",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.9.0",
+    "eslint-plugin-react": "^7.4.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "react-hot-loader": "^1.3.1",
+    "react-router-dom": "^4.2.2",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3",
+    "webpack-merge": "^4.1.0"
+  }
+}
