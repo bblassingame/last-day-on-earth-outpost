@@ -1,12 +1,29 @@
 import React from 'react'
 
-const DatabaseApplicaiton = () => {
+import DatabaseHeader from './header/database-header'
+
+// import './reset.css'
+// import './database-application-style.css'
+
+const DatabaseApplication = () => {
   return (
-    <div style={{margin: 'auto'}}>
-      <h1>Jugando:  Last Day On Earth</h1>
-      <h2>Database</h2>
+    <div>
+      <DatabaseHeader />
     </div>
   )
 }
 
-export default DatabaseApplicaiton
+export default DatabaseApplication
+
+const ItemData = {
+  id: 0,
+  category: 'consumable',
+  name: 'Pine Log',
+  craftTime: null,
+  gameVersion: '1.6.7',
+  released: true,
+  inGameDescription: 'Can be cut into Planks or used as Fuel',
+  outpostDescription: 'This is the description provded by The Outpost',
+  movementSpeedEffect: null,
+  image: null,
+}
