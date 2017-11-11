@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-import gaTracker from '../ga-tracker'
+import gaTracker from './utility/ga-tracker'
 
 import LoadingPage from './utility/loading-page'
 import ComingSoon from './utility/coming-soon'
@@ -60,7 +60,7 @@ class AppContent extends React.Component {
 
   render () {
     return (
-      <div className='app-content'>
+      <div>
         <Switch>
           <Route exact path='/' component={gaTracker(this.getPage())} />
           <Route path='/forum' component={gaTracker(Forum)} />

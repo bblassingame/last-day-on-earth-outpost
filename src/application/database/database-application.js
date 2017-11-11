@@ -1,14 +1,17 @@
 import React from 'react'
 
 import DatabaseHeader from './header/database-header'
+import DatabaseContent from './content/database-content'
+import DatabaseFooter from './footer/database-footer'
 
-// import './reset.css'
-// import './database-application-style.css'
+import './database-application-style.css'
 
 const DatabaseApplication = () => {
   return (
-    <div>
+    <div className='db-application-content'>
       <DatabaseHeader />
+      <DatabaseContent />
+      <DatabaseFooter />
     </div>
   )
 }

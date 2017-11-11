@@ -30,16 +30,6 @@ html, body {
   height: 100%;
 }
 
-.app-content {
-  display: flex;
-  -webkit-display: flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-}
-
 .hidden-element {
   display: none;
 }
@@ -155,7 +145,7 @@ a:active  { color: #1155cc;                             }
   font-size:.9em;
 }
 
-/*****************************   Main Content Styling   *****************************/
+/*****************************   Footer Styling   *****************************/
 .footer-container {
   display: -webkit-box;
   display: -moz-box;

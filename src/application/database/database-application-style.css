@@ -1,0 +1,103 @@
+/*****************************   Database Application Styling Styling   *****************************/
+.db-application-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+
+/*****************************   Header Styling   *****************************/
+.db-header-container {
+  max-width: 768px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.db-header-home-button {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.db-header-nav_container-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.db-header-nav-container {
+  margin: 0 40px 0 5px;
+  height: 35px;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.db-header-button {
+  background-color: slategrey;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.db-header-img-container {
+  height: 35px;
+  padding: 5px 5px 5px 3px;
+}
+
+.db-header-img {
+  max-height: 100%;
+}
+
+/*****************************   Footer Styling   *****************************/
+.db-content {
+  flex: 1;
+}
+
+/*****************************   Footer Styling   *****************************/
+.db-footer-container {
+  height: 40px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.db-footer-copyright-text {
+  font-size: .75em;
+}
+
