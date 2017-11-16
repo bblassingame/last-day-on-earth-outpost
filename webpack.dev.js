@@ -8,7 +8,7 @@ module.exports = merge(common, {
   devServer: {
     proxy: {
       '/api': {
-        target: 'https://other-server.example.com',
+        target: 'http://localhost',
         secure: false
       }
     },

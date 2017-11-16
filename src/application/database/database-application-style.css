@@ -78,9 +78,23 @@
   max-height: 100%;
 }
 
-/*****************************   Footer Styling   *****************************/
-.db-content {
-  flex: 1;
+/*****************************   Content Styling   *****************************/
+.db-content-container {
+  margin: 10px 0 0;
+}
+
+.db-content-list-entry {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.db-content-list-entry-name {
+  padding: 0 0 0 3px;
 }
 
 /*****************************   Footer Styling   *****************************/

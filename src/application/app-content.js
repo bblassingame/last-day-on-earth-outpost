@@ -27,17 +27,17 @@ class AppContent extends React.Component {
     // get bound and is null further down in the handleFetchResult and handleJsonResult functions.
     // I could also use fetch().then(result => result.json).then(items => this.setState()), but it
     // seems like we're just trying to put too much crap onto one line.
-    fetch('http://localhost/api/v1/feature').then(result => this.handleFetchResult(result))
+    fetch('http://localhost/api/v1/feature').then(fetchResult => this.handleFetchResult(fetchResult))
   }
 
-  handleFetchResult(result) {
-    result.json().then((items) => this.handleJsonResult(items))
+  handleFetchResult(fetchResult) {
+    fetchResult.json().then((feature) => this.handleJsonResult(feature))
   }
 
-  handleJsonResult(items) {
-    // console.log(items)
+  handleJsonResult(feature) {
+    // console.log(feature)
     this.setState({
-      previewEnabled: items.enabled,
+      previewEnabled: feature.enabled,
       loading: false
     })
     // console.log(this.state)
@@ -58,7 +58,7 @@ class AppContent extends React.Component {
     return this.state.previewEnabled == 1 ? LaunchPage : ComingSoon
   }
 
-  render () {
+  render() {
     return (
       <div>
         <Switch>

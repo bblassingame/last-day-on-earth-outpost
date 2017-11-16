@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-const DatabaseHeader = () => {
+const DatabaseFooter = () => {
   return (
     <div className='db-footer-container'>
       {/* <Link to='/about'>
@@ -13,4 +13,4 @@ const DatabaseHeader = () => {
   )
 }
 
-export default DatabaseHeader
+export default DatabaseFooter
