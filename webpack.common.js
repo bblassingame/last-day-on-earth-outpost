@@ -12,7 +12,8 @@ module.exports = {
     entry: ['babel-polyfill', ENTRY_PATH],
     output: {
         path: BUILD_DIR,
-        filename: "bundle.js"
+        publicPath: '/',
+        filename: 'bundle.js'
     },
     module: {
         rules:
@@ -48,7 +49,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['bin']),
         new HtmlWebpackPlugin({
-            title: 'Jugando: LDOE',
+            title: 'LDOE: Outpost',
             template: './src/template.ejs'
         })
     ],

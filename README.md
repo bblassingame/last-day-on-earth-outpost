@@ -1,2 +1,2 @@
-# at-home-climate-website
-The website for Jugando: Last Day On Earth
+# ldoe: outpost
+The website for Last Day On Earth: Outpost
