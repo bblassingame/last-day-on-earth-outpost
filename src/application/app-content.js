@@ -66,9 +66,9 @@ class AppContent extends React.Component {
           <Route path='/forum' component={gaTracker(Forum)} />
           <Route path='/strategy' component={gaTracker(Strategy)} />
           <Route path='/multiplayer' component={gaTracker(MultiPlayer)} />
-          <Route path='/database' component={gaTracker(Database)} />
+          <Route path='/database' render={gaTracker(Database)} />
           <Route path='/about' component={gaTracker(About)} />
-          {<Route component={NotFound} />}
+          <Route component={NotFound} />
         </Switch>
       </div>
     )
