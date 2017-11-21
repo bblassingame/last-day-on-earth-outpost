@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 import LeftArrow from './left-arrow-64-white.png'
 
-const DatabaseHeader = () => {
+const DatabaseHeader = (props) => {
   return (
     <div className='db-header-container'>
       <div className='db-header-home-button'>
-        <Link to='/'>
+        <Link to={getLinkDestination(props.viewingItem)} onClick={() => props.onBackArrowClick()} >
           <div className='db-header-img-container'>
             <img className='db-header-img' src={LeftArrow} />
           </div>
@@ -34,6 +34,13 @@ const DatabaseHeader = () => {
       </div>
     </div>
   )
+}
+
+const getLinkDestination = (viewingItem) => {
+  if(true == viewingItem)
+    return '/database'
+  else
+    return '/'
 }
 
 export default DatabaseHeader

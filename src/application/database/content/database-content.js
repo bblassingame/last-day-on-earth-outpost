@@ -1,34 +1,74 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-const DatabaseContent = (props) => {
-  return (
-    <div className='db-content-container'>
-      <h1>LDOE: Database</h1>
-      <div className='db-search-container'>
+class DatabaseContent extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true,
+      items: [],
+    }
+  }
+
+  componentWillMount() {
+    fetch('http://localhost/api/v1/items').then(fetchResult => this.handleFetchResult(fetchResult))
+  }
+
+  handleFetchResult(fetchResult) {
+    fetchResult.json().then(itemsResults => this.handleItems(itemsResults))
+  }
+
+  handleItems(itemsResults) {
+    this.setState ({
+      loading: false,
+      items: itemsResults
+    })
+  }
+
+  render() {
+    return this.state.loading ? this.getLoadingPanel() : this.getContentPanel()
+  }
+
+  getLoadingPanel() {
+    return (
+      <div style={{margin: 'auto'}}>
+        <h1>Loading...</h1>
       </div>
-      <div className='db-content'>
-        {createItems(props)}
+    )
+  }
+
+  getContentPanel() {
+    return (
+      <div className='db-content-container'>
+        <h1>LDOE: Database</h1>
+        <div className='db-search-container'>
+        </div>
+        <div className='db-content'>
+          {this.createItems(this.state.items)}
+        </div>
       </div>
-    </div>
-  )
-}
-
-const createItems = (items) => {
-  return (
-    <ul>
-      {Object.keys(items).map(index => createItem(items, index))}
-    </ul>
-  )
-}
-
-const createItem = (items, index) => {
-  const item = items[index]
-  return (
-    <li key={item.itemId} className='db-content-list-entry'>
-      <img src={item.img} />
-      <span className='db-content-list-entry-name'>{item.name}</span>
-    </li>
-  )
+    )
+  }
+    
+  createItems(items) {
+    return (
+      <ul>
+        {Object.keys(items).map(index => this.createItem(items, index))}
+      </ul>
+    )
+  }
+    
+  createItem(items, index) {
+    const item = items[index]
+    return (
+      <Link key={item.itemId} to={`database/${item.itemId}`} onClick={() => this.props.onItemClick(item.itemId)} >
+        <li className='db-content-list-entry'>
+          <img src={item.img} />
+          <span className='db-content-list-entry-name'>{item.name}</span>
+        </li>
+      </Link>
+    )
+  }
 }
 
 export default DatabaseContent
