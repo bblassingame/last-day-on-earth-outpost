@@ -36,7 +36,8 @@ class AppContent extends React.Component {
     if(this.props.appInitialized == false)
       return LoadingPage
 
-    return this.props.features.enabled == 1 ? LaunchPage : ComingSoon
+    const previewEnabled = this.props.features['preview'].enabled
+    return previewEnabled == 1 ? LaunchPage : ComingSoon
   }
 
   render() {
