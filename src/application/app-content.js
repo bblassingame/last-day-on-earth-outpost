@@ -1,8 +1,11 @@
+// react and redux items
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
+// utility functions and objects
 import gaTracker from './utility/ga-tracker'
 
+// child components
 import LoadingPage from './utility/loading-page'
 import ComingSoon from './utility/coming-soon'
 import LaunchPage from './launch-page/launch-page'
@@ -14,48 +17,26 @@ import About from './administrative/about'
 import NotFound from './utility/not-found'
 
 class AppContent extends React.Component {
-  constructor() {
-    super()
-    this.state = { 
-      previewEnabled: false,
-      loading: true
-    }
+  constructor(props) {
+    super(props)
+    console.log('AppContent Constructor')
+    console.log(this)
+    console.log(props)
   }
 
   componentWillMount() {
-    // using => function notation allows use of this.handleFetchResult().  Otherwise, 'this' doesn't
-    // get bound and is null further down in the handleFetchResult and handleJsonResult functions.
-    // I could also use fetch().then(result => result.json).then(items => this.setState()), but it
-    // seems like we're just trying to put too much crap onto one line.
-    fetch('http://localhost/api/v1/feature').then(fetchResult => this.handleFetchResult(fetchResult))
+    this.props.onComponentWillMount()
   }
 
-  handleFetchResult(fetchResult) {
-    fetchResult.json().then((feature) => this.handleJsonResult(feature))
-  }
-
-  handleJsonResult(feature) {
-    // console.log(feature)
-    this.setState({
-      previewEnabled: feature.enabled,
-      loading: false
-    })
-    // console.log(this.state)
+  componentDidUpdate() {
+    this.props.onComponentUpdate()
   }
 
   getPage() {
-    // {/*global process*/}
-    // return process.env.NODE_ENV !== 'production' ? LaunchPage : ComingSoon
-    if(this.state.loading == true)
+    if(this.props.appInitialized == false)
       return LoadingPage
-    // console.log('getPage()')
-    // console.log(this.state.previewEnabled)
-    // if(this.state.previewEnabled == 1)
-    //   console.log('preview enabled, should show the LaunchPage')
-    // else if(this.state.previewEnabled == 0)
-    //   console.log('preview disabled, we should show ComingSoon')
 
-    return this.state.previewEnabled == 1 ? LaunchPage : ComingSoon
+    return this.props.features.enabled == 1 ? LaunchPage : ComingSoon
   }
 
   render() {
