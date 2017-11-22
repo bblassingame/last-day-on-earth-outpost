@@ -18,16 +18,15 @@ export const formatLaunchPageContent = (content) => {
 }
 
 const returnLaunchPageTag = (item, i) => {
-  switch(item.type){
+  switch(item.type) {
+    case 'paragraph':
+      return renderLaunchPageParagraph(item, i)
 
-  case 'paragraph':
-    return renderLaunchPageParagraph(item, i)
+    case 'subheading':
+      return renderLaunchPageSubheading(item, i)
 
-  case 'subheading':
-    return renderLaunchPageSubheading(item, i)
-
-  default:
-    break
+    default:
+      break
   }
 }
 
