@@ -3,6 +3,9 @@ const databaseAppReducer = (state = {}, action) => {
     case 'REQUEST_ITEMS':
     case 'RECEIVE_ITEMS':
       return Object.assign({}, itemsReducer(state, action))
+    
+    case 'SET_SELECTED_ITEM':
+      return Object.assign({}, state, {selectedItem: action.selectedItem})
 
     default:
       return state

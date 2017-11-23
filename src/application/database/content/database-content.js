@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom'
 class DatabaseContent extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      loading: true,
-      items: [],
-    }
   }
 
   render() {

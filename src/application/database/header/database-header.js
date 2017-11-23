@@ -7,7 +7,7 @@ const DatabaseHeader = (props) => {
   return (
     <div className='db-header-container'>
       <div className='db-header-home-button'>
-        <Link to={getLinkDestination(props.viewingItem)} onClick={() => props.onBackArrowClick()} >
+        <Link to={getLinkDestination(props.selectedItem)} onClick={() => props.onBackArrowClick()} >
           <div className='db-header-img-container'>
             <img className='db-header-img' src={LeftArrow} />
           </div>
@@ -36,11 +36,11 @@ const DatabaseHeader = (props) => {
   )
 }
 
-const getLinkDestination = (viewingItem) => {
-  if(true == viewingItem)
-    return '/database'
-  else
+const getLinkDestination = (selectedItem) => {
+  if(-1 === selectedItem)
     return '/'
+  else
+    return '/database'
 }
 
 export default DatabaseHeader

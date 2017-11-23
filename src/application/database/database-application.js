@@ -13,9 +13,6 @@ class DatabaseApplication extends Component {
     super(props)
     this.handleBackArrowClick = this.handleBackArrowClick.bind(this)
     this.handleItemClick = this.handleItemClick.bind(this)
-    this.state = {
-      viewingItem: false
-    }
   }
 
   componentWillMount() {
@@ -27,21 +24,17 @@ class DatabaseApplication extends Component {
   }
 
   handleBackArrowClick() {
-    this.setState({
-      viewingItem: false
-    })
+    this.props.onItemSelected(-1)
   }
 
-  handleItemClick () {
-    this.setState({
-      viewingItem: true
-    })
+  handleItemClick (itemId) {
+    this.props.onItemSelected(itemId)
   }
 
   render() {
     return (
       <div className='db-application-content'>
-        <DatabaseHeader viewingItem={this.state.viewingItem}  onBackArrowClick={this.handleBackArrowClick}/>
+        <DatabaseHeader selectedItem={this.props.selectedItem}  onBackArrowClick={this.handleBackArrowClick}/>
         <Route exact path='/database' render={(routeProps) =><DatabaseContent isLoading={this.getLoadingStatus()} items={this.props.items} onItemClick={this.handleItemClick} {...routeProps} />} />
         <Route path='/database/:itemId' render={(routeProps) => <DatabaseItem {...routeProps} />} />
         <DatabaseFooter />

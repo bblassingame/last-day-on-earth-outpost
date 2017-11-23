@@ -1,16 +1,21 @@
 import fetch from 'cross-fetch'
 
+export const setSelectedItem = (itemId) => {
+  return {
+    type: 'SET_SELECTED_ITEM',
+    selectedItem: itemId,
+  }
+}
+
 export const requestItems = () => {
   return {
     type: 'REQUEST_ITEMS',
-    applicationName: 'database',
   }
 }
 
 export const receiveItems = (json) => {
   return {
     type: 'RECEIVE_ITEMS',
-    applicationName: 'database',
     items: json,
     receivedAt: Date.now()
   }

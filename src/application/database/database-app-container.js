@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import DatabaseApplication from './database-application'
-import { fetchItemsIfNeeded } from './database-app-actions'
+import { fetchItemsIfNeeded, setSelectedItem } from './database-app-actions'
 
 const mapStateToProps = (state) => {
   const {database} = state
@@ -13,6 +13,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onComponentWillMount: () => dispatch(fetchItemsIfNeeded()),
     onComponentUpdate: () => dispatch(fetchItemsIfNeeded()),
+    onItemSelected: (itemId) => dispatch(setSelectedItem(itemId)),
   }
 }
 
