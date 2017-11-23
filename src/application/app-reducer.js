@@ -1,21 +1,12 @@
-// const initialState = {
-//   application: {},
-//   database: {
-//     items: [],
-//     lastUpdated: -1,
-//     selectedItem: -1,
-//     didInvalidate: false,
-//     isFetching: false,
-//   },
-//   strategy: {},
-//   multiplayer: {},
-//   forum: {},
-// }
-const RootReducer = (state = {}, action) => {
+import { combineReducers } from 'redux'
+
+import database from './database/database-app-reducers'
+
+const application = (state = {}, action) => {
   switch(action.type) {
     case 'REQUEST_FEATURES':
     case 'RECEIVE_FEATURES':
-      return Object.assign({}, state, {[action.applicationName]: applicationReducer(state[action.applicationName], action)})
+      return Object.assign({}, featuresReducer(state, action))
 
     default:
       return state
@@ -29,7 +20,10 @@ const defaultApplicationState = {
   appInvalidated: false,
   isFetching: false,
 }
-const applicationReducer = (applicationState = defaultApplicationState, action) => {
+const featuresReducer = (applicationState, action) => {
+  if(Object.keys(applicationState).length === 0 && applicationState.constructor === Object) {
+    applicationState = defaultApplicationState    
+  }
   switch(action.type) {
 
     case 'REQUEST_FEATURES':
@@ -49,5 +43,10 @@ const applicationReducer = (applicationState = defaultApplicationState, action) 
       return applicationState
   }
 }
+
+const RootReducer = combineReducers({
+  application,
+  database
+})
 
 export default RootReducer

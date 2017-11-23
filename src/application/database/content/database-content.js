@@ -10,23 +10,8 @@ class DatabaseContent extends Component {
     }
   }
 
-  componentWillMount() {
-    fetch('http://localhost/api/v1/items').then(fetchResult => this.handleFetchResult(fetchResult))
-  }
-
-  handleFetchResult(fetchResult) {
-    fetchResult.json().then(itemsResults => this.handleItems(itemsResults))
-  }
-
-  handleItems(itemsResults) {
-    this.setState ({
-      loading: false,
-      items: itemsResults
-    })
-  }
-
   render() {
-    return this.state.loading ? this.getLoadingPanel() : this.getContentPanel()
+    return this.props.isLoading ? this.getLoadingPanel() : this.getContentPanel()
   }
 
   getLoadingPanel() {
@@ -44,7 +29,7 @@ class DatabaseContent extends Component {
         <div className='db-search-container'>
         </div>
         <div className='db-content'>
-          {this.createItems(this.state.items)}
+          {this.createItems(this.props.items)}
         </div>
       </div>
     )
@@ -63,7 +48,7 @@ class DatabaseContent extends Component {
     return (
       <Link key={item.itemId} to={`database/${item.itemId}`} onClick={() => this.props.onItemClick(item.itemId)} >
         <li className='db-content-list-entry'>
-          <img src={item.img} />
+          <img src={item.thumbnail} />
           <span className='db-content-list-entry-name'>{item.name}</span>
         </li>
       </Link>

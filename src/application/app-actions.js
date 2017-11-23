@@ -8,8 +8,6 @@ export const requestFeatures = () => {
 }
 
 export const receiveFeatures = (json) => {
-  console.log('->json data from features<-')
-  console.log(json)
   return {
     type: 'RECEIVE_FEATURES',
     applicationName: 'application',
@@ -21,7 +19,6 @@ export const receiveFeatures = (json) => {
 export const fetchFeaturesIfNeeded = () => {
   return (dispatch, getState) => {
     if(shouldFetchFeatures(getState())) {
-      // Dispatch a thunk from thunk!
       return dispatch(fetchFeatures())
     }
     else {
@@ -32,13 +29,14 @@ export const fetchFeaturesIfNeeded = () => {
 }
 
 function shouldFetchFeatures(state) {
-  const application = state.application
-  if(!application)
+  const appInitialized = state.application['appInitialized']
+  if(null == appInitialized || (false == state.application.appInitialized && false == state.application.isFetching)) {
     return true
-  else if(application.isFetching)
+  }
+  else if(state.application.isFetching)
     return false
   else
-    return application.appInvalidated
+    return false
 }
 
 function fetchFeatures() {

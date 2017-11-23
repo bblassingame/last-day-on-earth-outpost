@@ -18,6 +18,14 @@ class DatabaseApplication extends Component {
     }
   }
 
+  componentWillMount() {
+    this.props.onComponentWillMount()
+  }
+
+  componentDidUpdate() {
+    this.props.onComponentUpdate()
+  }
+
   handleBackArrowClick() {
     this.setState({
       viewingItem: false
@@ -34,11 +42,15 @@ class DatabaseApplication extends Component {
     return (
       <div className='db-application-content'>
         <DatabaseHeader viewingItem={this.state.viewingItem}  onBackArrowClick={this.handleBackArrowClick}/>
-        <Route exact path='/database' render={(routeProps) =><DatabaseContent onItemClick={this.handleItemClick} {...routeProps} />} />
+        <Route exact path='/database' render={(routeProps) =><DatabaseContent isLoading={this.getLoadingStatus()} items={this.props.items} onItemClick={this.handleItemClick} {...routeProps} />} />
         <Route path='/database/:itemId' render={(routeProps) => <DatabaseItem {...routeProps} />} />
         <DatabaseFooter />
       </div>
     )
+  }
+
+  getLoadingStatus() {
+    return (this.props.isFetching == null || this.props.isFetching == true) ? true : false
   }
 }
 
