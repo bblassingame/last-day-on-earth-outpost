@@ -1,6 +1,9 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
+var path = require('path');
+const CONTENT_DIR = path.resolve(__dirname, 'C:/Apache24/htdocs/');
+
 module.exports = merge(common, {
   devtool: 'inline-source-map',
 
@@ -12,7 +15,7 @@ module.exports = merge(common, {
         secure: false
       }
     },
-    contentBase: './bin',
+    contentBase: CONTENT_DIR,
     historyApiFallback: true
   },
 })
