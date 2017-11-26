@@ -42,7 +42,7 @@ function shouldFetchFeatures(state) {
 function fetchFeatures() {
   return dispatch => {
     dispatch(requestFeatures())
-    return fetch('http://localhost/api/v1/feature')
+    return fetch('http://localhost/api/v1/features')
       .then(response => response.json())
       .then(json => dispatch(receiveFeatures(json)))
   }
