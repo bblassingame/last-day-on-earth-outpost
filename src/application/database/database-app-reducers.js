@@ -13,7 +13,7 @@ const databaseAppReducer = (state = {}, action) => {
 }
 
 const defaultDbAppState = {
-  items: [],
+  items: {},
   lastUpdated: -1,
   selectedItem: -1,
   isFetching: false,

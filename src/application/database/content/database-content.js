@@ -42,7 +42,7 @@ class DatabaseContent extends Component {
   createItem(items, index) {
     const item = items[index]
     return (
-      <Link key={item.itemId} to={`database/${item.itemId}`} onClick={() => this.props.onItemClick(item.itemId)} >
+      <Link key={item.itemId} to={`/database/${item.itemId}`} onClick={() => this.props.onItemClick(item.itemId)} >
         <li className='db-content-list-entry'>
           <img src={item.thumbnail} />
           <span className='db-content-list-entry-name'>{item.name}</span>
