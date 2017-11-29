@@ -16,7 +16,7 @@ export const requestItems = () => {
 export const receiveItems = (json) => {
   return {
     type: 'RECEIVE_ITEMS',
-    items: json,
+    itemData: json,
     receivedAt: Date.now()
   }
 }

@@ -78,7 +78,7 @@
   max-height: 100%;
 }
 
-/*****************************   Content Styling   *****************************/
+/*****************************   Items Panel Styling   *****************************/
 .db-content-container {
   margin: 10px 0 0;
 }
@@ -95,6 +95,47 @@
 
 .db-content-list-entry-name {
   padding: 0 0 0 3px;
+}
+
+/*****************************   Item (Generic, Weapon, Armor, etc.) Panel Styling   *****************************/
+.db-item-info-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 5px 5px;
+}
+
+.db-item-info-header {
+  margin: 0 0 5px;
+}
+
+.db-item-category-text {
+  font-size: .75em;
+  margin: 0 0 15px;
+}
+
+.db-item-category:nth-last-of-type(1n+2) {
+  margin: 0 5px 0 0;
+}
+
+.db-item-pic-desc-container {
+  float: left;
+  padding: 0 10px 10px 0;
+  width: 30vh;
+  max-width: 200px;
+}
+
+.db-item-pic {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.db-item-desc {
+  text-align: center;
+  font-size: .85em;
 }
 
 /*****************************   Footer Styling   *****************************/

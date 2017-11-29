@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-class DatabaseItem extends Component {
+class DatabaseGenericItem extends Component {
   constructor(props) {
     super(props)
-    console.log('DatabaseItem Constructor')
+    console.log('DatabaseGenericItem Constructor')
     console.log(this)
   }
 
@@ -15,24 +15,21 @@ class DatabaseItem extends Component {
 
   getIngredientPanel() {
     return (
-      <div>
-        <h1>{this.props.name}</h1>
+      <div className='db-item-info-container'>
+        <h1 className='db-item-info-header'>{this.props.name}</h1>
+        <p className='db-item-category-text'>categories:  {this.props.categories.map((category, i) => <span key={i} className='db-item-category'>{category}</span>)}</p>
         <div>
-          <div>
-            <img src={this.props.img} />
-            <p>&quot;{this.props.inGameDescription}&quot;</p>
+          <div className='db-item-pic-desc-container'>
+            <img className='db-item-pic' src={this.props.img} />
+            <p className='db-item-desc'>&quot;{this.props.inGameDescription}&quot;</p>
           </div>
           <div>
             <p>{this.props.outpostDescription}blah blah blah blah lots of description.  blah blah blah blah lots of description.  blah blah blah blah lots of description.  blah blah blah blah lots of description.  blah blah blah blah lots of description.  blah blah blah blah lots of description.  blah blah blah blah lots of description.  </p>
           </div>
         </div>
-        <h2>Used To Craft</h2>
-        <h2>Used To Build</h2>
-        <h2>Used As Fuel By</h2>        
-        <h2>Where To Find</h2>
       </div>
     )
   }
 }
 
-export default DatabaseItem
+export default DatabaseGenericItem

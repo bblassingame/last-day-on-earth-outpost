@@ -14,6 +14,11 @@ const databaseAppReducer = (state = {}, action) => {
 
 const defaultDbAppState = {
   items: {},
+  itemCategories: {},
+  craftProducts: {},
+  craftIngredients: {},
+  workbenchProducts: {},
+  workbenchIngredients: {},
   lastUpdated: -1,
   selectedItem: -1,
   isFetching: false,
@@ -29,7 +34,12 @@ const itemsReducer = (dbAppState = defaultDbAppState, action) => {
     
     case 'RECEIVE_ITEMS':
       return Object.assign({}, dbAppState, {
-        items: action.items,
+        items: action.itemData.items,
+        itemCategories: action.itemData.itemCategories,
+        craftProducts: action.itemData.craftProducts,
+        craftIngredients: action.itemData.craftIngredients,
+        workbenchProducts: action.itemData.workbenchProducts,
+        workbenchIngredients: action.itemData.workbenchIngredients,
         lastUpdated: action.receivedAt,
         isFetching: false,
         isInitialized: true,
