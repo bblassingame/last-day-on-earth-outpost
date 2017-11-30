@@ -14,6 +14,7 @@ const mapDispatchToProps = (dispatch) => {
     onComponentWillMount: () => dispatch(fetchItemsIfNeeded()),
     onComponentUpdate: () => dispatch(fetchItemsIfNeeded()),
     onItemSelected: (itemId) => dispatch(setSelectedItem(itemId)),
+    initializeSelectedItem: (itemId) => dispatch(setSelectedItem(itemId)),
   }
 }
 

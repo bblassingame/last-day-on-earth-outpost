@@ -17,6 +17,14 @@ class DatabaseApplication extends Component {
 
   componentWillMount() {
     this.props.onComponentWillMount()
+    // do this check in componentWillMount.  React expects functions that will update state to happen in a lifecyle
+    // method aside from render.
+    // match the expected path exactly in case later we add a further endpoint that builds off the path
+    // accepted paths:  '/database/<itemId>'  OR  '/database/<itemId>/'
+    if(null != this.props.location.pathname.match(/^\/database\/\d+\/?$/) && (-1 === this.props.selectedItem || null == this.props.selectedItem)) {
+      const tmpArray = this.props.location.pathname.split('/')
+      this.props.initializeSelectedItem(tmpArray[2])
+    }
   }
 
   componentDidUpdate() {
@@ -47,17 +55,36 @@ class DatabaseApplication extends Component {
   }
 
   getItemPanel(routeProps) {
-    const selItem = this.props.selectedItem
-    switch(this.props.items[selItem].primaryCategory) {
+    // if we're loading, show a loading panel
+    if(true == this.getLoadingStatus())
+      return this.getLoadingPanel()
+    
+    let selectedItem = this.props.selectedItem
+    switch(this.props.items[selectedItem].primaryCategory) {
       case 'ingredient':
-      //   return (<DatabaseGenericItem {...routeProps} {...this.props.items[this.props.selectedItem]} />)
       case 'weapon':
       case 'armor':
       case 'tool':
       case 'health':
       default:
-        return (<DatabaseGenericItem categories={this.props.itemCategories[selItem]} {...this.props.items[selItem]} {...routeProps} />)
+        return (<DatabaseGenericItem categories={this.props.itemCategories[selectedItem]} {...this.props.items[selectedItem]} {...routeProps} />)
     }
+  }
+
+  getLoadingPanel() {
+    return (
+      <div style={{margin: 'auto'}}>
+        <h1>Loading...</h1>
+      </div>
+    )
+  }
+
+  getErrorPanel() {
+    return (
+      <div style={{margin: 'auto'}}>
+        <h1>An error has occurred.  Please go to the home page and try to access this item again.</h1>
+      </div>
+    )
   }
 }
 
