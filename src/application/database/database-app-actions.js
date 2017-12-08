@@ -46,7 +46,7 @@ function shouldFetchItems(state) {
 function fetchItems() {
   return dispatch => {
     dispatch(requestItems())
-    return fetch('http://localhost/api/v1/items')
+    return fetch('/api/v1/items')
       .then(response => response.json())
       .then(json => dispatch(receiveItems(json)))
   }
