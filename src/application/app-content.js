@@ -15,6 +15,7 @@ import MultiPlayer from './multi-player/multi-player-application'
 import Database from './database/database-app-container'
 import About from './administrative/about'
 import NotFound from './utility/not-found'
+import Preview from './utility/preview'
 
 class AppContent extends React.Component {
   constructor(props) {
@@ -51,6 +52,7 @@ class AppContent extends React.Component {
           <Route path='/multiplayer' component={gaTracker(MultiPlayer)} />
           <Route path='/database' render={gaTracker(Database)} />
           <Route path='/about' component={gaTracker(About)} />
+          <Route path='/preview' component={gaTracker(Preview)} />
           <Route component={NotFound} />
         </Switch>
       </div>
