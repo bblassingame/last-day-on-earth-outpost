@@ -21,15 +21,18 @@ const databaseAppReducer = (state = {}, action) => {
 }
 
 const defaultDbAppState = {
+  // the item data and associated other data
   items: {},
   itemCategories: {},
   craftProducts: {},
   craftIngredients: {},
   workbenchProducts: {},
   workbenchIngredients: {},
+  // items related to searching
   searchText: '',
   searchActive: false,
   filteredItems: {},
+  // application state items
   lastUpdated: -1,
   selectedItem: -1,
   isFetching: false,
@@ -45,15 +48,18 @@ const itemsReducer = (dbAppState = defaultDbAppState, action) => {
     
     case 'RECEIVE_ITEMS':
       return Object.assign({}, dbAppState, {
+        // the item data and associated other data
         items: action.itemData.items,
         itemCategories: action.itemData.itemCategories,
         craftProducts: action.itemData.craftProducts,
         craftIngredients: action.itemData.craftIngredients,
         workbenchProducts: action.itemData.workbenchProducts,
         workbenchIngredients: action.itemData.workbenchIngredients,
+        // items related to searching
         searchText: action.itemData.searchText,
         searchActive: action.itemData.searchActive,
         filteredItems: action.itemData.items,
+        // application state items
         lastUpdated: action.receivedAt,
         isFetching: false,
         isInitialized: true,
@@ -78,6 +84,7 @@ const getFilteredItemsList = (state) => {
 
 const populateFilteredList = (key, state, filterText, filteredItems) => {
   const itemName = state.items[key].name
+  // escape all of the regular expression special characters
   const regExpFilter = new RegExp('^' + quoteRegExp(filterText), 'i')
   if(0 === itemName.search(regExpFilter)) {
     filteredItems[key] = state.items[key]

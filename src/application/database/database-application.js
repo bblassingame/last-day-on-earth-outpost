@@ -30,6 +30,8 @@ class DatabaseApplication extends Component {
   }
 
   componentDidUpdate() {
+    // we removed this for now because I couldn't remember why we were fetching items when the component updated.
+    // keeping this in causes us to fetch items on each search so we had to remove it
     // this.props.onComponentUpdate()
   }
 

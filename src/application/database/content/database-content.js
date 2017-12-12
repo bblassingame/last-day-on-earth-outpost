@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 class DatabaseContent extends Component {
   constructor(props) {
     super(props)
-    console.log(props)
-    console.log(props.items)
   }
 
   render() {
