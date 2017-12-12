@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
 import DatabaseHeader from './header/database-header'
+import DatabaseSearch from './content/database-search'
 import DatabaseContent from './content/database-content'
 import DatabaseGenericItem from './content/database-generic-item'
 import DatabaseFooter from './footer/database-footer'
@@ -13,6 +14,7 @@ class DatabaseApplication extends Component {
     super(props)
     this.handleBackArrowClick = this.handleBackArrowClick.bind(this)
     this.handleItemClick = this.handleItemClick.bind(this)
+    this.handleSearchInput = this.handleSearchInput.bind(this)
   }
 
   componentWillMount() {
@@ -28,22 +30,28 @@ class DatabaseApplication extends Component {
   }
 
   componentDidUpdate() {
-    this.props.onComponentUpdate()
+    // this.props.onComponentUpdate()
   }
 
   handleBackArrowClick() {
     this.props.onItemSelected(-1)
   }
 
-  handleItemClick (itemId) {
+  handleItemClick(itemId) {
     this.props.onItemSelected(itemId)
+  }
+
+  handleSearchInput(event) {
+    this.props.onSearchTextEntered(event.target.value)
+    this.props.filterItemsList()
   }
 
   render() {
     return (
       <div className='db-application-content'>
         <DatabaseHeader selectedItem={this.props.selectedItem}  onBackArrowClick={this.handleBackArrowClick}/>
-        <Route exact path='/database' render={(routeProps) =><DatabaseContent isLoading={this.getLoadingStatus()} items={this.props.items} onItemClick={this.handleItemClick} {...routeProps} />} />
+        <DatabaseSearch onInput={this.handleSearchInput}/>
+        <Route exact path='/database' render={(routeProps) =><DatabaseContent isLoading={this.getLoadingStatus()} items={this.props.filteredItems} onItemClick={this.handleItemClick} {...routeProps} />} />
         <Route path='/database/:itemId' render={(routeProps) => this.getItemPanel(routeProps)} />
         <DatabaseFooter />
       </div>

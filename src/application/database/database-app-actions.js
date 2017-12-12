@@ -51,3 +51,16 @@ function fetchItems() {
       .then(json => dispatch(receiveItems(json)))
   }
 }
+
+export const setSearchText = (enteredText) => {
+  return {
+    type: 'SET_SEARCH_TEXT',
+    searchText: enteredText,
+  }
+}
+
+export const filterItemsList = () => {
+  return {
+    type: 'FILTER_ITEMS_LIST',
+  }
+}

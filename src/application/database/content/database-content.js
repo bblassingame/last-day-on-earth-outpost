@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 class DatabaseContent extends Component {
   constructor(props) {
     super(props)
+    console.log(props)
+    console.log(props.items)
   }
 
   render() {
@@ -21,7 +23,7 @@ class DatabaseContent extends Component {
   getContentPanel() {
     return (
       <div className='db-content-container'>
-        <h1>LDOE: Database</h1>
+        <h1 className='db-content-header'>LDOE: Database</h1>
         <div className='db-search-container'>
         </div>
         <div className='db-content'>
