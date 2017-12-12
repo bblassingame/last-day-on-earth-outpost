@@ -85,8 +85,9 @@ const getFilteredItemsList = (state) => {
 const populateFilteredList = (key, state, filterText, filteredItems) => {
   const itemName = state.items[key].name
   // escape all of the regular expression special characters
-  const regExpFilter = new RegExp('^' + quoteRegExp(filterText), 'i')
-  if(0 === itemName.search(regExpFilter)) {
+  const regExpFilter = new RegExp(quoteRegExp(filterText), 'i')
+  console.log(itemName.search(regExpFilter))
+  if(0 <= itemName.search(regExpFilter)) {
     filteredItems[key] = state.items[key]
   }
 }
