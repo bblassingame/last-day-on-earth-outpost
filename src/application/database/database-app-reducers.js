@@ -10,10 +10,13 @@ const databaseAppReducer = (state = {}, action) => {
       return Object.assign({}, state, {selectedItem: action.selectedItem})
 
     case 'SET_SEARCH_TEXT':
-      return Object.assign({}, state, {searchText: action.searchText})
+      return Object.assign({}, state, {
+        searchText: action.searchText,
+        searchActive: (action.searchText === '' ? false : true)
+      })
     
     case 'FILTER_ITEMS_LIST':
-      return Object.assign({}, getFilteredItemsList(state, action))
+      return Object.assign({}, state, {sortedFilteredItems: getSortedFilteredItemsList(state)})
 
     default:
       return state
@@ -31,7 +34,7 @@ const defaultDbAppState = {
   // items related to searching
   searchText: '',
   searchActive: false,
-  filteredItems: {},
+  sortedFilteredItems: {},
   // application state items
   lastUpdated: -1,
   selectedItem: -1,
@@ -58,7 +61,7 @@ const itemsReducer = (dbAppState = defaultDbAppState, action) => {
         // items related to searching
         searchText: action.itemData.searchText,
         searchActive: action.itemData.searchActive,
-        filteredItems: action.itemData.items,
+        sortedFilteredItems: getSortedFilteredItemsList(action.itemData),
         // application state items
         lastUpdated: action.receivedAt,
         isFetching: false,
@@ -71,23 +74,46 @@ const itemsReducer = (dbAppState = defaultDbAppState, action) => {
   }
 }
 
-const getFilteredItemsList = (state) => {
+const getSortedFilteredItemsList = (state) => {
+  // sort the items by name
+  const sortedItems = getItemsSortedByName(state.items)
+
+  // return just the sorted items if we don't have a search string and indicate search is inactive
   const searchText = state.searchText
   if(null == searchText || '' === searchText)
-    return Object.assign({}, {...state}, {filteredItems: state.items, searchActive: false})
+    return Object.assign({}, {...sortedItems})
   
-  let filteredItems = {}
-  const itemKeys = Object.keys(state.items)
-  itemKeys.map(key => populateFilteredList(key, state, searchText, filteredItems))
-  return Object.assign({}, {...state}, {filteredItems: filteredItems, searchActive: true})
+  // if we have a search string, filter the items according to the search and indicate search is active
+  let sortedFilteredItems = {}
+  const itemKeys = Object.keys(sortedItems)
+  itemKeys.map(key => populateFilteredList(key, sortedItems, searchText, sortedFilteredItems))
+  return Object.assign({}, {...sortedFilteredItems})
 }
 
-const populateFilteredList = (key, state, filterText, filteredItems) => {
-  const itemName = state.items[key].name
+const getItemsSortedByName = (items) => {
+  // sort the list by alphabetical order
+  let array = Object.keys(items)
+  array.sort((a, b) => {
+    if(items[a].name.toUpperCase() < items[b].name.toUpperCase())
+      return -1
+    else if(items[a].name.toUpperCase() > items[b].name.toUpperCase())
+      return 1
+    else
+      return 0
+  })
+
+  // return an object with object indexes that reflect the new order
+  let returnObject = {}
+  array.map((key, index) => { returnObject[index] = items[key] })
+  return returnObject
+}
+
+const populateFilteredList = (key, sortedItems, filterText, sortedFilteredItems) => {
+  const itemName = sortedItems[key].name
   // escape all of the regular expression special characters
   const regExpFilter = new RegExp(quoteRegExp(filterText), 'i')
   if(0 <= itemName.search(regExpFilter)) {
-    filteredItems[key] = state.items[key]
+    sortedFilteredItems[key] = sortedItems[key]
   }
 }
 
