@@ -34,6 +34,7 @@ const defaultDbAppState = {
   // items related to searching
   searchText: '',
   searchActive: false,
+  searchWords: {},
   sortedFilteredItems: {},
   // application state items
   lastUpdated: -1,
@@ -61,6 +62,7 @@ const itemsReducer = (dbAppState = defaultDbAppState, action) => {
         // items related to searching
         searchText: action.itemData.searchText,
         searchActive: action.itemData.searchActive,
+        searchWords: action.itemData.searchWords,
         sortedFilteredItems: getSortedFilteredItemsList(action.itemData),
         // application state items
         lastUpdated: action.receivedAt,
@@ -78,15 +80,19 @@ const getSortedFilteredItemsList = (state) => {
   // sort the items by name
   const sortedItems = getItemsSortedByName(state.items)
 
-  // return just the sorted items if we don't have a search string and indicate search is inactive
+  // return just the sorted items if we don't have a search string
   const searchText = state.searchText
   if(null == searchText || '' === searchText)
     return Object.assign({}, {...sortedItems})
   
-  // if we have a search string, filter the items according to the search and indicate search is active
+  // if we have a search string, filter the items according to the search
   let sortedFilteredItems = {}
   const itemKeys = Object.keys(sortedItems)
-  itemKeys.map(key => populateFilteredList(key, sortedItems, searchText, sortedFilteredItems))
+  // add the first set of matches, we look for a match at the beginning of a word and when it
+  // matches a search word
+  itemKeys.map(key => filterItemsMatchAtWordBoundary(key, sortedItems, searchText, state.searchWords, sortedFilteredItems))
+  itemKeys.map(key => filterItemsMatchAtNonWordBoundary(key, sortedItems, searchText, sortedFilteredItems))
+  // now we add words where the search matches within the word
   return Object.assign({}, {...sortedFilteredItems})
 }
 
@@ -108,12 +114,49 @@ const getItemsSortedByName = (items) => {
   return returnObject
 }
 
-const populateFilteredList = (key, sortedItems, filterText, sortedFilteredItems) => {
+const filterItemsMatchAtWordBoundary = (key, sortedItems, filterText, searchWords, sortedFilteredItems) => {
+  let index = Object.keys(sortedFilteredItems).length
   const itemName = sortedItems[key].name
+
   // escape all of the regular expression special characters
-  const regExpFilter = new RegExp(quoteRegExp(filterText), 'i')
+  const regExpFilter = new RegExp('\\b' + quoteRegExp(filterText), 'i')
+
+  // first check if the regular expression matches the actual item name
   if(0 <= itemName.search(regExpFilter)) {
-    sortedFilteredItems[key] = sortedItems[key]
+    sortedFilteredItems[index] = sortedItems[key]
+  }
+
+  // now check if the regex matches secondary search words
+  index = Object.keys(sortedFilteredItems).length
+  const itemSearchWords = searchWords[sortedItems[key].itemId]
+  // check if there are any search words for this item before trying to match
+  if(null != itemSearchWords) {
+    itemSearchWords.map(searchWord => {
+      if(0 <= searchWord.search(regExpFilter))
+        sortedFilteredItems[index] = sortedItems[key]
+    })
+  }
+}
+
+const filterItemsMatchAtNonWordBoundary = (key, sortedItems, filterText, sortedFilteredItems) => {
+  const index = Object.keys(sortedFilteredItems).length
+  const itemName = sortedItems[key].name
+
+  // escape all of the regular expression special characters
+  const regExpFilter = new RegExp('\\B' + quoteRegExp(filterText), 'i')
+
+  // first check if the regular expression matches
+  if(0 <= itemName.search(regExpFilter)) {
+    let match = false
+    // check whether the item has already been added to our sortedFilteredItems list
+    Object.keys(sortedFilteredItems).map(key => {
+      if(sortedFilteredItems[key].name === itemName)
+        match = true
+    })
+
+    // if the regex matches and we haven't already added the item, add it
+    if(false === match)
+      sortedFilteredItems[index] = sortedItems[key]
   }
 }
 
