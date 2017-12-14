@@ -64,3 +64,9 @@ export const filterItemsList = () => {
     type: 'FILTER_ITEMS_LIST',
   }
 }
+
+export const clearSearchText = () => {
+  return {
+    type: 'CLEAR_SEARCH_TEXT',
+  }
+}

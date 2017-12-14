@@ -37,10 +37,14 @@ class DatabaseApplication extends Component {
 
   handleBackArrowClick() {
     this.props.onItemSelected(-1)
+    this.props.clearSearchText()
+    this.props.filterItemsList()
   }
 
   handleItemClick(itemId) {
     this.props.onItemSelected(itemId)
+    this.props.clearSearchText()
+    this.props.filterItemsList()
   }
 
   handleSearchInput(event) {
@@ -52,8 +56,8 @@ class DatabaseApplication extends Component {
     return (
       <div className='db-application-content'>
         <DatabaseHeader selectedItem={this.props.selectedItem}  onBackArrowClick={this.handleBackArrowClick}/>
-        <DatabaseSearch onInput={this.handleSearchInput}/>
-        <Route exact path='/database' render={(routeProps) =><DatabaseContent isLoading={this.getLoadingStatus()} items={this.props.sortedFilteredItems} onItemClick={this.handleItemClick} {...routeProps} />} />
+        <Route exact path='/database' render={(routeProps) => <DatabaseSearch onInput={this.handleSearchInput} {...routeProps} />}/>
+        <Route exact path='/database' render={(routeProps) => <DatabaseContent isLoading={this.getLoadingStatus()} items={this.props.sortedFilteredItems} onItemClick={this.handleItemClick} {...routeProps} />} />
         <Route path='/database/:itemId' render={(routeProps) => this.getItemPanel(routeProps)} />
         <DatabaseFooter />
       </div>

@@ -17,6 +17,9 @@ const databaseAppReducer = (state = {}, action) => {
     
     case 'FILTER_ITEMS_LIST':
       return Object.assign({}, state, {sortedFilteredItems: getSortedFilteredItemsList(state)})
+    
+    case 'CLEAR_SEARCH_TEXT':
+      return Object.assign({}, state, {searchText: ''})
 
     default:
       return state
