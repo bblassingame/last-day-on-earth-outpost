@@ -2,6 +2,7 @@ import React from 'react'
 
 import FacebookLogo from './social/facebook-logo'
 import YoutubeLogo from './social/youtube-logo'
+import DiscordLogo from './social/discord-logo'
 // import TwitterLogo from './social/twitter-logo'
 // import RedditLogo from './social/reddit-logo'
 
@@ -11,6 +12,7 @@ const LaunchHeader = () => {
       <div className='social-container'>
         <FacebookLogo />
         <YoutubeLogo />
+        <DiscordLogo />
         {/* <TwitterLogo /> */}
         {/* <RedditLogo /> */}
       </div>

@@ -65,9 +65,10 @@ a:active  { color: #1155cc;                             }
   display: flex;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
+  margin: 5px 5px 0 0;
 }
 
-.social-container .social-img-container:nth-child(0n+1) {
+.social-container .social-img-container:nth-last-of-type(1n+2) {
   margin: 0 5px 0 0;
 }
 
