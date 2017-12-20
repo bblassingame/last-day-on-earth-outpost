@@ -22,8 +22,6 @@ class DatabaseContent extends Component {
     return (
       <div className='db-content-container'>
         <h1 className='db-content-header'>LDOE: Database</h1>
-        <div className='db-search-container'>
-        </div>
         <div className='db-content'>
           {this.createItems(this.props.items)}
         </div>
@@ -42,12 +40,14 @@ class DatabaseContent extends Component {
   createItem(items, index) {
     const item = items[index]
     return (
-      <Link key={item.itemId} to={`/database/${item.itemId}`} onClick={() => this.props.onItemClick(item.itemId)} >
-        <li className='db-content-list-entry'>
-          <img src={item.thumbnail} />
-          <span className='db-content-list-entry-name'>{item.name}</span>
-        </li>
-      </Link>
+      <li key={item.itemId} className='db-content-list-entry'>
+        <Link key={item.itemId} to={`/database/${item.itemId}`} onClick={() => this.props.onItemClick(item.itemId)} >
+          <div className='db-content-list-entry-data-container'>
+            <img src={item.thumbnail} />
+            <span className='db-content-list-entry-name'>{item.name}</span>
+          </div>
+        </Link>
+      </li>
     )
   }
 }

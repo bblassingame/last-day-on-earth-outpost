@@ -39,11 +39,11 @@ html, body {
 }
 
 /* anchor/link text properties*/
-a         { text-decoration: none;      font-weight: 600;           }
-a:link    { color: #FAF7FA;           text-decoration: underline; }
-a:visited { color: #FAF7FA;                                       }
-a:hover   { text-decoration: underline;                             }
-a:active  { color: #FAF7FA;                                       }
+a         { text-decoration: none;      font-weight: 600; }
+a:link    { color: #FAF7FA;                             }
+a:visited { color: #FAF7FA;                             }
+a:hover   { text-decoration: underline;                   }
+a:active  { color: #FAF7FA;                             }
 
 /*****************************   Launch Page Header Styling   *****************************/
 .header-content {
@@ -93,7 +93,7 @@ a:active  { color: #FAF7FA;                                       }
   max-width: 100%;
 } */
 
-/*****************************   Main Content Styling   *****************************/
+/*****************************   Launch Page Nav Styling   *****************************/
 .nav-button-container {
   display: -webkit-box;
   display: -moz-box;
@@ -101,6 +101,7 @@ a:active  { color: #FAF7FA;                                       }
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   padding: 20px 0 0;
 }
 
@@ -114,7 +115,7 @@ a:active  { color: #FAF7FA;                                       }
 }
 
 .nav-button {
-  background-color: slategrey;
+  background-color: #2d2e29;
   width: 100px;
   height: 100px;
   border-radius: 8px;
@@ -123,7 +124,7 @@ a:active  { color: #FAF7FA;                                       }
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
@@ -131,7 +132,27 @@ a:active  { color: #FAF7FA;                                       }
   margin: 0 20px 0 0;
 }
 
-/*****************************   Main Content Styling   *****************************/
+.nav-button-forum {
+  background: url("./nav/forum.png") center/contain no-repeat;
+}
+
+.nav-button-strategy {
+  background: url("./nav/strategy.png") center/contain no-repeat;
+}
+
+.nav-button-multiplayer {
+  background: url("./nav/multiplayer.png") center/contain no-repeat;
+}
+
+.nav-button-database {
+  background: url("./nav/database.png") center/contain no-repeat;
+}
+
+.nav-button-text {
+  margin: 0 0 2px;
+}
+
+/*****************************   Launch Page Content Styling   *****************************/
 .content-header-1-container {
     background: url("./content/heading-background.png") left/contain no-repeat;
     margin: 0 0 0 -2px;
@@ -155,7 +176,11 @@ a:active  { color: #FAF7FA;                                       }
   font-size:.9em;
 }
 
-/*****************************   Footer Styling   *****************************/
+.content-container a {
+  text-decoration: underline;
+}
+
+/*****************************    Launch Page Footer Styling   *****************************/
 .footer-container {
   display: -webkit-box;
   display: -moz-box;
@@ -171,8 +196,16 @@ a:active  { color: #FAF7FA;                                       }
   font-size: .75em;
 }
 
+/*********************************************************************************************
 
+                                  Media Query - View Port > 480px
+
+*********************************************************************************************/
 @media (min-width: 480px) {
+  .nav-button-container {
+    flex-direction: row;
+  }
+
   .nav-button-row:nth-of-type(1) {
     margin: 0 10px 20px auto;
   } 
