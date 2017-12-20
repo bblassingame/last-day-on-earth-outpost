@@ -5,7 +5,9 @@ import { formatLaunchPageContent } from '../../utility/format-content'
 const LaunchContent = () => {
   return (
     <div>
-      <h1 className='content-header-1'>Welcome!</h1>
+      <div className='content-header-1-container'>
+        <h1 className='content-header-1'>Welcome!</h1>
+      </div>
       {formatLaunchPageContent(LaunchPageData[0].contentItems)}
     </div>
   )

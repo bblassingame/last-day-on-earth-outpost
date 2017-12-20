@@ -10,7 +10,7 @@ import './launch-page-style.css'
 
 const LaunchPage = () => {
   return (
-    <div>
+    <div className='launch-page-container'>
       <LaunchHeader />
       <LaunchNav />
       <LaunchContent />

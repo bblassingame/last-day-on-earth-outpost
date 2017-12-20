@@ -14,7 +14,7 @@ body {
   max-width: 768px;
   margin: auto;
   background-color: black;
-  color : white;
+  color : #FAF7FA;
 }
 
 html, body {
@@ -34,12 +34,16 @@ html, body {
   display: none;
 }
 
+.launch-page-container {
+  margin: 0 0 0 2px;
+}
+
 /* anchor/link text properties*/
-a         { text-decoration: none;      font-weight: 600; }
-a:link    { color: #1155cc;                             }
-a:visited { color: #6611CC;                             }
-a:hover   { text-decoration: underline;                   }
-a:active  { color: #1155cc;                             }
+a         { text-decoration: none;      font-weight: 600;           }
+a:link    { color: #FAF7FA;           text-decoration: underline; }
+a:visited { color: #FAF7FA;                                       }
+a:hover   { text-decoration: underline;                             }
+a:active  { color: #FAF7FA;                                       }
 
 /*****************************   Launch Page Header Styling   *****************************/
 .header-content {
@@ -128,9 +132,14 @@ a:active  { color: #1155cc;                             }
 }
 
 /*****************************   Main Content Styling   *****************************/
+.content-header-1-container {
+    background: url("./content/heading-background.png") left/contain no-repeat;
+    margin: 0 0 0 -2px;
+    padding: 5px 0 2px 5px;
+}
+
 .content-header-1 {
   display: inline-block;
-  background-color: red;
   font-size: 1.5em;
   margin: 0 0 2px
 }
@@ -162,141 +171,13 @@ a:active  { color: #1155cc;                             }
   font-size: .75em;
 }
 
-/*****************************   Main Content Styling   *****************************/
-/* .main-content {
-  padding: 0 5px 0 5px;
-  overflow-y: auto;
+
+@media (min-width: 480px) {
+  .nav-button-row:nth-of-type(1) {
+    margin: 0 10px 20px auto;
+  } 
+
+  .nav-button-row:nth-of-type(2) {
+    margin: 0 auto 20px 10px;
+  }
 }
-
-.mc-sub-panel {
-  display: flex;
-  -webkit-display: flex;
-  padding: 0 0 10px;
-}
-
-.mc-sub-panel-img {
-  height: 1.75em;
-  max-width: 100%;
-}
-
-.mc-sub-panel-header-container {
-  padding: 0 0 0 5px;
-}
-
-.mc-sub-panel-header {
-  font-size: 1.75em;
-  padding: 0 0 5px;
-  display: inline-block;
-  vertical-align: bottom;
-} */
-
-/*****************************   Units Content Styling   *****************************/
-/* .mc-sub-panel .units-entry-container:nth-last-of-type(1n+2) {
-  padding: 0 0 5px;
-}
-
-.units-dim-row {
-  padding: 0 0 2px;
-}
-
-.units-dimensions {
-  display: inline-block;
-  width: 120px;
-}
-
-.units-rate-sup {
-  vertical-align: top;
-  font-size: .75em;
-}
-
-.units-info-container {
-  padding: 0 0 0 20px;
-}
-
-.units-info-text {
-  font-size: .75em;
-}
-
-.units-info-availability {
-  display: inline-block;
-  padding: 0 5px 0 0;
-  font-style: italic;
-}
-
-.unit-available {
-  font-weight: 600;
-  color: black;
-}
-
-.unit-not-available {
-  font-weight: 500;
-  color: red;
-} */
-
-/*****************************   Operations Content Styling   *****************************/
-/* .operations-container .operations-type-container:nth-last-of-type(1n+2) {
-  padding: 0 0 4px;
-}
-
-.operations-type {
-  padding: 0 0 4px;
-}
-
-.operations-hours-row {
-  font-size: .75em;
-  padding: 0 0 2px 20px;
-}
-
-.operations-days {
-  display:inline-block;
-  width: 120px;
-}
-
-.operations-hours {
-  font-weight: 600;
-} */
-
-/*****************************   Ratings Content Styling   *****************************/
-/* .ratings .rating-container:nth-last-of-type(1n+2) {
-  padding: 0 0 5px;
-}
-
-.ratings-name-row {
-  display: flex;
-  -webkit-display: flex;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
-  padding: 0 0 4px;
-}
-
-.ratings-title {
-  font-size: .75em;
-  font-weight: 600;
-  padding: 0 0 2px;
-}
-
-.ratings-star-container {
-  height: 1em;
-}
-
-.ratings-info-container {
-  padding: 0 0 0 20px;
-}
-
-.ratings-comment {
-  font-size: .75em;
-} */
-
-/*****************************   Address Content Styling   *****************************/
-/* .address-row-container {
-  padding: 0 0 2px;
-}
-
-.address-info-container {
-  padding: 0 0 0 20px;
-}
-
-.address-details-text {
-  font-size: .75em;
-  padding: 0 0 2px;
-} */
