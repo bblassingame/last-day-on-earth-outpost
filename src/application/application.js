@@ -8,6 +8,7 @@ import { createLogger } from 'redux-logger'
 import 'babel-polyfill'
 import AppContainer from './app-container'
 import RootReducer from './app-reducer'
+import ScrollToTop from './utility/scroll-to-top'
 
 let store
 
@@ -23,7 +24,9 @@ else {
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <AppContainer />
+      <ScrollToTop>
+        <AppContainer />
+      </ScrollToTop>
     </BrowserRouter>
   </Provider>, document.getElementById('main')
 )
