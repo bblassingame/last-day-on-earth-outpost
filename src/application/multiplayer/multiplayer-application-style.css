@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/*****************************   App Styling   *****************************/
+body {
+  max-width: 768px;
+  margin: auto;
+  background-color: black;
+  color : #FAF7FA;
+}
+
+html, body {
+  height: 100%;
+}
+
+#main {
+  display: flex;
+  -webkit-display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+/*****************************   Header Styling   *****************************/
+.multiplayer-header-container {
+  max-width: 768px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.multiplayer-header-home-button {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.multiplayer-header-nav-container-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.multiplayer-header-nav-container {
+  margin: 0 40px 0 5px;
+  height: 35px;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.multiplayer-header-button {
+  background-color: slategrey;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.multiplayer-header-img-container {
+  height: 35px;
+  padding: 5px 5px 5px 3px;
+}
+
+.multiplayer-header-img {
+  max-height: 100%;
+}
+
+/*****************************   Content Styling   *****************************/
+.multiplayer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.multiplayer-content a {
+  text-decoration: underline;
+}
+
+.multiplayer-content-paragraph {
+  padding: 0 5px 5px 10px;
+  font-size: .9em;
+}
+
+.multiplayer-ordered-list {
+  margin: 0 0 10px 45px;
+  font-size: .9em;
+}
+
+.multiplayer-youtube-container {
+  margin: 5px;
+  position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	/*padding-top: 25px;*/
+	height: 0;
+}
+
+.multiplayer-youtube-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*****************************   Footer Styling   *****************************/
+.multiplayer-footer-container {
+  height: 40px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.multiplayer-footer-copyright-text {
+  font-size: .75em;
+}

@@ -13,7 +13,7 @@ const DatabaseHeader = (props) => {
           </div>
         </Link>
       </div>
-      <div className='db-header-nav_container-wrapper'>
+      <div className='db-header-nav-container-wrapper'>
         <div className='db-header-nav-container'>
           <Link to='/forum' className='db-header-button'>
             <div>
