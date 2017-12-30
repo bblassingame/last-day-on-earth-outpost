@@ -116,6 +116,17 @@
   margin: 0 0 0 10px;
 }
 
+.db-content-list-entry-data-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  page-break-inside: avoid;
+}
+
 .db-content-list-entry {
   display: -webkit-box;
   display: -moz-box;
