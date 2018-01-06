@@ -221,8 +221,8 @@ const renderMultiplayerPageListItem = (item, i) => {
 
 const renderMultiplayerPageYoutube = (item, i) => {
   return (
-    <div className='multiplayer-youtube-container'>
-      <iframe key={i} src={item.link} width='560' height='315' frameBorder="0" gesture="media" allow="encrypted-media" showinfo='0' allowFullScreen></iframe>
+    <div key={i} className='multiplayer-youtube-container'>
+      <iframe key={i} src={item.link} width='560' height='315' frameBorder="0" allowFullScreen></iframe>
     </div>
   )
 }

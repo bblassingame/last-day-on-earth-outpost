@@ -2,15 +2,16 @@ import React from 'react'
 
 import { formatMultiplayerContent } from '../../utility/format-content'
 
-const MultiPlayerApplicaiton = () => {
+const MultiplayerContent = () => {
   return (
     <div className='multiplayer-content'>
+      <h1 className='multiplayer-content-header'>LDOE: Multiplayer</h1>
       {formatMultiplayerContent(multiplayerData[0].contentItems)}
     </div>
   )
 }
 
-export default MultiPlayerApplicaiton
+export default MultiplayerContent
 
 const multiplayerData = [
   {
@@ -226,8 +227,6 @@ const multiplayerData = [
       {
         type: 'paragraph',
         text: 'If you did not know that Multiplayer did not exist in the game, you might be interested to know that there are dozens of other things in Last Day on Earth that do not exist in the game even though it seems like they do. This video list everything that does not exist in the game. ',
-        id: true,
-        idName: 'learn-more',
       },
       {
         type: 'youtube',
@@ -236,6 +235,8 @@ const multiplayerData = [
       {
         type: 'paragraph',
         text: 'If you would like to know more about what it means to have a good clan, this video lays out the three things that I would argue are the most important when choosing a good Clan. ',
+        id: true,
+        idName: 'learn-more',
       },
       {
         type: 'youtube',

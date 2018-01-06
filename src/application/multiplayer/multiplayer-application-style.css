@@ -97,12 +97,22 @@ html, body {
 
 /*****************************   Content Styling   *****************************/
 .multiplayer-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
+  margin: 10px 0 0;
 }
 
 .multiplayer-content a {
   text-decoration: underline;
+}
+
+.multiplayer-content-header {
+  font-size: 1.5em;
+  margin: 0 0 10px 5px;
 }
 
 .multiplayer-content-paragraph {
