@@ -24,7 +24,8 @@ class FormatMgr
         break
       
       case 'youtube':
-        // console.log('creating a youtube element')
+        this.page.createYoutube(item)
+        console.log(this.page)
         break
   
       case 'ordered-list':

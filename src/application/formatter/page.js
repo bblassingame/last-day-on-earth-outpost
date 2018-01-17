@@ -1,4 +1,5 @@
 import Paragraph from './paragraph'
+import Youtube from './youtube'
 
 class Page
 {
@@ -11,6 +12,12 @@ class Page
     paragraph.setRawText(rawElementData.text)
     paragraph.initialize()
     this.pageElements.push(paragraph)
+  }
+
+  createYoutube(rawElementData) {
+    let youtube = new Youtube()
+    youtube.setLink(rawElementData.link)
+    this.pageElements.push(youtube)
   }
 }
 
