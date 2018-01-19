@@ -13,27 +13,24 @@ class FormatMgr
 
   generatePageElements(item) {
     switch(item.type) {
-      // case 'test':
       case 'paragraph':
         this.page.createParagraph(item)
-        console.log(this.page)
         break
   
-      case 'subheading':
-        // console.log('creating a heading element')
+      case 'heading':
+        this.page.createHeading(item)
         break
       
       case 'youtube':
         this.page.createYoutube(item)
-        console.log(this.page)
         break
   
       case 'ordered-list':
-        // console.log('creating an ordered list element')
+        this.page.createList(item)
         break
   
       default:
-        // console.log('unknown page element encountered')
+        console.log('unknown page element encountered')
         break
     }
   }
