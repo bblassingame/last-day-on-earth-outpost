@@ -1,11 +1,14 @@
-class Heading {
+class ListItem {
   constructor() {
     this.rawProperties = {}
-    this.headingLevel = -1
     this.text = ''
     this.isLink = false
     this.linkSrc = ''
     this.linkEvent = ''
+  }
+
+  getType() {
+    return 'ListItem'
   }
 
   setRawProperties(properties) {
@@ -13,12 +16,12 @@ class Heading {
   }
 
   initialize() {
-    this.headingLevel = this.rawProperties.level
+    // convert the raw properties to member properties
     this.text = this.rawProperties.text
     this.isLink = this.rawProperties.link
-    this.linkSrc = this.rawProperties.linkTo
+    this.link = this.rawProperties.linkTo
     this.linkEvent = this.rawProperties.event
   }
 }
 
-export default Heading
+export default ListItem

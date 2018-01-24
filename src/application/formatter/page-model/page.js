@@ -9,6 +9,10 @@ class Page
     this.pageElements = []
   }
 
+  getPageElements() {
+    return this.pageElements
+  }
+
   createParagraph(rawElementData) {
     let paragraph = new Paragraph()
     paragraph.setRawText(rawElementData.text)

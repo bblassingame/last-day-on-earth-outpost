@@ -1,4 +1,4 @@
-import Page from './page'
+import Page from './page-model/page'
 
 class FormatMgr
 {
@@ -9,6 +9,7 @@ class FormatMgr
   formatContent(content) {
     // iterate through each item in the content and generate the page elements
     content.map( item => this.generatePageElements(item) )
+    return this.page
   }
 
   generatePageElements(item) {

@@ -11,6 +11,10 @@ class Paragraph extends ParagraphElement
     this.rawText = ''
   }
 
+  getType() {
+    return 'Paragraph'
+  }
+
   setRawText(rawText) {
     this.rawText = rawText
   }

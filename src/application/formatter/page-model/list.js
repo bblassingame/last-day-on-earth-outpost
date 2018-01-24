@@ -1,9 +1,15 @@
+import PageElement from './page-element'
 import ListItem from './list-item'
 
-class List {
+class List extends PageElement {
   constructor() {
+    super()
     this.rawListItems = []
     this.listItems = []
+  }
+
+  getType() {
+    return 'List'
   }
 
   setRawListItems(items) {

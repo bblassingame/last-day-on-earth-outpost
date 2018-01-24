@@ -1,11 +1,18 @@
-class ParagraphElement
+import PageElement from './page-element'
+
+class ParagraphElement extends PageElement
 {
   constructor() {
+    super()
     this.rawTokens = []
     this.childTokens = []
     this.elements = []
     this.attributes = {}
     this.displayText = ''
+  }
+
+  getType() {
+    return 'ParagraphElement'
   }
 
   setTokens(tokens) {

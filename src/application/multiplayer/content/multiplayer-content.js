@@ -1,17 +1,12 @@
 import React from 'react'
 
-import { formatMultiplayerContent } from '../../utility/format-content'
 import FormatMgr from '../../formatter/format-mgr'
+import HtmlDocument from '../../formatter/document-model/html-document'
 
 const MultiplayerContent = () => {
   let formatMgr = new FormatMgr()
-  formatMgr.formatContent(multiplayerData[0].contentItems)
-  return (
-    <div className='multiplayer-content'>
-      <h1 className='multiplayer-content-header'>LDOE: Multiplayer</h1>
-      {formatMultiplayerContent(multiplayerData[0].contentItems)}
-    </div>
-  )
+  let pageModel = formatMgr.formatContent(multiplayerData[0].contentItems)
+  return <HtmlDocument pageModel={pageModel}/>
 }
 
 export default MultiplayerContent
