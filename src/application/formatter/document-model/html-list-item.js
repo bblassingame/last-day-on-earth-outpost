@@ -36,7 +36,7 @@ class HtmlListItem extends Component {
     }
   
     return (
-      <li className='multiplayer-list-item'>
+      <li>
         {returnElement}
       </li>
     )

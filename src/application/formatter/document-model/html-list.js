@@ -26,7 +26,7 @@ class HtmlList extends Component {
 
   render() {
     return (
-      <ol className='multiplayer-ordered-list'>
+      <ol className='formatted-ordered-list'>
         {this.htmlListItems}
       </ol>
     )

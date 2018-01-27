@@ -4,7 +4,6 @@ import MultiplayerHeader from './header/multiplayer-header'
 import MultiplayerContent from './content/multiplayer-content'
 import MultiplayerFooter from './footer/multiplayer-footer'
 
-import './reset.css'
 import './multiplayer-application-style.css'
 
 const multiplayerApplication = () => {

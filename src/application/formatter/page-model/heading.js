@@ -20,11 +20,13 @@ class Heading extends PageElement {
   }
 
   initialize() {
-    this.headingType = this.rawProperties.type
+    this.headingType = this.rawProperties.headingType
     this.text = this.rawProperties.text
-    this.isLink = this.rawProperties.link
-    this.linkSrc = this.rawProperties.linkTo
-    this.linkEvent = this.rawProperties.event
+    if(null != this.rawProperties.link) {
+      this.isLink = this.rawProperties.link
+      this.linkSrc = this.rawProperties.linkTo
+      this.linkEvent = this.rawProperties.event
+    }
   }
 }
 

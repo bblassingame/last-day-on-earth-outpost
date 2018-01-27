@@ -32,10 +32,10 @@ class HtmlParagraph extends Component {
   render() {
     let paragraph = null
     if(this.hasId === true) {
-      paragraph = <p id={this.idName} className='multiplayer-content-paragraph'>{this.paragraphElements}</p>
+      paragraph = <p id={this.idName} className='formatted-paragraph'>{this.paragraphElements}</p>
     }
     else {
-      paragraph = <p className='multiplayer-content-paragraph'>{this.paragraphElements}</p>
+      paragraph = <p className='formatted-paragraph'>{this.paragraphElements}</p>
     }
 
     return paragraph

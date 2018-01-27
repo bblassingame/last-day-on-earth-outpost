@@ -5,7 +5,6 @@ import LaunchNav from './nav/launch-nav'
 import LaunchContent from './content/launch-content'
 import LaunchFooter from './footer/launch-footer'
 
-import './reset.css'
 import './launch-page-style.css'
 
 const LaunchPage = () => {

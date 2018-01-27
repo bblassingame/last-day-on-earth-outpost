@@ -50,8 +50,7 @@ class HtmlDocument extends Component {
 
   render() {
     return (
-      <div className='multiplayer-content'>
-        <h1 className='multiplayer-content-header'>LDOE: Multiplayer</h1>
+      <div className='formatted-content'>
         {this.htmlDocElements}
       </div>
     )

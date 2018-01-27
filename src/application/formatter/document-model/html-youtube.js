@@ -16,7 +16,7 @@ class HtmlYoutube extends Component{
 
   render() {
     return (
-      <div className='multiplayer-youtube-container'>
+      <div className='formatted-youtube-container'>
         <iframe src={this.src} width='560' height='315' frameBorder="0" allowFullScreen></iframe>
       </div>
     )

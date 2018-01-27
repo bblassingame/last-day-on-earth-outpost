@@ -14,9 +14,13 @@ export default MultiplayerContent
 const multiplayerData = [
   {
     id: 0,
-    title: 'Multiplayer',
     contentItems: 
     [
+      {
+        type: 'heading',
+        headingType: 'title',
+        text: 'LDOE: Multiplayer',
+      },
       {
         type: 'paragraph',
         text: 'This page will be used for recording all the clans of Last Day on Earth. It will also hold information like clan ranking, which clan is in possession of which Pump Jack and when clan wars are scheduled.',

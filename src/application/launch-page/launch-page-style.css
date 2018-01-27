@@ -1,35 +1,6 @@
-/*
-Focusing a mobile first layout, so everything here will be for smaller mobile displays
-up to something like a Galaxy s8 or iPhone 8 Plus.
-*/
-
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
+/*LAUNCH PAGE STYLES*/
 
 /*****************************   App Styling   *****************************/
-body {
-  max-width: 768px;
-  margin: auto;
-  background-color: black;
-  color : #FAF7FA;
-}
-
-html, body {
-  height: 100%;
-}
-
-#main {
-  display: flex;
-  -webkit-display: flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  font-family: sans-serif;
-  height: 100%;
-}
-
 .hidden-element {
   display: none;
 }
@@ -38,28 +9,9 @@ html, body {
   margin: 0 0 0 2px;
 }
 
-/* anchor/link text properties*/
-a         { text-decoration: none;      font-weight: 600; }
-a:link    { color: #FAF7FA;                             }
-a:visited { color: #FAF7FA;                             }
-a:hover   { text-decoration: underline;                   }
-a:active  { color: #FAF7FA;                             }
-
 /*****************************   Launch Page Header Styling   *****************************/
-.header-content {
-  /* padding: 5px 5px 0;
-  flex: 0 0 auto;
-  width: 100%;
-  height: 48px;
-  margin: 0px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; */
-  /* -webkit-justify-content: space-between;
-  justify-content: space-between; */
-}
+/* .header-content {
+} */
 
 .social-container {
   display: -webkit-box;
@@ -87,11 +39,6 @@ a:active  { color: #FAF7FA;                             }
 .social-img {
   max-height: 100%;
 }
-
-/* .img-fill {
-  max-height: 100%;
-  max-width: 100%;
-} */
 
 /*****************************   Launch Page Nav Styling   *****************************/
 .nav-button-container {
