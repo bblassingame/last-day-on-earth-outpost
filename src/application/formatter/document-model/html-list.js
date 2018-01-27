@@ -1,27 +1,34 @@
 import React, { Component } from 'react'
 
+import HtmlListItem from './html-list-item'
+
 class HtmlList extends Component {
   constructor() {
     super()
-    // this.listPageElement = null
+    this.htmlListItems = []
   }
 
-  // setPageElement(pageElement) {
-  //   this.listPageElement = pageElement
-  //   console.log(this.listPageElement)
-  // }
-
   componentWillMount() {
+    this.initialize()
   }
 
   componentWillUpdate() {
+    this.initialize()
+  }
+
+  initialize() {
+    this.props.listPageElement.listItems.map( (item, i) => this.createHtmlListItem(item, i) )
+  }
+
+  createHtmlListItem(item, index) {
+    this.htmlListItems.push(<HtmlListItem key={index} listItemPageElement={item} />)
   }
 
   render() {
     return (
-      <div>
-        HtmlList
-      </div>
+      <ol className='multiplayer-ordered-list'>
+        {this.htmlListItems}
+      </ol>
     )
   }
 }
