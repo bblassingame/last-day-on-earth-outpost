@@ -19,7 +19,7 @@ class ListItem {
     // convert the raw properties to member properties
     this.text = this.rawProperties.text
     this.isLink = this.rawProperties.link
-    this.link = this.rawProperties.linkTo
+    this.linkSrc = this.rawProperties.linkTo
     this.linkEvent = this.rawProperties.event
   }
 }

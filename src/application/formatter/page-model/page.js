@@ -15,7 +15,7 @@ class Page
 
   createParagraph(rawElementData) {
     let paragraph = new Paragraph()
-    paragraph.setRawText(rawElementData.text)
+    paragraph.setParagraphData(rawElementData)
     paragraph.initialize()
     this.pageElements.push(paragraph)
   }

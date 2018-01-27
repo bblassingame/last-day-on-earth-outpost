@@ -8,18 +8,25 @@ class Paragraph extends ParagraphElement
 {
   constructor() {
     super()
+    this.paragraphData = null
     this.rawText = ''
+    this.hasId = ''
+    this.idName = ''
   }
 
   getType() {
     return 'Paragraph'
   }
 
-  setRawText(rawText) {
-    this.rawText = rawText
+  setParagraphData(paragraphData) {
+    this.paragraphData = paragraphData
   }
 
   initialize() {
+    this.rawText = this.paragraphData.text
+    this.hasId = this.paragraphData.id
+    this.idName = this.paragraphData.idName
+
     if(this.rawText === '') {
       console.log('ERROR:  It looks like you didn\'t set any child tokens.  Skipping this paragraph')
     }
