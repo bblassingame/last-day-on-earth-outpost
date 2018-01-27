@@ -4,7 +4,7 @@ class Heading extends PageElement {
   constructor() {
     super()
     this.rawProperties = {}
-    this.headingLevel = -1
+    this.headingType = ''
     this.text = ''
     this.isLink = false
     this.linkSrc = ''
@@ -20,7 +20,7 @@ class Heading extends PageElement {
   }
 
   initialize() {
-    this.headingLevel = this.rawProperties.level
+    this.headingType = this.rawProperties.type
     this.text = this.rawProperties.text
     this.isLink = this.rawProperties.link
     this.linkSrc = this.rawProperties.linkTo
