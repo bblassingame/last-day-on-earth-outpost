@@ -23,14 +23,7 @@ const multiplayerData = [
       },
       {
         type: 'paragraph',
-        text: 'Unfortunately, since Last Day on Earth is still in Beta, multiplayer does not yet exist in the game. The Radio Tower (which is the key to unlocking multiplayer) cannot actually be built because some of the items required to craft it are also not in the game yet <L>(Learn about other things that don’t exist yet)</L>. The players that attack you while you are farming in the green, yellow and red zones are AI players… they are just bots serving as placeholders until the real game is released. The player bases around your base are also placeholders and are the same for every person playing Last Day on Earth.',
-        links:
-        [
-          {
-            event: '',
-            to: '/multiplayer#learn-more',
-          }
-        ]
+        text: 'Unfortunately, since Last Day on Earth is still in Beta, multiplayer does not yet exist in the game. The Radio Tower (which is the key to unlocking multiplayer) cannot actually be built because some of the items required to craft it are also not in the game yet <L to="/multiplayer#learn-more">(Learn about other things that don’t exist yet)</L>. The players that attack you while you are farming in the green, yellow and red zones are AI players… they are just bots serving as placeholders until the real game is released. The player bases around your base are also placeholders and are the same for every person playing Last Day on Earth.',
       },
       {
         type: 'paragraph',
@@ -41,7 +34,7 @@ const multiplayerData = [
         listItems:
         [
           {
-            text: 'JcF\'s Alliance of Clans (facebook):',
+            text: 'JcF\'s Alliance of Clans (facebook)',
             link: true,
             linkTo: 'https://www.facebook.com/groups/279700595879410/',
             event: 'Clan Click - JcF Facebook',
