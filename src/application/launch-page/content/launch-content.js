@@ -1,16 +1,12 @@
 import React from 'react'
 
-import { formatLaunchPageContent } from '../../utility/format-content'
+import FormatMgr from '../../formatter/format-mgr'
+import HtmlDocument from '../../formatter/document-model/html-document'
 
 const LaunchContent = () => {
-  return (
-    <div className='content-container'>
-      <div className='content-header-1-container'>
-        <h1 className='content-header-1'>Welcome!</h1>
-      </div>
-      {formatLaunchPageContent(LaunchPageData[0].contentItems)}
-    </div>
-  )
+  let formatMgr = new FormatMgr()
+  let pageModel = formatMgr.formatContent(LaunchPageData[0].contentItems)
+  return <HtmlDocument pageModel={pageModel}/>
 }
 
 export default LaunchContent
@@ -18,26 +14,20 @@ export default LaunchContent
 const LaunchPageData = [
   {
     id: 0,
-    title: 'Welcome!',
     contentItems: 
     [
       {
-        type: 'paragraph',
-        text: 'Welcome to <L>The Outpost</L>.  This is our first post of what we hope to be many.  This is our site dedicated to playing <OL>Last Day On Earth: Survival\u2122</OL>, and playing it at the highest level possible.  We\'re excited about the features we plan to bring you.  Here\'s a quick run down of what we\'re planning:',
-        links: 
-        [
-          {
-            event: '',
-            to: '/',
-          },
-          {
-            event: 'toLDOEFacebook',
-            to: 'https://www.facebook.com/lastdayonearthgame/',
-          }
-        ]
+        type: 'heading',
+        headingType: 'bloody',
+        text: 'Welcome!',
       },
       {
-        type: 'subheading',
+        type: 'paragraph',
+        text: 'Welcome to <L to="/">The Outpost</L>.  This is our first post of what we hope to be many.  This is our site dedicated to playing <OL to="https://www.facebook.com/lastdayonearthgame/" eventLabel="toLDOEFacebook">Last Day On Earth: Survival\u2122</OL>, and playing it at the highest level possible.  We\'re excited about the features we plan to bring you.  Here\'s a quick run down of what we\'re planning:',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
         text: 'Strategy',
         link: true,
         linkTo: 'strategy',
@@ -47,7 +37,8 @@ const LaunchPageData = [
         text: 'We plan to create and maintain comprehensive strategy information for new and experienced players.  Whether you\'re new to LDOE or waiting on the next update, we want to deliver information ideas that will help you be the best player you can be.'
       },
       {
-        type: 'subheading',
+        type: 'heading',
+        headingType: 'subheading',
         text: 'Database',
         link: true,
         linkTo: 'database',
@@ -57,7 +48,8 @@ const LaunchPageData = [
         text: 'Our research team has been hard at work compiling detailed information on each item in the game, zones, drop rates, and other details that will help you know what you need, where to get it, and who/what to get it from.'
       },
       {
-        type: 'subheading',
+        type: 'heading',
+        headingType: 'subheading',
         text: 'Forum',
         link: true,
         linkTo: 'forum',
@@ -67,7 +59,8 @@ const LaunchPageData = [
         text: 'We all need a place to discuss what\'s happening with the game, to ask questions, speculate on when multiplayer will be released, and vent about that dude that just killed us for the 5th time in the red zone.'
       },
       {
-        type: 'subheading',
+        type: 'heading',
+        headingType: 'subheading',
         text: 'Multiplayer',
         link: true,
         linkTo: 'multiplayer'
