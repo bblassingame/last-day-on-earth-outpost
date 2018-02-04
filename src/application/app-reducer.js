@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 
 import database from './database/database-app-reducers'
+import strategy from './strategy/strategy-app-reducers'
 
 const application = (state = {}, action) => {
   switch(action.type) {
@@ -46,7 +47,8 @@ const featuresReducer = (applicationState, action) => {
 
 const RootReducer = combineReducers({
   application,
-  database
+  database,
+  strategy,
 })
 
 export default RootReducer

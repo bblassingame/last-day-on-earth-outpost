@@ -1,0 +1,113 @@
+/*STRATEGY STYLES*/
+
+/*****************************   Header Styling   *****************************/
+.strategy-header-container {
+  max-width: 768px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0 0 10px;
+}
+
+.strategy-header-home-button {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.strategy-header-nav-container-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.strategy-header-nav-container {
+  margin: 0 40px 0 5px;
+  height: 35px;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.strategy-header-button {
+  background-color: slategrey;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.strategy-header-img-container {
+  height: 35px;
+  padding: 5px 5px 5px 3px;
+}
+
+.strategy-header-img {
+  max-height: 100%;
+}
+
+
+/*****************************   Content Styling   *****************************/
+.strategy-heading-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0 0 10px 0px;
+}
+
+.strategy-content-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 5px;
+}
+
+.strategy-article-link {
+  font-size: 1.25em;
+  margin: 0 0 7px 5px;
+}
+
+/*****************************   Footer Styling   *****************************/
+.strategy-footer-container {
+  height: 40px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.strategy-footer-copyright-text {
+  font-size: .75em;
+}
