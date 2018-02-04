@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 import 'babel-polyfill'
@@ -15,13 +15,15 @@ import './base-styles.css'
 
 let store
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
 /*global process*/
 if (process.env.NODE_ENV !== 'production') {
   console.log('Dev Environment Detected:  Starting Application')
-  store = createStore(RootReducer, applyMiddleware(thunkMiddleware, createLogger()))
+  store = createStore(RootReducer, composeEnhancers(applyMiddleware(thunkMiddleware, createLogger())))
 }
 else {
-  store = createStore(RootReducer, applyMiddleware(thunkMiddleware))
+  store = createStore(RootReducer, composeEnhancers(applyMiddleware(thunkMiddleware)))
 }
 
 ReactDOM.render(

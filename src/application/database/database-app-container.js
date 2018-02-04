@@ -21,6 +21,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
+// why did I use withRouter here?  freakin comment stuff!
 const DatabaseAppContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(DatabaseApplication))
 
 export default DatabaseAppContainer

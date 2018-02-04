@@ -93,6 +93,7 @@ class DatabaseApplication extends Component {
     )
   }
 
+  // I'm not using this yet but I should try to handle fetching errors at some point
   getErrorPanel() {
     return (
       <div style={{margin: 'auto'}}>
