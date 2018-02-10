@@ -35,15 +35,16 @@ class AppContent extends React.Component {
   }
 
   getPage() {
-    const previewAuthorized = localStorage.getItem('preview')
-    if(null == previewAuthorized || 'allowed' !== previewAuthorized)
-      return ComingSoon
+    // const previewAuthorized = localStorage.getItem('preview')
+    // if(null == previewAuthorized || 'allowed' !== previewAuthorized)
+    //   return ComingSoon
 
     if(this.props.appInitialized == false)
       return LoadingPage
 
-    const previewEnabled = this.props.features['preview'].enabled
-    return previewEnabled == 1 ? LaunchPage : ComingSoon
+    // const previewEnabled = this.props.features['preview'].enabled
+    // return previewEnabled == 1 ? LaunchPage : ComingSoon
+    return LaunchPage
   }
 
   render() {
