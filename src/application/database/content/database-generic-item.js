@@ -24,7 +24,7 @@ class DatabaseGenericItem extends Component {
             <p className='db-item-desc'>&quot;{this.props.inGameDescription}&quot;</p>
           </div>
           <div>
-            <p>{this.props.outpostDescription}blah blah blah blah lots of description.  blah blah blah blah lots of description.  blah blah blah blah lots of description.  blah blah blah blah lots of description.  blah blah blah blah lots of description.  blah blah blah blah lots of description.  blah blah blah blah lots of description.  </p>
+            <p>{this.props.outpostDescription}</p>
           </div>
         </div>
       </div>
