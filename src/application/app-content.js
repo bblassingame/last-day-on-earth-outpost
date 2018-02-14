@@ -7,7 +7,7 @@ import gaTracker from './utility/ga-tracker'
 
 // child components
 import LoadingPage from './utility/loading-page'
-import ComingSoon from './utility/coming-soon'
+// import ComingSoon from './utility/coming-soon'
 import LaunchPage from './launch-page/launch-page'
 import Forum from './forum/forum-application'
 import Strategy from './strategy/strategy-app-container'
