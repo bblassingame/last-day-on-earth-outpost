@@ -5,8 +5,6 @@ import DatabaseCraftingTable from './database-crafting-table'
 class DatabaseGenericItem extends Component {
   constructor(props) {
     super(props)
-    console.log('DatabaseGenericItem Constructor')
-    console.log(this)
   }
 
   render() {
