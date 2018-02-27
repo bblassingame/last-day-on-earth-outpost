@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import DatabaseCraftingTable from './database-crafting-table'
+
 class DatabaseGenericItem extends Component {
   constructor(props) {
     super(props)
@@ -27,6 +29,11 @@ class DatabaseGenericItem extends Component {
             <p>{this.props.outpostDescription}</p>
           </div>
         </div>
+        <DatabaseCraftingTable
+          craftable={this.props.craftable} 
+          craftingMaterialsList={this.props.craftingMaterialsList} 
+          craftPoints={this.props.craftPoints} 
+          craftRequiredLevel={this.props.craftRequiredLevel} />
       </div>
     )
   }

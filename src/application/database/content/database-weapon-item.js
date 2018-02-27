@@ -57,8 +57,11 @@ const getIngredientPanel = (props) => {
           </tbody>
         </table>
       </div>
-      <DatabaseCraftingTable craftable={props.craftable} craftingMaterialsList={props.craftingMaterialsList} craftPoints={props.craftPoints} craftRequiredLevel={props.craftRequiredLevel} />
-      {/* {createCraftingTable(props.craftable, props.craftingMaterialsList)} */}
+      <DatabaseCraftingTable
+        craftable={props.craftable} 
+        craftingMaterialsList={props.craftingMaterialsList} 
+        craftPoints={props.craftPoints} 
+        craftRequiredLevel={props.craftRequiredLevel} />
     </div>
   )
 }

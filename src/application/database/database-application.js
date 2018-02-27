@@ -77,12 +77,20 @@ class DatabaseApplication extends Component {
     let selectedItem = this.props.selectedItem
     switch(this.props.items[selectedItem].primaryCategory) {
       case 'weapon':
-        return (<DatabaseWeaponItem categories={this.props.itemCategories[selectedItem]} {...this.props.items[selectedItem]} craftingMaterialsList={this.getItemCraftingMaterialsList(selectedItem)} {...routeProps} />)
+        return (<DatabaseWeaponItem 
+          categories={this.props.itemCategories[selectedItem]} 
+          craftingMaterialsList={this.getItemCraftingMaterialsList(selectedItem)} 
+          {...this.props.items[selectedItem]} 
+          {...routeProps} />)
       case 'material':
       case 'armor':
       case 'provision':
       default:
-        return (<DatabaseGenericItem categories={this.props.itemCategories[selectedItem]} {...this.props.items[selectedItem]} {...routeProps} />)
+        return (<DatabaseGenericItem 
+          categories={this.props.itemCategories[selectedItem]} 
+          {...this.props.items[selectedItem]} 
+          craftingMaterialsList={this.getItemCraftingMaterialsList(selectedItem)} 
+          {...routeProps} />)
     }
   }
 
