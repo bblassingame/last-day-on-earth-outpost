@@ -169,7 +169,7 @@
 .db-item-pic-desc-container {
   float: left;
   padding: 0 10px 10px 0;
-  width: 30vh;
+  width: 250px;
   max-width: 200px;
 }
 
@@ -181,6 +181,58 @@
 .db-item-desc {
   text-align: center;
   font-size: .85em;
+}
+
+.db-item-weapon-table {
+  margin: 10px 0 0 0;
+  width: 250px;
+}
+
+.db-item-weapon-table-body {
+  font-size: .9em;
+}
+
+.db-item-weapon-table-body-col2 {
+  text-align: right;
+}
+
+.db-item-crafting-table-container {
+  margin: 10px 0 0 0;
+  max-width: 250px;
+}
+
+.db-item-crafting-table-header-container {
+  display: flex;
+}
+
+.db-item-crafting-table-heading {
+  display: inline-block;
+  flex: 1 0;
+}
+
+.db-item-crafting-table-craft-level {
+  margin: 0 15px 0 0;
+}
+
+.db-item-crafting-table-craft-points {
+  margin: 0 0 0 2px;
+}
+
+.db-item-crafting-table-row {
+  display: flex;
+  align-items: center;
+  font-size: .9em;
+}
+
+.db-item-crafting-table-row-image {
+  width: 30px;
+  height: 30px;
+}
+
+.db-item-crafting-table-row-text {
+  width: 100px;
+  margin: 0 0 0 10px;
+  flex: 1 0;
 }
 
 /*****************************   Footer Styling   *****************************/

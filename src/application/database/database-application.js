@@ -5,6 +5,7 @@ import DatabaseHeader from './header/database-header'
 import DatabaseSearch from './content/database-search'
 import DatabaseContent from './content/database-content'
 import DatabaseGenericItem from './content/database-generic-item'
+import DatabaseWeaponItem from './content/database-weapon-item'
 import DatabaseFooter from './footer/database-footer'
 
 import './database-application-style.css'
@@ -75,11 +76,11 @@ class DatabaseApplication extends Component {
     
     let selectedItem = this.props.selectedItem
     switch(this.props.items[selectedItem].primaryCategory) {
-      case 'ingredient':
       case 'weapon':
+        return (<DatabaseWeaponItem categories={this.props.itemCategories[selectedItem]} {...this.props.items[selectedItem]} craftingMaterialsList={this.getItemCraftingMaterialsList(selectedItem)} {...routeProps} />)
+      case 'material':
       case 'armor':
-      case 'tool':
-      case 'health':
+      case 'provision':
       default:
         return (<DatabaseGenericItem categories={this.props.itemCategories[selectedItem]} {...this.props.items[selectedItem]} {...routeProps} />)
     }
@@ -100,6 +101,36 @@ class DatabaseApplication extends Component {
         <h1>An error has occurred.  Please go to the home page and try to access this item again.</h1>
       </div>
     )
+  }
+
+  // create an array of objects that represent the items used to craft this object.
+  // it has the following structure
+  /*
+    [
+      {
+        'img': <base64 encoded sm_thumb image>,
+        'quantity': <quantity>,
+        'name': <item_name>,
+      },
+    ]
+  */
+  getItemCraftingMaterialsList(selectedItem) {
+    if(this.props.items[selectedItem].craftable == false) // use '==' because of string
+      return null
+    
+    let itemCraftingMaterialsList = []
+    let itemMaterial = {}
+
+    const craftList = this.props.craftProducts[selectedItem]
+    for(const key of Object.keys(craftList)) {
+      itemMaterial['quantity'] = craftList[key].quantity
+      itemMaterial['name'] = this.props.items[key].name
+      itemMaterial['img'] = this.props.items[key].thumbnail
+      itemCraftingMaterialsList.push(itemMaterial)
+      itemMaterial = {}
+    }
+
+    return itemCraftingMaterialsList
   }
 }
 
