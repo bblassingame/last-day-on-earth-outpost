@@ -1,6 +1,6 @@
 export const setSelectedItem = (itemId) => {
   return {
-    type: 'SET_SELECTED_ITEM',
+    type: 'STRATEGY_SET_SELECTED_ITEM',
     selectedItem: itemId,
   }
 }

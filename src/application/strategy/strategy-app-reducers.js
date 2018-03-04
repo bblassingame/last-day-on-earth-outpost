@@ -9,7 +9,7 @@ const defaultStrategyAppState = {
 // why did I set the default state not at the reducer entry in my other reducers?  freakin comment the stuff you learn!
 const strategyAppReducer = (state = defaultStrategyAppState, action) => {
   switch(action.type) {
-    case 'SET_SELECTED_ITEM':
+    case 'STRATEGY_SET_SELECTED_ITEM':
       return Object.assign({}, state, {selectedItem: action.selectedItem})
 
     default:
