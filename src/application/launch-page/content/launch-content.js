@@ -134,4 +134,40 @@ const LaunchPageData = [
       },
     ]
   },
+  {
+    id: 3,
+    contentItems:
+    [
+      {
+        type: 'heading',
+        headingType: 'bloody',
+        text: '(3/1) Kefir\'s Response...',
+      },
+      {
+        type: 'youtube',
+        link: 'https://www.youtube.com/embed/9J3lyF_mOJE',
+      },
+      {
+        type: 'paragraph',
+        text: 'On February 15th, JCF addressed Kefir directly to discuss his thoughts on the state of Last Day On Earth: Survival.  Kefir has responded and JCF goes through that response point-by-point.  Kefir lays out what looks like a great plan for the future and we can only wait to see when their changes take place and whether they follow through on their declarations.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Here\'s the TL;DR version:',
+      },
+      {
+        type: 'ordered-list',
+        listItems:
+        [
+          {text: 'The <L to="/database/65">gas tank</L> will now increase its drop rate on each time you don\'t get it',},
+          {text: 'We can expect updates to Bunker Alpha, but nothing specific',},
+          {text: 'A new forest zone will be introduced to help with resources for building walls',},
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Check out JCF\'s video for the full response',
+      },
+    ]
+  },
 ]

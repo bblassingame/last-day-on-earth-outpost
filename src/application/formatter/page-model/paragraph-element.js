@@ -19,9 +19,13 @@ class ParagraphElement extends PageElement
     this.rawTokens = tokens
   }
 
+  // we need to do a couple of things here.
+  // first we create the text and attributes for this paragraph element
+  // second, we check if we need to create additional child elements and take care of that
   initialize() {
     if(this.rawTokens.length === 0 || this.rawTokens.length === 2) {
-      // log an error if there are no tokens found during initialization
+      // log an error if there are no tokens or two tokens found during initialization.  We should have
+      // 1, 3, or more than 3 tokens.
       console.log('ERROR: no tokens or wrong number of tokens found in intializaion')
       return
     }
@@ -58,13 +62,13 @@ class ParagraphElement extends PageElement
           this.childTokens.push(token)
         }
 
-        this.convertTokens()
+        this.createChildElements()
       }
     }
   }
 
-  convertTokens() {
-    // iterate over the tokens that we have and create elements
+  createChildElements() {
+    // iterate over the tokens that we have and create our child elements
     // two types of elements are supported:  text, tag
     // text elements are just text that do not have any surrounding tags for style or functionality
     // tag elements have text encapsulated by tags for style or functional enhancements
@@ -75,7 +79,7 @@ class ParagraphElement extends PageElement
       tokens.push(currentToken)
       if('<' === currentToken[0]) {
         // we have tag element, so do one of the following:
-        // 1. create a closing tag if it's null, which indicates we're not currently looking for a tag
+        // 1. create a closing tag if it's null, which indicates we don't currently have a tag set
         // 2. create a paragraph element if we find the closing tag we're looking for
         // 3. continue iterating because we found a tag, but it's an embedded tag within our current tag
         if(null === closingTag) {

@@ -28,13 +28,19 @@ class Paragraph extends ParagraphElement
     this.idName = this.paragraphData.idName
 
     if(this.rawText === '') {
-      console.log('ERROR:  It looks like you didn\'t set any child tokens.  Skipping this paragraph')
+      console.log('ERROR:  It looks like you didn\'t set any text.  Skipping this paragraph')
     }
 
     this.tokenize()
-    this.convertTokens()
+    this.createChildElements()
   }
 
+  // this method looks to see if we have any tags in this portion of text.  if we find tags,
+  // we're going to iterate over the text and extract the plain text and the text surrounded
+  // by tags.  We'll add each section (token) to our childTokens array to convert into paragraph elements
+  // Ex:
+  //|        Token       |  Token  |  T | T|        Token        |           Token         |     Token    | T |        Token       |
+  // blah blah blah blah <L to="me">blah</L> blah blah blah blah <OL to="you" event="hello">blah blah blah</OL> blah blah blah blah 
   tokenize() {
     // check if there is a tag in the paragraph and if so, tokenize things out
     if(this.rawText.indexOf(LEFT_ANGLE_BRACKET !== -1)) {
