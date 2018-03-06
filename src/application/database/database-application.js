@@ -19,8 +19,15 @@ class DatabaseApplication extends Component {
   }
 
   componentWillMount() {
-    this.props.onComponentWillMount()
-    // do this check in componentWillMount.  React expects functions that will update state to happen in a lifecyle
+    // don't rely on actions dispatched from this method because React ends up combining all of the
+    // calls to mapStateToProps into a single call.  The result is that a dispatched action that
+    // needs a call to mapStateToProps doesn't get the required call and you don't get the props
+    // updated with the new state.  You need to call you actions after the componentWillMount call
+    // so that you get the mapStateToProps that you're expecting
+  }
+
+  componentDidMount() {
+    // do this check in componentDidMount.  React expects functions that will update state to happen in a lifecyle
     // method aside from render.
     // match the expected path exactly in case later we add a further endpoint that builds off the path
     // accepted paths:  '/database/<itemId>'  OR  '/database/<itemId>/'
@@ -28,12 +35,6 @@ class DatabaseApplication extends Component {
       const tmpArray = this.props.location.pathname.split('/')
       this.props.initializeSelectedItem(tmpArray[2])
     }
-  }
-
-  componentDidUpdate() {
-    // we removed this for now because I couldn't remember why we were fetching items when the component updated.
-    // keeping this in causes us to fetch items on each search so we had to remove it
-    // this.props.onComponentUpdate()
   }
 
   handleBackArrowClick() {
@@ -70,8 +71,10 @@ class DatabaseApplication extends Component {
   }
 
   getItemPanel(routeProps) {
-    // if we're loading, show a loading panel
-    if(true == this.getLoadingStatus())
+    // if we're loading or if we're still waiting on react to mount the component, show the loading panel
+    // - this.getLoadingStatus -> 'true' indicates that we're still fetching items from the server
+    // - this.props.selectedItem -> '-1' indicates that the item panel is still mounting and initializeSelectedItem has not been called
+    if(true == this.getLoadingStatus() || this.props.selectedItem === -1)
       return this.getLoadingPanel()
     
     let selectedItem = this.props.selectedItem
