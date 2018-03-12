@@ -153,20 +153,66 @@ const LaunchPageData = [
       },
       {
         type: 'paragraph',
-        text: 'Here\'s the TL;DR version:',
+        text: 'TL;DR',
       },
       {
         type: 'ordered-list',
         listItems:
         [
           {text: 'The <L to="/database/65">gas tank</L> will now increase its drop rate on each time you don\'t get it',},
-          {text: 'We can expect updates to Bunker Alpha, but nothing specific',},
+          {text: 'We can expect updates to <L to="/strategy/BunkerAlpha">Bunker Alpha</L>, but nothing specific',},
           {text: 'A new forest zone will be introduced to help with resources for building walls',},
         ],
       },
       {
         type: 'paragraph',
         text: 'Check out JCF\'s video for the full response',
+      },
+    ]
+  },
+  {
+    id: 4,
+    contentItems:
+    [
+      {
+        type: 'heading',
+        headingType: 'bloody',
+        text: '(3/10) Hidden Changes',
+      },
+      {
+        type: 'paragraph',
+        text: 'Check out the latest hidden changes between Last Day On Earth: Survival, Jurassic Survival, and Grim Soul: Dark Fantasy Survival.  Kefir! and company have been very busy; the research team has found over 168 hidden changes!',
+      },
+      {
+        type: 'youtube',
+        link: 'https://www.youtube.com/embed/cVLTTzBhdJM',
+      },
+    ]
+  },
+  {
+    id: 5,
+    contentItems:
+    [
+      {
+        type: 'heading',
+        headingType: 'bloody',
+        text: '(3/10) One Company...',
+      },
+      {
+        type: 'paragraph',
+        text: '...To rule them all',
+      },
+      {
+        type: 'paragraph',
+        text: 'JCF blows the lid off the secret - Last Day On Earth: Survival, Jurassic Survival, and Grim Soul: Dark Fantasy Survival are all made by the same parent company!  JCF put out a two part explanation of how he discovered this, all of his evidence, and why this is a good thing in the end.',
+      },
+      {
+        type: 'youtube',
+        link: 'https://www.youtube.com/embed/hHlW3q4L7mg',
+      },
+      {
+        type: 'youtube',
+        link: 'https://www.youtube.com/embed/1iJB1EH04dg',
       },
     ]
   },
