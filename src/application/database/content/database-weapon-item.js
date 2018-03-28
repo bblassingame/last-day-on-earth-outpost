@@ -1,5 +1,6 @@
 import React from 'react'
 
+import DatabaseWeaponTable from './database-weapon-table'
 import DatabaseCraftingTable from './database-crafting-table'
 
 const DatabaseWeaponItem = (props) => {
@@ -22,41 +23,7 @@ const getIngredientPanel = (props) => {
           <p/>
         </div>
       </div>
-      <div>
-        <table className='db-item-weapon-table'>
-          <thead>
-            <tr>
-              <th colSpan='2'>Weapon Stats</th>
-            </tr>
-          </thead>
-          <tbody className='db-item-weapon-table-body'>
-            <tr>
-              <td>Dmg</td>
-              <td className='db-item-weapon-table-body-col2'>10</td>
-            </tr>
-            <tr>
-              <td>Sneak Dmg</td>
-              <td className='db-item-weapon-table-body-col2'>30</td>
-            </tr>
-            <tr>
-              <td>Rate (s)</td>
-              <td className='db-item-weapon-table-body-col2'>1.0</td>
-            </tr>
-            <tr>
-              <td>DPS</td>
-              <td className='db-item-weapon-table-body-col2'>10</td>
-            </tr>
-            <tr>
-              <td>Durability</td>
-              <td className='db-item-weapon-table-body-col2'>60</td>
-            </tr>
-            <tr>
-              <td>Total Dmg</td>
-              <td className='db-item-weapon-table-body-col2'>600</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <DatabaseWeaponTable weaponData={props.weaponData} name={props.name} />
       <DatabaseCraftingTable
         craftable={props.craftable} 
         craftingMaterialsList={props.craftingMaterialsList} 

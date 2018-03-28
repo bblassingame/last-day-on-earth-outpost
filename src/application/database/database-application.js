@@ -82,7 +82,8 @@ class DatabaseApplication extends Component {
       case 'weapon':
         return (<DatabaseWeaponItem 
           categories={this.props.itemCategories[selectedItem]} 
-          craftingMaterialsList={this.getItemCraftingMaterialsList(selectedItem)} 
+          craftingMaterialsList={this.getItemCraftingMaterialsList(selectedItem)}
+          weaponData={this.props.weapons[selectedItem]}
           {...this.props.items[selectedItem]} 
           {...routeProps} />)
       case 'material':

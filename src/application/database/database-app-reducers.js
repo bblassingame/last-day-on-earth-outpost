@@ -34,6 +34,8 @@ const defaultDbAppState = {
   craftIngredients: {},
   workbenchProducts: {},
   workbenchIngredients: {},
+  weapons: {},
+  armor: {},
   // items related to searching
   searchText: '',
   searchActive: false,
@@ -62,6 +64,8 @@ const itemsReducer = (dbAppState = defaultDbAppState, action) => {
         craftIngredients: action.itemData.craftIngredients,
         workbenchProducts: action.itemData.workbenchProducts,
         workbenchIngredients: action.itemData.workbenchIngredients,
+        weapons: action.itemData.weapons,
+        armor: action.itemData.armor,
         // items related to searching
         searchText: action.itemData.searchText,
         searchActive: action.itemData.searchActive,
