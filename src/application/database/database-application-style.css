@@ -10,8 +10,8 @@
 
 .superscript {
   position: relative;
-  top: -0.5em;
-  font-size: 80%;
+  top: -0.6em;
+  font-size: 70%;
 }
 
 /*****************************   Header Styling   *****************************/
@@ -213,8 +213,8 @@
 
 /******************  Weapon Annotations  ******************/
 .db-item-weapon-annotation-container {
-  margin: 7px 0 0 0;
-  font-size: .85em;
+  margin: 0 0 10px 0;
+  font-size: .75em;
 }
 
 .db-item-weapon-annotation-entry {
@@ -224,6 +224,45 @@
 .db-item-weapon-annotation {
   margin: 0 3px 0 0;
   min-width: 10px;
+  top: 0px;
+}
+
+/******************  Armor Data  ******************/
+.db-item-armor-table {
+  margin: 10px 0 0 0;
+  width: 250px;
+}
+
+.db-item-armor-table-body {
+  font-size: .9em;
+}
+
+.db-item-armor-table-body-row {
+  height: 21px;
+}
+
+.db-item-armor-table-body-col2 {
+  text-align: right;
+}
+
+.db-item-armor-table-body-infinity {
+  font-size: 1.5em;
+}
+
+/******************  Armor Annotations  ******************/
+.db-item-armor-annotation-container {
+  margin: 0 0 10px 0;
+  font-size: .75em;
+}
+
+.db-item-armor-annotation-entry {
+  display: flex;
+}
+
+.db-item-armor-annotation {
+  margin: 0 3px 0 0;
+  min-width: 10px;
+  top: 0px;
 }
 
 /******************  Crafting Data  ******************/

@@ -6,6 +6,7 @@ import DatabaseSearch from './content/database-search'
 import DatabaseContent from './content/database-content'
 import DatabaseGenericItem from './content/database-generic-item'
 import DatabaseWeaponItem from './content/database-weapon-item'
+import DatabaseArmorItem from './content/database-armor-item'
 import DatabaseFooter from './footer/database-footer'
 
 import './database-application-style.css'
@@ -86,8 +87,15 @@ class DatabaseApplication extends Component {
           weaponData={this.props.weapons[selectedItem]}
           {...this.props.items[selectedItem]} 
           {...routeProps} />)
-      case 'material':
       case 'armor':
+        return (<DatabaseArmorItem 
+          categories={this.props.itemCategories[selectedItem]} 
+          craftingMaterialsList={this.getItemCraftingMaterialsList(selectedItem)}
+          armorData={this.props.armor[selectedItem]}
+          {...this.props.items[selectedItem]} 
+          {...routeProps} />
+        )
+      case 'material':
       case 'provision':
       default:
         return (<DatabaseGenericItem 
