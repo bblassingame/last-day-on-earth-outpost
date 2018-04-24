@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import DatabaseCraftingTable from './database-crafting-table'
+import DatabaseItemImagePanel from './database-item-image-panel'
 
 class DatabaseGenericItem extends Component {
   constructor(props) {
@@ -19,10 +20,7 @@ class DatabaseGenericItem extends Component {
         <h1 className='db-item-info-header'>{this.props.name}</h1>
         <p className='db-item-category-text'>categories:  {this.props.categories.map((category, i) => <span key={i} className='db-item-category'>{category}</span>)}</p>
         <div>
-          <div className='db-item-pic-desc-container'>
-            <img className='db-item-pic' src={this.props.img} />
-            <p className='db-item-desc'>&quot;{this.props.inGameDescription}&quot;</p>
-          </div>
+          <DatabaseItemImagePanel inGameStatus={this.props.inGameStatus} img={this.props.img} inGameDescription={this.props.inGameDescription} />
           <div>
             <p>{this.props.outpostDescription}</p>
           </div>
