@@ -15,17 +15,17 @@ const DatabaseHeader = (props) => {
       </div>
       <div className='db-header-nav-container-wrapper'>
         <div className='db-header-nav-container'>
-          <Link to='/forum' className='db-header-button'>
+          <Link to='/forum' className='db-header-button forum-background-image'>
             <div>
               <p>Forum</p>
             </div>
           </Link>
-          <Link to='/strategy' className='db-header-button'>
+          <Link to='/strategy' className='db-header-button strategy-background-image'>
             <div>
               <p>Strategy</p>
             </div>
           </Link>
-          <Link to='/multiplayer' className='db-header-button'>
+          <Link to='/multiplayer' className='db-header-button multiplayer-background-image'>
             <div>
               <p>Multiplayer</p>
             </div>

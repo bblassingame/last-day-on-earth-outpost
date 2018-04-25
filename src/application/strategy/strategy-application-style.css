@@ -47,7 +47,7 @@
 }
 
 .strategy-header-button {
-  background-color: slategrey;
+  background-color: black;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -60,6 +60,19 @@
   justify-content: center;
   -webkit-align-items: center;
   align-items: center;
+  margin: 0 1px;
+}
+
+.forum-background-image {
+  background: url("./header/forum-background.png") center no-repeat black;
+}
+
+.multiplayer-background-image {
+  background: url("./header/multiplayer-background.png") center no-repeat black;
+}
+
+.database-background-image {
+  background: url("./header/database-background.png") center no-repeat black;
 }
 
 .strategy-header-img-container {

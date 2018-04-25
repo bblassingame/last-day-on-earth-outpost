@@ -16,17 +16,17 @@ const StrategyHeader = (props) => {
       </div>
       <div className='strategy-header-nav-container-wrapper'>
         <div className='strategy-header-nav-container'>
-          <Link to='/forum' className='strategy-header-button'>
+          <Link to='/forum' className='strategy-header-button forum-background-image'>
             <div>
               <p>Forum</p>
             </div>
           </Link>
-          <Link to='/multiplayer' className='strategy-header-button'>
+          <Link to='/multiplayer' className='strategy-header-button multiplayer-background-image'>
             <div>
               <p>Multiplayer</p>
             </div>
           </Link>
-          <Link to='/database' className='strategy-header-button'>
+          <Link to='/database' className='strategy-header-button database-background-image'>
             <div>
               <p>Database</p>
             </div>

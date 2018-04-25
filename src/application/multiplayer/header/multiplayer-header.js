@@ -16,17 +16,17 @@ const MultiplayerHeader = () => {
       </div>
       <div className='multiplayer-header-nav-container-wrapper'>
         <div className='multiplayer-header-nav-container'>
-          <Link to='/forum' className='multiplayer-header-button'>
+          <Link to='/forum' className='multiplayer-header-button forum-background-image'>
             <div>
               <p>Forum</p>
             </div>
           </Link>
-          <Link to='/strategy' className='multiplayer-header-button'>
+          <Link to='/strategy' className='multiplayer-header-button strategy-background-image'>
             <div>
               <p>Strategy</p>
             </div>
           </Link>
-          <Link to='/database' className='multiplayer-header-button'>
+          <Link to='/database' className='multiplayer-header-button database-background-image'>
             <div>
               <p>Database</p>
             </div>
