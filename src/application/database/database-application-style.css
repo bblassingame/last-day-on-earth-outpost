@@ -74,6 +74,7 @@
   -webkit-align-items: center;
   align-items: center;
   margin: 0 1px;
+  border-radius: 2px 2px 5px 5px;
 }
 
 .forum-background-image {
