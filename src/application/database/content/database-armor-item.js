@@ -15,7 +15,7 @@ const DatabaseArmorItem = (props) => {
           <p/>
         </div>
       </div>
-      <DatabaseArmorTable armorData={props.armorData} name={props.name} />
+      {getDatabaseArmorTable(props.armorData, props.name)}
       <DatabaseCraftingTable
         craftable={props.craftable} 
         craftingMaterialsList={props.craftingMaterialsList} 
@@ -23,6 +23,13 @@ const DatabaseArmorItem = (props) => {
         craftRequiredLevel={props.craftRequiredLevel} />
     </div>
   )
+}
+
+const getDatabaseArmorTable = (armorData, name) => {
+  if('undefined' === typeof(armorData))
+    return null
+  
+  return <DatabaseArmorTable armorData={armorData} name={name} />
 }
 
 export default DatabaseArmorItem
