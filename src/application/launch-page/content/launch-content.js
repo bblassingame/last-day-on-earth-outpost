@@ -216,4 +216,23 @@ const LaunchPageData = [
       },
     ]
   },
+  {
+    id: 6,
+    contentItems:
+    [
+      {
+        type: 'heading',
+        headingType: 'bloody',
+        text: '(4/20) Pay To Play!',
+      },
+      {
+        type: 'paragraph',
+        text: 'Is Kefir! doubling down on their pay to play strategy?  Does this hurt their chances of growing the game and contuing with the success and growth they\'ve experienced?  JCF takes a look at the latest changes along with Kefir!\'s apparent strategic decision to continue with their pay to play business plan',
+      },
+      {
+        type: 'youtube',
+        link: 'https://www.youtube.com/embed/gZf7pIG2SNs',
+      },
+    ]
+  },
 ]
