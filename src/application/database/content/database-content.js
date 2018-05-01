@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import { getURLString } from '../../utility/regex-utils'
+
 class DatabaseContent extends Component {
   constructor(props) {
     super(props)
@@ -41,7 +43,7 @@ class DatabaseContent extends Component {
     const item = items[index]
     return (
       <li key={item.itemId} className='db-content-list-entry'>
-        <Link key={item.itemId} to={`/database/${item.itemId}`} onClick={() => this.props.onItemClick(item.itemId)} >
+        <Link key={item.itemId} to={`/database/${getURLString(item.name)}`} onClick={() => this.props.onItemClick(item.itemId)} >
           <div className='db-content-list-entry-data-container'>
             <img src={item.thumbnail} />
             <span className='db-content-list-entry-name'>{item.name}</span>
