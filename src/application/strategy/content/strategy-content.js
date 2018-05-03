@@ -1313,12 +1313,12 @@ const strategyData = [
       {
         type: 'heading',
         headingType: 'subheading',
-        text: 'Beta Update 1.6.4',
+        text: 'Beta Update 1.6.3 (Skipped)',
       },
       {
         type: 'heading',
         headingType: 'subheading',
-        text: 'Beta Update 1.6.3 (Skipped)',
+        text: 'Beta Update 1.6.4',
       },
       {
         type: 'ordered-list',
