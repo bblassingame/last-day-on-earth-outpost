@@ -34,6 +34,8 @@ const defaultDbAppState = {
   craftIngredients: {},
   workbenchProducts: {},
   workbenchIngredients: {},
+  recycleables: {},
+  recycleProducts: {},
   weapons: {},
   armor: {},
   // items related to searching
@@ -64,6 +66,8 @@ const itemsReducer = (dbAppState = defaultDbAppState, action) => {
         craftIngredients: action.itemData.craftIngredients,
         workbenchProducts: action.itemData.workbenchProducts,
         workbenchIngredients: action.itemData.workbenchIngredients,
+        recycleables: action.itemData.recycleables,
+        recycleProducts: action.itemData.recycleProducts,
         weapons: action.itemData.weapons,
         armor: action.itemData.armor,
         // items related to searching
