@@ -27,7 +27,19 @@ const multiplayerData = [
       },
       {
         type: 'paragraph',
-        text: 'Unfortunately, since Last Day on Earth is still in Beta, multiplayer does not yet exist in the game. The Radio Tower (which is the key to unlocking multiplayer) cannot actually be built because some of the items required to craft it are also not in the game yet <L to="/multiplayer#learn-more">(Learn about other things that don’t exist yet)</L>. The players that attack you while you are farming in the green, yellow and red zones are AI players… they are just bots serving as placeholders until the real game is released. The player bases around your base are also placeholders and are the same for every person playing Last Day on Earth.',
+        text: 'Just recently Last Day on Earth introduced their first version of multiplayer (Sector 7) which does not have clans or even PvP. If you would like to learn how to access the multiplayer section of Last Day on Earth, please watch the first 5 minutes of this video.',
+      },
+      {
+        type: 'youtube',
+        link: 'https://www.youtube.com/embed/M3tQ4FgRnA8?start=372'
+      },
+      {
+        type: 'paragraph',
+        text: 'And recently they added co-op tasks...',
+      },
+      {
+        type: 'paragraph',
+        text: 'Because multiplayer is unfinished, the Radio Tower (which is the key to unlocking multiplayer) cannot actually be built because some of the items required to craft it are also not in the game yet <L to="/multiplayer#learn-more">(Learn about other things that don’t exist yet)</L>. The players that attack you while you are farming in the green, yellow and red zones are AI players… they are just bots serving as placeholders until the real game is released. The player bases around your base are also placeholders and are the same for every person playing Last Day on Earth.',
       },
       {
         type: 'paragraph',
@@ -221,7 +233,7 @@ const multiplayerData = [
       },
       {
         type: 'paragraph',
-        text: 'If you did not know that Multiplayer did not exist in the game, you might be interested to know that there are dozens of other things in Last Day on Earth that do not exist in the game even though it seems like they do. This video list everything that does not exist in the game. ',
+        text: 'If you did not know that Multiplayer was not implemented in the game, you might be interested to know that there are dozens of other things in Last Day on Earth that do not exist in the game even though it seems like they do. This video list everything that does not exist in the game. ',
       },
       {
         type: 'youtube',
