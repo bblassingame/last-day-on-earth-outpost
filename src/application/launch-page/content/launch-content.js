@@ -310,16 +310,19 @@ const LaunchPageData = [
         text: 'Here are some of the things we are currently working on to improve this website:',
       },
       {
-        type: 'ordered-list',
+        type: 'list',
         listItems:
         [
           {
+            type: 'text',
             text: 'Using Kefir’s Massive Giveaway to get content for the resource section under strategy',
           },
           {
+            type: 'text',
             text: 'Adding the Forum and integrating it with the rest of the website',
           },
           {
+            type: 'text',
             text: 'Adding Locations and Skills to the Database',
           },
         ],

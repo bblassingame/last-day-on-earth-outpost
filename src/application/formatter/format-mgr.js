@@ -26,7 +26,7 @@ class FormatMgr
         this.page.createYoutube(item)
         break
   
-      case 'ordered-list':
+      case 'list':
         this.page.createList(item)
         break
   

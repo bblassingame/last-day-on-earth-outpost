@@ -17,18 +17,26 @@ class HtmlList extends Component {
   }
 
   initialize() {
-    this.props.listPageElement.listItems.map( (item, i) => this.createHtmlListItem(item, i) )
+    this.props.listPageElement.listItems.map( (item, i) => this.createListItems(item, i) )
   }
 
-  createHtmlListItem(item, index) {
-    this.htmlListItems.push(<HtmlListItem key={index} listItemPageElement={item} />)
+  createListItems(item, index) {
+    if(item.getType() === 'List') {
+      this.htmlListItems.push(<HtmlList key={index} listPageElement={item} />)
+    }
+    else if(item.getType() === 'ListItemText' ) {
+      this.htmlListItems.push(<HtmlListItem key={index} listItemPageElement={item} />)
+    }
+    else {
+      console.log('HTML Model Error:  Unknown list item type')
+    }
   }
 
   render() {
     return (
-      <ol className='formatted-ordered-list'>
+      <ul className='formatted-ordered-list'>
         {this.htmlListItems}
-      </ol>
+      </ul>
     )
   }
 }

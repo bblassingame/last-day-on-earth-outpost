@@ -4,7 +4,7 @@ import ListItemElement from './list-item-element'
 const LEFT_ANGLE_BRACKET = '<'
 const RIGHT_ANGLE_BRACKET = '>'
 
-class ListItem {
+class ListItemText {
   constructor() {
     this.rawProperties = {}
     this.rawText = ''
@@ -16,7 +16,7 @@ class ListItem {
   }
 
   getType() {
-    return 'ListItem'
+    return 'ListItemText'
   }
 
   setRawProperties(properties) {
@@ -127,4 +127,4 @@ class ListItem {
   }
 }
 
-export default ListItem
+export default ListItemText

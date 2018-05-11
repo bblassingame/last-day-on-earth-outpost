@@ -28,7 +28,7 @@ class Page
 
   createList(rawElementData) {
     let list = new List()
-    list.setRawListItems(rawElementData.listItems)
+    list.setRawProperties(rawElementData.listItems)
     list.initialize()
     this.pageElements.push(list)
   }
