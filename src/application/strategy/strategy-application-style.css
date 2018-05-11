@@ -108,6 +108,80 @@
   margin: 0 0 7px 5px;
 }
 
+/*****************************   Launch Page Nav Styling   *****************************/
+.strategy-nav-button-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px 0 0;
+}
+
+.strategy-nav-button-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.strategy-nav-button {
+  background-color: #2d2e29;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0 20px 20px 0;
+}
+
+/* .strategy-nav-button-basedesign {
+  background: url("./nav/forum.png") center/contain no-repeat;
+}
+
+.strategy-nav-button-bunkers {
+  background: url("./nav/strategy.png") center/contain no-repeat;
+}
+
+.strategy-nav-button-multiplayer {
+  background: url("./nav/multiplayer.png") center/contain no-repeat;
+}
+
+.strategy-nav-button-updates {
+  background: url("./nav/database.png") center/contain no-repeat;
+} */
+
+/* .strategy-nav-button-events {
+  background: url("./nav/forum.png") center/contain no-repeat;
+}
+
+.strategy-nav-button-aibases {
+  background: url("./nav/strategy.png") center/contain no-repeat;
+}
+
+.strategy-nav-button-tipsandtricks {
+  background: url("./nav/multiplayer.png") center/contain no-repeat;
+}
+
+.strategy-nav-button-resources {
+  background: url("./nav/database.png") center/contain no-repeat;
+} */
+
+.strategy-nav-button-text {
+  margin: 0 0 2px;
+}
+
+
 /*****************************   Footer Styling   *****************************/
 .strategy-footer-container {
   height: 40px;

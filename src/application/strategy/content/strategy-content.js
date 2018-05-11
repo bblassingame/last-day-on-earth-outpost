@@ -7,29 +7,75 @@ const StrategyContent = (props) => {
   return (
     <div className='strategy-content-container'>
       <h1 className='strategy-heading-title'>LDOE: Strategy</h1>
-      <Route key={7} exact path='/strategy' render={() => renderArticleLinks(props.onArticleClick)} />
+      <Route key={8} exact path='/strategy' render={() => renderArticleLinks(props.onArticleClick)} />
       <Route key={0} path='/strategy/BaseDesign' render={(routeProps) => <StrategyArticle articleData={strategyData[0]} {...routeProps} />} />
-      <Route key={1} path='/strategy/BunkerAlpha' render={(routeProps) => <StrategyArticle articleData={strategyData[1]} {...routeProps} />} />
+      <Route key={1} path='/strategy/Bunkers' render={(routeProps) => <StrategyArticle articleData={strategyData[1]} {...routeProps} />} />
       <Route key={2} path='/strategy/Mulitplayer' render={(routeProps) => <StrategyArticle articleData={strategyData[2]} {...routeProps} />} />
       <Route key={3} path='/strategy/Updates' render={(routeProps) => <StrategyArticle articleData={strategyData[3]} {...routeProps} />} />
       <Route key={4} path='/strategy/Events' render={(routeProps) => <StrategyArticle articleData={strategyData[4]} {...routeProps} />} />
       <Route key={5} path='/strategy/AIBases' render={(routeProps) => <StrategyArticle articleData={strategyData[5]} {...routeProps} />} />
       <Route key={6} path='/strategy/TipsAndTricks' render={(routeProps) => <StrategyArticle articleData={strategyData[6]} {...routeProps} />} />
+      <Route key={7} path='/strategy/Resources' render={(routeProps) => <StrategyArticle articleData={strategyData[7]} {...routeProps} />} />
     </div>
   )
 }
 
 const renderArticleLinks = (onArticleClick) => {
   return (
-    [
-      <Link key={0} to='/strategy/BaseDesign' className='strategy-article-link' onClick={() => onArticleClick('BaseDesign')}>Base Design</Link>,
-      <Link key={1} to='/strategy/BunkerAlpha' className='strategy-article-link' onClick={() => onArticleClick('BunkerAlpha')}>Bunker Alpha</Link>,
-      <Link key={2} to='/strategy/Mulitplayer' className='strategy-article-link' onClick={() => onArticleClick('Mulitplayer')}>Mulitplayer</Link>,
-      <Link key={3} to='/strategy/Updates' className='strategy-article-link' onClick={() => onArticleClick('Updates')}>Updates</Link>,
-      <Link key={4} to='/strategy/Events' className='strategy-article-link' onClick={() => onArticleClick('Events')}>Events</Link>,
-      <Link key={5} to='/strategy/AIBases' className='strategy-article-link' onClick={() => onArticleClick('AIBases')}>AI Bases</Link>,
-      <Link key={6} to='/strategy/TipsAndTricks' className='strategy-article-link' onClick={() => onArticleClick('TipsAndTricks')}>Tips &amp; Tricks</Link>,
-    ]
+    <div className='strategy-nav-button-container'>
+      <div className='strategy-nav-button-row'>
+        <div className='strategy-nav-button-row'>
+          <Link to='/strategy/BaseDesign' onClick={() => onArticleClick('BaseDesign')}>
+            <div className='strategy-nav-button strategy-nav-button-basedesign'>
+              <p className='strategy-nav-button-text'>Base Design</p>
+            </div>
+          </Link>
+          <Link to='/strategy/Bunkers' onClick={() => onArticleClick('Bunkers')}>
+            <div className='strategy-nav-button strategy-nav-button-bunkers'>
+              <p className='strategy-nav-button-text'>Bunkers</p>
+            </div>
+          </Link>
+        </div>
+        <div className='strategy-nav-button-row'>
+          <Link to='/strategy/Mulitplayer' onClick={() => onArticleClick('Mulitplayer')}>
+            <div className='strategy-nav-button strategy-nav-button-multiplayer'>
+              <p className='strategy-nav-button-text'>Multiplayer</p>
+            </div>
+          </Link>
+          <Link to='/strategy/Updates' onClick={() => onArticleClick('Updates')}>
+            <div className='strategy-nav-button strategy-nav-button-updates'>
+              <p className='strategy-nav-button-text'>Updates</p>
+            </div>
+          </Link>
+        </div>
+      </div>
+      <div className='strategy-nav-button-row'>
+        <div className='strategy-nav-button-row'>
+          <Link to='/strategy/Events' onClick={() => onArticleClick('Events')}>
+            <div className='strategy-nav-button strategy-nav-button-events'>
+              <p className='strategy-nav-button-text'>Events</p>
+            </div>
+          </Link>
+          <Link to='/strategy/AIBases' onClick={() => onArticleClick('AIBases')}>
+            <div className='strategy-nav-button strategy-nav-button-aibases'>
+              <p className='strategy-nav-button-text'>AI Bases</p>
+            </div>
+          </Link>
+        </div>
+        <div className='strategy-nav-button-row'>
+          <Link to='/strategy/TipsAndTricks' onClick={() => onArticleClick('TipsAndTricks')}>
+            <div className='strategy-nav-button strategy-nav-button-tipsandtricks'>
+              <p className='strategy-nav-button-text'>Tips &amp; Tricks</p>
+            </div>
+          </Link>
+          <Link to='/strategy/Resources' onClick={() => onArticleClick('Resources')}>
+            <div className='strategy-nav-button strategy-nav-button-resources'>
+              <p className='strategy-nav-button-text'>Resources</p>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -3867,6 +3913,22 @@ const strategyData = [
       {
         type: 'youtube',
         link: 'https://www.youtube.com/embed/e-VUV1ULmy4?start=88',
+      },
+    ],
+  },  
+  {
+    id: 7,
+    title: 'Resources',
+    contentItems:
+    [
+      {
+        type: 'heading',
+        headingType: 'title',
+        text: 'Resources',
+      },
+      {
+        type: 'paragraph',
+        text: 'Stay tuned!  We will begin filling out this article with submissions from winners of the Kefir! giveaway...',
       },
     ],
   },  
