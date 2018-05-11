@@ -81,6 +81,10 @@ margin: 0 0 2px
   font-size: .9em;
 }
 
+.formatted-text-quote {
+  font-style: italic;
+}
+
 /* List Styles */
 .formatted-ordered-list {
   margin: 0 0 10px 45px;

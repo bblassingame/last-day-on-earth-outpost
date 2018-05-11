@@ -64,8 +64,14 @@ class HtmlParagraphElement extends Component {
       case 'OL': // outbound link to another site
         return this.renderOutboundLink()
       
-      case 'H': // highlight the encasulated text
+      case 'H': // highlight the encapsulated text
         return this.renderHighlighted()
+      
+      case 'B': // bolded text
+        return this.renderBold()
+      
+      case 'I': // text that should appear in italics and inset a little bit
+        return this.renderQuote()
       
       default:
         console.log('ERROR:  Unknown tag encountered in HTML render')
@@ -93,6 +99,14 @@ class HtmlParagraphElement extends Component {
 
   renderHighlighted() {
     return <span>;nbspTAG NOT SUPPORTED;nbsp</span>
+  }
+
+  renderBold() {
+    return <b>{this.text}</b>
+  }
+
+  renderQuote() {
+    return <i className='formatted-text-quote'>{this.text}</i>
   }
 
 }
