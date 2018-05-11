@@ -23,6 +23,7 @@ export default LaunchContent
 const LaunchPageData = [
   {
     id: 0,
+    title: 'Welcome!',
     contentItems: 
     [
       {
@@ -82,6 +83,7 @@ const LaunchPageData = [
   },
   {
     id: 1,
+    title: 'DEV BLOG',
     contentItems:
     [
       {
@@ -121,6 +123,7 @@ const LaunchPageData = [
   },
   {
     id: 2,
+    title: 'LDOE Communities',
     contentItems:
     [
       {
@@ -148,6 +151,7 @@ const LaunchPageData = [
   },
   {
     id: 3,
+    title: 'LDOE Videos',
     contentItems:
     [
       {
@@ -163,6 +167,7 @@ const LaunchPageData = [
   },
   {
     id: 4,
+    title: 'Current Update & Hidden Changes!',
     contentItems:
     [
       {
@@ -182,25 +187,7 @@ const LaunchPageData = [
   },
   {
     id: 5,
-    contentItems:
-    [
-      {
-        type: 'heading',
-        headingType: 'bloody',
-        text: 'Current Update & Hidden Changes!'
-      },
-      {
-        type: 'paragraph',
-        text: 'Update 1.8.3 was a “Multiplayer Update” adding the ability to cooperatively shoot things in Sector 7. It wasn’t the biggest update, but Last Day on Earth has been coming out with a lot of updates lately which is good.',
-      },
-      {
-        type: 'youtube',
-        link: 'https://www.youtube.com/embed/fKnoTDP1a80?start=6',
-      },
-    ]
-  },
-  {
-    id: 6,
+    title: 'One Company...',
     contentItems:
     [
       {
@@ -231,7 +218,8 @@ const LaunchPageData = [
     ]
   },
   {
-    id: 7,
+    id: 6,
+    title: 'JCF Letters',
     contentItems:
     [
       {
@@ -274,7 +262,8 @@ const LaunchPageData = [
     ]
   },
   {
-    id: 8,
+    id: 7,
+    title: 'Pay To Play!',
     contentItems:
     [
       {
@@ -293,7 +282,8 @@ const LaunchPageData = [
     ]
   },
   {
-    id: 9,
+    id: 8,
+    title: 'Website Update',
     contentItems:
     [
       {
