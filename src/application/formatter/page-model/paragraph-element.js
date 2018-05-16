@@ -1,5 +1,7 @@
 import PageElement from './page-element'
 
+import { parseAttributes } from '../../utility/regex-utils'
+
 class ParagraphElement extends PageElement
 {
   constructor() {
@@ -34,19 +36,29 @@ class ParagraphElement extends PageElement
       this.displayText = this.rawTokens[0] 
     }
     else if(this.rawTokens[0].charAt(0) === '<') {
-      // extract any attributes that we have with the tag
+      // strip off the greater/less than brackets
       let strippedTag = this.rawTokens[0].slice(1, -1)
-      let attrTokens = strippedTag.split(' ')
+      
+      // check for a space.  if we have a space, grab the tag and attributes.  otherwise just grabb the tag.
+      const index = strippedTag.indexOf(' ')
+      if(-1 !== index) {
+        // grab the tag first, the get the rest of the attributes
+        this.attributes['tag'] = strippedTag.substring(0, index)
 
-      // set the tag so that we know what to convert to
-      this.attributes['tag'] = attrTokens[0]
+        // split out each set of attributes and values within the tag
+        //let attrTokens = strippedTag.substring(index + 1).split(/\w+="[^"]"/)
+        let attrTokens = parseAttributes(strippedTag.substring(index + 1))
 
-      // begin iterating after the first token since that's the actual tag
-      for(let i = 1 ; i < attrTokens.length ; i++) {
-        let attrAndValue = attrTokens[i].split('=') // split the attribute and its value EX:  src="http://www.google.com"
-        const attr = attrAndValue[0] // the attribute is before the equals  Ex: attr = src
-        const value = attrAndValue[1].slice(1, -1) // the value is after the equals and we slice off the quotes  Ex: value = http://www.google.com
-        this.attributes[attr] = value
+        // begin iterating after the first token since that's the actual tag
+        for(let i = 0 ; i < attrTokens.length ; i++) {
+          let attrAndValue = attrTokens[i].split('=') // split the attribute and its value EX:  src="http://www.google.com"
+          const attr = attrAndValue[0] // the attribute is before the equals  Ex: attr = src
+          const value = attrAndValue[1].slice(1, -1) // the value is after the equals and we slice off the quotes  Ex: value = http://www.google.com
+          this.attributes[attr] = value
+        }
+      }
+      else {
+        this.attributes['tag'] = strippedTag
       }
 
       // either set the text if we're just a tag element or create child elements if we're complex

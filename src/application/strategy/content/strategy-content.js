@@ -2615,7 +2615,7 @@ const strategyData = [
       },
       {
         type: 'paragraph',
-        text: '',
+        text: ' ',
       },
       {
         type: 'list',
@@ -2872,7 +2872,7 @@ const strategyData = [
       },
       {
         type: 'paragraph',
-        text: '',
+        text: ' ',
       },
       {
         type: 'list',

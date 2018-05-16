@@ -97,27 +97,27 @@ const LaunchPageData = [
       },
       {
         type: 'paragraph',
-        text: '<L to="https://www.facebook.com/lastdayonearthgame/">Facebook Page</L>',
+        text: '<OL to="https://www.facebook.com/lastdayonearthgame/" eventLabel="LDOE Facebook">Facebook Page</OL>',
       },
       {
         type: 'paragraph',
-        text: '<L to="https://discord.gg/8KSTu5Q">Official Discord</L>',
+        text: '<OL to="https://discord.gg/8KSTu5Q" eventLabel="LDOE Discord">Official Discord</OL>',
       },
       {
         type: 'paragraph',
-        text: '<L to="https://twitter.com/lastdaysurvival">Twitter</L>',
+        text: '<OL to="https://twitter.com/lastdaysurvival" eventLabel="LDOE Twitter">Twitter</OL>',
       },
       {
         type: 'paragraph',
-        text: '<L to="https://www.reddit.com/r/LastDayonEarthGame">Reddit</L>',
+        text: '<OL to="https://www.reddit.com/r/LastDayonEarthGame" eventLabel="LDOE Reddit">Reddit</OL>',
       },
       {
         type: 'paragraph',
-        text: '<L to="https://www.instagram.com/lastdayonearthgame/">Instagram</L>',
+        text: '<OL to="https://www.instagram.com/lastdayonearthgame/" eventLabel="LDOE Instagram">Instagram</OL>',
       },
       {
         type: 'paragraph',
-        text: '<L to="https://t.me/lastdayonearthsurvival">Telegram</L>',
+        text: '<OL to="https://t.me/lastdayonearthsurvival" eventLabel="LDOE Telegram">Telegram</OL>',
       },      
     ]
   },
@@ -137,15 +137,15 @@ const LaunchPageData = [
       },
       {
         type: 'paragraph',
-        text: '<L to="https://www.facebook.com/groups/LastDayOnEarthGC/">Facebook Group (global community)</L>',
+        text: '<OL to="https://www.facebook.com/groups/LastDayOnEarthGC/" eventLabel="LDOE Facebook">Facebook Group (global community)</OL>',
       },      
       {
         type: 'paragraph',
-        text: '<L to="https://www.reddit.com/r/LDESurvival/">Reddit Forum (LDESurvival)</L>',
+        text: '<OL to="https://www.reddit.com/r/LDESurvival/" eventLabel="LDOE Reddit">Reddit Forum (LDESurvival)</OL>',
       },      
       {
         type: 'paragraph',
-        text: '<L to="https://discord.gg/CXAa5gZ">Discord (JCF’s Alliance of Clans)</L>',
+        text: '<OL to="https://discord.gg/CXAa5gZ" eventLabel="JCF Discord">Discord (JCF’s Alliance of Clans)</OL>',
       },      
     ]
   },
@@ -237,7 +237,7 @@ const LaunchPageData = [
       },
       {
         type: 'paragraph',
-        text: '',
+        text: ' ',
       },
       {
         type: 'paragraph',
@@ -249,7 +249,7 @@ const LaunchPageData = [
       },
       {
         type: 'paragraph',
-        text: '',
+        text: ' ',
       },
       {
         type: 'paragraph',
