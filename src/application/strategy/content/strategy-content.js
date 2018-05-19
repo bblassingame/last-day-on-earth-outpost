@@ -16,6 +16,7 @@ const StrategyContent = (props) => {
       <Route key={5} path='/strategy/AIBases' render={(routeProps) => <StrategyArticle articleData={strategyData[5]} {...routeProps} />} />
       <Route key={6} path='/strategy/TipsAndTricks' render={(routeProps) => <StrategyArticle articleData={strategyData[6]} {...routeProps} />} />
       <Route key={7} path='/strategy/Resources' render={(routeProps) => <StrategyArticle articleData={strategyData[7]} {...routeProps} />} />
+      <Route key={9} path='/strategy/Dogs' render={(routeProps) => <StrategyArticle articleData={strategyData[8]} {...routeProps} />} />
     </div>
   )
 }
@@ -71,6 +72,15 @@ const renderArticleLinks = (onArticleClick) => {
           <Link to='/strategy/Resources' onClick={() => onArticleClick('Resources')}>
             <div className='strategy-nav-button strategy-nav-button-resources'>
               <p className='strategy-nav-button-text'>Resources</p>
+            </div>
+          </Link>
+        </div>
+      </div>
+      <div className='strategy-nav-button-row'>
+        <div className='strategy-nav-button-row'>
+          <Link to='/strategy/Dogs' onClick={() => onArticleClick('Dogs')}>
+            <div className='strategy-nav-button strategy-nav-button-dogs'>
+              <p className='strategy-nav-button-text'>Dogs</p>
             </div>
           </Link>
         </div>
@@ -3927,11 +3937,36 @@ const strategyData = [
         text: 'Resources',
       },
       {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Acid Bath',
+      },
+      {
+        type: 'paragraph',
+        text: 'Where is the best place to get this item?  I am not sure but I need to add some text here so that I can have something that wraps and gives me a better idea of what the full layout will look like as I get more of this stuff in here.',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Yours Truly',
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: 'Dogs',
+    contentItems:
+    [
+      {
+        type: 'heading',
+        headingType: 'title',
+        text: 'Dogs',
+      },
+      {
         type: 'paragraph',
         text: 'Stay tuned!  We will begin filling out this article with submissions from winners of the Kefir! giveaway...',
       },
-    ],
-  },  
+    ]
+  },
 ]
 
 

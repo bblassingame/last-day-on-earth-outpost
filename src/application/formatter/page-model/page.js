@@ -2,6 +2,7 @@ import Paragraph from './paragraph'
 import Youtube from './youtube'
 import List from './list'
 import Heading from './heading'
+import Acknowledgement from './acknowledgement'
 
 class Page
 {
@@ -38,6 +39,13 @@ class Page
     heading.setRawProperties(rawElementData)
     heading.initialize()
     this.pageElements.push(heading)
+  }
+
+  createAcknowledgement(rawAcknowledgementData) {
+    let acknowledgement = new Acknowledgement()
+    acknowledgement.setRawProperties(rawAcknowledgementData)
+    acknowledgement.initialize()
+    this.pageElements.push(acknowledgement)
   }
 }
 

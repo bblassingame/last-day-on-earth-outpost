@@ -29,6 +29,10 @@ class FormatMgr
       case 'list':
         this.page.createList(item)
         break
+      
+      case 'acknowledgement':
+        this.page.createAcknowledgement(item)
+        break
   
       default:
         console.log('unknown page element encountered')

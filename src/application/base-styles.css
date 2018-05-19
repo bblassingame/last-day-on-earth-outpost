@@ -112,3 +112,9 @@ margin: 0 0 2px
   margin: 5px 0 0 0;
 }
 
+/* Acknowledgement Styles */
+.formatted-acknowledgement-text {
+  margin: 0 20px 0 0;
+  text-align: right;
+  font-style: italic;
+}

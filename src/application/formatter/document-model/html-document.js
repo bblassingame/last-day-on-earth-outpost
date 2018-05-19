@@ -4,6 +4,7 @@ import HtmlParagraph from './html-paragraph'
 import HtmlList from './html-list'
 import HtmlYoutube from './html-youtube'
 import HtmlHeading from './html-heading'
+import HtmlAcknowledgement from './html-acknowledgement'
 
 class HtmlDocument extends Component {
   constructor() {
@@ -39,6 +40,10 @@ class HtmlDocument extends Component {
         
         case 'Heading':
           this.htmlDocElements.push(<HtmlHeading key={i} headingPageElement={pageElement} />)
+          break
+
+        case 'Acknowledgement':
+          this.htmlDocElements.push(<HtmlAcknowledgement key={i} acknowledgementPageElement={pageElement} />)
           break
 
         default:
