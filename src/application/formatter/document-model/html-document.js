@@ -5,6 +5,7 @@ import HtmlList from './html-list'
 import HtmlYoutube from './html-youtube'
 import HtmlHeading from './html-heading'
 import HtmlAcknowledgement from './html-acknowledgement'
+import HtmlImage from './html-image'
 
 class HtmlDocument extends Component {
   constructor() {
@@ -44,6 +45,13 @@ class HtmlDocument extends Component {
 
         case 'Acknowledgement':
           this.htmlDocElements.push(<HtmlAcknowledgement key={i} acknowledgementPageElement={pageElement} />)
+          break
+
+        case 'Image':
+          console.log('creating HTML Image')
+          console.log(pageElement)
+          this.htmlDocElements.push(<HtmlImage key={i} imagePageElement={pageElement} />)
+          console.log(this.htmlDocElements)
           break
 
         default:

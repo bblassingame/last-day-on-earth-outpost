@@ -16,7 +16,7 @@ const StrategyContent = (props) => {
       <Route key={5} path='/strategy/AIBases' render={(routeProps) => <StrategyArticle articleData={strategyData[5]} {...routeProps} />} />
       <Route key={6} path='/strategy/TipsAndTricks' render={(routeProps) => <StrategyArticle articleData={strategyData[6]} {...routeProps} />} />
       <Route key={7} path='/strategy/Resources' render={(routeProps) => <StrategyArticle articleData={strategyData[7]} {...routeProps} />} />
-      <Route key={9} path='/strategy/Dogs' render={(routeProps) => <StrategyArticle articleData={strategyData[8]} {...routeProps} />} />
+      <Route key={9} path='/strategy/Pets' render={(routeProps) => <StrategyArticle articleData={strategyData[8]} {...routeProps} />} />
     </div>
   )
 }
@@ -78,9 +78,9 @@ const renderArticleLinks = (onArticleClick) => {
       </div>
       <div className='strategy-nav-button-row'>
         <div className='strategy-nav-button-row'>
-          <Link to='/strategy/Dogs' onClick={() => onArticleClick('Dogs')}>
-            <div className='strategy-nav-button strategy-nav-button-dogs'>
-              <p className='strategy-nav-button-text'>Dogs</p>
+          <Link to='/strategy/Pets' onClick={() => onArticleClick('Pets')}>
+            <div className='strategy-nav-button strategy-nav-button-pets'>
+              <p className='strategy-nav-button-text'>Pets</p>
             </div>
           </Link>
         </div>
@@ -3953,17 +3953,187 @@ const strategyData = [
   },
   {
     id: 8,
-    title: 'Dogs',
+    title: 'Pets',
     contentItems:
     [
       {
         type: 'heading',
         headingType: 'title',
-        text: 'Dogs',
+        text: 'Dogs (Pets)',
       },
       {
         type: 'paragraph',
-        text: 'Stay tuned!  We will begin filling out this article with submissions from winners of the Kefir! giveaway...',
+        text: 'Currently dogs are the only pets you can get in the game. Dogs give you one passive buff for each level and you can equip up to four of them in your base. There are two main things you need to know about dogs.',
+      },
+      {
+        type: 'heading',
+        headingType: 'heading',
+        text: 'How to Find and Breed Dogs',
+      },
+      {
+        type: 'paragraph',
+        text: 'The first thing you need to do is build a dog pin. It takes up a 3x4 space and you can\'t rotate it yet. You will then need to finish it by collecting other materials (see video at bottom).',
+      },
+      {
+        type: 'paragraph',
+        text: 'Second, after you build your dog pin, go to the green zone and farm. After about 30 seconds, a puppy will come up to you. This is your “free” puppy. Go over to him and pick him up. He will be added into your inventory. After this, you will occasionally be able to find additional puppies in the zones, but they are very rare.  The best places to find them are floppy disk locations and air drops, but even those have become much rarer than when dogs were first released. There also seems to be a puppy that comes to the pickup at your base right after the horde attacks. This is also rare, but your chances increase the closer you go to your base after the horde attacks.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Third, when your dog pen is finished, make sure you add some food. Raw turkey is worth 12 hours of food and raw meat is worth 2.4 hours. This number is then divided by however many dogs you have in your pen. This means that if you have 10 dogs, you will need to kill 100 deer every day to keep them fed. Which is a lot. But your dogs will not die or leave when they are not fed. They just stop growing or giving you buffs.',
+      },
+      {
+        type: 'paragraph',
+        text: 'The fourth step is letting your puppies out of their boxes by selecting the puppy box and clicking “open.” At this point you’ll want to name your puppy.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Fifth, wait for your puppy to become a dog. This takes 24 hours. Most dogs start at Rank 1, which means they are given one skill. Rank 2 dogs have 2 skills, and so on. ',
+      },
+      {
+        type: 'paragraph',
+        text: 'Side note about skills: there are nine different skills that a dog can have, but some of them can only be obtained when they are higher rank. Most of these skills are buffs ranging from one to five percent, which can provide huge modifications to your gameplay. If you want to know more about skills scroll to the article below this one. ',
+      },
+      {
+        type: 'paragraph',
+        text: 'Sixth step: begin breeding to acquire higher rank dogs. When you breed a male and female, which have to be the same rank, there is a chance that their puppy will be will be a higher rank. The new puppy will never be a lower rank than its parents. ',
+      },
+      {
+        type: 'paragraph',
+        text: 'But both of the dog parents will run away, leaving you to raise their dog child.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Seriously, that\'s not a joke, you will lose those two dogs once you breed them.',
+      },
+      {
+        type: 'paragraph',
+        text: 'So for example, Let’s say you find ten Rank 1 dog\'s, five male and five female, if you breed all of them, you will lose your ten dogs and then have five new puppies. When those puppies grow up, I believe all of them will be Rank 2 dogs.',
+      },
+      {
+        type: 'paragraph',
+        text: 'These odds decrease as you breed dogs of higher rank. My guess is that breeding two Rank two dogs have around a 40% chance of breeding a Rank 3 dog, and breeding two Rank 3 dogs has around a 20% chance of breeding a Rank 4 dog.  These numbers can be increased by using a buff which increases the chance of getting a higher ranked puppy by an unknown percentage, but this item can only be bought in the shop. ',
+      },
+      {
+        type: 'paragraph',
+        text: 'Now, a word about equipping the dogs. When you select your dog crate, you will be able to see all of your dogs, how much longer each of your puppies have until they grow up, and the skills they have. You will also notice four slots. This is where you can equip specific dogs to perform tasks. These three slots are designated for dogs to guard your base.  These dogs will not attack zombies unless they have the skill “guard dog.” However, it is still worth it is to place dogs in the slots, as the only buffs that get activated are from the dogs in these four slots. ',
+      },
+      {
+        type: 'paragraph',
+        text: 'Only dogs with the skill “true friend” can be equipped into the fourth slot. The true friend skill is only available to Rank 4 dogs. The true friend skill is so rare it is almost impossible to get. You will notice that many players have a true friend and that is because they used the data reset trick which is very controversial. While I did use this trick to get my own true friend, I have since come to the conclusion that this trick ruins the game. Here is a video explaining how it works and why I no longer use or promote this trick.',
+      },
+      {
+        type: 'youtube',
+        link: 'https://www.youtube.com/embed/tdPpn6KdM-0?start=6',
+      },
+      {
+        type: 'paragraph',
+        text: 'Lastly, if you are a player that is wanting to make a purchase to speed up the process of developing the use of dogs in your game, it is way more valuable to buy the highest rank dog in the shop. The data clear trick does not work for leveling up dogs so spending $50 for a rank 4 dog is going to be cheaper than buying 10 rank 3 dogs for $8 each or buying 120 rank 1 dogs. ',
+      },
+      {
+        type: 'paragraph',
+        text: 'Below is a video that gives visuals for this article.  ',
+      },
+      {
+        type: 'youtube',
+        link: 'https://www.youtube.com/embed/ZAYDTJcunag?start=47',
+      },
+      {
+        type: 'heading',
+        headingType: 'heading',
+        text: 'Everything about Dog Buffs',
+      },
+      {
+        type: 'paragraph',
+        text: 'There are nine skills that a dog can have and some of them are way better than others. ',
+      },
+      {
+        type: 'paragraph',
+        text: 'Let\'s go through the nine skills. ',
+      },
+      {
+        type: 'paragraph',
+        text: '<B>Companion Skill:</B> Equipping your dog with this skill gives your character a one to five percent bonus on how much experience you get. If your character is Level 99, this skill is worthless to you. What percentage of bonus you get on these dogs is based on luck.',
+      },
+      {
+        type: 'paragraph',
+        text: '<B>Careful Skill:</B> Equipping your dog with this skill gives your dog pen a one to five percent bonus in how fast your dogs grow. This is an incredible buff to have active when you have a lot of puppies',
+      },
+      {
+        type: 'paragraph',
+        text: '<B>Well-Stocked Skill:</B> Equipping your dog with this skill reduces how much food your dog pen consumes by one to five percent. This buff can also be incredibly helpful since, as I mentioned in the article above, the food intake of your dog pen can be extremely overwhelming. ',
+      },
+      {
+        type: 'paragraph',
+        text: '<B>Hunter Skill:</B> Equipping your dog with this skill gives your character a one to five percent increased chance to run into rare animals. If you look on the game, you’ll see this includes the fox, but I would argue that this also includes turkeys and finding more puppies. I will talk about this more later on.',
+      },
+      {
+        type: 'paragraph',
+        text: '<B>Bloodhound Skill:</B> Equipping your dog with this skill gives your character a one to five percent increased chance to find rare items. This is, of course, an amazing skill to aid in finding gas tanks and electronic circuits, but is not useful for getting higher ranked dogs. ',
+      },
+      {
+        type: 'paragraph',
+        text: '<B>Witty Skill:</B> Equipping your dog with this skill gives your dog pen a one to three percent bonus on getting higher ranked dogs when you are breeding. This is a key skill for the strategy I will be presenting in the next part of this article. ',
+      },
+      {
+        type: 'paragraph',
+        text: '<B>Leader Skill:</B> Equipping your dog with this skill gives your four equipped dogs one to three extra attack damage. I think this will be a very desirable skill when we have a lot of high ranked dogs, but when you are just starting out, it feels kind of useless.',
+      },
+      {
+        type: 'paragraph',
+        text: '<B>Guard Skill:</B> Equipping your dog with this skill enables them to attack the horde and zombies around the base. As mentioned in this article above, to make use of the skills you equip your dogs with, you have to place them in the slots. They will appear around your base, but will not attack unless equipped with the guard skill. ',
+      },
+      {
+        type: 'paragraph',
+        text: '<B>True Friend Skill:</B> And finally, a dog with the True Friend skill can be placed in the fourth slot, allowing you to have more active buffs; but more importantly, it is able to travel and fight with you. ',
+      },
+      {
+        type: 'paragraph',
+        text: 'The following test samples were gained by using 100s of test samples:',
+      },
+      {
+        type: 'paragraph',
+        text: 'At Rank 1, your dog can get one of these 4 skills. Even if you reroll your skills at a higher rank, your dog will always have one of these four skills in that lvl 1 slot. Here is a breakdown of what skills your dog will probably end up with in the lvl 1 slot: ',
+      },
+      {
+        type: 'image',
+        imageType: 'full',
+        imageSrc: '/lvl-1-skill-chances.png',
+      },
+      {
+        type: 'paragraph',
+        text: 'At Rank 2, your dog can get one of these 4 skills in addition to it’s lvl 1 skill. Even if you reroll your skills at a higher rank, your dog will always have one of these four skills in that lvl 2 slot. Here is a breakdown of what skills your dog will probably end up with in the lvl 2 slot:',
+      },
+      {
+        type: 'image',
+        imageType: 'full',
+        imageSrc: '/lvl-2-skill-chances.png',
+      },
+      {
+        type: 'paragraph',
+        text: 'At Rank 3, your dog can get one of these 5 skills in addition to it’s lvl 1 & 2 skills. Even if you reroll your skills at a higher rank, your dog will always have one of these five skills in that lvl 3 slot. Here is a breakdown of what skills your dog will probably end up with in the lvl 3 slot:',
+      },
+      {
+        type: 'image',
+        imageType: 'full',
+        imageSrc: '/lvl-3-skill-chances.png',
+      },
+      {
+        type: 'paragraph',
+        text: 'At Rank 4, your dog can get one of these 4 skills in addition to it’s other skills. Here is a breakdown of what skills your dog will probably end up with in the lvl 4 slot:',
+      },
+      {
+        type: 'image',
+        imageType: 'full',
+        imageSrc: '/lvl-4-skill-chances.png',
+      },
+      {
+        type: 'paragraph',
+        text: 'Here is JCF’s strategy on how to use some skills to get higher Rank Dogs faster:',
+      },
+      {
+        type: 'youtube',
+        link: 'https://www.youtube.com/embed/jSe7FhghYUk?start=19',
       },
     ]
   },

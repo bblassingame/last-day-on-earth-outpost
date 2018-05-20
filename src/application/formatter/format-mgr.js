@@ -33,6 +33,10 @@ class FormatMgr
       case 'acknowledgement':
         this.page.createAcknowledgement(item)
         break
+
+      case 'image':
+        this.page.createImage(item)
+        break
   
       default:
         console.log('unknown page element encountered')

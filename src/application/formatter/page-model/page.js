@@ -3,6 +3,7 @@ import Youtube from './youtube'
 import List from './list'
 import Heading from './heading'
 import Acknowledgement from './acknowledgement'
+import Image from './image'
 
 class Page
 {
@@ -46,6 +47,13 @@ class Page
     acknowledgement.setRawProperties(rawAcknowledgementData)
     acknowledgement.initialize()
     this.pageElements.push(acknowledgement)
+  }
+
+  createImage(rawImageData) {
+    let image = new Image()
+    image.setRawProperties(rawImageData)
+    image.initialize()
+    this.pageElements.push(image)
   }
 }
 
