@@ -48,10 +48,7 @@ class HtmlDocument extends Component {
           break
 
         case 'Image':
-          console.log('creating HTML Image')
-          console.log(pageElement)
           this.htmlDocElements.push(<HtmlImage key={i} imagePageElement={pageElement} />)
-          console.log(this.htmlDocElements)
           break
 
         default:
