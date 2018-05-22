@@ -141,11 +141,23 @@ const LaunchPageData = [
       },      
       {
         type: 'paragraph',
+        text: 'This group has the most active community of any of the facebook groups. There are other groups that compete for most posts per day, but Global Community stands out with how responsive people are to each post. The Global Community has also had the most consistently good team of moderators. They are strict with modders and hackers, but they are otherwise pretty flexible and most of their moderators are on the same page.',
+      },      
+      {
+        type: 'paragraph',
         text: '<OL to="https://www.reddit.com/r/LDESurvival/" eventLabel="LDOE Reddit">Reddit Forum (LDESurvival)</OL>',
       },      
       {
         type: 'paragraph',
+        text: 'LDESurvival is full of critical thinkers and great conversations about LDOE. If they don’t like your theory, they will shoot it down with logical reasons which allows for you to then respond in kind. These lively, but intellectual debates are what makes Reddit unique from the other social mediums.',
+      },      
+      {
+        type: 'paragraph',
         text: '<OL to="https://discord.gg/CXAa5gZ" eventLabel="JCF Discord">Discord (JCF’s Alliance of Clans)</OL>',
+      },      
+      {
+        type: 'paragraph',
+        text: 'JCF has a vision for creating an alliance of clans and a lot of the best players have joined him to make this happen. Clans aren’t out yet, but when they are, I want to be in that alliance.',
       },      
     ]
   },

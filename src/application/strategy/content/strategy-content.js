@@ -117,7 +117,7 @@ const strategyData = [
       },
       {
         type: 'paragraph',
-        text: 'Currently, the best way to deal with the horde is to find the normal path they take when you are offline and build lvl 2 walls (level 3 would be more ideal, but difficult because they require 15 oak to build) staggered so that no more than 10 zombies hit each wall. This will kill all the zombies without losing any walls. Hopefully JCF can make a video explaining this strategy soon.'
+        text: 'Currently, the best way to deal with the horde is to find the normal path they take when you are offline and build lvl 2 walls (level 3 would be more ideal, but difficult because they require 10 oak to build) staggered so that no more than 10 zombies hit each wall. This will kill all the zombies without losing any walls. Hopefully JCF can make a video explaining this strategy soon.'
       },
       {
         type: 'paragraph',
@@ -3937,17 +3937,340 @@ const strategyData = [
         text: 'Resources',
       },
       {
-        type: 'heading',
-        headingType: 'subheading',
-        text: 'Acid Bath',
+        type: 'paragraph',
+        text: 'Often when people are trying to get rich, they look for a place that has the most of what they want and then they go to that place to try and get it. Unfortunately, that is not how life works and nor is it how it works in Last Day on Earth. The place that has the most of what you want is the red zone. It has more trees, more rocks, more metal, more cloth and more vehicle parts, but the red zone is often the worst place to get rich. Getting rich in Last Day on Earth is about bringing home more than you left home with which means that the cost of doing something is often more than  what you get out of doing it. This means that it is often more lucrative to farm the green zone since the green zone costs far less to farm than any of the other zones. But this is not always the case. Here are some tips for collecting each resource.',
       },
       {
         type: 'paragraph',
-        text: 'Where is the best place to get this item?  I am not sure but I need to add some text here so that I can have something that wraps and gives me a better idea of what the full layout will look like as I get more of this stuff in here.',
+        text: 'Note: (COMING SOON!) If you are looking for a specific resource, I recommend searching for it in the database and then clicking on the link for “the best way to find this item”. It will reroute you here at the exact location you are looking for.',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Air Filter',
+      },
+      {
+        type: 'paragraph',
+        text: 'Air Filters can be found in the red ticket chest of Bunker Alfa, floppy disk chests, and as raid loot. It can not be crafted. My strategy is to open bunker alpha red ticket chest and floppy disk crates since raiding for air filters requires luck and there is often better loot to take.',
       },
       {
         type: 'acknowledgement',
-        text: 'Yours Truly',
+        text: 'ShadowThief  (Edited By:  Fuerza)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'AK-47',
+      },
+      {
+        type: 'paragraph',
+        text: 'Best place to get the ak-47 is from the red ticket crate in bunker alpha. ',
+      },
+      {
+        type: 'paragraph',
+        text: 'You can also get the ak-47 from the yellow and green ticket crates, rest stop events, the trader, rarely from red and yellow zones, and of course from raiding.',
+      },
+      {
+        type: 'paragraph',
+        text: 'It can\'t be crafted at the moment as it requires tungsten and ash planks in it\'s current formula.',
+      },
+      {
+        type: 'paragraph',
+        text: 'You can modify a low durability ak-47 at the bunker ',
+      },
+      {
+        type: 'paragraph',
+        text: 'Recycling: you can recycle your weapon to get at lvl 1 weapons category for scrap metal, weapon parts and steel bars',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Tareq Al-Amour  (Edited By:  Fuerza)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Alcohol',
+      },
+      {
+        type: 'paragraph',
+        text: 'Alcohol is an common resource that can be easily made using the medical table and putting in 5 berries. 5 berries make 1 bottle. You can also find a lot in coupon and loot chests in bunker Alpha. Alcohol can be used to make medkits, remove paint from storage chests, exchange with dealer and used in crafting explosive material. ',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Jade Swan  (Edited By:  Vedrana,  Fuerza)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Animal Rawhide',
+      },
+      {
+        type: 'paragraph',
+        text: 'Animal Rawhide can be easily obtained from killing gray wolves, rabid wolves, and deer.',
+      },
+      {
+        type: 'paragraph',
+        text: 'The most efficient way of obtaining it is simply to kill all the animals in a location you are going to farm anyways. For example, if you need pine logs and are farming the green zone, kill all the animals there as well and collect all of the rawhide. However, if you\'d like to focus directly on rawhide, you can move back and forth from green and yellow zones. Also, when killing an AI, there is chance of finding rawhide while looting him.',
+      },
+      {
+        type: 'paragraph',
+        text: 'To supplement your rawhide income, keep an eye out for the chopper event that has around 10 deer roaming around the map and kill all of them. Rawhide can be also obtained in unknown box (daily hour chest).""',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Thornz  (Edited By:  Vedrana,  Fuerza)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'ATV Gas Tank',
+      },
+      {
+        type: 'paragraph',
+        text: 'The ATV gas tank is a fairly common drop in the chests of any of the Red Zone areas and can also be found in any of the Bunker Alfa ticket crates. The ATV is needed for the second stage recipe of the ATV and extra ATV GAs Tanks are very useful in increasing the mechanics level in your Recycler as it offers a lot of experience.',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'xhobbesx  (Edited By:  Fuerza)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Berry Tea',
+      },
+      {
+        type: 'paragraph',
+        text: 'Berry Tea cannot be found in any zones. It is best to craft this item. Simply throw some berries in the campfire, and you will get 1 cup of tea for every 3 berries. Each Berry Tea restores 5 hunger and 30 thirst, but no health and no warmth. Also, the trader can ask for it, but this is very rare.',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Wasteland Dan  (Edited By:  Fuerza)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Black Paint',
+      },
+      {
+        type: 'paragraph',
+        text: 'best way to get black paint is by clearing bunker alpha and opening the ticket crates.',
+      },
+      {
+        type: 'paragraph',
+        text: 'you can also find black paint in every color zone, airdrop events, rest stop events, floppy disk locations and the shop',
+      },
+      {
+        type: 'paragraph',
+        text: 'it cant be crafted ',
+      },
+      {
+        type: 'paragraph',
+        text: 'it cant be recycled',
+      },
+      {
+        type: 'paragraph',
+        text: 'Uses:',
+      },
+      {
+        type: 'paragraph',
+        text: '1- Black Paint can be used to recolor Chests.',
+      },
+      {
+        type: 'paragraph',
+        text: '2- Black Paint can be used to paint the Chopper using certain Patterns.',
+      },
+      {
+        type: 'paragraph',
+        text: '*Bloater pattern: 10 black paint',
+      },
+      {
+        type: 'paragraph',
+        text: '*fire pattern: 20 black paint',
+      },
+      {
+        type: 'paragraph',
+        text: '*Harvey pattern : 5 black paint',
+      },
+      {
+        type: 'paragraph',
+        text: '*leopard pattern: 10 black paint',
+      },
+      {
+        type: 'paragraph',
+        text: '*military pattern: 10 black paint',
+      },
+      {
+        type: 'paragraph',
+        text: '*nuclear pattern: 5 black paint ',
+      },
+      {
+        type: 'paragraph',
+        text: '*skulls pattern: 20 black paint',
+      },
+      {
+        type: 'paragraph',
+        text: '*Halloween pattern: 5 black paint',
+      },
+      {
+        type: 'paragraph',
+        text: '*Christmas pattern: 5 black paint',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Tareq Al-Amour  (Edited By:  Fuerza)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Bow',
+      },
+      {
+        type: 'paragraph',
+        text: 'Bow',
+      },
+      {
+        type: 'paragraph',
+        text: 'The easiest way to get the bow is by crafting it.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Although can be found in 1 of the ai bases and in raids.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Type: ranged',
+      },
+      {
+        type: 'paragraph',
+        text: 'Unlock:',
+      },
+      {
+        type: 'paragraph',
+        text: 'Lv 10',
+      },
+      {
+        type: 'paragraph',
+        text: 'Craft Points 1',
+      },
+      {
+        type: 'paragraph',
+        text: 'Materials:',
+      },
+      {
+        type: 'paragraph',
+        text: '5 Pine Plank',
+      },
+      {
+        type: 'paragraph',
+        text: '1 Iron Bar',
+      },
+      {
+        type: 'paragraph',
+        text: '5 Rope',
+      },
+      {
+        type: 'paragraph',
+        text: '3 Duct Tape',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Klaustin  (Edited By:  Huakawa)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Camera',
+      },
+      {
+        type: 'paragraph',
+        text: 'The easiest way to get the camera is by opening chests in any of the zones. Chests in the red zones have the best chance, but cameras are one of the rarest electronic items in the game. Sometimes you can get a stash of cameras by raiding another players base that would take months to farm, but this is based on luck. This item can not be crafted',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Lance018  (Edited By:  Huakawa,  Fuerza)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Campfire',
+      },
+      {
+        type: 'paragraph',
+        text: 'The easiest way to get the campfire is by crafting it, u can also find it rarely from an ai player\'s dead body',
+      },
+      {
+        type: 'paragraph',
+        text: 'Crafting becomes available at Lv.2 and requires one crafting point. It then requires 5 Pine Logs, 5 Limestone and 1 Plant Fiber to craft. You can craft up to 2 of them.',
+      },
+      {
+        type: 'paragraph',
+        text: 'After crafting it, you can place it on any level floor and the take up a 1x1 area.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Recipes (the campfire needs fuel, pine log 1min, Pine Plank 2min, Charcoal 4min)',
+      },
+      {
+        type: 'paragraph',
+        text: 'Material                                Result                            Time needed',
+      },
+      {
+        type: 'paragraph',
+        text: '3 Berries                                1 Berry Tea                   2 minutes',
+      },
+      {
+        type: 'paragraph',
+        text: '1 Raw Meat                           1 Juicy Steak                   2 minutes',
+      },
+      {
+        type: 'paragraph',
+        text: '1 Carrot                                1 Carrot Stew                   2 minutes',
+      },
+      {
+        type: 'paragraph',
+        text: '1 Raw Turkey                           1 Roasted Turkey     40 minutes',
+      },
+      {
+        type: 'paragraph',
+        text: '1 Pine Log                           1 Charcoal                        4 minutes',
+      },
+      {
+        type: 'paragraph',
+        text: '1 Pine Plank                           2 Charcoals                   4 minutes',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Tareq Al-Amour  (Edited By:  Huakawa,  Fuerza)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Carrot',
+      },
+      {
+        type: 'paragraph',
+        text: 'The best way to get carrots is to grow them in a Garden Bed at home with Seeds. 1 seed = 2 carrots ( takes 1 hour). Can also be found in dead AI players and NPC survivor bases. It restores 15 health, 25 hunger and 5 thirst. You can make a maximum  96 carrots per day ( 2 garden bed maximum - that gives you 4 carrots an hour x 24 = 96 carrots). Carrots restore the same amount of health and hunger as Baked Beans.',
+      },
+      {
+        type: 'paragraph',
+        text: '',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Tareq Al-Amour  (Edited By:  Vedrana,  Fuerza)',
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Carrot Seeds',
+      },
+      {
+        type: 'paragraph',
+        text: 'The best way to get carrot seeds is to collect plant fiber in any of the zones. There is around a 50-60% chance of getting one carrot seed each time you collect a plant fiber. The carrot seed cannot be crafted. They can also be found in Ai\'s bases garden beds and chests . Plus, you have a chance of getting 5 carrot seeds in the ""Unknow Box"" in the store for free after watching an advertisement .',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Trevor  (Edited By:  Vedrana,  Fuerza)',
       },
     ],
   },
