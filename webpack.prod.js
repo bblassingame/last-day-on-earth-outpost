@@ -25,6 +25,10 @@ module.exports = merge(common, {
       {from: 'favicon-16x16.png', to: 'favicon-16x16.png'},
       {from: 'favicon-32x32.png', to: 'favicon-32x32.png'},
       {from: 'mstile-150x150.png', to: 'mstile-150x150.png'},
+      {from: 'lvl-1-skill-chances.png', to: 'lvl-1-skill-chances.png'},
+      {from: 'lvl-2-skill-chances.png', to: 'lvl-2-skill-chances.png'},
+      {from: 'lvl-3-skill-chances.png', to: 'lvl-3-skill-chances.png'},
+      {from: 'lvl-4-skill-chances.png', to: 'lvl-4-skill-chances.png'},
     ]),
   ],
 })
