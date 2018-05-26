@@ -13925,6 +13925,10 @@ const strategyData = [
         type: 'youtube',
         link: 'https://www.youtube.com/embed/jSe7FhghYUk?start=19',
       },
+      {
+        type: 'paragraph',
+        text: 'Contributors: Fuerza and Cícero Artifon',
+      },
     ]
   },
 ]
