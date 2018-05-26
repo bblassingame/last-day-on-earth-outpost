@@ -3770,7 +3770,7 @@ const strategyData = [
       },
       {
         type: 'paragraph',
-        text: 'The rest stop event is currently available every 36 hours. You have to use a motorcycle to get to the event, but you can first travel to a closer location using energy to save on gas. There three types of rest stop events you can encounter. The first one has three guys guarding a motorcycle. If you go to the far northwest side of them and shoot the guy on that side who is holding a skull crusher, none of them will attack you. After that, it is best to try and kill the other two separately (you can always use the loading screen to reset the players). The other two are shown in this video. (note: the snorkel is now in the game and can only be found at the rest stop, but it is a very rare chance).',
+        text: 'The rest stop event is currently available every 36 hours. You have to use a motorcycle to get to the event, but you can first travel to a closer location using energy to save on gas. There three types of rest stop events you can encounter. For all of the events, I recommend using a glock and kiting enemies as you leave the area. Each time you leave, it resets the area. The first one has three guys guarding a motorcycle. I suggest going to the top right of the enemies and killing the guy with swat shoes first. Since he is the fastest one, he will stay in the front as you kill him. Then repeat this for the other character with a gun and then kill the guy with the skull crusher last. The other two are shown in this video. (note: the snorkel is now in the game and can only be found at the rest stop, but it is a very rare chance).',
       },
       {
         type: 'youtube',
