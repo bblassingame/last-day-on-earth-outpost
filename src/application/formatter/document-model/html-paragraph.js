@@ -6,6 +6,7 @@ class HtmlParagraph extends Component {
   constructor() {
     super()
     this.paragraphElements = []
+    // optional properties
     this.hasId = false
     this.idName = ''
   }
