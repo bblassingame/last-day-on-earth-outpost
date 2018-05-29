@@ -3948,6 +3948,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Acid Bath',
+        id: true,
+        idName: 'Acid Bath',
       },
       {
         type: 'paragraph',
@@ -4093,6 +4095,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Air Filter',
+        id: true,
+        idName: 'Air Filter',
       },
       {
         type: 'paragraph',
@@ -4106,6 +4110,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'AK-47',
+        id: true,
+        idName: 'AK-47',
       },
       {
         type: 'paragraph',
@@ -4135,6 +4141,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Alcohol',
+        id: true,
+        idName: 'Alcohol',
       },
       {
         type: 'paragraph',
@@ -4148,6 +4156,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Aluminum Bar',
+        id: true,
+        idName: 'Aluminum Bar',
       },
       {
         type: 'paragraph',
@@ -4249,6 +4259,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Aluminum Plate',
+        id: true,
+        idName: 'Aluminum Plate',
       },
       {
         type: 'paragraph',
@@ -4266,6 +4278,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Aluminum Wire',
+        id: true,
+        idName: 'Aluminum Wire',
       },
       {
         type: 'paragraph',
@@ -4287,6 +4301,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Animal Rawhide',
+        id: true,
+        idName: 'Animal Rawhide',
       },
       {
         type: 'paragraph',
@@ -4304,10 +4320,18 @@ const strategyData = [
         type: 'acknowledgement',
         text: 'Thornz  (Edited By:  Vedrana,  Fuerza)',
       },
+      
+      
+      
+      
+      
+      
       {
         type: 'heading',
         headingType: 'subheading',
         text: 'ATV Gas Tank',
+        id: true,
+        idName: 'ATV Gas Tank',
       },
       {
         type: 'paragraph',
@@ -4317,10 +4341,14 @@ const strategyData = [
         type: 'acknowledgement',
         text: 'xhobbesx  (Edited By:  Fuerza)',
       },
+      
+      
       {
         type: 'heading',
         headingType: 'subheading',
         text: 'ATV Wheel',
+        id: true,
+        idName: 'ATV Wheel',
       },
       {
         type: 'paragraph',
@@ -4374,6 +4402,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'ATV',
+        id: true,
+        idName: 'ATV',
       },
       {
         type: 'paragraph',
@@ -4447,6 +4477,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Baked Beans',
+        id: true,
+        idName: 'Baked Beans',
       },
       {
         type: 'paragraph',
@@ -4532,6 +4564,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Ball Bearing',
+        id: true,
+        idName: 'Ball Bearing',
       },
       {
         type: 'paragraph',
@@ -4589,6 +4623,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Bandages',
+        id: true,
+        idName: 'Bandages',
       },
       {
         type: 'paragraph',
@@ -4606,6 +4642,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Baseball Bat',
+        id: true,
+        idName: 'Baseball Bat',
       },
       {
         type: 'paragraph',
@@ -4643,6 +4681,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Basic Backpack',
+        id: true,
+        idName: 'Basic Backpack',
       },
       {
         type: 'paragraph',
@@ -4660,6 +4700,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Batteries',
+        id: true,
+        idName: 'Batteries',
       },
       {
         type: 'paragraph',
@@ -4673,6 +4715,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Bauxite',
+        id: true,
+        idName: 'Bauxite',
       },
       {
         type: 'paragraph',
@@ -4690,6 +4734,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Beanie',
+        id: true,
+        idName: 'Beanie',
       },
       {
         type: 'paragraph',
@@ -4772,6 +4818,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Beer',
+        id: true,
+        idName: 'Beer',
       },
       {
         type: 'paragraph',
@@ -4842,6 +4890,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Berry Tea',
+        id: true,
+        idName: 'Berry Tea',
       },
       {
         type: 'paragraph',
@@ -4855,6 +4905,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Berry',
+        id: true,
+        idName: 'Berry',
       },
       {
         type: 'paragraph',
@@ -4916,6 +4968,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Black Paint',
+        id: true,
+        idName: 'Black Paint',
       },
       {
         type: 'paragraph',
@@ -4989,6 +5043,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Blue Paint',
+        id: true,
+        idName: 'Blue Paint',
       },
       {
         type: 'paragraph',
@@ -5018,6 +5074,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Bolts',
+        id: true,
+        idName: 'Bolts',
       },
       {
         type: 'paragraph',
@@ -5035,6 +5093,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Bottle of Gasoline',
+        id: true,
+        idName: 'Bottle of Gasoline',
       },
       {
         type: 'paragraph',
@@ -5068,6 +5128,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Bottle of Water',
+        id: true,
+        idName: 'Bottle of Water',
       },
       {
         type: 'paragraph',
@@ -5157,6 +5219,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Bow',
+        id: true,
+        idName: 'Bow',
       },
       {
         type: 'paragraph',
@@ -5216,6 +5280,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'CAC Card A',
+        id: true,
+        idName: 'CAC Card A',
       },
       {
         type: 'paragraph',
@@ -5237,6 +5303,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'CAC Card B',
+        id: true,
+        idName: 'CAC Card B',
       },
       {
         type: 'paragraph',
@@ -5258,6 +5326,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'CAC Card C',
+        id: true,
+        idName: 'CAC Card C',
       },
       {
         type: 'paragraph',
@@ -5279,6 +5349,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'CAC Card D',
+        id: true,
+        idName: 'CAC Card D',
       },
       {
         type: 'paragraph',
@@ -5300,6 +5372,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'CAC Card F',
+        id: true,
+        idName: 'CAC Card F',
       },
       {
         type: 'paragraph',
@@ -5321,6 +5395,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'CAC Card R',
+        id: true,
+        idName: 'CAC Card R',
       },
       {
         type: 'paragraph',
@@ -5342,6 +5418,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'CAC Card Z',
+        id: true,
+        idName: 'CAC Card Z',
       },
       {
         type: 'paragraph',
@@ -5356,6 +5434,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Camera',
+        id: true,
+        idName: 'Camera',
       },
       {
         type: 'paragraph',
@@ -5369,6 +5449,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Campfire',
+        id: true,
+        idName: 'Campfire',
       },
       {
         type: 'paragraph',
@@ -5423,6 +5505,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Cargo Pants',
+        id: true,
+        idName: 'Cargo Pants',
       },
       {
         type: 'paragraph',
@@ -5440,6 +5524,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Carrot',
+        id: true,
+        idName: 'Carrot',
       },
       {
         type: 'paragraph',
@@ -5457,6 +5543,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Carrot Seeds',
+        id: true,
+        idName: 'Carrot Seeds',
       },
       {
         type: 'paragraph',
@@ -5470,6 +5558,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Carrot Stew',
+        id: true,
+        idName: 'Carrot Stew',
       },
       {
         type: 'paragraph',
@@ -5487,6 +5577,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'CB Radio',
+        id: true,
+        idName: 'CB Radio',
       },
       {
         type: 'paragraph',
@@ -5593,6 +5685,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Charcoal',
+        id: true,
+        idName: 'Charcoal',
       },
       {
         type: 'paragraph',
@@ -5663,6 +5757,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Chest',
+        id: true,
+        idName: 'Chest',
       },
       {
         type: 'paragraph',
@@ -5687,6 +5783,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Chopper Fork',
+        id: true,
+        idName: 'Chopper Fork',
       },
       {
         type: 'paragraph',
@@ -5704,6 +5802,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Chopper Gas Tank',
+        id: true,
+        idName: 'Chopper Gas Tank',
       },
       {
         type: 'paragraph',
@@ -5721,6 +5821,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Chopper Wheel',
+        id: true,
+        idName: 'Chopper Wheel',
       },
       {
         type: 'paragraph',
@@ -5782,6 +5884,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Chopper',
+        id: true,
+        idName: 'Chopper',
       },
       {
         type: 'paragraph',
@@ -6009,6 +6113,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Cleaver',
+        id: true,
+        idName: 'Cleaver',
       },
       {
         type: 'paragraph',
@@ -6062,6 +6168,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Combat Gear Coupon',
+        id: true,
+        idName: 'Combat Gear Coupon',
       },
       {
         type: 'paragraph',
@@ -6095,6 +6203,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Comfortable Bed',
+        id: true,
+        idName: 'Comfortable Bed',
       },
       {
         type: 'paragraph',
@@ -6201,6 +6311,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Connecting Rod',
+        id: true,
+        idName: 'Connecting Rod',
       },
       {
         type: 'paragraph',
@@ -6282,6 +6394,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Copper Bar',
+        id: true,
+        idName: 'Copper Bar',
       },
       {
         type: 'paragraph',
@@ -6299,6 +6413,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Copper Ore',
+        id: true,
+        idName: 'Copper Ore',
       },
       {
         type: 'paragraph',
@@ -6416,6 +6532,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Cosy Couch',
+        id: true,
+        idName: 'Cosy Couch',
       },
       {
         type: 'paragraph',
@@ -6501,6 +6619,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Crowbar',
+        id: true,
+        idName: 'Crowbar',
       },
       {
         type: 'paragraph',
@@ -6607,6 +6727,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Dad Hat',
+        id: true,
+        idName: 'Dad Hat',
       },
       {
         type: 'paragraph',
@@ -6684,6 +6806,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Denim Jeans',
+        id: true,
+        idName: 'Denim Jeans',
       },
       {
         type: 'paragraph',
@@ -6769,6 +6893,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Dining Table',
+        id: true,
+        idName: 'Dining Table',
       },
       {
         type: 'paragraph',
@@ -6858,6 +6984,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Dish Antenna',
+        id: true,
+        idName: 'Dish Antenna',
       },
       {
         type: 'paragraph',
@@ -6875,6 +7003,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Doormat',
+        id: true,
+        idName: 'Doormat',
       },
       {
         type: 'paragraph',
@@ -6892,6 +7022,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Dual Berettas',
+        id: true,
+        idName: 'Dual Berettas',
       },
       {
         type: 'paragraph',
@@ -6909,6 +7041,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Duct Tape',
+        id: true,
+        idName: 'Duct Tape',
       },
       {
         type: 'paragraph',
@@ -7042,6 +7176,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Edible Mushroom',
+        id: true,
+        idName: 'Edible Mushroom',
       },
       {
         type: 'paragraph',
@@ -7060,6 +7196,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Electric Generator',
+        id: true,
+        idName: 'Electric Generator',
       },
       {
         type: 'paragraph',
@@ -7133,6 +7271,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Electronic Circuit',
+        id: true,
+        idName: 'Electronic Circuit',
       },
       {
         type: 'paragraph',
@@ -7179,6 +7319,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Empty Bottle',
+        id: true,
+        idName: 'Empty Bottle',
       },
       {
         type: 'paragraph',
@@ -7196,6 +7338,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Empty Can',
+        id: true,
+        idName: 'Empty Can',
       },
       {
         type: 'paragraph',
@@ -7214,6 +7358,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Engine Part',
+        id: true,
+        idName: 'Engine Part',
       },
       {
         type: 'paragraph',
@@ -7263,6 +7409,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Expensive Watches',
+        id: true,
+        idName: 'Expensive Watches',
       },
       {
         type: 'paragraph',
@@ -7289,6 +7437,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'First Aid Kit',
+        id: true,
+        idName: 'First Aid Kit',
       },
       {
         type: 'paragraph',
@@ -7306,6 +7456,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Fishing Rod',
+        id: true,
+        idName: 'Fishing Rod',
       },
       {
         type: 'paragraph',
@@ -7323,6 +7475,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Flare Gun',
+        id: true,
+        idName: 'Flare Gun',
       },
       {
         type: 'paragraph',
@@ -7344,6 +7498,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Flashlight',
+        id: true,
+        idName: 'Flashlight',
       },
       {
         type: 'paragraph',
@@ -7361,6 +7517,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Floor Lamp',
+        id: true,
+        idName: 'Floor Lamp',
       },
       {
         type: 'paragraph',
@@ -7450,6 +7608,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Floppy Disk',
+        id: true,
+        idName: 'Floppy Disk',
       },
       {
         type: 'paragraph',
@@ -7475,6 +7635,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'FN Scar',
+        id: true,
+        idName: 'FN Scar',
       },
       {
         type: 'paragraph',
@@ -7493,6 +7655,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Fur Beanie',
+        id: true,
+        idName: 'Fur Beanie',
       },
       {
         type: 'paragraph',
@@ -7510,6 +7674,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Fur Boots',
+        id: true,
+        idName: 'Fur Boots',
       },
       {
         type: 'paragraph',
@@ -7527,6 +7693,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Fur Jacket',
+        id: true,
+        idName: 'Fur Jacket',
       },
       {
         type: 'paragraph',
@@ -7544,6 +7712,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Fur Trousers',
+        id: true,
+        idName: 'Fur Trousers',
       },
       {
         type: 'paragraph',
@@ -7561,6 +7731,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Fur',
+        id: true,
+        idName: 'Fur',
       },
       {
         type: 'paragraph',
@@ -7582,6 +7754,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Garden Bed',
+        id: true,
+        idName: 'Garden Bed',
       },
       {
         type: 'paragraph',
@@ -7599,6 +7773,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Gas Mask',
+        id: true,
+        idName: 'Gas Mask',
       },
       {
         type: 'paragraph',
@@ -7648,6 +7824,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Gasoline',
+        id: true,
+        idName: 'Gasoline',
       },
       {
         type: 'paragraph',
@@ -7670,6 +7848,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Glock 17',
+        id: true,
+        idName: 'Glock 17',
       },
       {
         type: 'paragraph',
@@ -7691,6 +7871,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Gold Bar',
+        id: true,
+        idName: 'Gold Bar',
       },
       {
         type: 'paragraph',
@@ -7708,6 +7890,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Golf Club',
+        id: true,
+        idName: 'Golf Club',
       },
       {
         type: 'paragraph',
@@ -7761,6 +7945,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Green Paint',
+        id: true,
+        idName: 'Green Paint',
       },
       {
         type: 'paragraph',
@@ -7790,6 +7976,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Gun Oil',
+        id: true,
+        idName: 'Gun Oil',
       },
       {
         type: 'paragraph',
@@ -7816,6 +8004,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Gunsmith Bench',
+        id: true,
+        idName: 'Gunsmith Bench',
       },
       {
         type: 'paragraph',
@@ -7997,6 +8187,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Hammer',
+        id: true,
+        idName: 'Hammer',
       },
       {
         type: 'paragraph',
@@ -8020,6 +8212,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Hatchet',
+        id: true,
+        idName: 'Hatchet',
       },
       {
         type: 'paragraph',
@@ -8049,6 +8243,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Hi-Tech Components',
+        id: true,
+        idName: 'Hi-Tech Components',
       },
       {
         type: 'paragraph',
@@ -8066,6 +8262,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Hockey Stick',
+        id: true,
+        idName: 'Hockey Stick',
       },
       {
         type: 'paragraph',
@@ -8137,6 +8335,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Horse Feeder',
+        id: true,
+        idName: 'Horse Feeder',
       },
       {
         type: 'paragraph',
@@ -8203,6 +8403,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Houseplant',
+        id: true,
+        idName: 'Houseplant',
       },
       {
         type: 'paragraph',
@@ -8220,6 +8422,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Identification Tags',
+        id: true,
+        idName: 'Identification Tags',
       },
       {
         type: 'paragraph',
@@ -8261,6 +8465,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Iron Bar',
+        id: true,
+        idName: 'Iron Bar',
       },
       {
         type: 'paragraph',
@@ -8446,6 +8652,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Iron Hatchet',
+        id: true,
+        idName: 'Iron Hatchet',
       },
       {
         type: 'paragraph',
@@ -8471,6 +8679,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Iron Ore',
+        id: true,
+        idName: 'Iron Ore',
       },
       {
         type: 'paragraph',
@@ -8500,6 +8710,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Iron Pickaxe',
+        id: true,
+        idName: 'Iron Pickaxe',
       },
       {
         type: 'paragraph',
@@ -8525,6 +8737,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Jerky',
+        id: true,
+        idName: 'Jerky',
       },
       {
         type: 'paragraph',
@@ -8622,6 +8836,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Juicy Steak',
+        id: true,
+        idName: 'Juicy Steak',
       },
       {
         type: 'paragraph',
@@ -8731,6 +8947,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Katana',
+        id: true,
+        idName: 'Katana',
       },
       {
         type: 'paragraph',
@@ -8757,6 +8975,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Leather',
+        id: true,
+        idName: 'Leather',
       },
       {
         type: 'paragraph',
@@ -8946,6 +9166,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Light Bulb',
+        id: true,
+        idName: 'Light Bulb',
       },
       {
         type: 'paragraph',
@@ -8968,6 +9190,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Limestone',
+        id: true,
+        idName: 'Limestone',
       },
       {
         type: 'paragraph',
@@ -9013,6 +9237,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Lock and Key',
+        id: true,
+        idName: 'Lock and Key',
       },
       {
         type: 'paragraph',
@@ -9110,6 +9336,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'M16',
+        id: true,
+        idName: 'M16',
       },
       {
         type: 'paragraph',
@@ -9159,6 +9387,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Machete',
+        id: true,
+        idName: 'Machete',
       },
       {
         type: 'paragraph',
@@ -9188,6 +9418,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Makeshift Bat',
+        id: true,
+        idName: 'Makeshift Bat',
       },
       {
         type: 'paragraph',
@@ -9205,6 +9437,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Meat Dryer',
+        id: true,
+        idName: 'Meat Dryer',
       },
       {
         type: 'paragraph',
@@ -9338,6 +9572,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Medical Table',
+        id: true,
+        idName: 'Medical Table',
       },
       {
         type: 'paragraph',
@@ -9483,6 +9719,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Melting Furnace',
+        id: true,
+        idName: 'Melting Furnace',
       },
       {
         type: 'paragraph',
@@ -9502,6 +9740,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Military Backpack',
+        id: true,
+        idName: 'Military Backpack',
       },
       {
         type: 'paragraph',
@@ -9555,6 +9795,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Military Box',
+        id: true,
+        idName: 'Military Box',
       },
       {
         type: 'paragraph',
@@ -9572,6 +9814,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Military Notebook',
+        id: true,
+        idName: 'Military Notebook',
       },
       {
         type: 'paragraph',
@@ -9589,6 +9833,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Minigun',
+        id: true,
+        idName: 'Minigun',
       },
       {
         type: 'paragraph',
@@ -9606,6 +9852,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Mobile Phone',
+        id: true,
+        idName: 'Mobile Phone',
       },
       {
         type: 'paragraph',
@@ -9635,6 +9883,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Modified AK-47',
+        id: true,
+        idName: 'Modified AK-47',
       },
       {
         type: 'paragraph',
@@ -9652,6 +9902,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Modified Glock 17',
+        id: true,
+        idName: 'Modified Glock 17',
       },
       {
         type: 'paragraph',
@@ -9701,6 +9953,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Modified M16',
+        id: true,
+        idName: 'Modified M16',
       },
       {
         type: 'paragraph',
@@ -9720,6 +9974,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Nail Board',
+        id: true,
+        idName: 'Nail Board',
       },
       {
         type: 'paragraph',
@@ -9741,6 +9997,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Nails',
+        id: true,
+        idName: 'Nails',
       },
       {
         type: 'paragraph',
@@ -9775,6 +10033,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Oak Log',
+        id: true,
+        idName: 'Oak Log',
       },
       {
         type: 'paragraph',
@@ -10184,6 +10444,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Oak Plank',
+        id: true,
+        idName: 'Oak Plank',
       },
       {
         type: 'paragraph',
@@ -10230,6 +10492,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Paddle',
+        id: true,
+        idName: 'Paddle',
       },
       {
         type: 'paragraph',
@@ -10243,6 +10507,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Bloater',
+        id: true,
+        idName: 'Pattern Bloater',
       },
       {
         type: 'paragraph',
@@ -10260,6 +10526,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Blue',
+        id: true,
+        idName: 'Pattern Blue',
       },
       {
         type: 'paragraph',
@@ -10277,6 +10545,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Captain',
+        id: true,
+        idName: 'Pattern Captain',
       },
       {
         type: 'paragraph',
@@ -10294,6 +10564,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Christmas\'17',
+        id: true,
+        idName: 'Pattern Christmas\'17',
       },
       {
         type: 'paragraph',
@@ -10311,6 +10583,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Fire',
+        id: true,
+        idName: 'Pattern Fire',
       },
       {
         type: 'paragraph',
@@ -10328,6 +10602,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Halloween\'17',
+        id: true,
+        idName: 'Pattern Halloween\'17',
       },
       {
         type: 'paragraph',
@@ -10345,6 +10621,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Harvey',
+        id: true,
+        idName: 'Pattern Harvey',
       },
       {
         type: 'paragraph',
@@ -10362,6 +10640,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Kitty',
+        id: true,
+        idName: 'Pattern Kitty',
       },
       {
         type: 'paragraph',
@@ -10395,6 +10675,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Leopard',
+        id: true,
+        idName: 'Pattern Leopard',
       },
       {
         type: 'paragraph',
@@ -10412,6 +10694,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Military',
+        id: true,
+        idName: 'Pattern Military',
       },
       {
         type: 'paragraph',
@@ -10441,6 +10725,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Nuclear',
+        id: true,
+        idName: 'Pattern Nuclear',
       },
       {
         type: 'paragraph',
@@ -10458,6 +10744,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pattern Skulls',
+        id: true,
+        idName: 'Pattern Skulls',
       },
       {
         type: 'paragraph',
@@ -10475,6 +10763,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Personal Effects',
+        id: true,
+        idName: 'Personal Effects',
       },
       {
         type: 'paragraph',
@@ -10492,6 +10782,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pickaxe',
+        id: true,
+        idName: 'Pickaxe',
       },
       {
         type: 'paragraph',
@@ -10509,6 +10801,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Piece of Cloth',
+        id: true,
+        idName: 'Piece of Cloth',
       },
       {
         type: 'paragraph',
@@ -10526,6 +10820,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pine Log',
+        id: true,
+        idName: 'Pine Log',
       },
       {
         type: 'paragraph',
@@ -10647,6 +10943,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Pine Plank',
+        id: true,
+        idName: 'Pine Plank',
       },
       {
         type: 'paragraph',
@@ -10724,6 +11022,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Plant Fiber',
+        id: true,
+        idName: 'Plant Fiber',
       },
       {
         type: 'paragraph',
@@ -10868,6 +11168,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Rain Catcher',
+        id: true,
+        idName: 'Rain Catcher',
       },
       {
         type: 'paragraph',
@@ -10885,6 +11187,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Ration Coupon',
+        id: true,
+        idName: 'Ration Coupon',
       },
       {
         type: 'paragraph',
@@ -10902,6 +11206,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Raw Meat',
+        id: true,
+        idName: 'Raw Meat',
       },
       {
         type: 'paragraph',
@@ -10919,6 +11225,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Raw Turkey',
+        id: true,
+        idName: 'Raw Turkey',
       },
       {
         type: 'paragraph',
@@ -10961,6 +11269,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Red Paint',
+        id: true,
+        idName: 'Red Paint',
       },
       {
         type: 'paragraph',
@@ -10998,6 +11308,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Refined Melting Furnace',
+        id: true,
+        idName: 'Refined Melting Furnace',
       },
       {
         type: 'paragraph',
@@ -11015,6 +11327,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Reinforced Beanie',
+        id: true,
+        idName: 'Reinforced Beanie',
       },
       {
         type: 'paragraph',
@@ -11068,6 +11382,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Reinforced Boots',
+        id: true,
+        idName: 'Reinforced Boots',
       },
       {
         type: 'paragraph',
@@ -11117,6 +11433,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Reinforced Jacket',
+        id: true,
+        idName: 'Reinforced Jacket',
       },
       {
         type: 'paragraph',
@@ -11166,6 +11484,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Reinforced Jeans',
+        id: true,
+        idName: 'Reinforced Jeans',
       },
       {
         type: 'paragraph',
@@ -11215,6 +11535,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Reinforced Trousers',
+        id: true,
+        idName: 'Reinforced Trousers',
       },
       {
         type: 'paragraph',
@@ -11233,6 +11555,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Road Sign',
+        id: true,
+        idName: 'Road Sign',
       },
       {
         type: 'paragraph',
@@ -11250,6 +11574,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Roasted Turkey',
+        id: true,
+        idName: 'Roasted Turkey',
       },
       {
         type: 'paragraph',
@@ -11267,6 +11593,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Rope',
+        id: true,
+        idName: 'Rope',
       },
       {
         type: 'paragraph',
@@ -11284,6 +11612,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Rubber Parts',
+        id: true,
+        idName: 'Rubber Parts',
       },
       {
         type: 'paragraph',
@@ -11302,6 +11632,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Safe',
+        id: true,
+        idName: 'Safe',
       },
       {
         type: 'paragraph',
@@ -11323,6 +11655,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Saw Blade Mace',
+        id: true,
+        idName: 'Saw Blade Mace',
       },
       {
         type: 'paragraph',
@@ -11352,6 +11686,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Scrap Metal',
+        id: true,
+        idName: 'Scrap Metal',
       },
       {
         type: 'paragraph',
@@ -11409,6 +11745,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Sewing Table',
+        id: true,
+        idName: 'Sewing Table',
       },
       {
         type: 'paragraph',
@@ -11430,6 +11768,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Shirt',
+        id: true,
+        idName: 'Shirt',
       },
       {
         type: 'paragraph',
@@ -11447,6 +11787,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Shotgun',
+        id: true,
+        idName: 'Shotgun',
       },
       {
         type: 'paragraph',
@@ -11480,6 +11822,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Shovel',
+        id: true,
+        idName: 'Shovel',
       },
       {
         type: 'paragraph',
@@ -11501,6 +11845,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Shower',
+        id: true,
+        idName: 'Shower',
       },
       {
         type: 'paragraph',
@@ -11526,6 +11872,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Signal Amplifier',
+        id: true,
+        idName: 'Signal Amplifier',
       },
       {
         type: 'paragraph',
@@ -11543,6 +11891,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Skull Crusher',
+        id: true,
+        idName: 'Skull Crusher',
       },
       {
         type: 'paragraph',
@@ -11572,6 +11922,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Small Box',
+        id: true,
+        idName: 'Small Box',
       },
       {
         type: 'paragraph',
@@ -11621,6 +11973,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Sneakers',
+        id: true,
+        idName: 'Sneakers',
       },
       {
         type: 'paragraph',
@@ -11642,6 +11996,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Snorkel',
+        id: true,
+        idName: 'Snorkel',
       },
       {
         type: 'paragraph',
@@ -11663,6 +12019,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Spear',
+        id: true,
+        idName: 'Spear',
       },
       {
         type: 'paragraph',
@@ -11684,6 +12042,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Spike Trap',
+        id: true,
+        idName: 'Spike Trap',
       },
       {
         type: 'paragraph',
@@ -11709,6 +12069,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Spiked Devestator',
+        id: true,
+        idName: 'Spiked Devestator',
       },
       {
         type: 'paragraph',
@@ -11798,6 +12160,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Steel Bar',
+        id: true,
+        idName: 'Steel Bar',
       },
       {
         type: 'paragraph',
@@ -11871,6 +12235,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Steel Plate',
+        id: true,
+        idName: 'Steel Plate',
       },
       {
         type: 'paragraph',
@@ -11893,6 +12259,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Stone Brick',
+        id: true,
+        idName: 'Stone Brick',
       },
       {
         type: 'paragraph',
@@ -11914,6 +12282,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Stonecutter\'s Table',
+        id: true,
+        idName: 'Stonecutter\'s Table',
       },
       {
         type: 'paragraph',
@@ -11939,6 +12309,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Strong Alcohol',
+        id: true,
+        idName: 'Strong Alcohol',
       },
       {
         type: 'paragraph',
@@ -11953,6 +12325,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Survival Kit Coupon',
+        id: true,
+        idName: 'Survival Kit Coupon',
       },
       {
         type: 'paragraph',
@@ -11974,6 +12348,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'SWAT Body Armor',
+        id: true,
+        idName: 'SWAT Body Armor',
       },
       {
         type: 'paragraph',
@@ -12015,6 +12391,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'SWAT Boots',
+        id: true,
+        idName: 'SWAT Boots',
       },
       {
         type: 'paragraph',
@@ -12036,6 +12414,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'SWAT Helmet',
+        id: true,
+        idName: 'SWAT Helmet',
       },
       {
         type: 'paragraph',
@@ -12057,6 +12437,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'SWAT Trousers',
+        id: true,
+        idName: 'SWAT Trousers',
       },
       {
         type: 'paragraph',
@@ -12079,6 +12461,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Tactical Body Armor',
+        id: true,
+        idName: 'Tactical Body Armor',
       },
       {
         type: 'paragraph',
@@ -12096,6 +12480,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Tactical Boots',
+        id: true,
+        idName: 'Tactical Boots',
       },
       {
         type: 'paragraph',
@@ -12117,6 +12503,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Tactical Cap',
+        id: true,
+        idName: 'Tactical Cap',
       },
       {
         type: 'paragraph',
@@ -12134,6 +12522,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Tactical Trousers',
+        id: true,
+        idName: 'Tactical Trousers',
       },
       {
         type: 'paragraph',
@@ -12155,6 +12545,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Tanning Rack',
+        id: true,
+        idName: 'Tanning Rack',
       },
       {
         type: 'paragraph',
@@ -12177,6 +12569,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Thick Fabric',
+        id: true,
+        idName: 'Thick Fabric',
       },
       {
         type: 'paragraph',
@@ -12222,6 +12616,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Thick Jacket',
+        id: true,
+        idName: 'Thick Jacket',
       },
       {
         type: 'paragraph',
@@ -12257,6 +12653,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Torch',
+        id: true,
+        idName: 'Torch',
       },
       {
         type: 'paragraph',
@@ -12275,6 +12673,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Transistor',
+        id: true,
+        idName: 'Transistor',
       },
       {
         type: 'paragraph',
@@ -12296,6 +12696,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Trash',
+        id: true,
+        idName: 'Trash',
       },
       {
         type: 'paragraph',
@@ -12325,6 +12727,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Trip Wire Trap',
+        id: true,
+        idName: 'Trip Wire Trap',
       },
       {
         type: 'paragraph',
@@ -12346,6 +12750,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Truck Saw Blade',
+        id: true,
+        idName: 'Truck Saw Blade',
       },
       {
         type: 'paragraph',
@@ -12359,6 +12765,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Truck Wheel',
+        id: true,
+        idName: 'Truck Wheel',
       },
       {
         type: 'paragraph',
@@ -12384,6 +12792,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Trunk',
+        id: true,
+        idName: 'Trunk',
       },
       {
         type: 'paragraph',
@@ -12447,6 +12857,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Turret',
+        id: true,
+        idName: 'Turret',
       },
       {
         type: 'paragraph',
@@ -12489,6 +12901,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'USB Drive',
+        id: true,
+        idName: 'USB Drive',
       },
       {
         type: 'paragraph',
@@ -12522,6 +12936,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'VSS Vintorez',
+        id: true,
+        idName: 'VSS Vintorez',
       },
       {
         type: 'paragraph',
@@ -12543,6 +12959,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Weapon Crate',
+        id: true,
+        idName: 'Weapon Crate',
       },
       {
         type: 'paragraph',
@@ -12564,6 +12982,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Weapon Parts',
+        id: true,
+        idName: 'Weapon Parts',
       },
       {
         type: 'paragraph',
@@ -12585,6 +13005,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'White Paint',
+        id: true,
+        idName: 'White Paint',
       },
       {
         type: 'paragraph',
@@ -12638,6 +13060,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Wiring',
+        id: true,
+        idName: 'Wiring',
       },
       {
         type: 'paragraph',
@@ -12680,6 +13104,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Woodworking Bench',
+        id: true,
+        idName: 'Woodworking Bench',
       },
       {
         type: 'paragraph',
@@ -12701,6 +13127,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Work Boots',
+        id: true,
+        idName: 'Work Boots',
       },
       {
         type: 'paragraph',
@@ -12734,6 +13162,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Workbench',
+        id: true,
+        idName: 'Workbench',
       },
       {
         type: 'paragraph',
@@ -12767,6 +13197,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Wrench',
+        id: true,
+        idName: 'Wrench',
       },
       {
         type: 'paragraph',
@@ -12836,6 +13268,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Yellow Paint',
+        id: true,
+        idName: 'Yellow Paint',
       },
       {
         type: 'paragraph',
@@ -12918,6 +13352,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Zip Gun',
+        id: true,
+        idName: 'Zip Gun',
       },
       {
         type: 'paragraph',
@@ -13012,6 +13448,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Iron Plate',
+        id: true,
+        idName: 'Iron Plate',
       },
       {
         type: 'paragraph',
@@ -13033,6 +13471,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'MILKOR MGL',
+        id: true,
+        idName: 'MILKOR MGL',
       },
       {
         type: 'paragraph',
@@ -13067,6 +13507,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Reinforced Shirt',
+        id: true,
+        idName: 'Reinforced Shirt',
       },
       {
         type: 'paragraph',
@@ -13088,6 +13530,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Reinforced Sneakers',
+        id: true,
+        idName: 'Reinforced Sneakers',
       },
       {
         type: 'paragraph',
@@ -13124,6 +13568,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Warrior Armor',
+        id: true,
+        idName: 'Warrior Armor',
       },
       {
         type: 'paragraph',
@@ -13141,6 +13587,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Warrior Boots',
+        id: true,
+        idName: 'Warrior Boots',
       },
       {
         type: 'paragraph',
@@ -13158,6 +13606,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Warrior Greaves',
+        id: true,
+        idName: 'Warrior Greaves',
       },
       {
         type: 'paragraph',
@@ -13175,6 +13625,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Warrior Helmet',
+        id: true,
+        idName: 'Warrior Helmet',
       },
       {
         type: 'paragraph',
@@ -13192,6 +13644,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Recycler',
+        id: true,
+        idName: 'Recycler',
       },
       {
         type: 'paragraph',
@@ -13233,6 +13687,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Dog Crate',
+        id: true,
+        idName: 'Dog Crate',
       },
       {
         type: 'paragraph',
@@ -13438,6 +13894,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Heat Sensor',
+        id: true,
+        idName: 'Heat Sensor',
       },
       {
         type: 'paragraph',
@@ -13467,6 +13925,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Turret Parts',
+        id: true,
+        idName: 'Turret Parts',
       },
       {
         type: 'paragraph',
@@ -13500,6 +13960,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Weapon Stand',
+        id: true,
+        idName: 'Weapon Stand',
       },
       {
         type: 'paragraph',
@@ -13521,6 +13983,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Plastic',
+        id: true,
+        idName: 'Plastic',
       },
       {
         type: 'paragraph',
@@ -13550,6 +14014,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Car Engine',
+        id: true,
+        idName: 'Car Engine',
       },
       {
         type: 'paragraph',
@@ -13611,6 +14077,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Football Helmet',
+        id: true,
+        idName: 'Football Helmet',
       },
       {
         type: 'paragraph',
@@ -13632,6 +14100,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Power Armor Suit',
+        id: true,
+        idName: 'Power Armor Suit',
       },
       {
         type: 'paragraph',
@@ -13693,6 +14163,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Multitool',
+        id: true,
+        idName: 'Multitool',
       },
       {
         type: 'paragraph',
@@ -13710,6 +14182,8 @@ const strategyData = [
         type: 'heading',
         headingType: 'subheading',
         text: 'Control Chip',
+        id: true,
+        idName: 'Control Chip',
       },
       {
         type: 'paragraph',
