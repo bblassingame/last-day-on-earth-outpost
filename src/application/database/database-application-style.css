@@ -328,6 +328,71 @@
   flex: 1 0;
 }
 
+/******************  Item Links  ******************/
+.database-item-links-container {
+  border-radius: 11px 11px 5px 5px;
+  background-color: #777777;
+}
+
+.database-item-links-heading {
+  border-radius: 10px 10px 0 0;
+  /* background-color: #424242; */
+  background-color: #393939;
+  /* background-color: #2f2f2f; */
+  /*background-color: #252525;*/
+  padding: 5px;
+}
+
+.database-item-links-scroll-container {
+  display: flex;
+  overflow: auto;
+}
+
+.database-item-links-scroll-item {
+  height: 100px;
+  width: 80px;
+  font-size: .75em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2d2e29;
+  margin: 5px;
+  border-radius: 5px; 
+}
+
+.database-item-links-scroll-item-heading {
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.database-item-links-scroll-item-text {
+  flex-grow: 9;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
 /*****************************   Footer Styling   *****************************/
 .db-footer-container {
   height: 40px;

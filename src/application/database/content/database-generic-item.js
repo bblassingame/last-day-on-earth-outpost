@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import DatabaseCraftingTable from './database-crafting-table'
 import DatabaseItemImagePanel from './database-item-image-panel'
+import DatabaseItemLinks from './database-item-links'
 
 class DatabaseGenericItem extends Component {
   constructor(props) {
@@ -30,6 +31,7 @@ class DatabaseGenericItem extends Component {
           craftingMaterialsList={this.props.craftingMaterialsList} 
           craftPoints={this.props.craftPoints} 
           craftRequiredLevel={this.props.craftRequiredLevel} />
+        <DatabaseItemLinks itemName={this.props.name}/>
       </div>
     )
   }
