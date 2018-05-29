@@ -3,6 +3,7 @@ import React from 'react'
 import DatabaseArmorTable from './database-armor-table'
 import DatabaseCraftingTable from './database-crafting-table'
 import DatabaseItemImagePanel from './database-item-image-panel'
+import DatabaseItemLinks from './database-item-links'
 
 const DatabaseArmorItem = (props) => {
   return (
@@ -21,6 +22,7 @@ const DatabaseArmorItem = (props) => {
         craftingMaterialsList={props.craftingMaterialsList} 
         craftPoints={props.craftPoints} 
         craftRequiredLevel={props.craftRequiredLevel} />
+      <DatabaseItemLinks itemName={props.name}/>
     </div>
   )
 }

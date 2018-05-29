@@ -1,5 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
+
+import { getURLString } from '../../utility/regex-utils'
 
 const DatabaseItemLinks = (props) => {
   return (
@@ -14,8 +16,9 @@ const DatabaseItemLinks = (props) => {
 }
 
 const getResourceLink = (itemName) => {
+  let src = '/strategy/Resources#' + getURLString(itemName)
   return (
-    <Link to='/strategy/Resources' >
+    <Link to={src} >
       <div className='database-item-links-scroll-item'>
         {/*fill this in and create the link item*/}
         <div className='database-item-links-scroll-item-heading'>
