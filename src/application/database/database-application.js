@@ -25,16 +25,20 @@ class DatabaseApplication extends Component {
     // needs a call to mapStateToProps doesn't get the required call and you don't get the props
     // updated with the new state.  You need to call you actions after the componentWillMount call
     // so that you get the mapStateToProps that you're expecting
+    this.props.onComponentWillMount() // load here in case we stop loading in the main app for whatever reason
   }
 
-  componentDidMount() {
-    // do this check in componentDidMount.  React expects functions that will update state to happen in a lifecyle
+  componentDidUpdate() {
+    // do this check in componentDidUpdate.  React expects functions that will update state to happen in a lifecyle
     // method aside from render.
+    // also, we're using componenDidUpdate because the component's state doesn't actually get props until this method.  Most
+    // other lifecycle methods don't actually have the updated props from the mapStateToProps function.
     // match the expected path exactly in case later we add a further endpoint that builds off the path
     // accepted paths:  '/database/<itemId>'  OR  '/database/<itemId>/'
-    if(null != this.props.location.pathname.match(/^\/database\/\d+\/?$/) && (-1 === this.props.selectedItem || null == this.props.selectedItem)) {
+    if(null != this.props.location.pathname.match(/^\/database\/[\w-_']+\/?$/) && (-1 === this.props.selectedItem || 'undefined' === typeof(this.props.selectedItem)) && false === this.getLoadingStatus()) {
       const tmpArray = this.props.location.pathname.split('/')
-      this.props.initializeSelectedItem(tmpArray[2])
+      const itemId = this.getItemIdFromUrlName(this.props.items, tmpArray[2])
+      this.props.initializeSelectedItem(itemId)
     }
   }
 
@@ -61,7 +65,7 @@ class DatabaseApplication extends Component {
         <DatabaseHeader selectedItem={this.props.selectedItem}  onBackArrowClick={this.handleBackArrowClick}/>
         <Route exact path='/database' render={(routeProps) => <DatabaseSearch onInput={this.handleSearchInput} {...routeProps} />}/>
         <Route exact path='/database' render={(routeProps) => <DatabaseContent isLoading={this.getLoadingStatus()} items={this.props.sortedFilteredItems} onItemClick={this.handleItemClick} {...routeProps} />} />
-        <Route path='/database/:itemName' render={(routeProps) => this.getItemPanel(routeProps)} />
+        <Route path='/database/:itemUrlName' render={(routeProps) => this.getItemPanel(routeProps)} />
         <DatabaseFooter />
       </div>
     )
@@ -75,7 +79,8 @@ class DatabaseApplication extends Component {
     // if we're loading or if we're still waiting on react to mount the component, show the loading panel
     // - this.getLoadingStatus -> 'true' indicates that we're still fetching items from the server
     // - this.props.selectedItem -> '-1' indicates that the item panel is still mounting and initializeSelectedItem has not been called
-    if(true == this.getLoadingStatus() || this.props.selectedItem === -1)
+    // - 'undefined' === typeof(this.props.selectedItem) indicates that the full state is not initialized because selectedItem is not present in the state
+    if(true === this.getLoadingStatus() || this.props.selectedItem === -1 || 'undefined' === typeof(this.props.selectedItem))
       return this.getLoadingPanel()
     
     let selectedItem = this.props.selectedItem
@@ -151,6 +156,18 @@ class DatabaseApplication extends Component {
     }
 
     return itemCraftingMaterialsList
+  }
+
+  getItemIdFromUrlName(items, selectedUrlName) {
+    let returnItemId = 1
+
+    Object.keys(items).map((itemId) => {
+      if(items[itemId].urlName === selectedUrlName) {
+        returnItemId = itemId
+      }
+    })
+
+    return returnItemId
   }
 }
 
