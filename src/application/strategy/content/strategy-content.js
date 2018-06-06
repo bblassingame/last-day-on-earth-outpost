@@ -3933,25 +3933,16 @@ const strategyData = [
     [
       {
         type: 'heading',
-        headingType: 'title',
-        text: 'Resources',
-      },
-      {
-        type: 'paragraph',
-        text: 'Often when people are trying to get rich, they look for a place that has the most of what they want and then they go to that place to try and get it. Unfortunately, that is not how life works and nor is it how it works in Last Day on Earth. The place that has the most of what you want is the red zone. It has more trees, more rocks, more metal, more cloth and more vehicle parts, but the red zone is often the worst place to get rich. Getting rich in Last Day on Earth is about bringing home more than you left home with which means that the cost of doing something is often more than  what you get out of doing it. This means that it is often more lucrative to farm the green zone since the green zone costs far less to farm than any of the other zones. But this is not always the case. Here are some tips for collecting each resource.',
-      },
-      {
-        type: 'paragraph',
-        text: 'Note: (COMING SOON!) If you are looking for a specific resource, I recommend searching for it in the database and then clicking on the link for “the best way to find this item”. It will reroute you here at the exact location you are looking for.',
-      },
-
-
-      {
-        type: 'heading',
         headingType: 'subheading',
         text: 'Acid Bath',
         id: true,
         idName: 'Acid_Bath',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Acid Bath',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4101,6 +4092,12 @@ const strategyData = [
         idName: 'Air_Filter',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Air Filter',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Air Filters can be found in the red ticket chest of Bunker Alfa, floppy disk chests, and as raid loot. It can not be crafted. My strategy is to open bunker alpha red ticket chest and floppy disk crates since raiding for air filters requires luck and there is often better loot to take.',
       },
@@ -4114,6 +4111,12 @@ const strategyData = [
         text: 'AK-47',
         id: true,
         idName: 'AK-47',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'AK-47',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4147,6 +4150,12 @@ const strategyData = [
         idName: 'Alcohol',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Alcohol',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Alcohol is an common resource that can be easily made using the medical table and putting in 5 berries. 5 berries make 1 bottle. You can also find a lot in coupon and loot chests in bunker Alpha. Alcohol can be used to make medkits, remove paint from storage chests, exchange with dealer and used in crafting explosive material. ',
       },
@@ -4160,6 +4169,12 @@ const strategyData = [
         text: 'Aluminum Bar',
         id: true,
         idName: 'Aluminum_Bar',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Aluminum Bar',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4265,6 +4280,12 @@ const strategyData = [
         idName: 'Aluminum_Plate',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Aluminum Plate',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get aluminum plates is by using the workbench to turn aluminum bars into plates. ',
       },
@@ -4282,6 +4303,12 @@ const strategyData = [
         text: 'Aluminum Wire',
         id: true,
         idName: 'Aluminum_Wire',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Aluminum Wire',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4305,6 +4332,12 @@ const strategyData = [
         text: 'Animal Rawhide',
         id: true,
         idName: 'Animal_Rawhide',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Animal Rawhide',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4336,6 +4369,12 @@ const strategyData = [
         idName: 'ATV_Gas_Tank',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'ATV Gas Tank',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The ATV gas tank is a fairly common drop in the chests of any of the Red Zone areas and can also be found in any of the Bunker Alfa ticket crates. The ATV is needed for the second stage recipe of the ATV and extra ATV GAs Tanks are very useful in increasing the mechanics level in your Recycler as it offers a lot of experience.',
       },
@@ -4351,6 +4390,12 @@ const strategyData = [
         text: 'ATV Wheel',
         id: true,
         idName: 'ATV_Wheel',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'ATV Wheel',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4406,6 +4451,12 @@ const strategyData = [
         text: 'ATV',
         id: true,
         idName: 'ATV',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'ATV',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4481,6 +4532,12 @@ const strategyData = [
         text: 'Baked Beans',
         id: true,
         idName: 'Baked_Beans',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Baked Beans',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4570,6 +4627,12 @@ const strategyData = [
         idName: 'Ball_Bearing',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Ball Bearing',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to collect ball bearings is farming zones and completing bunker alpha. At high level play, you will have more than you could ever need.',
       },
@@ -4629,6 +4692,12 @@ const strategyData = [
         idName: 'Bandages',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Bandages',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The way to get lots of bandages is to collect lots of cloth and craft it into bandages. This takes 5 cloth per bandage.',
       },
@@ -4646,6 +4715,12 @@ const strategyData = [
         text: 'Baseball Bat',
         id: true,
         idName: 'Baseball_Bat',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Baseball Bat',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4687,6 +4762,12 @@ const strategyData = [
         idName: 'Basic_Backpack',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Basic Backpack',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The easiest way to get the backpack is to craft it.',
       },
@@ -4706,6 +4787,12 @@ const strategyData = [
         idName: 'Batteries',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Batteries',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best place to find Batteries is in the lockers and chest scattered throughout Bunker Alfa but can also be found in other resources zones and events (Plane crash and Airdrops). Batteries cannot be crafted.',
       },
@@ -4719,6 +4806,12 @@ const strategyData = [
         text: 'Bauxite',
         id: true,
         idName: 'Bauxite',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Bauxite',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4738,6 +4831,12 @@ const strategyData = [
         text: 'Beanie',
         id: true,
         idName: 'Beanie',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Beanie',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4824,6 +4923,12 @@ const strategyData = [
         idName: 'Beer',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Beer',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get beer is by clearing bunker alpha (100% guaranteed)',
       },
@@ -4896,6 +5001,12 @@ const strategyData = [
         idName: 'Berry_Tea',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Berry Tea',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Berry Tea cannot be found in any zones. It is best to craft this item. Simply throw some berries in the campfire, and you will get 1 cup of tea for every 3 berries. Each Berry Tea restores 5 hunger and 30 thirst, but no health and no warmth. Also, the trader can ask for it, but this is very rare.',
       },
@@ -4909,6 +5020,12 @@ const strategyData = [
         text: 'Berry',
         id: true,
         idName: 'Berry',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Berry',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -4972,6 +5089,12 @@ const strategyData = [
         text: 'Black Paint',
         id: true,
         idName: 'Black_Paint',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Black Paint',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -5049,6 +5172,12 @@ const strategyData = [
         idName: 'Blue_Paint',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Blue Paint',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The easiesr way to get Blue paint is by opening Bunker Alpha Coupon crate and chests/lockers in the lower lv\'s ',
       },
@@ -5080,6 +5209,12 @@ const strategyData = [
         idName: 'Bolts',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Bolts',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Best way to get this is by looting chests in any farming zone.',
       },
@@ -5097,6 +5232,12 @@ const strategyData = [
         text: 'Bottle of Gasoline',
         id: true,
         idName: 'Bottle_of_Gasoline',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Bottle of Gasoline',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -5132,6 +5273,12 @@ const strategyData = [
         text: 'Bottle of Water',
         id: true,
         idName: 'Bottle_of_Water',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Bottle of Water',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -5225,6 +5372,12 @@ const strategyData = [
         idName: 'Bow',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Bow',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Bow',
       },
@@ -5277,7 +5430,31 @@ const strategyData = [
         text: 'Klaustin  (Edited By:  Huakawa)',
       },
       
-      
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'C-4 Explosive',
+        id: true,
+        idName: 'C-4_Explosive',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'C-4 Explosive',
+        style: 'inline',
+      },
+      {
+        type: 'paragraph',
+        text: 'The best way to get it is to visit Bunker Alpha as often as possible.',
+      },
+      {
+        type: 'paragraph',
+        text: 'C-4 Explosive is a currently uncraftable item (due to some materials that are not yet in the game) which allows a player to destroy a level 3 wall (a stone wall). This item can be found in Bunker Alfa red coupon crates, at the Floppy with Coordinates location and rarely in red zone crates. It is quite risky to use because it raises the raid noise meter by 16. When used, it destroys targeted wall and destroys chests located on the both sides of the targeted wall. But be careful because it can damage you too. While blowing up wall, keep a distance from it. Best strategy is to visit Bunker Alfa often and get it in the Red Coupon crate or the Floppy with Coordinates. If farming experience in red zones is your thing, with some luck, you may just find it in the crates.',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Bagy3  (Edited By:  Vedrana,  Locket)',
+      },
       {
         type: 'heading',
         headingType: 'subheading',
@@ -5286,12 +5463,18 @@ const strategyData = [
         idName: 'CAC_Card_A',
       },
       {
-        type: 'paragraph',
-        text: 'The easiest way to find the CAC Card D is to kill zombies in any locations, Toxic spitters, Floater Bloaters and Toxic abominations have the highes chance to drop it or by openeing chests in any zone',
+        type: 'image',
+        sourceType: 'database',
+        source: 'CAC Card A',
+        style: 'inline',
       },
       {
         type: 'paragraph',
-        text: 'Required to open Bunker Delta (Bunker Delta is not in the game)',
+        text: 'The easiest way to find the CAC Card A is to kill zombies in any locations, Toxic spitters, Floater Bloaters and Toxic abominations have the highest chance to drop it or by openeing chests in any zone',
+      },
+      {
+        type: 'paragraph',
+        text: 'Required to open Bunker Alpha',
       },
       {
         type: 'paragraph',
@@ -5309,12 +5492,18 @@ const strategyData = [
         idName: 'CAC_Card_B',
       },
       {
-        type: 'paragraph',
-        text: 'The easiest way to find the CAC Card D is to kill zombies in any locations, Toxic spitters, Floater Bloaters and Toxic abominations have the highes chance to drop it or by openeing chests in any zone',
+        type: 'image',
+        sourceType: 'database',
+        source: 'CAC Card B',
+        style: 'inline',
       },
       {
         type: 'paragraph',
-        text: 'Required to open Bunker Delta (Bunker Delta is not in the game)',
+        text: 'The easiest way to find the CAC Card B is to kill zombies in any locations, Toxic spitters, Floater Bloaters and Toxic abominations have the highest chance to drop it or by openeing chests in any zone',
+      },
+      {
+        type: 'paragraph',
+        text: 'Required to open Bunker Bravo',
       },
       {
         type: 'paragraph',
@@ -5332,12 +5521,18 @@ const strategyData = [
         idName: 'CAC_Card_C',
       },
       {
-        type: 'paragraph',
-        text: 'The easiest way to find the CAC Card D is to kill zombies in any locations, Toxic spitters, Floater Bloaters and Toxic abominations have the highes chance to drop it or by openeing chests in any zone',
+        type: 'image',
+        sourceType: 'database',
+        source: 'CAC Card C',
+        style: 'inline',
       },
       {
         type: 'paragraph',
-        text: 'Required to open Bunker Delta (Bunker Delta is not in the game)',
+        text: 'The easiest way to find the CAC Card C is to kill zombies in any locations, Toxic spitters, Floater Bloaters and Toxic abominations have the highest chance to drop it or by openeing chests in any zone',
+      },
+      {
+        type: 'paragraph',
+        text: 'Required to open Bunker Charlie (Bunker Charlie is not reachable in the game)',
       },
       {
         type: 'paragraph',
@@ -5353,6 +5548,12 @@ const strategyData = [
         text: 'CAC Card D',
         id: true,
         idName: 'CAC_Card_D',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'CAC Card D',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -5378,8 +5579,14 @@ const strategyData = [
         idName: 'CAC_Card_F',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'CAC Card F',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
-        text: 'The easiest way to find the CAC Card F is to kill zombies in any locations, Toxic spitters, Floater Bloaters and Toxic abominations have the highes chance to drop it or by openeing chests in any zone',
+        text: 'The easiest way to find the CAC Card F is to kill zombies in any locations, Toxic spitters, Floater Bloaters and Toxic abominations have the highest chance to drop it or by openeing chests in any zone',
       },
       {
         type: 'paragraph',
@@ -5401,8 +5608,14 @@ const strategyData = [
         idName: 'CAC_Card_R',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'CAC Card R',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
-        text: 'The easiest way to find the CAC Card R is to kill zombies in any locations, Toxic spitters, Floater Bloaters and Toxic abominations have the highes chance to drop it or by openeing chests in any zone',
+        text: 'The easiest way to find the CAC Card R is to kill zombies in any locations, Toxic spitters, Floater Bloaters and Toxic abominations have the highest chance to drop it or by openeing chests in any zone',
       },
       {
         type: 'paragraph',
@@ -5424,6 +5637,12 @@ const strategyData = [
         idName: 'CAC_Card_Z',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'CAC Card Z',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'There are currently 2 ways for a player to obtain the bunker Zulu common access card. The first one is the most hard but reliable, and it requires you to kill the toughest zombie currently in the game, the Big One. The second way to obtain this card is by finding it while raiding other peoples bases. This item currently has no use, but if you would like to obtain it as a trophy and don\'t want to rely on pure luck(by that I mean finding it while raiding), here are a couple of tips. First of all, there is only one type of the Big One that you should try to kill. There are 3 types of the Big One: the one that exists in the second floor of the bunker, the one that spawns in raids once the noise meter reaches 100 and the one that spawns in the red resource locations and the infected forest. The ones you should try to kill are those that spawn in dangerous locations and the infected forest, as the one in the bunker cannot be attacked in any way(there is currently no way to enter his room and fight him) and the one in the raids will deal increasing damage with each hit and will also heal back to full health once his hp drops below 20%. If you want to fight the Big One there are a couple of things you should know about him, such as he has 1000 HP, deals 17 damage per hit (swat armor equiped), does around one hit per second and has a running speed that is almost double than the player even with the best boots on. His most important characteristic though is his armour. His armour will block 95% of incoming damage, meaning that every 20 points of damage deal 1 point of damage to him. This means that in order to harm him you will need a weapon that deals +20 damage per hit. I only recommend ranged weapons, as they attack faster and will reduce the amount of hits you receive as you won\'t have to approach him as much. The most suitable weapons to kill him are the shotgun and the VSS vintorez,but I would recommend the shotgun, as it deals 3 dmg to the Big One ( actual damage is 70 but due to the armour it is reduced to 3) compared to the the VSS vintorez which deals 2 and is also a lot harder to find. The grenade launcher is not recommended, as you will most likely harm yourself while using it. The location you should choose to find and attack him should be the infected forest (all though the big one might be removed from there in an upcoming update) as there is an 100% chance that he will spawn. Other than that, he has a high chance of spawning in normal red zones. The whole fight will take around 30-40 medkits, 8-9 shotguns, two full sets of swat gear and a lot of patience and determination. Finally, it is also worth noting that during the fight you will have to face other hostile entities, such as toxic abominations, toxic spitters, rabid and diseased wolfs and, in some rare cases, even a second big one.',
       },
@@ -5440,6 +5659,12 @@ const strategyData = [
         idName: 'Camera',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Camera',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The easiest way to get the camera is by opening chests in any of the zones. Chests in the red zones have the best chance, but cameras are one of the rarest electronic items in the game. Sometimes you can get a stash of cameras by raiding another players base that would take months to farm, but this is based on luck. This item can not be crafted',
       },
@@ -5453,6 +5678,12 @@ const strategyData = [
         text: 'Campfire',
         id: true,
         idName: 'Campfire',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Campfire',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -5511,6 +5742,12 @@ const strategyData = [
         idName: 'Cargo_Pants',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Cargo Pants',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this item is by farming the green zone for these simple ingredients/ materials.',
       },
@@ -5528,6 +5765,12 @@ const strategyData = [
         text: 'Carrot',
         id: true,
         idName: 'Carrot',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Carrot',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -5549,6 +5792,12 @@ const strategyData = [
         idName: 'Carrot_Seeds',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Carrot Seeds',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get carrot seeds is to collect plant fiber in any of the zones. There is around a 50-60% chance of getting one carrot seed each time you collect a plant fiber. The carrot seed cannot be crafted. They can also be found in Ai\' s bases garden beds and chests . Plus, you have a chance of getting 5 carrot seeds in the ""Unknow Box"" in the store for free after watching an advertisement .',
       },
@@ -5562,6 +5811,12 @@ const strategyData = [
         text: 'Carrot Stew',
         id: true,
         idName: 'Carrot_Stew',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Carrot Stew',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -5581,6 +5836,12 @@ const strategyData = [
         text: 'CB Radio',
         id: true,
         idName: 'CB_Radio',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'CB Radio',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -5691,6 +5952,12 @@ const strategyData = [
         idName: 'Charcoal',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Charcoal',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'It can be crafted by burning pine/oak plank in campfire. ',
       },
@@ -5763,6 +6030,12 @@ const strategyData = [
         idName: 'Chest',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Chest',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to obtain is simply by crafting it. ',
       },
@@ -5789,6 +6062,12 @@ const strategyData = [
         idName: 'Chopper_Fork',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Chopper Fork',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The ultimate BEST place to find chopper fork is the bunker alfa. ',
       },
@@ -5808,6 +6087,12 @@ const strategyData = [
         idName: 'Chopper_Gas_Tank',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Chopper Gas Tank',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by opening red coupon chest in bunker Alpha.',
       },
@@ -5825,6 +6110,12 @@ const strategyData = [
         text: 'Chopper Wheel',
         id: true,
         idName: 'Chopper_Wheel',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Chopper Wheel',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -5888,6 +6179,12 @@ const strategyData = [
         text: 'Chopper',
         id: true,
         idName: 'Chopper',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Chopper',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -6109,7 +6406,31 @@ const strategyData = [
         type: 'acknowledgement',
         text: 'Huakawa  (Edited By:  Locket)',
       },
-      
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Cigarettes',
+        id: true,
+        idName: 'Cigarettes',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Cigarettes',
+        style: 'inline',
+      },
+      {
+        type: 'paragraph',
+        text: 'It can be found in the lockers and boxes in Bunker Alpha and in every farming zone, in a chest or by killing zombies. ',
+      },
+      {
+        type: 'paragraph',
+        text: 'Item cannot be crafted. Can be used for trades with the dealer.""',
+      },
+      {
+        type: 'acknowledgement',
+        text: 'Dennys Reyes  (Edited By:  Vedrana,  Locket)',
+      },
       
       {
         type: 'heading',
@@ -6117,6 +6438,12 @@ const strategyData = [
         text: 'Cleaver',
         id: true,
         idName: 'Cleaver',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Cleaver',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -6174,6 +6501,12 @@ const strategyData = [
         idName: 'Combat_Gear_Coupon',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Combat Gear Coupon',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by clearing bunker Alpha normal mode.',
       },
@@ -6207,6 +6540,12 @@ const strategyData = [
         text: 'Comfortable Bed',
         id: true,
         idName: 'Comfortable_Bed',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Comfortable Bed',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -6317,6 +6656,12 @@ const strategyData = [
         idName: 'Connecting_Rod',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Connecting Rod',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is from bunker Alpha coupon chests.',
       },
@@ -6400,6 +6745,12 @@ const strategyData = [
         idName: 'Copper_Bar',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Copper Bar',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by smelting copper ore into copper bar.',
       },
@@ -6417,6 +6768,12 @@ const strategyData = [
         text: 'Copper Ore',
         id: true,
         idName: 'Copper_Ore',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Copper Ore',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -6538,6 +6895,12 @@ const strategyData = [
         idName: 'Cosy_Couch',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Cosy Couch',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The only way to get this is by crafting it.',
       },
@@ -6623,6 +6986,12 @@ const strategyData = [
         text: 'Crowbar',
         id: true,
         idName: 'Crowbar',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Crowbar',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -6733,6 +7102,12 @@ const strategyData = [
         idName: 'Dad_Hat',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Dad Hat',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The easiest way to get this is by crafting it.',
       },
@@ -6810,6 +7185,12 @@ const strategyData = [
         text: 'Denim Jeans',
         id: true,
         idName: 'Denim_Jeans',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Denim Jeans',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -6897,6 +7278,12 @@ const strategyData = [
         text: 'Dining Table',
         id: true,
         idName: 'Dining_Table',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Dining Table',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -6990,6 +7377,12 @@ const strategyData = [
         idName: 'Dish_Antenna',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Dish Antenna',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is in the bunker alfa by killing zombies and opening chests and getting the tickets and opening the various kits available.',
       },
@@ -7007,6 +7400,12 @@ const strategyData = [
         text: 'Doormat',
         id: true,
         idName: 'Doormat',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Doormat',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7028,6 +7427,12 @@ const strategyData = [
         idName: 'Dual_Berettas',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Dual Berettas',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Best way to get this is by opening floppy disc chests.',
       },
@@ -7045,6 +7450,12 @@ const strategyData = [
         text: 'Duct Tape',
         id: true,
         idName: 'Duct_Tape',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Duct Tape',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7182,6 +7593,12 @@ const strategyData = [
         idName: 'Edible_Mushroom',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Edible Mushroom',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Best way to get this is by farming oak zones.',
       },
@@ -7200,6 +7617,12 @@ const strategyData = [
         text: 'Electric Generator',
         id: true,
         idName: 'Electric_Generator',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Electric Generator',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7277,6 +7700,12 @@ const strategyData = [
         idName: 'Electronic_Circuit',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Electronic Circuit',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to obtain the Electronic Circuit would be in the military chests found in secret locations that are revealed by inserting the ""Floppy with Coordinates"" ',
       },
@@ -7325,6 +7754,12 @@ const strategyData = [
         idName: 'Empty_Bottle',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Empty Bottle',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Easiest way to obtain empty bottle is simply by drinking a bottle of water. ',
       },
@@ -7342,6 +7777,12 @@ const strategyData = [
         text: 'Empty Can',
         id: true,
         idName: 'Empty_Can',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Empty Can',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7362,6 +7803,12 @@ const strategyData = [
         text: 'Engine Part',
         id: true,
         idName: 'Engine_Part',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Engine Part',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7415,6 +7862,12 @@ const strategyData = [
         idName: 'Expensive_Watches',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Expensive Watches',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: '1. The best way to get this is by farming Green, Yellow, and Red locations (forests or mountains, including oak forest, and winter locations), additionally, bunker Alpha and Air Drops',
       },
@@ -7443,6 +7896,12 @@ const strategyData = [
         idName: 'First_Aid_Kit',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'First Aid Kit',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by killing zombies for pieces of cloth, get berry for alcohol and turn them into first aid kit.',
       },
@@ -7462,6 +7921,12 @@ const strategyData = [
         idName: 'Fishing_Rod',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Fishing Rod',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Fishing rod can only be crafted as it is craftable.',
       },
@@ -7479,6 +7944,12 @@ const strategyData = [
         text: 'Flare Gun',
         id: true,
         idName: 'Flare_Gun',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Flare Gun',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7504,6 +7975,12 @@ const strategyData = [
         idName: 'Flashlight',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Flashlight',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get the flashlight is through clearing the bunker.',
       },
@@ -7521,6 +7998,12 @@ const strategyData = [
         text: 'Floor Lamp',
         id: true,
         idName: 'Floor_Lamp',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Floor Lamp',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7614,6 +8097,12 @@ const strategyData = [
         idName: 'Floppy_Disk',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Floppy Disk',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The only way you can get it is in Bunker Alfa Hard mode. ',
       },
@@ -7641,6 +8130,12 @@ const strategyData = [
         idName: 'FN_Scar',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'FN Scar',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'This can be found in floppy disk coordinates and during a raid. ',
       },
@@ -7659,6 +8154,12 @@ const strategyData = [
         text: 'Fur Beanie',
         id: true,
         idName: 'Fur_Beanie',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Fur Beanie',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7680,6 +8181,12 @@ const strategyData = [
         idName: 'Fur_Boots',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Fur Boots',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Fur boots is crafted from fur and other resources (view database). ',
       },
@@ -7697,6 +8204,12 @@ const strategyData = [
         text: 'Fur Jacket',
         id: true,
         idName: 'Fur_Jacket',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Fur Jacket',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7718,6 +8231,12 @@ const strategyData = [
         idName: 'Fur_Trousers',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Fur Trousers',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Fur trousers is crafted from fur and other resources (view database). ',
       },
@@ -7735,6 +8254,12 @@ const strategyData = [
         text: 'Fur',
         id: true,
         idName: 'Fur',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Fur',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7760,6 +8285,12 @@ const strategyData = [
         idName: 'Garden_Bed',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Garden Bed',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Garden bed is easily crafted by collecting resources (view database) and placed in build mode. ',
       },
@@ -7777,6 +8308,12 @@ const strategyData = [
         text: 'Gas Mask',
         id: true,
         idName: 'Gas_Mask',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Gas Mask',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7830,6 +8367,12 @@ const strategyData = [
         idName: 'Gasoline',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Gasoline',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: '""It can be found in Bunker Alpha Coupon crates (green, yellow, red)and lower lv chests/lockers, Raids, Air drop and  Rest stop event',
       },
@@ -7852,6 +8395,12 @@ const strategyData = [
         text: 'Glock 17',
         id: true,
         idName: 'Glock_17',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Glock 17',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7877,6 +8426,12 @@ const strategyData = [
         idName: 'Gold_Bar',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Gold Bar',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'It’s usually found in chests in green, yellow, and red zones. ',
       },
@@ -7894,6 +8449,12 @@ const strategyData = [
         text: 'Golf Club',
         id: true,
         idName: 'Golf_Club',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Golf Club',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -7951,6 +8512,12 @@ const strategyData = [
         idName: 'Green_Paint',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Green Paint',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The easiesr way to get Green paint is by opening Bunker Alpha Coupon crates and chests/lockers in the lower lv\'s ',
       },
@@ -7982,6 +8549,12 @@ const strategyData = [
         idName: 'Gun_Oil',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Gun Oil',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The only way to get this is by doing bunker Alpha hard mode.',
       },
@@ -8008,6 +8581,12 @@ const strategyData = [
         text: 'Gunsmith Bench',
         id: true,
         idName: 'Gunsmith_Bench',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Gunsmith Bench',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -8193,6 +8772,12 @@ const strategyData = [
         idName: 'Hammer',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Hammer',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The easiest way to get this item is Bunker Alpha, there are 3 chests which can garuntee u a hammer (or wrench), these are in the lobby, lv 2 and lv3',
       },
@@ -8216,6 +8801,12 @@ const strategyData = [
         text: 'Hatchet',
         id: true,
         idName: 'Hatchet',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Hatchet',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -8249,6 +8840,12 @@ const strategyData = [
         idName: 'Hi-Tech_Components',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Hi-Tech Components',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'This item can only be optained from the recycler by recycling phone, camera, signal amplefier and heat sensor',
       },
@@ -8266,6 +8863,12 @@ const strategyData = [
         text: 'Hockey Stick',
         id: true,
         idName: 'Hockey_Stick',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Hockey Stick',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -8341,6 +8944,12 @@ const strategyData = [
         idName: 'Horse_Feeder',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Horse Feeder',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The easiest way to optain it is by crafting it',
       },
@@ -8409,6 +9018,12 @@ const strategyData = [
         idName: 'Houseplant',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Houseplant',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -8426,6 +9041,12 @@ const strategyData = [
         text: 'Identification Tags',
         id: true,
         idName: 'Identification_Tags',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Identification Tags',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -8469,6 +9090,12 @@ const strategyData = [
         text: 'Iron Bar',
         id: true,
         idName: 'Iron_Bar',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Iron Bar',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -8658,6 +9285,12 @@ const strategyData = [
         idName: 'Iron_Hatchet',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Iron Hatchet',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -8683,6 +9316,12 @@ const strategyData = [
         text: 'Iron Ore',
         id: true,
         idName: 'Iron_Ore',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Iron Ore',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -8716,6 +9355,12 @@ const strategyData = [
         idName: 'Iron_Pickaxe',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Iron Pickaxe',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -8741,6 +9386,12 @@ const strategyData = [
         text: 'Jerky',
         id: true,
         idName: 'Jerky',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Jerky',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -8840,6 +9491,12 @@ const strategyData = [
         text: 'Juicy Steak',
         id: true,
         idName: 'Juicy_Steak',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Juicy Steak',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -8953,6 +9610,12 @@ const strategyData = [
         idName: 'Katana',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Katana',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by visiting the dealer frequently.',
       },
@@ -8979,6 +9642,12 @@ const strategyData = [
         text: 'Leather',
         id: true,
         idName: 'Leather',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Leather',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -9172,6 +9841,12 @@ const strategyData = [
         idName: 'Light_Bulb',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Light Bulb',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by doing bunker Alpha.',
       },
@@ -9194,6 +9869,12 @@ const strategyData = [
         text: 'Limestone',
         id: true,
         idName: 'Limestone',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Limestone',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -9241,6 +9922,12 @@ const strategyData = [
         text: 'Lock and Key',
         id: true,
         idName: 'Lock_and_Key',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Lock and Key',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -9342,6 +10029,12 @@ const strategyData = [
         idName: 'M16',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'M16',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: '""The best way to get this is by doing bunker Alpha.',
       },
@@ -9393,6 +10086,12 @@ const strategyData = [
         idName: 'Machete',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Machete',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to obtain this is by crafting it.',
       },
@@ -9424,6 +10123,12 @@ const strategyData = [
         idName: 'Makeshift_Bat',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Makeshift Bat',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Best way to get it is through crafting it. ',
       },
@@ -9441,6 +10146,12 @@ const strategyData = [
         text: 'Meat Dryer',
         id: true,
         idName: 'Meat_Dryer',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Meat Dryer',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -9576,6 +10287,12 @@ const strategyData = [
         text: 'Medical Table',
         id: true,
         idName: 'Medical_Table',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Medical Table',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -9725,6 +10442,12 @@ const strategyData = [
         idName: 'Melting_Furnace',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Melting Furnace',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The only way to get Melting furnace is by crafting it.',
       },
@@ -9744,6 +10467,12 @@ const strategyData = [
         text: 'Military Backpack',
         id: true,
         idName: 'Military_Backpack',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Military Backpack',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -9801,6 +10530,12 @@ const strategyData = [
         idName: 'Military_Box',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Military Box',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'For once it can be obtained from shop, now there is no way to obtain it.',
       },
@@ -9818,6 +10553,12 @@ const strategyData = [
         text: 'Military Notebook',
         id: true,
         idName: 'Military_Notebook',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Military Notebook',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -9839,6 +10580,12 @@ const strategyData = [
         idName: 'Minigun',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Minigun',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by doing bunker Alpha.',
       },
@@ -9856,6 +10603,12 @@ const strategyData = [
         text: 'Mobile Phone',
         id: true,
         idName: 'Mobile_Phone',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Mobile Phone',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -9889,6 +10642,12 @@ const strategyData = [
         idName: 'Modified_AK-47',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Modified AK-47',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by doing bunker Alpha.',
       },
@@ -9906,6 +10665,12 @@ const strategyData = [
         text: 'Modified Glock 17',
         id: true,
         idName: 'Modified_Glock_17',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Modified Glock 17',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -9959,6 +10724,12 @@ const strategyData = [
         idName: 'Modified_M16',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Modified M16',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by doing bunker Alpha.',
       },
@@ -9978,6 +10749,12 @@ const strategyData = [
         text: 'Nail Board',
         id: true,
         idName: 'Nail_Board',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Nail Board',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10001,6 +10778,12 @@ const strategyData = [
         text: 'Nails',
         id: true,
         idName: 'Nails',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Nails',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10037,6 +10820,12 @@ const strategyData = [
         text: 'Oak Log',
         id: true,
         idName: 'Oak_Log',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Oak Log',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10450,6 +11239,12 @@ const strategyData = [
         idName: 'Oak_Plank',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Oak Plank',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by processing oak log in woodworking bench.',
       },
@@ -10498,8 +11293,14 @@ const strategyData = [
         idName: 'Paddle',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Paddle',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
-        text: 'This weapon can only be found as loot in chests(green or yellow zone).',
+        text: 'This weapon can only be found as loot in AI dead body (better chance in any green or yellow farming zone).',
       },
       {
         type: 'acknowledgement',
@@ -10511,6 +11312,12 @@ const strategyData = [
         text: 'Pattern Bloater',
         id: true,
         idName: 'Pattern_Bloater',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Bloater',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10532,6 +11339,12 @@ const strategyData = [
         idName: 'Pattern_Blue',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Blue',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'It can be found in yellow and red ticket crate in bunker Alfa, also from floppy disk coordinates and chopper event.',
       },
@@ -10549,6 +11362,12 @@ const strategyData = [
         text: 'Pattern Captain',
         id: true,
         idName: 'Pattern_Captain',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Captain',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10570,6 +11389,12 @@ const strategyData = [
         idName: 'Pattern_Christmas\'17',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Christmas\'17',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Not obtainable anymore but perhaps you can get it from raid, but this is nearly impossible.',
       },
@@ -10587,6 +11412,12 @@ const strategyData = [
         text: 'Pattern Fire',
         id: true,
         idName: 'Pattern_Fire',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Fire',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10608,6 +11439,12 @@ const strategyData = [
         idName: 'Pattern_Halloween\'17',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Halloween\'17',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Not obtainable anymore but perhaps you can get it from raid, but this is nearly impossible.',
       },
@@ -10627,6 +11464,12 @@ const strategyData = [
         idName: 'Pattern_Harvey',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Harvey',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'It can be found in yellow and red ticket crate in bunker Alfa, also from chopper event.',
       },
@@ -10644,6 +11487,12 @@ const strategyData = [
         text: 'Pattern Kitty',
         id: true,
         idName: 'Pattern_Kitty',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Kitty',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10681,6 +11530,12 @@ const strategyData = [
         idName: 'Pattern_Leopard',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Leopard',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'It can only be found in floppy disc chests.',
       },
@@ -10698,6 +11553,12 @@ const strategyData = [
         text: 'Pattern Military',
         id: true,
         idName: 'Pattern_Military',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Military',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10731,6 +11592,12 @@ const strategyData = [
         idName: 'Pattern_Nuclear',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Nuclear',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'It can be found in yellow and red ticket crate in bunker Alfa, also from chopper event.',
       },
@@ -10748,6 +11615,12 @@ const strategyData = [
         text: 'Pattern Skulls',
         id: true,
         idName: 'Pattern_Skulls',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pattern Skulls',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10769,6 +11642,12 @@ const strategyData = [
         idName: 'Personal_Effects',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Personal Effects',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best place to get this is by doing bunker Alpha hard mode.',
       },
@@ -10786,6 +11665,12 @@ const strategyData = [
         text: 'Pickaxe',
         id: true,
         idName: 'Pickaxe',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pickaxe',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10807,6 +11692,12 @@ const strategyData = [
         idName: 'Piece_of_Cloth',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Piece of Cloth',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way of getting this is by using sewing table and/or killing zombies in red zone.',
       },
@@ -10824,6 +11715,12 @@ const strategyData = [
         text: 'Pine Log',
         id: true,
         idName: 'Pine_Log',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pine Log',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -10949,6 +11846,12 @@ const strategyData = [
         idName: 'Pine_Plank',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Pine Plank',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by processing pine log in woodworking bench.',
       },
@@ -11026,6 +11929,12 @@ const strategyData = [
         text: 'Plant Fiber',
         id: true,
         idName: 'Plant_Fiber',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Plant Fiber',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11174,6 +12083,12 @@ const strategyData = [
         idName: 'Rain_Catcher',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Rain Catcher',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -11191,6 +12106,12 @@ const strategyData = [
         text: 'Ration Coupon',
         id: true,
         idName: 'Ration_Coupon',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Ration Coupon',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11212,6 +12133,12 @@ const strategyData = [
         idName: 'Raw_Meat',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Raw Meat',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by farming any zone repeatedly.',
       },
@@ -11229,6 +12156,12 @@ const strategyData = [
         text: 'Raw Turkey',
         id: true,
         idName: 'Raw_Turkey',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Raw Turkey',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11275,6 +12208,12 @@ const strategyData = [
         idName: 'Red_Paint',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Red Paint',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'he easiesr way to get Red paint is by opening Bunker Alpha Coupon crates and chests/lockers in the lower lv\'s ',
       },
@@ -11314,6 +12253,12 @@ const strategyData = [
         idName: 'Refined_Melting_Furnace',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Refined Melting Furnace',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to ge this is by crafting it.',
       },
@@ -11331,6 +12276,12 @@ const strategyData = [
         text: 'Reinforced Beanie',
         id: true,
         idName: 'Reinforced_Beanie',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Reinforced Beanie',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11388,6 +12339,12 @@ const strategyData = [
         idName: 'Reinforced_Boots',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Reinforced Boots',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -11437,6 +12394,12 @@ const strategyData = [
         text: 'Reinforced Jacket',
         id: true,
         idName: 'Reinforced_Jacket',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Reinforced Jacket',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11490,6 +12453,12 @@ const strategyData = [
         idName: 'Reinforced_Jeans',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Reinforced Jeans',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -11541,6 +12510,12 @@ const strategyData = [
         idName: 'Reinforced_Trousers',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Reinforced Trousers',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -11559,6 +12534,12 @@ const strategyData = [
         text: 'Road Sign',
         id: true,
         idName: 'Road_Sign',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Road Sign',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11580,6 +12561,12 @@ const strategyData = [
         idName: 'Roasted_Turkey',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Roasted Turkey',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best place to find this is to go yellow or red zone.',
       },
@@ -11597,6 +12584,12 @@ const strategyData = [
         text: 'Rope',
         id: true,
         idName: 'Rope',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Rope',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11618,6 +12611,12 @@ const strategyData = [
         idName: 'Rubber_Parts',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Rubber Parts',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by doing bunker Alpha.',
       },
@@ -11636,6 +12635,12 @@ const strategyData = [
         text: 'Safe',
         id: true,
         idName: 'Safe',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Safe',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11659,6 +12664,12 @@ const strategyData = [
         text: 'Saw Blade Mace',
         id: true,
         idName: 'Saw_Blade_Mace',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Saw Blade Mace',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11690,6 +12701,12 @@ const strategyData = [
         text: 'Scrap Metal',
         id: true,
         idName: 'Scrap_Metal',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Scrap Metal',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11751,6 +12768,12 @@ const strategyData = [
         idName: 'Sewing_Table',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Sewing Table',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'It is a craftable item, which makes crafting the easiest way to optain it',
       },
@@ -11774,6 +12797,12 @@ const strategyData = [
         idName: 'Shirt',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Shirt',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -11791,6 +12820,12 @@ const strategyData = [
         text: 'Shotgun',
         id: true,
         idName: 'Shotgun',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Shotgun',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11828,6 +12863,12 @@ const strategyData = [
         idName: 'Shovel',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Shovel',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -11849,6 +12890,12 @@ const strategyData = [
         text: 'Shower',
         id: true,
         idName: 'Shower',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Shower',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11878,6 +12925,12 @@ const strategyData = [
         idName: 'Signal_Amplifier',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Signal Amplifier',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is to do bunker Alpha.',
       },
@@ -11895,6 +12948,12 @@ const strategyData = [
         text: 'Skull Crusher',
         id: true,
         idName: 'Skull_Crusher',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Skull Crusher',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11926,6 +12985,12 @@ const strategyData = [
         text: 'Small Box',
         id: true,
         idName: 'Small_Box',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Small Box',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -11979,6 +13044,12 @@ const strategyData = [
         idName: 'Sneakers',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Sneakers',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -12000,6 +13071,12 @@ const strategyData = [
         text: 'Snorkel',
         id: true,
         idName: 'Snorkel',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Snorkel',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12025,6 +13102,12 @@ const strategyData = [
         idName: 'Spear',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Spear',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'You should pick up pine log from the ground and craft it.',
       },
@@ -12046,6 +13129,12 @@ const strategyData = [
         text: 'Spike Trap',
         id: true,
         idName: 'Spike_Trap',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Spike Trap',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12073,6 +13162,12 @@ const strategyData = [
         text: 'Spiked Devestator',
         id: true,
         idName: 'Spiked_Devestator',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Spiked Devestator',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12166,6 +13261,12 @@ const strategyData = [
         idName: 'Steel_Bar',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Steel Bar',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Best and easiest way would be by getting a copper bar from Recycler and refine it into steel bar.',
       },
@@ -12241,6 +13342,12 @@ const strategyData = [
         idName: 'Steel_Plate',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Steel Plate',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Best and easiest way would be by getting a copper bar from Recycler and refine it into steel bar before turning it into steel plate.',
       },
@@ -12265,6 +13372,12 @@ const strategyData = [
         idName: 'Stone_Brick',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Stone Brick',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is to turn limestone into stone brick in stonecutter’s table.',
       },
@@ -12286,6 +13399,12 @@ const strategyData = [
         text: 'Stonecutter\'s Table',
         id: true,
         idName: 'Stonecutter\'s_Table',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Stonecutter\'s Table',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12315,6 +13434,12 @@ const strategyData = [
         idName: 'Strong_Alcohol',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Strong Alcohol',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get strong alcohol is through opening chests in all red zones, it can also be obtained on AI/NPC inventories as well as raiding other people\'s base.',
       },
@@ -12329,6 +13454,12 @@ const strategyData = [
         text: 'Survival Kit Coupon',
         id: true,
         idName: 'Survival_Kit_Coupon',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Survival Kit Coupon',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12352,6 +13483,12 @@ const strategyData = [
         text: 'SWAT Body Armor',
         id: true,
         idName: 'SWAT_Body_Armor',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'SWAT Body Armor',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12397,6 +13534,12 @@ const strategyData = [
         idName: 'SWAT_Boots',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'SWAT Boots',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by opening coupon chests in bunker Alpha.',
       },
@@ -12420,6 +13563,12 @@ const strategyData = [
         idName: 'SWAT_Helmet',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'SWAT Helmet',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by opening coupon chests in bunker Alpha.',
       },
@@ -12441,6 +13590,12 @@ const strategyData = [
         text: 'SWAT Trousers',
         id: true,
         idName: 'SWAT_Trousers',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'SWAT Trousers',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12467,6 +13622,12 @@ const strategyData = [
         idName: 'Tactical_Body_Armor',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Tactical Body Armor',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by opening coupon chests in bunker Alpha.',
       },
@@ -12484,6 +13645,12 @@ const strategyData = [
         text: 'Tactical Boots',
         id: true,
         idName: 'Tactical_Boots',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Tactical Boots',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12509,6 +13676,12 @@ const strategyData = [
         idName: 'Tactical_Cap',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Tactical Cap',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by opening coupon chests in bunker Alpha.',
       },
@@ -12526,6 +13699,12 @@ const strategyData = [
         text: 'Tactical Trousers',
         id: true,
         idName: 'Tactical_Trousers',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Tactical Trousers',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12551,6 +13730,12 @@ const strategyData = [
         idName: 'Tanning_Rack',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Tanning Rack',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The only way to get this is to craft it.',
       },
@@ -12573,6 +13758,12 @@ const strategyData = [
         text: 'Thick Fabric',
         id: true,
         idName: 'Thick_Fabric',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Thick Fabric',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12622,6 +13813,12 @@ const strategyData = [
         idName: 'Thick_Jacket',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Thick Jacket',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -12659,6 +13856,12 @@ const strategyData = [
         idName: 'Torch',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Torch',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by crafting it.',
       },
@@ -12677,6 +13880,12 @@ const strategyData = [
         text: 'Transistor',
         id: true,
         idName: 'Transistor',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Transistor',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12700,6 +13909,12 @@ const strategyData = [
         text: 'Trash',
         id: true,
         idName: 'Trash',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Trash',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12733,6 +13948,12 @@ const strategyData = [
         idName: 'Trip_Wire_Trap',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Trip Wire Trap',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'This can only be crafted.',
       },
@@ -12756,6 +13977,12 @@ const strategyData = [
         idName: 'Truck_Saw_Blade',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Truck Saw Blade',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Truck Saw Blade can be found in Red and Yellow resource zone chests as well as Bunker Alfa ticket crates.  They are used in the Zombie Truck, which is not yet available in the game.  Truck Saw Blade can be recycled in the Recycler for a small chance to get a steel bar and metal scraps',
       },
@@ -12769,6 +13996,12 @@ const strategyData = [
         text: 'Truck Wheel',
         id: true,
         idName: 'Truck_Wheel',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Truck Wheel',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12796,6 +14029,12 @@ const strategyData = [
         text: 'Trunk',
         id: true,
         idName: 'Trunk',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Trunk',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12863,6 +14102,12 @@ const strategyData = [
         idName: 'Turret',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Turret',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'It can only be built three times into three different levels.',
       },
@@ -12907,6 +14152,12 @@ const strategyData = [
         idName: 'USB_Drive',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'USB Drive',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is to search them in yellow or red zone.',
       },
@@ -12942,6 +14193,12 @@ const strategyData = [
         idName: 'VSS_Vintorez',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'VSS Vintorez',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is to level up army specialist’s reputation level and get loot from floppy disc chests.',
       },
@@ -12963,6 +14220,12 @@ const strategyData = [
         text: 'Weapon Crate',
         id: true,
         idName: 'Weapon_Crate',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Weapon Crate',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -12988,6 +14251,12 @@ const strategyData = [
         idName: 'Weapon_Parts',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Weapon Parts',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best and fastest way to get this is to do bunker as much as possible',
       },
@@ -13009,6 +14278,12 @@ const strategyData = [
         text: 'White Paint',
         id: true,
         idName: 'White_Paint',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'White Paint',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13066,6 +14341,12 @@ const strategyData = [
         idName: 'Wiring',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Wiring',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Wiring is easy to find and the best place to find it is find it is any green zone.',
       },
@@ -13110,6 +14391,12 @@ const strategyData = [
         idName: 'Woodworking_Bench',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Woodworking Bench',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Best way to obtain a woodworking bench is to obtain the required materials to craft it from the crafting menu[10 pine logs and 5 iron ore].',
       },
@@ -13131,6 +14418,12 @@ const strategyData = [
         text: 'Work Boots',
         id: true,
         idName: 'Work_Boots',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Work Boots',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13168,6 +14461,12 @@ const strategyData = [
         idName: 'Workbench',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Workbench',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'It can only be crafted.',
       },
@@ -13201,6 +14500,12 @@ const strategyData = [
         text: 'Wrench',
         id: true,
         idName: 'Wrench',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Wrench',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13272,6 +14577,12 @@ const strategyData = [
         text: 'Yellow Paint',
         id: true,
         idName: 'Yellow_Paint',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Yellow Paint',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13356,6 +14667,12 @@ const strategyData = [
         text: 'Zip Gun',
         id: true,
         idName: 'Zip_Gun',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Zip Gun',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13454,6 +14771,12 @@ const strategyData = [
         idName: 'Iron_Plate',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Iron Plate',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to get this is by processing the Iron Bar into Iron Plate.',
       },
@@ -13475,6 +14798,12 @@ const strategyData = [
         text: 'MILKOR MGL',
         id: true,
         idName: 'MILKOR_MGL',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'MILKOR MGL',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13513,6 +14842,12 @@ const strategyData = [
         idName: 'Reinforced_Shirt',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Reinforced Shirt',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'The best way to obtain Reinforced Shirt is to craft them as the resources are fairly easy to find.',
       },
@@ -13534,6 +14869,12 @@ const strategyData = [
         text: 'Reinforced Sneakers',
         id: true,
         idName: 'Reinforced_Sneakers',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Reinforced Sneakers',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13574,6 +14915,12 @@ const strategyData = [
         idName: 'Warrior_Armor',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Warrior Armor',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'That item can not be crafted or even find, because it is a special item from the event Chinеsе New year. ',
       },
@@ -13591,6 +14938,12 @@ const strategyData = [
         text: 'Warrior Boots',
         id: true,
         idName: 'Warrior_Boots',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Warrior Boots',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13612,6 +14965,12 @@ const strategyData = [
         idName: 'Warrior_Greaves',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Warrior Greaves',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'That item can not be crafted or even find, because it is a special item from the event Chinеsе New year. ',
       },
@@ -13631,6 +14990,12 @@ const strategyData = [
         idName: 'Warrior_Helmet',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Warrior Helmet',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'That item can not be crafted or even find, because it is a special item from the event Chinеsе New year. ',
       },
@@ -13648,6 +15013,12 @@ const strategyData = [
         text: 'Recycler',
         id: true,
         idName: 'Recycler',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Recycler',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13691,6 +15062,12 @@ const strategyData = [
         text: 'Dog Crate',
         id: true,
         idName: 'Dog_Crate',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Dog Crate',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13900,6 +15277,12 @@ const strategyData = [
         idName: 'Heat_Sensor',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Heat Sensor',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Heat Sensor can only be found in Bunker Alpha.',
       },
@@ -13929,6 +15312,12 @@ const strategyData = [
         text: 'Turret Parts',
         id: true,
         idName: 'Turret_Parts',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Turret Parts',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -13966,6 +15355,12 @@ const strategyData = [
         idName: 'Weapon_Stand',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Weapon Stand',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'It is only craftable (see item database for items need to craft it).',
       },
@@ -13987,6 +15382,12 @@ const strategyData = [
         text: 'Plastic',
         id: true,
         idName: 'Plastic',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Plastic',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -14018,6 +15419,12 @@ const strategyData = [
         text: 'Car Engine',
         id: true,
         idName: 'Car_Engine',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Car Engine',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -14083,6 +15490,12 @@ const strategyData = [
         idName: 'Football_Helmet',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Football Helmet',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'Football Helmet is an item which can be obtained only from shop at section. ',
       },
@@ -14104,6 +15517,12 @@ const strategyData = [
         text: 'Power Armor Suit',
         id: true,
         idName: 'Power_Armor_Suit',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Power Armor Suit',
+        style: 'inline',
       },
       {
         type: 'paragraph',
@@ -14169,6 +15588,12 @@ const strategyData = [
         idName: 'Multitool',
       },
       {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Multitool',
+        style: 'inline',
+      },
+      {
         type: 'paragraph',
         text: 'This can only be obtained in sector 7.',
       },
@@ -14186,6 +15611,12 @@ const strategyData = [
         text: 'Control Chip',
         id: true,
         idName: 'Control_Chip',
+      },
+      {
+        type: 'image',
+        sourceType: 'database',
+        source: 'Control Chip',
+        style: 'inline',
       },
       {
         type: 'paragraph',
