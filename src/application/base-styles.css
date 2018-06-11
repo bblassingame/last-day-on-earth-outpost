@@ -128,3 +128,25 @@ margin: 0 0 2px
   max-width: 100%;
   max-height: 100%;
 }
+
+.strategy-resources-inline {
+  width: 225px;
+  height: 225px;
+  margin: 0 auto;
+  display: block;
+}
+
+/*********************************************************************************************
+
+                                  Media Query - View Port > 480px
+
+*********************************************************************************************/
+@media (min-width: 480px) {
+  .strategy-resources-inline {
+    width: unset;
+    height: unset;
+    float: right;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
