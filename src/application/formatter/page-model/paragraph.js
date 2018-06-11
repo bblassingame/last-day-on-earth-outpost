@@ -8,7 +8,8 @@ class Paragraph extends ParagraphElement
 {
   constructor() {
     super()
-    this.paragraphData = null
+    this.page = null
+    this.rawProperties = null
     this.rawText = ''
     this.hasId = ''
     this.idName = ''
@@ -18,14 +19,15 @@ class Paragraph extends ParagraphElement
     return 'Paragraph'
   }
 
-  setParagraphData(paragraphData) {
-    this.paragraphData = paragraphData
+  setRawProperties(page, rawProperties) {
+    this.page = page
+    this.rawProperties = rawProperties
   }
 
   initialize() {
-    this.rawText = this.paragraphData.text
-    this.hasId = this.paragraphData.id
-    this.idName = this.paragraphData.idName
+    this.rawText = this.rawProperties.text
+    this.hasId = this.rawProperties.id
+    this.idName = this.rawProperties.idName
 
     if(this.rawText === '') {
       console.log('ERROR:  It looks like you didn\'t set any text.  Skipping this paragraph')

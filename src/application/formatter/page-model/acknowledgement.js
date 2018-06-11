@@ -4,6 +4,7 @@ class Acknowledgement extends ParagraphElement
 {
   constructor() {
     super()
+    this.page = null
     this.rawProperties = null
     this.text = ''
     this.hasId = ''
@@ -14,7 +15,8 @@ class Acknowledgement extends ParagraphElement
     return 'Acknowledgement'
   }
 
-  setRawProperties(rawProperties) {
+  setRawProperties(page, rawProperties) {
+    this.page = page
     this.rawProperties = rawProperties
   }
 

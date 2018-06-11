@@ -3,6 +3,7 @@ import PageElement from './page-element'
 class Heading extends PageElement {
   constructor() {
     super()
+    this.page = null
     this.rawProperties = {}
     this.headingType = ''
     this.text = ''
@@ -17,7 +18,8 @@ class Heading extends PageElement {
     return 'Heading'
   }
 
-  setRawProperties(properties) {
+  setRawProperties(page, properties) {
+    this.page = page
     this.rawProperties = {...properties}
   }
 

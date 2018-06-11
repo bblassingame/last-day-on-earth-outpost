@@ -6,6 +6,7 @@ const RIGHT_ANGLE_BRACKET = '>'
 
 class ListItemText {
   constructor() {
+    this.page = null
     this.rawProperties = {}
     this.rawText = ''
     this.childTokens = []
@@ -19,8 +20,9 @@ class ListItemText {
     return 'ListItemText'
   }
 
-  setRawProperties(properties) {
-    this.rawProperties = {...properties}
+  setRawProperties(page, rawProperties) {
+    this.page = page
+    this.rawProperties = {...rawProperties}
   }
 
   initialize() {

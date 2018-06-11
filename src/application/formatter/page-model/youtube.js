@@ -3,6 +3,7 @@ import PageElement from './page-element'
 class Youtube extends PageElement {
   constructor() {
     super()
+    this.page = null
     this.link = ''
   }
 
@@ -10,7 +11,8 @@ class Youtube extends PageElement {
     return 'Youtube'
   }
 
-  setLink(link) {
+  setRawProperties(page, link) {
+    this.page = page
     this.link = link
   }
 }

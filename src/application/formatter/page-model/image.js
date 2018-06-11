@@ -4,22 +4,26 @@ class Image extends ParagraphElement
 {
   constructor() {
     super()
+    this.page = null
     this.rawProperties = null
+    // this.imageSrcType = ''
     this.imageSrc = ''
-    this.imageType = ''
+    this.imageStyle = ''
   }
 
   getType() {
     return 'Image'
   }
 
-  setRawProperties(rawProperties) {
+  setRawProperties(page, rawProperties) {
+    this.page = page
     this.rawProperties = rawProperties
   }
 
   initialize() {
+    // this.imageSrcType = this.rawProperties.imageSrcType
     this.imageSrc = this.rawProperties.imageSrc
-    this.imageType = this.rawProperties.imageType
+    this.imageStyle = this.rawProperties.imageStyle
 
     if(this.imageSrc === '') {
       console.log('ERROR:  It looks like you didn\'t set the image source.  Skipping this image')
