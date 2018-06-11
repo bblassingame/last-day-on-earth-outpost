@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 import AppContent from './app-content'
 import { fetchFeaturesIfNeeded } from './app-actions'
 import { fetchItemsIfNeeded } from './database/database-app-actions'
+import { fetchArticlesIfNeeded } from './strategy/strategy-app-actions'
 
 const mapStateToProps = (state) => {
   let {application} = state
@@ -17,7 +18,10 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onComponentWillMount: () => dispatch(fetchFeaturesIfNeeded()),
     onComponentUpdate: () => dispatch(fetchFeaturesIfNeeded()),
-    onComponentDidMount: () => dispatch(fetchItemsIfNeeded()),
+    onComponentDidMount: () => {
+      dispatch(fetchItemsIfNeeded())
+      dispatch(fetchArticlesIfNeeded())
+    },
   }
 }
 

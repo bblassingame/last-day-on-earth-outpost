@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import StrategyApplication from './strategy-application'
-import { setSelectedItem } from './strategy-app-actions'
+import { fetchArticlesIfNeeded, setSelectedArticle } from './strategy-app-actions'
 
 const mapStateToProps = (state) => {
   const {strategy} = state
@@ -11,10 +11,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // onComponentWillMount: () => dispatch(fetchItemsIfNeeded()),
-    // onComponentUpdate: () => dispatch(fetchItemsIfNeeded()),
-    onItemSelected: (itemId) => dispatch(setSelectedItem(itemId)),
-    initializeSelectedItem: (itemId) => dispatch(setSelectedItem(itemId)),
+    onComponentWillMount: () => dispatch(fetchArticlesIfNeeded()),
+    onArticleSelected: (articleId) => dispatch(setSelectedArticle(articleId)),
+    initializeSelectedArticle: (articleId) => dispatch(setSelectedArticle(articleId)),
   }
 }
 

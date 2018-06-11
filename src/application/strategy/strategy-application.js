@@ -16,28 +16,29 @@ class StrategyApplication extends Component {
   }
 
   componentWillMount() {
+    this.props.onComponentWillMount() // load here in case we stop loading in the main app for whatever reason
     // do this check in componentWillMount.  React expects functions that will update state to happen in a lifecyle
     // method aside from render.
     // match the expected path exactly in case later we add a further endpoint that builds off the path
     // accepted paths:  '/database/<articleId>'  OR  '/database/<articleId>/'
-    if(null != this.props.location.pathname.match(/^\/strategy\/\w+\/?$/) && ('' === this.props.selectedItem || null == this.props.selectedItem)) {
+    if(null != this.props.location.pathname.match(/^\/strategy\/\w+\/?$/) && ('' === this.props.selectedArticle || null == this.props.selectedArticle)) {
       const tmpArray = this.props.location.pathname.split('/')
-      this.props.initializeSelectedItem(tmpArray[2])
+      this.props.initializeSelectedArticle(tmpArray[2])
     }
   }
 
   handleBackArrowClick() {
-    this.props.onItemSelected('')
+    this.props.onArticleSelected('')
   }
 
   handleArticleClick(articleId) {
-    this.props.onItemSelected(articleId)
+    this.props.onArticleSelected(articleId)
   }
 
   render() { 
     return (
       <div className='strategy-container'>
-        <StrategyHeader selectedItem={this.props.selectedItem} onBackArrowClick={this.handleBackArrowClick} />
+        <StrategyHeader selectedArticle={this.props.selectedArticle} onBackArrowClick={this.handleBackArrowClick} />
         <StrategyContent onArticleClick={this.handleArticleClick} />
         <StrategyFooter />
       </div>
