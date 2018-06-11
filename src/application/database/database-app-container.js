@@ -12,7 +12,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onComponentWillMount: () => dispatch(fetchItemsIfNeeded()),
-    onComponentUpdate: () => dispatch(fetchItemsIfNeeded()),
     onItemSelected: (itemId) => dispatch(setSelectedItem(itemId)),
     initializeSelectedItem: (itemId) => dispatch(setSelectedItem(itemId)),
     onSearchTextEntered: (enteredText) => dispatch(setSearchText(enteredText)),
