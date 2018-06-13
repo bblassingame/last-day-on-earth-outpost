@@ -38,11 +38,7 @@ class HtmlParagraphElement extends Component {
     }
 
     if(this.props.paragraphElement.elements.length > 0)
-      this.props.paragraphElement.elements.map( (element, i) => this.createHtmlParagraphElement(element, i))
-  }
-
-  createHtmlParagraphElement(element, index) {
-    this.childElements.push(<HtmlParagraphElement paragraphElement={element} key={index} />)
+      this.childElements = this.props.htmlDocument.generateDocumentElementsForItem(this.props.paragraphElement.elements)
   }
 
   render() {

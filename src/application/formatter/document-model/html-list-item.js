@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { OutboundLink } from 'react-ga'
 
-import HtmlListItemElement from './html-list-item-element'
-
 class HtmlListItem extends Component {
   constructor() {
     super()
@@ -26,11 +24,7 @@ class HtmlListItem extends Component {
     this.src = this.props.listItemPageElement.linkSrc
     this.isLink = this.props.listItemPageElement.isLink
     this.event = this.props.listItemPageElement.linkEvent
-    this.props.listItemPageElement.elements.map((element, i) => this.createListItemElement(element, i))
-  }
-
-  createListItemElement(element, index) {
-    this.listItemElements.push(<HtmlListItemElement listItemElement={element} key={index} />)
+    this.listItemElements = this.props.htmlDocument.generateDocumentElementsForItem(this.props.listItemPageElement.elements)
   }
 
   render() {

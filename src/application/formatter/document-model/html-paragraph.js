@@ -23,11 +23,7 @@ class HtmlParagraph extends Component {
     this.hasId = this.props.paragraphPageElement.hasId
     this.idName = this.props.paragraphPageElement.idName
 
-    this.props.paragraphPageElement.elements.map( (element, i) => this.createParagraphElement(element, i) )
-  }
-
-  createParagraphElement(element, index) {
-    this.paragraphElements.push(<HtmlParagraphElement paragraphElement={element} key={index} />)
+    this.paragraphElements = this.props.htmlDocument.generateDocumentElementsForItem(this.props.paragraphPageElement.elements)
   }
 
   render() {

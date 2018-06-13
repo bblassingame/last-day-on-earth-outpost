@@ -3,11 +3,13 @@ import React, { Component } from 'react'
 import HtmlParagraph from './html-paragraph'
 import HtmlList from './html-list'
 import HtmlListItem from './html-list-item'
+import HtmlListItemElement from './html-list-item-element'
 import HtmlYoutube from './html-youtube'
 import HtmlHeading from './html-heading'
 import HtmlAcknowledgement from './html-acknowledgement'
 import HtmlImage from './html-image'
 import HtmlGroup from './html-group'
+import HtmlParagraphElement from './html-paragraph-element'
 
 class HtmlDocument extends Component {
   constructor() {
@@ -24,6 +26,8 @@ class HtmlDocument extends Component {
   }
 
   generateDocumentElements() {
+    // we need to clear out any existing document elements by setting the htmlDocElements to a new, empty array
+    this.htmlDocElements = []
     let elements = this.props.pageModel.getPageElements()
     elements.map( (pageElement, index) => this.htmlDocElements.push(this.generateDocumentElement(pageElement, index)) )
   }
@@ -39,8 +43,14 @@ class HtmlDocument extends Component {
       case 'Paragraph':
         return <HtmlParagraph key={index} paragraphPageElement={pageElement} htmlDocument={this} />
       
+      case 'ParagraphElement':
+        return <HtmlParagraphElement key={index} paragraphElement={pageElement} htmlDocument={this} />
+      
       case 'List':
         return <HtmlList key={index} listPageElement={pageElement} htmlDocument={this} />
+
+      case 'ListItemElement':
+        return <HtmlListItemElement key={index} listItemElement={pageElement} htmlDocument={this} />
       
       case 'ListItemText':
         return <HtmlListItem key={index} listItemPageElement={pageElement} htmlDocument={this} />
