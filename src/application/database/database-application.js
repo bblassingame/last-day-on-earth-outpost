@@ -35,7 +35,7 @@ class DatabaseApplication extends Component {
     // other lifecycle methods don't actually have the updated props from the mapStateToProps function.
     // match the expected path exactly in case later we add a further endpoint that builds off the path
     // accepted paths:  '/database/<itemId>'  OR  '/database/<itemId>/'
-    if(null != this.props.location.pathname.match(/^\/database\/[\w-_']+\/?$/) && (-1 === this.props.selectedItem || 'undefined' === typeof(this.props.selectedItem)) && false === this.getLoadingStatus()) {
+    if(null != this.props.location.pathname.match(/^\/database\/[\w-_']+\/?$/) && true === this.shouldInitializeSelectedItem()) {
       const tmpArray = this.props.location.pathname.split('/')
       const itemId = this.getItemIdFromUrlName(this.props.items, tmpArray[2])
       this.props.initializeSelectedItem(itemId)
@@ -71,16 +71,10 @@ class DatabaseApplication extends Component {
     )
   }
 
-  getLoadingStatus() {
-    return (this.props.isFetching == null || this.props.isFetching == true) ? true : false
-  }
-
   getItemPanel(routeProps) {
     // if we're loading or if we're still waiting on react to mount the component, show the loading panel
-    // - this.getLoadingStatus -> 'true' indicates that we're still fetching items from the server
-    // - this.props.selectedItem -> '-1' indicates that the item panel is still mounting and initializeSelectedItem has not been called
-    // - 'undefined' === typeof(this.props.selectedItem) indicates that the full state is not initialized because selectedItem is not present in the state
-    if(true === this.getLoadingStatus() || this.props.selectedItem === -1 || 'undefined' === typeof(this.props.selectedItem))
+    // this.props.selectedItem === -1:  indicates that the selected item has not been initialized and we're waiting on everything to finish loading and initializing
+    if(true === this.getLoadingStatus() || this.props.selectedItem === -1)
       return this.getLoadingPanel()
     
     let selectedItem = this.props.selectedItem
@@ -126,6 +120,24 @@ class DatabaseApplication extends Component {
         <h1>An error has occurred.  Please go to the home page and try to access this item again.</h1>
       </div>
     )
+  }
+
+  getLoadingStatus() {
+    // - this.props.isFetching == null || this.props.isFetching == true:  indicates that we're still fetching items from the server
+    // - 'undefined' === typeof(this.props.selectedItem):  indicates that the full state is not initialized because selectedItem is not present in the state
+    if(typeof(this.props.isFetching) === 'undefined' || this.props.isFetching === true || 'undefined' === typeof(this.props.selectedItem))
+      return true
+    else
+      return false
+  }
+
+  shouldInitializeSelectedItem() {
+    // - true === this.getLoadingStatus():  indicates that we've completed loading from the items API
+    // - this.props.selectedItem === -1:   indicates that initializeSelectedItem has not been called
+    if(false === this.getLoadingStatus() && this.props.selectedItem === -1)
+      return true
+    else
+      return false
   }
 
   // create an array of objects that represent the items used to craft this object.
