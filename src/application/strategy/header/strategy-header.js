@@ -8,7 +8,7 @@ const StrategyHeader = (props) => {
   return (
     <div className='strategy-header-container'>
       <div className='strategy-header-home-button'>
-        <Link to={getLinkDestination(props.selectedItem)} onClick={() => props.onBackArrowClick()}>
+        <Link to={getLinkDestination(props.selectedArticle)} onClick={() => props.onBackArrowClick()}>
           <div className='strategy-header-img-container'>
             <img className='strategy-header-img' src={LeftArrow} />
           </div>
@@ -37,8 +37,8 @@ const StrategyHeader = (props) => {
   )
 }
 
-const getLinkDestination = (selectedItem) => {
-  if('' === selectedItem)
+const getLinkDestination = (selectedArticle) => {
+  if('' === selectedArticle)
     return '/'
   else
     return '/strategy'
