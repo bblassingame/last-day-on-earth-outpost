@@ -7,7 +7,7 @@ const StrategyContent = (props) => {
   return (
     <div className='strategy-content-container'>
       <h1 className='strategy-heading-title'>LDOE: Strategy</h1>
-      <Route key={8} exact path='/strategy' render={() => renderArticleLinks(props.onArticleClick)} />
+      <Route key={8} exact path='/strategy' render={() => props.isLoading === true ? getLoadingPanel() : renderArticleLinks(props.onArticleClick)} />
       <Route key={0} path='/strategy/BaseDesign' render={(routeProps) => <StrategyArticle articleData={strategyData[0]} {...routeProps} />} />
       <Route key={1} path='/strategy/Bunkers' render={(routeProps) => <StrategyArticle articleData={strategyData[1]} {...routeProps} />} />
       <Route key={2} path='/strategy/Mulitplayer' render={(routeProps) => <StrategyArticle articleData={strategyData[2]} {...routeProps} />} />
@@ -15,7 +15,7 @@ const StrategyContent = (props) => {
       <Route key={4} path='/strategy/Events' render={(routeProps) => <StrategyArticle articleData={strategyData[4]} {...routeProps} />} />
       <Route key={5} path='/strategy/AIBases' render={(routeProps) => <StrategyArticle articleData={strategyData[5]} {...routeProps} />} />
       <Route key={6} path='/strategy/TipsAndTricks' render={(routeProps) => <StrategyArticle articleData={strategyData[6]} {...routeProps} />} />
-      <Route key={7} path='/strategy/Resources' render={(routeProps) => <StrategyArticle articleData={strategyData[7]} {...routeProps} />} />
+      <Route key={7} path='/strategy/Resources' render={(routeProps) => <StrategyArticle articleData={strategyData[7]} {...routeProps} items={props.items} />} />
       <Route key={9} path='/strategy/Pets' render={(routeProps) => <StrategyArticle articleData={strategyData[8]} {...routeProps} />} />
     </div>
   )
@@ -85,6 +85,15 @@ const renderArticleLinks = (onArticleClick) => {
           </Link>
         </div>
       </div>
+    </div>
+  )
+}
+
+// 
+const getLoadingPanel = () => {
+  return (
+    <div style={{margin: 'auto'}}>
+      <h1>Loading...</h1>
     </div>
   )
 }
