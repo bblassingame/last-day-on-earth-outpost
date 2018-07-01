@@ -1,5 +1,7 @@
 import { quoteRegExp } from '../utility/regex-utils'
 
+// just initialize with an empty object so that the first times we go through here everything is empty
+// and it is apparent that no initialization has happened.
 const databaseAppReducer = (state = {}, action) => {
   switch(action.type) {
     case 'REQUEST_ITEMS':
@@ -49,6 +51,9 @@ const defaultDbAppState = {
   isFetching: false,
   isInitialized: false,
 }
+
+// set the default article data here once we actually request the items.  If we set it up before the request then
+// it will appear that loading has happened or started when it hasn't because variables will be defined.
 const itemsReducer = (dbAppState = defaultDbAppState, action) => {
   if(Object.keys(dbAppState).length === 0 && dbAppState.constructor === Object)
     dbAppState = defaultDbAppState
