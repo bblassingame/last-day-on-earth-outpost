@@ -17172,6 +17172,7 @@ const strategyData = {
       },
       {
         type: 'table',
+        tableId: 'Recycler_0',
         tableData: 
         {
           columns:

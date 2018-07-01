@@ -25,8 +25,7 @@ const mapStateToProps = (state) => {
   switch(selectedArticle)
   {
     case 'Recycler':
-      newProps = mapPropsForRecycler(state)
-      newProps.articleData = articleContent
+      newProps = mapPropsForRecycler(state, articleContent)
       break
 
     default:
@@ -59,19 +58,28 @@ export default StrategyAppContainer
 
 
 /*--------------------  RECYCLER MAPPING  --------------------*/
-const mapPropsForRecycler = (state) => {
+const mapPropsForRecycler = (state, articleContent) => {
   let newProps = null
   const recycleables = state.database.recycleables
 
+  // create the recycler table body data
   let recyclerTableData = []
-
   Object.keys(recycleables).map( (itemId) => createRecyclerTableDataRow(recyclerTableData, itemId, state) )
+
+  // insert the body data into the article data
+  // this could be expanded later to incorporate multiple tables using the tableId like I'm already checking for here
+  articleContent.contentItems.map( entry => {
+    console.log(entry)
+    if(entry.type === 'table' && entry.tableId === 'Recycler_0') {
+      entry.tableData.body.bodyData = recyclerTableData
+    }
+  })
 
   newProps = Object.assign({}, {
     selectedArticle: state.strategy.selectedArticle,
     isFetching: state.strategy.isFetching,
     isInitialized: state.strategy.isInitialized,
-    recyclerTableData: recyclerTableData,
+    articleData: articleContent,
   })
 
   return newProps
