@@ -136,6 +136,31 @@ margin: 0 0 2px
   display: block;
 }
 
+/* Table Styles*/
+.formatted-table-header-container {
+  display: flex;
+}
+
+.formatted-table-header-column {
+  flex: 1;
+}
+
+.formatted-table-header-cell {
+  text-align: center;
+}
+
+.formatted-table-data-container {
+  display: flex;
+}
+
+.formatted-table-data-column {
+  flex: 1;
+}
+
+.formatted-table-data-cell {
+
+}
+
 /*********************************************************************************************
 
                                   Media Query - View Port > 480px

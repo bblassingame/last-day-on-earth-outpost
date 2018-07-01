@@ -69,7 +69,7 @@ class StrategyApplication extends Component {
 
   getContentPanel() {
     if(false === this.getLoadingStatus())
-      return <StrategyContent onArticleClick={this.handleArticleClick} items={this.props.items} isLoading={this.getLoadingStatus()} />
+      return <StrategyContent onArticleClick={this.handleArticleClick} items={this.props.items} articleData={this.props.articleData} isLoading={this.getLoadingStatus()} />
     else
       return this.getLoadingPanel()
   }
@@ -84,7 +84,7 @@ class StrategyApplication extends Component {
 
   getLoadingStatus() {
     // - this.props.isFetching == null || this.props.isFetching == true:  indicates that we're still fetching items from the server
-    // - 'undefined' === typeof(this.props.selectedItem):  indicates that the full state is not initialized because selectedItem is not present in the state
+    // - 'undefined' === typeof(this.props.selectedArticle):  indicates that the full state is not initialized because selectedArticle is not present in the state
     if( typeof(this.props.isFetching) === 'undefined' || this.props.isFetching === true || 'undefined' === typeof(this.props.selectedArticle) )
       return true
     else
