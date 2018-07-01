@@ -6,8 +6,9 @@ const defaultStrategyAppState = {
   isInitialized: false,
 }
 
-// why did I set the default state not at the reducer entry in my other reducers?  freakin comment the stuff you learn!
-const strategyAppReducer = (state = defaultStrategyAppState, action) => {
+// just initialize with an empty object so that the first times we go through here everything is empty
+// and it is apparent that no initialization has happened.
+const strategyAppReducer = (state = {}, action) => {
   switch(action.type) {
     case 'STRATEGY_SET_SELECTED_ARTICLE':
       return Object.assign({}, state, {selectedArticle: action.selectedArticle})
@@ -21,7 +22,9 @@ const strategyAppReducer = (state = defaultStrategyAppState, action) => {
   }
 }
 
-const articlesReducer = (strategyAppState, action) => {
+// set the default article data here once we actually request the items.  If we set it up before the request then
+// it will appear that loading has happened or started when it hasn't because variables will be defined.
+const articlesReducer = (strategyAppState = defaultStrategyAppState, action) => {
   if(Object.keys(strategyAppState).length === 0 && strategyAppState.constructor === Object)
     strategyAppState = defaultStrategyAppState
 
