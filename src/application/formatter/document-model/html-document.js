@@ -10,6 +10,7 @@ import HtmlAcknowledgement from './html-acknowledgement'
 import HtmlImage from './html-image'
 import HtmlGroup from './html-group'
 import HtmlParagraphElement from './html-paragraph-element'
+import HtmlTable from './html-table'
 
 class HtmlDocument extends Component {
   constructor() {
@@ -69,6 +70,10 @@ class HtmlDocument extends Component {
 
       case 'Group':
         return <HtmlGroup key={index} groupPageElement={pageElement} htmlDocument={this} />
+
+      case 'Table':
+        console.log(pageElement)
+        return <HtmlTable key={index} tablePageElement={pageElement} htmlDocument={this} />
 
       default:
         console.log('undefined PageElement detected')

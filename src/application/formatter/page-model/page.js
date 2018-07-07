@@ -6,6 +6,7 @@ import Heading from './heading'
 import Acknowledgement from './acknowledgement'
 import Image from './image'
 import Group from './group'
+import Table from './table'
 
 class Page
 {
@@ -48,6 +49,9 @@ class Page
       
       case 'text':
         return this.createListItemText(item)
+
+      case 'table':
+        return this.createTable(item)
 
       default:
         console.log('Page Model Error:  Unknown Item Type')
@@ -108,6 +112,13 @@ class Page
     group.setRawProperties(this, rawGroupData)
     group.initialize()
     return group
+  }
+
+  createTable(rawTableData) {
+    let table = new Table()
+    table.setRawProperties(this, rawTableData)
+    table.initialize()
+    return table
   }
 
   getPageElements() {

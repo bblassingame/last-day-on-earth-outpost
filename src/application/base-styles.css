@@ -141,16 +141,28 @@ margin: 0 0 2px
   display: flex;
 }
 
+.formatted-table-header-row {
+  display: flex;
+  flex: 1;
+}
+
 .formatted-table-header-column {
   flex: 1;
 }
 
 .formatted-table-header-cell {
   text-align: center;
+  flex: 1;
 }
 
 .formatted-table-data-container {
   display: flex;
+  flex-direction: column;
+}
+
+.formatted-table-data-row {
+  display: flex;
+  flex: 1;
 }
 
 .formatted-table-data-column {
@@ -158,7 +170,7 @@ margin: 0 0 2px
 }
 
 .formatted-table-data-cell {
-
+  flex: 1;
 }
 
 /*********************************************************************************************
