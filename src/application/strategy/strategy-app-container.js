@@ -133,7 +133,7 @@ const createRecyclerTableDataRow = (recyclerTableData, itemId, state) => {
       const recycleableProductItemId = recycleProduct[i].recycleableProductItemId // get the item ID so that it's easier to read the code
       fullLink = '/database/' + items[recycleableProductItemId].urlName // this will be the 'to' attribute for our Link component
       recyclerTableDataRow.push({
-        img: items[itemId].thumbnail,
+        img: items[recycleableProductItemId].thumbnail,
         link: fullLink,
       })
     }
