@@ -17,6 +17,7 @@ class DatabaseApplication extends Component {
     this.handleBackArrowClick = this.handleBackArrowClick.bind(this)
     this.handleItemClick = this.handleItemClick.bind(this)
     this.handleSearchInput = this.handleSearchInput.bind(this)
+    this.handleArticleClick = this.handleArticleClick.bind(this)
   }
 
   componentWillMount() {
@@ -59,6 +60,10 @@ class DatabaseApplication extends Component {
     this.props.filterItemsList()
   }
 
+  handleArticleClick() {
+    this.props.onItemSelected(-1)
+  }
+
   render() {
     return (
       <div className='db-application-content'>
@@ -85,15 +90,16 @@ class DatabaseApplication extends Component {
           craftingMaterialsList={this.getItemCraftingMaterialsList(selectedItem)}
           weaponData={this.props.weapons[selectedItem]}
           {...this.props.items[selectedItem]} 
-          {...routeProps} />)
+          {...routeProps}
+          onArticleClick={this.handleArticleClick} />)
       case 'armor':
         return (<DatabaseArmorItem 
           categories={this.props.itemCategories[selectedItem]} 
           craftingMaterialsList={this.getItemCraftingMaterialsList(selectedItem)}
           armorData={this.props.armor[selectedItem]}
           {...this.props.items[selectedItem]} 
-          {...routeProps} />
-        )
+          {...routeProps}
+          onArticleClick={this.handleArticleClick} />)
       case 'material':
       case 'provision':
       default:
@@ -101,7 +107,8 @@ class DatabaseApplication extends Component {
           categories={this.props.itemCategories[selectedItem]} 
           {...this.props.items[selectedItem]} 
           craftingMaterialsList={this.getItemCraftingMaterialsList(selectedItem)} 
-          {...routeProps} />)
+          {...routeProps}
+          onArticleClick={this.handleArticleClick} />)
     }
   }
 

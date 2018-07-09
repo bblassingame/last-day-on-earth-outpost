@@ -22,7 +22,7 @@ const DatabaseArmorItem = (props) => {
         craftingMaterialsList={props.craftingMaterialsList} 
         craftPoints={props.craftPoints} 
         craftRequiredLevel={props.craftRequiredLevel} />
-      <DatabaseItemLinks itemName={props.name}/>
+      <DatabaseItemLinks itemName={props.name} onArticleClick={props.onArticleClick}/>
     </div>
   )
 }
