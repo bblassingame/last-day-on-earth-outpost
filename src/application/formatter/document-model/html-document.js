@@ -72,7 +72,6 @@ class HtmlDocument extends Component {
         return <HtmlGroup key={index} groupPageElement={pageElement} htmlDocument={this} />
 
       case 'Table':
-        console.log(pageElement)
         return <HtmlTable key={index} tablePageElement={pageElement} htmlDocument={this} />
 
       default:
