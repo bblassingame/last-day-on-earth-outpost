@@ -17177,32 +17177,25 @@ const strategyData = {
         {
           columns:
           {
-            columnWidthIncrement: 10,
             columnData:
             [
               {
                 type: 'item',
-                width: 15,
               },
               {
                 type: 'text',
-                width: 10,
               },
               {
                 type: 'text',
-                width: 10,
               },
               {
                 type: 'image',
-                width: 6,
               },
               {
                 type: 'image',
-                width: 6,
               },
               {
                 type: 'image',
-                width: 6,
               },
             ],
           },
