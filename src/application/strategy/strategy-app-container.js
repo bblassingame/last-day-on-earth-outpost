@@ -69,7 +69,6 @@ const mapPropsForRecycler = (state, articleContent) => {
   // insert the body data into the article data
   // this could be expanded later to incorporate multiple tables using the tableId like I'm already checking for here
   articleContent.contentItems.map( entry => {
-    console.log(entry)
     if(entry.type === 'table' && entry.tableId === 'Recycler_0') {
       entry.tableData.body.bodyData = recyclerTableData
     }
@@ -94,34 +93,28 @@ const createRecyclerTableDataRow = (recyclerTableData, itemId, state) => {
   let recyclerTableDataRow = []
   // COLUMN 1
   // img = base 64 encoded thumbnail
+  // text = item name
   // link = link to the item in the database
   fullLink = '/database/' + items[itemId].urlName
   recyclerTableDataRow.push({
     img: items[itemId].thumbnail,
-    link: fullLink,
-  })
-
-  // COLUMN 2
-  // text = item name
-  // link = link to the item in the database
-  recyclerTableDataRow.push({
     text: items[itemId].name,
     link: fullLink,
   })
 
-  // COLUMN 3
+  // COLUMN 2
   // text = skill leveled up by the item being recycled
   recyclerTableDataRow.push({
     text: recycleables[itemId].recycleSkill,
   })
 
-  // COLUMN 4
+  // COLUMN 3
   // text = time it takes to recycle this item
   recyclerTableDataRow.push({
     text: recycleables[itemId].recycleTime,
   })
 
-  // COLUMN 5-7
+  // COLUMN 4-6
   // ***KEY DESIGN POINT***:  we're assuming that the item tiers are already sorted
   // in the order they need to be.
   // img = base 64 encoded thumbnail of the tier 1 item produced

@@ -17177,28 +17177,32 @@ const strategyData = {
         {
           columns:
           {
+            columnWidthIncrement: 10,
             columnData:
             [
               {
-                type: 'image',
+                type: 'item',
+                width: 15,
               },
               {
                 type: 'text',
+                width: 10,
               },
               {
                 type: 'text',
-              },
-              {
-                type: 'text',
-              },
-              {
-                type: 'image',
+                width: 10,
               },
               {
                 type: 'image',
+                width: 6,
               },
               {
                 type: 'image',
+                width: 6,
+              },
+              {
+                type: 'image',
+                width: 6,
               },
             ],
           },
@@ -17207,10 +17211,7 @@ const strategyData = {
             headerData:
             [
               {
-                text: 'Image',
-              },
-              {
-                text: 'Item Name',
+                text: 'Item',
               },
               {
                 text: 'Skill',

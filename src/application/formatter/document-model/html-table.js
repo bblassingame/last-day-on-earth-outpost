@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class HtmlTable extends Component {
   constructor() {
@@ -44,17 +45,13 @@ class HtmlTable extends Component {
     let tempElements = []
     for(let i = 0 ; i < headerData.length ; i++) {
       let element = null
-      element = <div key={i} className='formatted-table-header-cell'>{headerData[i].text}</div> 
+      element = <th key={i} className='formatted-table-header-cell'>{headerData[i].text}</th>
       tempElements.push(element)
     }
     
-    let row = <div className='formatted-table-header-row'>{tempElements}</div>
+    let row = <tr key={0}>{tempElements}</tr>
 
-    this.htmlTableRows.push(
-      <div key={0} className='formatted-table-header-container'>
-        {row}
-      </div>
-    )
+    this.htmlTableRows.push(<thead key={0}>{row}</thead>)
   }
 
   createTableBody() {
@@ -67,18 +64,15 @@ class HtmlTable extends Component {
       let elCell = null
       let dataCells = []
       for(let j = 0 ; j < bodyData[i].length ; j++) {
-        // check if we have a 'text' or 'image' type of column to know what kind of data cell we're putting in
+        // check the type of column we're generating and go
         if(columnData[j].type === 'text') {
-          elCell = <div key={j} className='formatted-table-data-cell'>{bodyData[i][j].text}</div>
+          elCell = this.createTextCell(bodyData[i][j], j)
         }
         else if(columnData[j].type === 'image') {
-          // only put in an empty div to hold a spot in the table but we don't have an image to put in
-          if(typeof(bodyData[i][j].img) === 'undefined' || Object.keys(bodyData[i][j]) === 0) {
-            elCell = <div key={j} className='formatted-table-data-cell'></div>
-          }
-          else {
-            elCell = <img key={j} className='formatted-table-data-cell' src={bodyData[i][j].img}></img>
-          }
+          elCell = this.createImageCell(bodyData[i][j], j)
+        }
+        else if(columnData[j].type === 'item') {
+          elCell = this.createItemCell(bodyData[i][j], j)
         }
 
         // add the cell to the row of cells that we're creating
@@ -86,19 +80,60 @@ class HtmlTable extends Component {
       }
 
       // add the final data row to the array of elements that we're going to append to the table after the header rows
-      elRow = <div key={i} className='formatted-table-data-row'>{dataCells}</div>
+      elRow = <tr key={i}>{dataCells}</tr>
       tempElements.push(elRow)
     }
 
     // finally, add all of the data rows to our table
-    this.htmlTableRows.push(<div key={1} className='formatted-table-data-container'>{tempElements}</div>)
+    this.htmlTableRows.push(<tbody key={1}>{tempElements}</tbody>)
+  }
+
+  createTextCell(cellData, index) {
+    return <td key={index} className='formatted-table-data-cell'>{cellData.text}</td>
+  }
+
+  createImageCell(cellData, index) {
+    let returnCell = null
+
+    // return an empty cell if find one
+    if(typeof(cellData.img) === 'undefined' || Object.keys(cellData) === 0) {
+      // only put in an empty cell to hold a spot in the table but we don't have an image to put in
+      returnCell = <td key={index} className='formatted-table-data-cell'></td>
+      return returnCell
+    }
+
+    // create the base image that we need to return
+    // returnCell = <td key={index} className='formatted-table-data-cell'><img className='formatted-table-image' src={cellData.img}></img></td>
+    returnCell = <img className='formatted-table-image' src={cellData.img}></img>
+
+    // check if we have a link and wrap the base cell in the Link if we have a link to add
+    if(typeof(cellData.link) !== 'undefined')
+      returnCell = <Link to={cellData.link}>{returnCell}</Link>
+
+    // finally, wrap the data in a <td> tag that will be a cell in the table
+    returnCell = <td key={index} className='formatted-table-data-cell'>{returnCell}</td>
+
+    return returnCell
+  }
+
+  createItemCell(cellData, index) {
+    return ( 
+      <td key={index} className='formatted-table-data-cell'>
+        <Link to={cellData.link}>
+          <div className='formatted-table-data-cell-item-container'>
+            <img className='formatted-table-image' src={cellData.img} />
+            <span className='formatted-hide-on-mobile'>{cellData.text}</span>
+          </div>
+        </Link>
+      </td>
+    )
   }
 
   render() {
     return (
-      <div className='formatted-table-container'>
+      <table className='formatted-table'>
         {this.htmlTableRows}
-      </div>
+      </table>
     )
   }
 }
