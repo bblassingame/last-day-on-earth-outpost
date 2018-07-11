@@ -20,6 +20,10 @@ class DatabaseApplication extends Component {
     this.handleArticleClick = this.handleArticleClick.bind(this)
   }
 
+  /****************************************************************************************************************************************/
+  /****************************************************************************************************************************************/
+  /*                                                     REACT LIFECYCLE METHODS                                                          */
+  
   componentWillMount() {
     // don't rely on actions dispatched from this method because React ends up combining all of the
     // calls to mapStateToProps into a single call.  The result is that a dispatched action that
@@ -29,22 +33,47 @@ class DatabaseApplication extends Component {
     this.props.onComponentWillMount() // load here in case we stop loading in the main app for whatever reason
   }
 
-  componentDidUpdate() {
-    // do this check in componentDidUpdate.  React expects functions that will update state to happen in a lifecyle
-    // method aside from render.
-    // also, we're using componenDidUpdate because the component's state doesn't actually get props until this method.  Most
-    // other lifecycle methods don't actually have the updated props from the mapStateToProps function.
-    // match the expected path exactly in case later we add a further endpoint that builds off the path
-    // accepted paths:  '/database/<itemId>'  OR  '/database/<itemId>/'
-    if(null != this.props.location.pathname.match(/^\/database\/[\w-_']+\/?$/) && true === this.shouldInitializeSelectedItem()) {
-      const tmpArray = this.props.location.pathname.split('/')
-      const itemId = this.getItemIdFromUrlName(this.props.items, tmpArray[2])
-      this.props.initializeSelectedItem(itemId)
-    }
+  // do this check in componentDidUpdate and componentDidMount.  React expects functions that will update state to happen in a lifecyle
+  // method aside from render.
+  componentDidMount() {
+    // also, we're using componentDidMount because after the application fully loads and we transition to the database
+    // from another sub application, componentDidUpdate is not called and only componentWillMount and componentDidMount get called.
+    this.initializeApplication()
   }
 
+  componentDidUpdate() {
+    // also, we're using componenDidUpdate because the component's state doesn't actually get props until this method.  Most
+    // other lifecycle methods don't actually have the updated props from the mapStateToProps function.
+    this.initializeApplication()
+  }
+
+  componentWillUnmount() {
+    // we need to clear out the selected item whenever the database application unmounts so that whenever we come
+    // back to the application from another application like strategy then we don't already have a selected item.  otherwise
+    // the selected item is set from whatever it was previously.  This is important whenever the user navigates using the
+    // the browser back or mouse button back.
+    this.props.clearSelectedItem()
+  }
+
+  render() {
+    return (
+      <div className='db-application-content'>
+        <DatabaseHeader selectedItem={this.props.selectedItem}  onBackArrowClick={this.handleBackArrowClick}/>
+        <Route exact path='/database' render={(routeProps) => <DatabaseSearch onInput={this.handleSearchInput} {...routeProps} />}/>
+        <Route exact path='/database' render={(routeProps) => <DatabaseContent isLoading={this.getLoadingStatus()} items={this.props.sortedFilteredItems} onItemClick={this.handleItemClick} {...routeProps} />} />
+        <Route path='/database/:itemUrlName' render={(routeProps) => this.getItemPanel(routeProps)} />
+        <DatabaseFooter />
+      </div>
+    )
+  }
+
+
+  /****************************************************************************************************************************************/
+  /****************************************************************************************************************************************/
+  /*                                                          EVENT HANDLERS                                                              */
+  
   handleBackArrowClick() {
-    this.props.onItemSelected(-1)
+    this.props.clearSelectedItem()
     this.props.clearSearchText()
     this.props.filterItemsList()
   }
@@ -61,21 +90,13 @@ class DatabaseApplication extends Component {
   }
 
   handleArticleClick() {
-    this.props.onItemSelected(-1)
+    this.props.clearSelectedItem()
   }
 
-  render() {
-    return (
-      <div className='db-application-content'>
-        <DatabaseHeader selectedItem={this.props.selectedItem}  onBackArrowClick={this.handleBackArrowClick}/>
-        <Route exact path='/database' render={(routeProps) => <DatabaseSearch onInput={this.handleSearchInput} {...routeProps} />}/>
-        <Route exact path='/database' render={(routeProps) => <DatabaseContent isLoading={this.getLoadingStatus()} items={this.props.sortedFilteredItems} onItemClick={this.handleItemClick} {...routeProps} />} />
-        <Route path='/database/:itemUrlName' render={(routeProps) => this.getItemPanel(routeProps)} />
-        <DatabaseFooter />
-      </div>
-    )
-  }
-
+  /****************************************************************************************************************************************/
+  /****************************************************************************************************************************************/
+  /*                                                        COMPONENT CREATION                                                            */
+  
   getItemPanel(routeProps) {
     // if we're loading or if we're still waiting on react to mount the component, show the loading panel
     // this.props.selectedItem === -1:  indicates that the selected item has not been initialized and we're waiting on everything to finish loading and initializing
@@ -127,6 +148,21 @@ class DatabaseApplication extends Component {
         <h1>An error has occurred.  Please go to the home page and try to access this item again.</h1>
       </div>
     )
+  }
+
+
+  /****************************************************************************************************************************************/
+  /****************************************************************************************************************************************/
+  /*                                                        UTILITY FUNCTIONS                                                             */
+  
+  initializeApplication() {
+    // match the expected path exactly in case later we add a further endpoint that builds off the path
+    // accepted paths:  '/database/<itemId>'  OR  '/database/<itemId>/'
+    if(null != this.props.location.pathname.match(/^\/database\/[\w-_']+\/?$/) && true === this.shouldInitializeSelectedItem()) {
+      const tmpArray = this.props.location.pathname.split('/')
+      const itemId = this.getItemIdFromUrlName(this.props.items, tmpArray[2])
+      this.props.initializeSelectedItem(itemId)
+    }
   }
 
   getLoadingStatus() {

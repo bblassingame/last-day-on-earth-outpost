@@ -14,6 +14,7 @@ const mapDispatchToProps = (dispatch) => {
     onComponentWillMount: () => dispatch(fetchItemsIfNeeded()),
     onItemSelected: (itemId) => dispatch(setSelectedItem(itemId)),
     initializeSelectedItem: (itemId) => dispatch(setSelectedItem(itemId)),
+    clearSelectedItem: () => dispatch(setSelectedItem(-1)),
     onSearchTextEntered: (enteredText) => dispatch(setSearchText(enteredText)),
     clearSearchText: () => dispatch(clearSearchText()),
     filterItemsList: () => dispatch(filterItemsList()),
