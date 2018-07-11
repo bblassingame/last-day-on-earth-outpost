@@ -15,6 +15,10 @@ class StrategyApplication extends Component {
     this.handleArticleClick = this.handleArticleClick.bind(this)
   }
 
+  /****************************************************************************************************************************************/
+  /****************************************************************************************************************************************/
+  /*                                                     REACT LIFECYCLE METHODS                                                          */
+  
   componentWillMount() {
     // don't rely on actions dispatched from this method because React ends up combining all of the
     // calls to mapStateToProps into a single call.  The result is that a dispatched action that
@@ -49,12 +53,12 @@ class StrategyApplication extends Component {
     }
   }
 
-  handleBackArrowClick() {
-    this.props.onArticleSelected('')
-  }
-
-  handleArticleClick(articleId) {
-    this.props.onArticleSelected(articleId)
+  componentWillUnmount() {
+    // we need to clear out the selected article whenever the database application unmounts so that whenever we come
+    // back to the application from another application like strategy then we don't already have a selected item.  otherwise
+    // the selected item is set from whatever it was previously.  This is important whenever the user navigates using the
+    // the browser back or mouse button back.
+    this.props.clearSelectedArticle()
   }
 
   render() {
@@ -67,6 +71,24 @@ class StrategyApplication extends Component {
     )
   }
 
+
+  /****************************************************************************************************************************************/
+  /****************************************************************************************************************************************/
+  /*                                                          EVENT HANDLERS                                                              */
+  
+  handleBackArrowClick() {
+    this.props.clearSelectedArticle()
+  }
+
+  handleArticleClick(articleId) {
+    this.props.onArticleSelected(articleId)
+  }
+
+
+  /****************************************************************************************************************************************/
+  /****************************************************************************************************************************************/
+  /*                                                        COMPONENT CREATION                                                            */
+  
   getContentPanel() {
     if(false === this.getLoadingStatus())
       return <StrategyContent onArticleClick={this.handleArticleClick} items={this.props.items} articleData={this.props.articleData} isLoading={this.getLoadingStatus()} />
@@ -82,6 +104,11 @@ class StrategyApplication extends Component {
     )
   }
 
+  
+  /****************************************************************************************************************************************/
+  /****************************************************************************************************************************************/
+  /*                                                        UTILITY FUNCTIONS                                                             */
+  
   getLoadingStatus() {
     // - this.props.isFetching == null || this.props.isFetching == true:  indicates that we're still fetching items from the server
     // - 'undefined' === typeof(this.props.selectedArticle):  indicates that the full state is not initialized because selectedArticle is not present in the state

@@ -43,6 +43,7 @@ const mapDispatchToProps = (dispatch) => {
     onComponentWillMount: () => dispatch(fetchArticlesIfNeeded()),
     onArticleSelected: (articleId) => dispatch(setSelectedArticle(articleId)),
     initializeSelectedArticle: (articleId) => dispatch(setSelectedArticle(articleId)),
+    clearSelectedArticle: () => dispatch(setSelectedArticle('')),
   }
 }
 
