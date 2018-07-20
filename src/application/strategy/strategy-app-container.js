@@ -2,7 +2,6 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import StrategyApplication from './strategy-application'
-import { fetchArticlesIfNeeded } from './strategy-app-actions'
 import Articles from './content/strategy-content-data'
 
 const mapStateToProps = (state, ownProps) => {
@@ -47,13 +46,7 @@ const mapStateToProps = (state, ownProps) => {
   return {...newProps}
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onComponentWillMount: () => dispatch(fetchArticlesIfNeeded()),
-  }
-}
-
-const StrategyAppContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(StrategyApplication))
+const StrategyAppContainer = withRouter(connect(mapStateToProps)(StrategyApplication))
 
 export default StrategyAppContainer
 

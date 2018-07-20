@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
 import database from './database/database-app-reducers'
-import strategy from './strategy/strategy-app-reducers'
+import strategy from './strategy-app-reducers'
 
 const defaultApplicationState = {
   features: [],

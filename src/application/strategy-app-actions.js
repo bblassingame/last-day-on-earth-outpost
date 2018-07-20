@@ -25,11 +25,12 @@ export const fetchArticlesIfNeeded = () => {
 }
 
 function shouldFetchArticles(state) {
-  const dbInitialized = state.strategy['isInitialized']
-  if(null == dbInitialized || (false == state.strategy.isInitialized && false == state.strategy.isFetching))
+  let shouldFetch = false
+  if(state.application.isStrategyFetching === false && state.application.hasStrategyFetched === false)
+    shouldFetch = true
+
+  if(true === shouldFetch)
     return true
-  else if(state.strategy.isFetching)
-    return false
   else
     return false
 }
