@@ -52,7 +52,7 @@ class StrategyApplication extends Component {
   
   getArticleLinksPanel() {
     if(false === this.props.isLoading)
-      return <StrategyArticleLinks items={this.props.items} articleData={this.props.articleData} isLoading={this.props.isLoading} />
+      return <StrategyArticleLinks articleData={this.props.articleData} />
     else
       return this.getLoadingPanel()
   }
