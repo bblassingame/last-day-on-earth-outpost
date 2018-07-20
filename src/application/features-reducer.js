@@ -20,8 +20,6 @@ const application = (state = defaultApplicationState, action) => {
     case 'RECEIVE_FEATURES':
       return Object.assign({}, featuresReducer(state, action))
 
-    // case 'REQUEST_ARTICLES':
-    // case 'RECEIVE_ARTICLES':
     case 'REQUEST_ITEMS':
     case 'RECEIVE_ITEMS':
       return dataFetchingReducer(state, action)
@@ -67,16 +65,6 @@ const dataFetchingReducer = (applicationState, action) => {
         hasDBFetched: true,
       })
 
-    // case 'REQUEST_ARTICLES':
-    //   return Object.assign({}, applicationState, {
-    //     isStrategyFetching: true
-    //   })
-
-    // case 'RECEIVE_ARTICLES':
-    //   return Object.assign({}, applicationState, {
-    //     isStrategyFetching: false,
-    //     hasStrategyFetched: true,
-    //   })
   }
 }
 
