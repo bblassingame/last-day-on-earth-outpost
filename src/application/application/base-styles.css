@@ -48,7 +48,7 @@ a:active  { color: #FAF7FA;                             }
 
 /* Heading Styles */
 .formatted-bloody-heading-container {
-  background: url("./formatter/media/heading-background.png") left/contain no-repeat;
+  background: url("../formatter/media/heading-background.png") left/contain no-repeat;
   margin: 5px 0 2px -2px;
   padding: 5px 0 2px 5px;
 }

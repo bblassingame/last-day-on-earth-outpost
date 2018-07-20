@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 
 import AppContent from './app-content'
 import { fetchFeaturesIfNeeded } from './app-actions'
-import { fetchItemsIfNeeded } from './database/database-app-actions'
+import { fetchItemsIfNeeded } from '../database/database-app-actions'
 import { fetchArticlesIfNeeded } from './strategy-app-actions'
 
 const mapStateToProps = (state) => {

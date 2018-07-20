@@ -8,7 +8,7 @@ import { createLogger } from 'redux-logger'
 import 'babel-polyfill'
 import AppContainer from './app-container'
 import RootReducer from './app-reducer'
-import ScrollToTop from './utility/scroll-to-top'
+import ScrollToTop from '../utility/scroll-to-top'
 
 import './reset.css'
 import './base-styles.css'

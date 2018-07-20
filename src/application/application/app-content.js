@@ -3,19 +3,19 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 // utility functions and objects
-import gaTracker from './utility/ga-tracker'
+import gaTracker from '../utility/ga-tracker'
 
 // child components
-import LoadingPage from './utility/loading-page'
+import LoadingPage from '../utility/loading-page'
 // import ComingSoon from './utility/coming-soon'
-import LaunchPage from './launch-page/launch-page'
-import Forum from './forum/forum-application'
-import Strategy from './strategy/strategy-app-container'
-import MultiPlayer from './multiplayer/multiplayer-application'
-import Database from './database/database-app-container'
-import About from './administrative/about'
-import NotFound from './utility/not-found'
-import Preview from './utility/preview'
+import LaunchPage from '../launch-page/launch-page'
+import Forum from '../forum/forum-application'
+import Strategy from '../strategy/strategy-app-container'
+import MultiPlayer from '../multiplayer/multiplayer-application'
+import Database from '../database/database-app-container'
+import About from '../administrative/about'
+import NotFound from '../utility/not-found'
+import Preview from '../utility/preview'
 
 class AppContent extends React.Component {
   constructor(props) {
