@@ -1,8 +1,3 @@
-import { combineReducers } from 'redux'
-
-import database from '../database/database-app-reducers'
-import articles from './articles-reducer'
-
 const defaultApplicationState = {
   features: [],
   lastUpdated: -1,
@@ -68,10 +63,4 @@ const dataFetchingReducer = (applicationState, action) => {
   }
 }
 
-const RootReducer = combineReducers({
-  application,
-  database,
-  articles,
-})
-
-export default RootReducer
+export default application
