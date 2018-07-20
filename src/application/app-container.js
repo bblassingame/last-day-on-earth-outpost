@@ -2,9 +2,9 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import AppContent from './app-content'
-import { fetchFeaturesIfNeeded } from './app-actions'
+import { fetchFeaturesIfNeeded } from './features-actions'
 import { fetchItemsIfNeeded } from '../database/database-app-actions'
-import { fetchArticlesIfNeeded } from './strategy-app-actions'
+import { fetchArticlesIfNeeded } from './articles-actions'
 
 const mapStateToProps = (state) => {
   let {application} = state

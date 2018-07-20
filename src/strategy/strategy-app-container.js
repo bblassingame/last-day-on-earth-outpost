@@ -16,13 +16,12 @@ const mapStateToProps = (state, ownProps) => {
   // we don't need to try to do mapping until we're fully loaded
   // we are checking if the database and article data are finished loading
   if(true === getLoadingStatus(state)) {
-    newProps = {...state.strategy, isLoading: true}
+    newProps = {...state.articles, isLoading: true}
     return {...newProps}
   }
 
   // this is temporarily pulling the article content from the local data instead of the article data we
   // will eventually pull from the store.  But we have to get the article data onto the database first.
-  // const selectedArticle = state.strategy.selectedArticle
   let articleContent = Articles[selectedArticle]
     
   // if we're done loading, do some special mapping when needed
@@ -62,7 +61,7 @@ const mapCommonProps = (state) => {
   let commonProps = {}
   let isLoadingValue = getLoadingStatus(state)
 
-  commonProps = Object.assign(state.strategy, {isLoading: isLoadingValue})
+  commonProps = Object.assign(state.articles, {isLoading: isLoadingValue})
 
   return commonProps
 }
@@ -89,9 +88,6 @@ const mapPropsForRecycler = (state, articleContent) => {
   })
 
   newProps = Object.assign(newProps, {
-    selectedArticle: state.strategy.selectedArticle,
-    isFetching: state.strategy.isFetching,
-    isInitialized: state.strategy.isInitialized,
     articleData: articleContent,
   })
 
@@ -162,7 +158,7 @@ const createRecyclerTableDataRow = (recyclerTableData, itemId, state) => {
 
 /*--------------------  LOADING STATUS FUNCTIONS  --------------------*/
 const getLoadingStatus = (state) => {
-  return getDatabaseLoadingStatus(state.application) || getArticlesLoadingStatus(state.application)
+  return getDatabaseLoadingStatus(state.application) || getArticlesLoadingStatus(state.articles)
 }
 
 const getDatabaseLoadingStatus = (appState) => {
@@ -172,8 +168,8 @@ const getDatabaseLoadingStatus = (appState) => {
     return false
 }
 
-const getArticlesLoadingStatus = (appState) => {
-  if(appState.isStrategyFetching === true || appState.hasStrategyFetched === false)
+const getArticlesLoadingStatus = (articlesState) => {
+  if(articlesState.isArticleDataFetching === true || articlesState.hasArticleDataFetched === false)
     return true
   else
     return false

@@ -2,14 +2,14 @@ import fetch from 'cross-fetch'
 
 export const requestFeatures = () => {
   return {
-    type: 'APPLICATION_REQUEST_FEATURES',
+    type: 'REQUEST_FEATURES',
     applicationName: 'application',
   }
 }
 
 export const receiveFeatures = (json) => {
   return {
-    type: 'APPLICATION_RECEIVE_FEATURES',
+    type: 'RECEIVE_FEATURES',
     applicationName: 'application',
     features: json,
     receivedAt: Date.now()

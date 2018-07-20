@@ -1,12 +1,12 @@
 export const requestArticles = () => {
   return {
-    type: 'STRATEGY_REQUEST_ARTICLES',
+    type: 'REQUEST_ARTICLES',
   }
 }
 
 export const receiveArticles = (json) => {
   return {
-    type: 'STRATEGY_RECEIVE_ARTICLES',
+    type: 'RECEIVE_ARTICLES',
     articleData: json,
     receivedAt: Date.now()
   }
@@ -26,7 +26,7 @@ export const fetchArticlesIfNeeded = () => {
 
 function shouldFetchArticles(state) {
   let shouldFetch = false
-  if(state.application.isStrategyFetching === false && state.application.hasStrategyFetched === false)
+  if(state.articles.isArticleDataFetching === false && state.articles.hasArticleDataFetched === false)
     shouldFetch = true
 
   if(true === shouldFetch)
