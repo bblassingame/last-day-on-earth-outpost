@@ -9,13 +9,13 @@ export const setSelectedItem = (itemId) => {
 
 export const requestItems = () => {
   return {
-    type: 'REQUEST_ITEMS',
+    type: 'DATABASE_REQUEST_ITEMS',
   }
 }
 
 export const receiveItems = (json) => {
   return {
-    type: 'RECEIVE_ITEMS',
+    type: 'DATABASE_RECEIVE_ITEMS',
     itemData: json,
     receivedAt: Date.now()
   }

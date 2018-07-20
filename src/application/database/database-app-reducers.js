@@ -4,8 +4,8 @@ import { quoteRegExp } from '../utility/regex-utils'
 // and it is apparent that no initialization has happened.
 const databaseAppReducer = (state = {}, action) => {
   switch(action.type) {
-    case 'REQUEST_ITEMS':
-    case 'RECEIVE_ITEMS':
+    case 'DATABASE_REQUEST_ITEMS':
+    case 'DATABASE_RECEIVE_ITEMS':
       return Object.assign({}, itemsReducer(state, action))
     
     case 'SET_SELECTED_ITEM':
@@ -59,10 +59,10 @@ const itemsReducer = (dbAppState = defaultDbAppState, action) => {
     dbAppState = defaultDbAppState
   switch(action.type) {
 
-    case 'REQUEST_ITEMS':
+    case 'DATABASE_REQUEST_ITEMS':
       return Object.assign({}, dbAppState, {isFetching: true})
     
-    case 'RECEIVE_ITEMS':
+    case 'DATABASE_RECEIVE_ITEMS':
       return Object.assign({}, dbAppState, {
         // the item data and associated other data
         items: action.itemData.items,

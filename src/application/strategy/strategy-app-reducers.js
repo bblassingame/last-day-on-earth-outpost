@@ -1,14 +1,11 @@
 const defaultStrategyAppState = {
   // application state items
   // lastUpdated: -1,  I don't need this yet, maybe ever
-  selectedArticle: '',
-  isFetching: false,
-  isInitialized: false,
 }
 
 // just initialize with an empty object so that the first times we go through here everything is empty
 // and it is apparent that no initialization has happened.
-const strategyAppReducer = (state = {}, action) => {
+const strategyAppReducer = (state = defaultStrategyAppState, action) => {
   switch(action.type) {
     case 'STRATEGY_SET_SELECTED_ARTICLE':
       return Object.assign({}, state, {selectedArticle: action.selectedArticle})
@@ -24,13 +21,11 @@ const strategyAppReducer = (state = {}, action) => {
 
 // set the default article data here once we actually request the items.  If we set it up before the request then
 // it will appear that loading has happened or started when it hasn't because variables will be defined.
-const articlesReducer = (strategyAppState = defaultStrategyAppState, action) => {
+const articlesReducer = (strategyAppState, action) => {
   if(Object.keys(strategyAppState).length === 0 && strategyAppState.constructor === Object)
     strategyAppState = defaultStrategyAppState
 
   switch(action.type) {
-    case 'STRATEGY_REQUEST_ARTICLES':
-      return Object.assign({}, strategyAppState, {isFetching: true})
     
     case 'STRATEGY_RECEIVE_ARTICLES':
       return Object.assign({}, strategyAppState, {
@@ -38,8 +33,6 @@ const articlesReducer = (strategyAppState = defaultStrategyAppState, action) => 
         items: action.articleData.items,
         // application state items
         lastUpdated: action.receivedAt,
-        isFetching: false,
-        isInitialized: true,
       })
 
     default:

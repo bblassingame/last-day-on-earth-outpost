@@ -2,23 +2,28 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import StrategyApplication from './strategy-application'
-import { fetchArticlesIfNeeded, setSelectedArticle } from './strategy-app-actions'
+import { fetchArticlesIfNeeded } from './strategy-app-actions'
 import Articles from './content/strategy-content-data'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   let newProps = null
+
+  // get the selected route here so that we can map properties based on the selected article
+  let selectedArticle = ''
+  if(null != ownProps.location.pathname.match(/^\/strategy\/\w+\/?$/))
+    selectedArticle = ownProps.location.pathname.split('/')[2]
 
   // check if we're still loading and if we are, just return the current state
   // we don't need to try to do mapping until we're fully loaded
   // we are checking if the database and article data are finished loading
   if(true === getLoadingStatus(state)) {
-    newProps = state.strategy
+    newProps = {...state.strategy, isLoading: true}
     return {...newProps}
   }
 
   // this is temporarily pulling the article content from the local data instead of the article data we
   // will eventually pull from the store.  But we have to get the article data onto the database first.
-  const selectedArticle = state.strategy.selectedArticle
+  // const selectedArticle = state.strategy.selectedArticle
   let articleContent = Articles[selectedArticle]
     
   // if we're done loading, do some special mapping when needed
@@ -28,10 +33,14 @@ const mapStateToProps = (state) => {
       newProps = mapPropsForRecycler(state, articleContent)
       break
 
+    case '':
+      newProps = mapCommonProps(state)
+      break
+
     default:
-      console.log('Unknown article selected, default strategy props mapped')
-      newProps = state.strategy
+      newProps = mapCommonProps(state)
       newProps.articleData = articleContent
+      newProps.articleData.items = state.database.items
       break
   }
 
@@ -41,9 +50,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onComponentWillMount: () => dispatch(fetchArticlesIfNeeded()),
-    onArticleSelected: (articleId) => dispatch(setSelectedArticle(articleId)),
-    initializeSelectedArticle: (articleId) => dispatch(setSelectedArticle(articleId)),
-    clearSelectedArticle: () => dispatch(setSelectedArticle('')),
   }
 }
 
@@ -58,10 +64,24 @@ export default StrategyAppContainer
 /*                                                         MAPPING FUNCTIONS                                                            */
 
 
+/*--------------------  COMMON MAPPING  --------------------*/
+const mapCommonProps = (state) => {
+  let commonProps = {}
+  let isLoadingValue = getLoadingStatus(state)
+
+  commonProps = Object.assign(state.strategy, {isLoading: isLoadingValue})
+
+  return commonProps
+}
+
+
 /*--------------------  RECYCLER MAPPING  --------------------*/
 const mapPropsForRecycler = (state, articleContent) => {
-  let newProps = null
+  let newProps = {}
   const recycleables = state.database.recycleables
+
+  // map properties common across the application
+  newProps = Object.assign(newProps, mapCommonProps(state))
 
   // create the recycler table body data
   let recyclerTableData = []
@@ -75,7 +95,7 @@ const mapPropsForRecycler = (state, articleContent) => {
     }
   })
 
-  newProps = Object.assign({}, {
+  newProps = Object.assign(newProps, {
     selectedArticle: state.strategy.selectedArticle,
     isFetching: state.strategy.isFetching,
     isInitialized: state.strategy.isInitialized,
@@ -149,22 +169,18 @@ const createRecyclerTableDataRow = (recyclerTableData, itemId, state) => {
 
 /*--------------------  LOADING STATUS FUNCTIONS  --------------------*/
 const getLoadingStatus = (state) => {
-  return getDatabaseLoadingStatus(state.database) || getArticlesLoadingStatus(state.strategy)
+  return getDatabaseLoadingStatus(state.application) || getArticlesLoadingStatus(state.application)
 }
 
-const getDatabaseLoadingStatus = (dbState) => {
-  // - this.props.isFetching == null || this.props.isFetching == true:  indicates that we're still fetching items from the server
-  // - 'undefined' === typeof(this.props.selectedItem):  indicates that the full state is not initialized because selectedItem is not present in the state
-  if(typeof(dbState.isFetching) === 'undefined' || dbState.isFetching === true || 'undefined' === typeof(dbState.selectedItem))
+const getDatabaseLoadingStatus = (appState) => {
+  if(appState.isDBFetching === true || appState.hasDBFetched === false)
     return true
   else
     return false
 }
 
-const getArticlesLoadingStatus = (artState) => {
-  // - this.props.isFetching == null || this.props.isFetching == true:  indicates that we're still fetching items from the server
-  // - 'undefined' === typeof(this.props.selectedArticle):  indicates that the full state is not initialized because selectedArticle is not present in the state
-  if( typeof(artState.isFetching) === 'undefined' || artState.isFetching === true || 'undefined' === typeof(artState.selectedArticle) )
+const getArticlesLoadingStatus = (appState) => {
+  if(appState.isStrategyFetching === true || appState.hasStrategyFetched === false)
     return true
   else
     return false

@@ -1,9 +1,3 @@
-export const setSelectedArticle = (articleId) => {
-  return {
-    type: 'STRATEGY_SET_SELECTED_ARTICLE',
-    selectedArticle: articleId,
-  }
-}
 export const requestArticles = () => {
   return {
     type: 'STRATEGY_REQUEST_ARTICLES',

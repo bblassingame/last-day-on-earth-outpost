@@ -8,7 +8,7 @@ const StrategyHeader = (props) => {
   return (
     <div className='strategy-header-container'>
       <div className='strategy-header-home-button'>
-        <Link to={getLinkDestination(props.selectedArticle)} onClick={() => props.onBackArrowClick()}>
+        <Link to={getLinkDestination(props.location)}>
           <div className='strategy-header-img-container'>
             <img className='strategy-header-img' src={LeftArrow} />
           </div>
@@ -37,7 +37,12 @@ const StrategyHeader = (props) => {
   )
 }
 
-const getLinkDestination = (selectedArticle) => {
+const getLinkDestination = (location) => {
+  let selectedArticle = ''
+
+  if(null != location.pathname.match(/^\/strategy\/\w+\/?$/))
+    selectedArticle = location.pathname.split('/')[2]
+
   if('' === selectedArticle)
     return '/'
   else

@@ -5,7 +5,7 @@ import HtmlDocument from '../../formatter/document-model/html-document'
 
 const StrategyArticle = (props) => {
   let formatMgr = new FormatMgr()
-  let contentToRender = updateImageSources(props.articleData.contentItems, props.items)
+  let contentToRender = updateImageSources(props.articleData.contentItems, props.articleData.items)
   let pageModel = formatMgr.formatContent(contentToRender)
   return <HtmlDocument pageModel={pageModel}/>
 }
