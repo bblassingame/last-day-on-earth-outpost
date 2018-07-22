@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux'
 
-import application from './features-reducer'
+import features from './features-reducer'
 import items from './items-reducer'
 import database from '../database/database-app-reducers'
 import articles from './articles-reducer'
 
 
 const RootReducer = combineReducers({
-  application,
+  features,
   items,
   database,
   articles,

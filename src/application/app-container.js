@@ -3,15 +3,18 @@ import { withRouter } from 'react-router-dom'
 
 import AppContent from './app-content'
 import { fetchFeaturesIfNeeded } from './features-actions'
-import { fetchItemsIfNeeded } from '../database/database-app-actions'
 import { fetchArticlesIfNeeded } from './articles-actions'
+import { fetchItemsIfNeeded } from './items-actions'
 
 const mapStateToProps = (state) => {
-  let {application} = state
-  if(null == application['appInitialized'])
-    application = {appInitialized: false}
+  let {features} = state
+  let isLoadingValue = false
+  if(features.isFeatureDataFetching === true || features.hasFeatureDataFetched === false)
+    isLoadingValue = true
 
-  return {...application}
+  features = Object.assign({}, features, {isLoading: isLoadingValue})
+
+  return {...features}
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -19,8 +22,8 @@ const mapDispatchToProps = (dispatch) => {
     onComponentWillMount: () => dispatch(fetchFeaturesIfNeeded()),
     onComponentUpdate: () => dispatch(fetchFeaturesIfNeeded()),
     onComponentDidMount: () => {
-      dispatch(fetchItemsIfNeeded())
       dispatch(fetchArticlesIfNeeded())
+      dispatch(fetchItemsIfNeeded())
     },
   }
 }

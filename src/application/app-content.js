@@ -39,7 +39,7 @@ class AppContent extends React.Component {
     // if(null == previewAuthorized || 'allowed' !== previewAuthorized)
     //   return ComingSoon
 
-    if(this.props.appInitialized == false)
+    if(this.props.isLoading === true)
       return LoadingPage
 
     // const previewEnabled = this.props.features['preview'].enabled

@@ -158,7 +158,7 @@ const createRecyclerTableDataRow = (recyclerTableData, itemId, state) => {
 
 /*--------------------  LOADING STATUS FUNCTIONS  --------------------*/
 const getLoadingStatus = (state) => {
-  return getDatabaseLoadingStatus(state.application) || getArticlesLoadingStatus(state.articles)
+  return getDatabaseLoadingStatus(state.features) || getArticlesLoadingStatus(state.articles)
 }
 
 const getDatabaseLoadingStatus = (appState) => {

@@ -29,12 +29,8 @@ export const fetchFeaturesIfNeeded = () => {
 }
 
 function shouldFetchFeatures(state) {
-  const appInitialized = state.application['appInitialized']
-  if(null == appInitialized || (false == state.application.appInitialized && false == state.application.isFetching)) {
+  if(typeof(state.features) === 'undefined' || (state.features.isFeatureDataFetching === false && state.features.hasFeatureDataFetched === false))
     return true
-  }
-  else if(state.application.isFetching)
-    return false
   else
     return false
 }
