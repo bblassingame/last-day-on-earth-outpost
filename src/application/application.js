@@ -7,7 +7,7 @@ import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 import 'babel-polyfill'
 import AppContainer from './app-container'
-import RootReducer from './features-reducer'
+import RootReducer from './root-reducer'
 import ScrollToTop from '../utility/scroll-to-top'
 
 import './reset.css'
