@@ -27,11 +27,8 @@ export const fetchItemsIfNeeded = () => {
 }
 
 function shouldFetchItems(state) {
-  const dbInitialized = state.database['isInitialized']
-  if(null == dbInitialized || (false == state.database.isInitialized && false == state.database.isFetching))
+  if(typeof(state.items) === 'undefined' || (state.items.isItemDataFetching === false && state.items.hasItemDataFetched === false))
     return true
-  else if(state.database.isFetching)
-    return false
   else
     return false
 }
