@@ -3,6 +3,7 @@ import { quoteRegExp } from '../utility/regex-utils'
 // just initialize with an empty object so that the first times we go through here everything is empty
 // and it is apparent that no initialization has happened.
 const databaseAppReducer = (state = {}, action) => {
+  
   switch(action.type) {
     case 'REQUEST_ITEMS':
     case 'RECEIVE_ITEMS':
@@ -57,6 +58,7 @@ const defaultDbAppState = {
 const itemsReducer = (dbAppState = defaultDbAppState, action) => {
   if(Object.keys(dbAppState).length === 0 && dbAppState.constructor === Object)
     dbAppState = defaultDbAppState
+
   switch(action.type) {
 
     case 'REQUEST_ITEMS':
@@ -89,6 +91,7 @@ const itemsReducer = (dbAppState = defaultDbAppState, action) => {
     default:
       console.log('***** ERROR:  Undefined Action.  This wasn\'t supposed to get hit, take a look.' + action.type)
       return dbAppState
+      
   }
 }
 
