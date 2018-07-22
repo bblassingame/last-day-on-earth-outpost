@@ -7,7 +7,7 @@ const defaultStrategyAppState = {
 
 // just initialize with an empty object so that the first times we go through here everything is empty
 // and it is apparent that no initialization has happened.
-const strategyAppReducer = (state = defaultStrategyAppState, action) => {
+const articlesReducer = (state = defaultStrategyAppState, action) => {
   switch(action.type) {
 
     case 'REQUEST_ARTICLES':
@@ -28,4 +28,4 @@ const strategyAppReducer = (state = defaultStrategyAppState, action) => {
   }
 }
 
-export default strategyAppReducer
+export default articlesReducer
