@@ -25,11 +25,7 @@ export const fetchArticlesIfNeeded = () => {
 }
 
 function shouldFetchArticles(state) {
-  let shouldFetch = false
-  if(state.articles.isArticleDataFetching === false && state.articles.hasArticleDataFetched === false)
-    shouldFetch = true
-
-  if(true === shouldFetch)
+  if(typeof(state.articles) === 'undefined' || (state.articles.isArticleDataFetching === false && state.articles.hasArticleDataFetched === false))
     return true
   else
     return false
