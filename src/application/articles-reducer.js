@@ -1,4 +1,4 @@
-const defaultStrategyAppState = {
+const defaultArticlesState = {
   // application state items
   lastUpdated: -1,  // I don't need this yet, maybe ever
   isArticleDataFetching: false,
@@ -7,7 +7,10 @@ const defaultStrategyAppState = {
 
 // just initialize with an empty object so that the first times we go through here everything is empty
 // and it is apparent that no initialization has happened.
-const articlesReducer = (state = defaultStrategyAppState, action) => {
+const articlesReducer = (state = {}, action) => {
+  if(Object.keys(state).length === 0 && state.constructor === Object)
+    state = defaultArticlesState
+
   switch(action.type) {
 
     case 'REQUEST_ARTICLES':
@@ -25,6 +28,7 @@ const articlesReducer = (state = defaultStrategyAppState, action) => {
 
     default:
       return state
+
   }
 }
 
