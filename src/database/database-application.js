@@ -75,18 +75,15 @@ class DatabaseApplication extends Component {
   handleBackArrowClick() {
     this.props.clearSelectedItem()
     this.props.clearSearchText()
-    this.props.filterItemsList()
   }
 
   handleItemClick(itemId) {
     this.props.onItemSelected(itemId)
     this.props.clearSearchText()
-    this.props.filterItemsList()
   }
 
   handleSearchInput(event) {
     this.props.onSearchTextEntered(event.target.value)
-    this.props.filterItemsList()
   }
 
   handleArticleClick() {
