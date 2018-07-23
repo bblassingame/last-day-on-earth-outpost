@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { getURLString } from '../../utility/regex-utils'
 
-class DatabaseContent extends Component {
+class DatabaseItemsOverview extends Component {
   constructor(props) {
     super(props)
   }
@@ -54,4 +54,4 @@ class DatabaseContent extends Component {
   }
 }
 
-export default DatabaseContent
+export default DatabaseItemsOverview

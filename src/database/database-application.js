@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 
 import DatabaseHeader from './header/database-header'
 import DatabaseSearch from './content/database-search'
-import DatabaseContent from './content/database-content'
+import DatabaseItemsOverview from './content/database-items-overview'
 import DatabaseGenericItem from './content/database-generic-item'
 import DatabaseWeaponItem from './content/database-weapon-item'
 import DatabaseArmorItem from './content/database-armor-item'
@@ -60,7 +60,7 @@ class DatabaseApplication extends Component {
       <div className='db-application-content'>
         <DatabaseHeader selectedItem={this.props.selectedItem}  onBackArrowClick={this.handleBackArrowClick}/>
         <Route exact path='/database' render={(routeProps) => <DatabaseSearch onInput={this.handleSearchInput} {...routeProps} />}/>
-        <Route exact path='/database' render={(routeProps) => <DatabaseContent isLoading={this.getLoadingStatus()} items={this.props.sortedFilteredItems} onItemClick={this.handleItemClick} {...routeProps} />} />
+        <Route exact path='/database' render={(routeProps) => <DatabaseItemsOverview isLoading={this.getLoadingStatus()} items={this.props.sortedFilteredItems} onItemClick={this.handleItemClick} {...routeProps} />} />
         <Route path='/database/:itemUrlName' render={(routeProps) => this.getItemPanel(routeProps)} />
         <DatabaseFooter />
       </div>
