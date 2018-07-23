@@ -61,7 +61,7 @@ const mapCommonProps = (state) => {
   let commonProps = {}
   let isLoadingValue = getLoadingStatus(state)
 
-  commonProps = Object.assign(state.articles, {isLoading: isLoadingValue})
+  commonProps = Object.assign({}, state.articles, {isLoading: isLoadingValue})
 
   return commonProps
 }
@@ -73,7 +73,7 @@ const mapPropsForRecycler = (state, articleContent) => {
   const recycleables = state.items.recycleables
 
   // map properties common across the application
-  newProps = Object.assign(newProps, mapCommonProps(state))
+  newProps = Object.assign({}, newProps, mapCommonProps(state))
 
   // create the recycler table body data
   let recyclerTableData = []
@@ -87,7 +87,7 @@ const mapPropsForRecycler = (state, articleContent) => {
     }
   })
 
-  newProps = Object.assign(newProps, {
+  newProps = Object.assign({}, newProps, {
     articleData: articleContent,
   })
 
@@ -162,7 +162,7 @@ const getLoadingStatus = (state) => {
 }
 
 const getDatabaseLoadingStatus = (itemsState) => {
-  if(itemsState.isDBFetching === true || itemsState.hasDBFetched === false)
+  if(itemsState.isItemDataFetching === true || itemsState.hasItemDataFetched === false)
     return true
   else
     return false
