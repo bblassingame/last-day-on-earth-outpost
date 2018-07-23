@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 
   // check if we're still loading and if we are, just return the current state
   // we don't need to try to do mapping until we're fully loaded
-  // we are checking if the database and article data are finished loading
+  // we are checking if the item and article data are finished loading
   if(true === getLoadingStatus(state)) {
     newProps = {...state.articles, isLoading: true}
     return {...newProps}
@@ -38,7 +38,7 @@ const mapStateToProps = (state, ownProps) => {
     default:
       newProps = mapCommonProps(state)
       newProps.articleData = articleContent
-      newProps.articleData.items = state.database.items
+      newProps.articleData.items = state.items.items
       break
   }
 
@@ -70,7 +70,7 @@ const mapCommonProps = (state) => {
 /*--------------------  RECYCLER MAPPING  --------------------*/
 const mapPropsForRecycler = (state, articleContent) => {
   let newProps = {}
-  const recycleables = state.database.recycleables
+  const recycleables = state.items.recycleables
 
   // map properties common across the application
   newProps = Object.assign(newProps, mapCommonProps(state))
@@ -95,9 +95,9 @@ const mapPropsForRecycler = (state, articleContent) => {
 }
 
 const createRecyclerTableDataRow = (recyclerTableData, itemId, state) => {
-  const items = state.database.items
-  const recycleables = state.database.recycleables
-  const recycleProducts = state.database.recycleProducts
+  const items = state.items.items
+  const recycleables = state.items.recycleables
+  const recycleProducts = state.items.recycleProducts
 
   let fullLink = ''
   let recyclerTableDataRow = []
@@ -158,11 +158,11 @@ const createRecyclerTableDataRow = (recyclerTableData, itemId, state) => {
 
 /*--------------------  LOADING STATUS FUNCTIONS  --------------------*/
 const getLoadingStatus = (state) => {
-  return getDatabaseLoadingStatus(state.features) || getArticlesLoadingStatus(state.articles)
+  return getDatabaseLoadingStatus(state.items) || getArticlesLoadingStatus(state.articles)
 }
 
-const getDatabaseLoadingStatus = (appState) => {
-  if(appState.isDBFetching === true || appState.hasDBFetched === false)
+const getDatabaseLoadingStatus = (itemsState) => {
+  if(itemsState.isDBFetching === true || itemsState.hasDBFetched === false)
     return true
   else
     return false

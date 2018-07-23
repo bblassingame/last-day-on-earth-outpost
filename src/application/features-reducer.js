@@ -1,13 +1,9 @@
 const defaultFeaturesState = {
   features: [],
   lastUpdated: -1,
-  // appInitialized: false,
   // for tracking feature data as we're fetching from the server
   isFeatureDataFetching: false,
   hasFeatureDataFetched: false,
-  // for loading up data for the sub applications
-  isDBFetching: false,
-  hasDBFetched: false,
 }
 
 const features = (state = {}, action) => {
@@ -19,10 +15,6 @@ const features = (state = {}, action) => {
     case 'RECEIVE_FEATURES':
       return Object.assign({}, featuresReducer(state, action))
 
-    case 'REQUEST_ITEMS':
-    case 'RECEIVE_ITEMS':
-      return dataFetchingReducer(state, action)
-        
     default:
       return state
   }
@@ -45,24 +37,6 @@ const featuresReducer = (state, action) => {
     default:
       console.log('***** ERROR:  Undefined Action.  This wasn\'t supposed to get hit, take a look.' + action.type)
       return state
-  }
-}
-
-const dataFetchingReducer = (applicationState, action) => {
-
-  switch(action.type) {
-
-    case 'REQUEST_ITEMS':
-      return Object.assign({}, applicationState, {
-        isDBFetching: true
-      })
-
-    case 'RECEIVE_ITEMS':
-      return Object.assign({}, applicationState, {
-        isDBFetching: false,
-        hasDBFetched: true,
-      })
-
   }
 }
 
