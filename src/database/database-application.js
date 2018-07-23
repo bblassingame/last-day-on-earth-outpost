@@ -30,7 +30,7 @@ class DatabaseApplication extends Component {
     // needs a call to mapStateToProps doesn't get the required call and you don't get the props
     // updated with the new state.  You need to call you actions after the componentWillMount call
     // so that you get the mapStateToProps that you're expecting
-    this.props.onComponentWillMount() // load here in case we stop loading in the main app for whatever reason
+    // this.props.onComponentWillMount() // load here in case we stop loading in the main app for whatever reason
   }
 
   // do this check in componentDidUpdate and componentDidMount.  React expects functions that will update state to happen in a lifecyle
@@ -163,9 +163,9 @@ class DatabaseApplication extends Component {
   }
 
   getLoadingStatus() {
-    // - this.props.isFetching == null || this.props.isFetching == true:  indicates that we're still fetching items from the server
+    // - this.props.isLoading == null || this.props.isLoading == true:  indicates that we're still fetching items from the server
     // - 'undefined' === typeof(this.props.selectedItem):  indicates that the full state is not initialized because selectedItem is not present in the state
-    if(typeof(this.props.isFetching) === 'undefined' || this.props.isFetching === true || 'undefined' === typeof(this.props.selectedItem))
+    if(typeof(this.props.isLoading) === 'undefined' || this.props.isLoading === true || 'undefined' === typeof(this.props.selectedItem))
       return true
     else
       return false

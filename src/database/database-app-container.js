@@ -2,12 +2,11 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import DatabaseApplication from './database-application'
-import { fetchItemsIfNeeded, setSelectedItem, setSearchText, clearSearchText } from './database-app-actions'
+import { setSelectedItem, setSearchText, clearSearchText } from './database-app-actions'
 import { quoteRegExp } from '../utility/regex-utils'
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onComponentWillMount: () => dispatch(fetchItemsIfNeeded()),
     onItemSelected: (itemId) => dispatch(setSelectedItem(itemId)),
     initializeSelectedItem: (itemId) => dispatch(setSelectedItem(itemId)),
     clearSelectedItem: () => dispatch(setSelectedItem(-1)),
@@ -17,11 +16,20 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-  const {database} = state
+  let database = Object.assign({}, state.database, state.items)
 
   // sort the items so that we can display them better and more functionally
-  if('undefined' !== typeof(state.database.items) && Object.keys(state.database.items).length !== 0)
-    database.sortedFilteredItems = getSortedFilteredItemsList(state.database)
+  // we should pass in the database object that we're creating because that has the items that we're sorting
+  // and the search text entered
+  if('undefined' !== typeof(database.items) && Object.keys(database.items).length !== 0)
+    database.sortedFilteredItems = getSortedFilteredItemsList(database)
+  
+  // get the loading status that we're going to use to determine whether we're ready to display items
+  let isLoadingValue = false
+  if(state.items.isItemDataFetching === true || state.items.hasItemDataFetched === false)
+    isLoadingValue = true
+
+  database.isLoading = isLoadingValue
 
   return {...database}
 }
@@ -53,7 +61,7 @@ const getSortedFilteredItemsList = (state) => {
 
   // TO DO:  Add some functionality so that we prioritize words items when they fully match.  A good example is "bat".
   // the first item is the Acid Bath, but really we probably want to see the Baseball Bat and Makeshift Bat first.
-  
+
   // add the first set of matches, we look for a match at the beginning of a word and when it
   // matches a search word
   itemKeys.map(key => filterItemsMatchAtWordBoundary(key, sortedItems, searchText, state.searchWords, sortedFilteredItems))

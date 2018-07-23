@@ -10,14 +10,8 @@ const defaultItemsState = {
   recycleProducts: {},
   weapons: {},
   armor: {},
-  // items related to searching
-  searchText: '',
-  searchActive: false,
-  searchWords: {},
-  sortedFilteredItems: {},
-  // application state items
+  // items data state info
   lastUpdated: -1,
-  selectedItem: -1,
   isItemDataFetching: false,
   hasItemDataFetched: false,
 }
@@ -44,10 +38,6 @@ const itemsReducer = (state = {}, action) => {
         recycleProducts: action.itemData.recycleProducts,
         weapons: action.itemData.weapons,
         armor: action.itemData.armor,
-        // items related to searching
-        searchText: action.itemData.searchText,
-        searchActive: action.itemData.searchActive,
-        searchWords: action.itemData.searchWords,
         // application state items
         lastUpdated: action.receivedAt,
         isItemDataFetching: false,
