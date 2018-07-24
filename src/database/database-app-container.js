@@ -2,14 +2,11 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import DatabaseApplication from './database-application'
-import { setSelectedItem, setSearchText, clearSearchText } from './database-app-actions'
+import { setSearchText, clearSearchText } from './database-app-actions'
 import { quoteRegExp } from '../utility/regex-utils'
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onItemSelected: (itemId) => dispatch(setSelectedItem(itemId)),
-    initializeSelectedItem: (itemId) => dispatch(setSelectedItem(itemId)),
-    clearSelectedItem: () => dispatch(setSelectedItem(-1)),
     onSearchTextEntered: (enteredText) => dispatch(setSearchText(enteredText)),
     clearSearchText: () => dispatch(clearSearchText()),
   }

@@ -28,7 +28,7 @@ const getIngredientPanel = (props) => {
         craftingMaterialsList={props.craftingMaterialsList} 
         craftPoints={props.craftPoints} 
         craftRequiredLevel={props.craftRequiredLevel} />
-      <DatabaseItemLinks itemName={props.name} onArticleClick={props.onArticleClick}/>
+      <DatabaseItemLinks itemName={props.name} />
     </div>
   )
 }

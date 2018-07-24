@@ -31,7 +31,7 @@ class DatabaseGenericItem extends Component {
           craftingMaterialsList={this.props.craftingMaterialsList} 
           craftPoints={this.props.craftPoints} 
           craftRequiredLevel={this.props.craftRequiredLevel} />
-        <DatabaseItemLinks itemName={this.props.name} onArticleClick={this.props.onArticleClick}/>
+        <DatabaseItemLinks itemName={this.props.name} />
       </div>
     )
   }

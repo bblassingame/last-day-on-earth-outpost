@@ -9,16 +9,16 @@ const DatabaseItemLinks = (props) => {
       <h1 className='database-item-links-heading'>Additional Resources</h1>
       {/*I need a link to the LDOE Wiki page for the item, but not first*/}
       <div className='database-item-links-scroll-container'>
-        {getResourceLink(props.itemName, props.onArticleClick)}
+        {getResourceLink(props.itemName)}
       </div>
     </div>
   )
 }
 
-const getResourceLink = (itemName, onArticleClick) => {
+const getResourceLink = (itemName) => {
   let src = '/strategy/Resources#' + getURLString(itemName)
   return (
-    <Link to={src} onClick={onArticleClick} >
+    <Link to={src}>
       <div className='database-item-links-scroll-item'>
         {/*fill this in and create the link item*/}
         <div className='database-item-links-scroll-item-heading'>

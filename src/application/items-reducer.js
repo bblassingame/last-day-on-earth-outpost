@@ -10,6 +10,7 @@ const defaultItemsState = {
   recycleProducts: {},
   weapons: {},
   armor: {},
+  searchWords: {},
   // items data state info
   lastUpdated: -1,
   isItemDataFetching: false,
@@ -38,6 +39,7 @@ const itemsReducer = (state = {}, action) => {
         recycleProducts: action.itemData.recycleProducts,
         weapons: action.itemData.weapons,
         armor: action.itemData.armor,
+        searchWords: action.itemData.searchWords,
         // application state items
         lastUpdated: action.receivedAt,
         isItemDataFetching: false,
