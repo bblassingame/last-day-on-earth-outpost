@@ -7,7 +7,7 @@ const DatabaseHeader = (props) => {
   return (
     <div className='db-header-container'>
       <div className='db-header-home-button'>
-        <Link to={getLinkDestination(props.selectedItem)} onClick={() => props.onBackArrowClick()} >
+        <Link to={getLinkDestination(props.location)} onClick={() => props.onBackArrowClick()} >
           <div className='db-header-img-container'>
             <img className='db-header-img' src={LeftArrow} />
           </div>
@@ -36,8 +36,13 @@ const DatabaseHeader = (props) => {
   )
 }
 
-const getLinkDestination = (selectedItem) => {
-  if(-1 === selectedItem)
+const getLinkDestination = (location) => {
+  let selectedItem = -1
+
+  if(null != location.pathname.match(/^\/database\/[\w-_']+\/?$/))
+    selectedItem = location.pathname.split('/')[2]
+
+  if(-1 === Number(selectedItem))
     return '/'
   else
     return '/database'

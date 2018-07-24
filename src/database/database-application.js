@@ -58,7 +58,7 @@ class DatabaseApplication extends Component {
   render() {
     return (
       <div className='db-application-content'>
-        <DatabaseHeader selectedItem={this.props.selectedItem}  onBackArrowClick={this.handleBackArrowClick}/>
+        <DatabaseHeader location={this.props.location}  onBackArrowClick={this.handleBackArrowClick} />
         <Route exact path='/database' render={(routeProps) => <DatabaseSearch onInput={this.handleSearchInput} {...routeProps} />}/>
         <Route exact path='/database' render={(routeProps) => <DatabaseItemsOverview isLoading={this.getLoadingStatus()} items={this.props.sortedFilteredItems} onItemClick={this.handleItemClick} {...routeProps} />} />
         <Route path='/database/:itemUrlName' render={(routeProps) => this.getItemPanel(routeProps)} />
