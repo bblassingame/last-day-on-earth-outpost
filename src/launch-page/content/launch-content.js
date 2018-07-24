@@ -189,11 +189,11 @@ const LaunchPageData = [
       },
       {
         type: 'paragraph',
-        text: 'Update 1.8.3 was a “Multiplayer Update” adding the ability to cooperatively shoot things in Sector 7. It wasn’t the biggest update, but Last Day on Earth has been coming out with a lot of updates lately which is good.',
+        text: 'Update 1.9.0 & 1.9.1 are the next steps in Kefir!\'s updates to support multiplayer!  These are huge updates, and most importantly the <L to="/database/Radio_Tower">Radio Tower</L> has been introduced!',
       },
       {
         type: 'youtube',
-        link: 'https://www.youtube.com/embed/fKnoTDP1a80?start=6',
+        link: 'https://www.youtube.com/embed/7brJViDv9Ug',
       },
     ]
   },
