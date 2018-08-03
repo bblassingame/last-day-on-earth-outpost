@@ -66,17 +66,34 @@ const DatabaseWeaponStatsAndMods = (props) => {
           </tbody>
         </table>
       </div>
-      {/* <div>
-        <div>
-          
+      <form className='weapon-mods-container'>
+        <h2 className='weapon-mods-heading'>
+          <span className='weapon-mods-type-width'>Type</span>
+          <span className='weapon-mods-name-width'>Name</span>
+          <span className='weapon-mods-mod-width'>Mod</span>
+        </h2>
+        <div className='weapon-mods-data-container'>
+          <div className='weapon-mods-types-container weapon-mods-type-width'>
+            <div><input type='radio' name='type' id='Magazine'></input><label className='weapon-mods-text' htmlFor='Magazine'>Magazine</label></div>
+            <div><input type='radio' name='type' id='Sight'></input><label className='weapon-mods-text' htmlFor='Sight'>Sight</label></div>
+            <div><input type='radio' name='type' id='Barrel'></input><label className='weapon-mods-text' htmlFor='Barrel'>Barrel</label></div>
+            <div><input type='radio' name='type' id='Stock'></input><label className='weapon-mods-text' htmlFor='Stock'>Stock</label></div>
+            <div><input type='radio' name='type' id='Accessory'></input><label className='weapon-mods-text' htmlFor='Accessory'>Accessory</label></div>
+          </div>
+          <div className='weapon-mods-names-container weapon-mods-name-width'>
+            <div><input type='radio' name='name' id='Double Magazine'></input><label className='weapon-mods-text' htmlFor='Double Magazine'>Double Magazine</label></div>
+            <div><input type='radio' name='name' id='Extended Magazine'></input><label className='weapon-mods-text' htmlFor='Extended Magazine'>Extended Magazine</label></div>
+            <div><input type='radio' name='name' id='Large Magazine'></input><label className='weapon-mods-text' htmlFor='Large Magazine'>Large Magazine</label></div>
+          </div>
+          <div className='weapon-mods-mods-container weapon-mods-mod-width'>
+            <div className='weapon-mods-stats-container'>
+              <p className='weapon-mods-text'><span>Damage&nbsp;</span><span>+</span></p>
+              <p className='weapon-mods-text'><span>Crit. Damage&nbsp;</span><span>--</span></p>
+              <p className='weapon-mods-text'><span>Crit. Chance&nbsp;</span><span>-</span></p>
+            </div>
+          </div>
         </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-      </div> */}
+      </form>
       <div className='db-item-weapon-annotation-container'>
         {annotations.map((item, index) => renderAnnotationRow(item, index))}
       </div>

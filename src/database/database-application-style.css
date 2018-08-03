@@ -267,6 +267,67 @@ we have a single header cell so we need to set both borders, otherwise we would 
   font-size: 1.5em;
 }
 
+/******************  Weapon Modifications  ******************/
+.weapon-mods-container {
+  margin: 10px 0 0 0;
+  background-color: #2d2e29;
+  border-radius: 11px 11px 5px 5px;
+}
+
+.weapon-mods-heading {
+  display: flex;
+  padding: 5px;
+  border-radius: 10px 10px 0 0;
+  background-color: #393939;
+  text-align: center;
+}
+
+.weapon-mods-data-container {
+  display: flex;
+}
+
+.weapon-mods-types-container {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.weapon-mods-names-container {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.weapon-mods-mods-container {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weapon-mods-stats-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.weapon-mods-text {
+  font-size: .75em;
+}
+
+.weapon-mods-type-width {
+  width: 25%;
+}
+
+.weapon-mods-name-width {
+  width: 35%;
+}
+
+.weapon-mods-mod-width {
+  flex: 1;
+}
+
 /******************  Weapon Annotations  ******************/
 .db-item-weapon-annotation-container {
   margin: 2px 0 10px 0;
