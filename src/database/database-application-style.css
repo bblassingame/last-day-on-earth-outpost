@@ -312,6 +312,12 @@ we have a single header cell so we need to set both borders, otherwise we would 
   justify-content: center;
 }
 
+.weapon-mods-input-container {
+  margin: 1px 0;
+  display: flex;
+  align-items: center;
+}
+
 .weapon-mods-text {
   font-size: .75em;
 }
