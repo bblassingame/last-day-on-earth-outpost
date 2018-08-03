@@ -3,7 +3,7 @@ import React from 'react'
 // component variables
 var annotations = null
 
-const DatabaseWeaponInfo = (props) => {
+const DatabaseWeaponStatsAndMods = (props) => {
 
   annotations = []
   const isRanged = props.weaponData.sneakAttack == -1 ? true : false
@@ -318,4 +318,4 @@ const annotationData =
   ['5', 'While entirely possible to do unlimited damage with your fists, it may not be your best idea'],
 ]
 
-export default DatabaseWeaponInfo
+export default DatabaseWeaponStatsAndMods

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DatabaseWeaponInfo from './database-weapon-info'
+import DatabaseWeaponStatsAndMods from './database-weapon-stats-mods'
 import DatabaseCraftingTable from './database-crafting-table'
 import DatabaseItemImagePanel from './database-item-image-panel'
 import DatabaseItemLinks from './database-item-links'
@@ -22,7 +22,7 @@ const getIngredientPanel = (props) => {
           <p/>
         </div>
       </div>
-      <DatabaseWeaponInfo weaponData={props.weaponData} name={props.name} />
+      <DatabaseWeaponStatsAndMods weaponData={props.weaponData} name={props.name} />
       <DatabaseCraftingTable
         craftable={props.craftable} 
         craftingMaterialsList={props.craftingMaterialsList} 
