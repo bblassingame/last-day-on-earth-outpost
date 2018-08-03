@@ -218,10 +218,29 @@
   width: 100%;
 }
 
+/*
+table top left and top right radius
+we have a single header cell so we need to set both borders, otherwise we would need to set the top left and top right independently
+*/
+.db-item-weapon-table tr:first-child th:first-child {
+  border-radius: 11px 11px 0 0;
+}
+
+/*table bottom left radius*/
+.db-item-weapon-table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+
+/*table bottom right radius*/
+.db-item-weapon-table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+
 .db-item-weapon-table-header-cell {
   height: 1.6em;
+  text-align: left;
   vertical-align: middle;
-  border-radius: 6px 6px 0 0;
+  padding: 0 0 0 5px;
   background-color: #393939;
 }
 
@@ -236,6 +255,7 @@
 
 .db-item-weapon-table-body-col1 {
   vertical-align: middle;
+  padding: 0 0 0 5px;
 }
 
 .db-item-weapon-table-body-col2 {
@@ -249,7 +269,7 @@
 
 /******************  Weapon Annotations  ******************/
 .db-item-weapon-annotation-container {
-  margin: 0 0 10px 0;
+  margin: 2px 0 10px 0;
   font-size: .75em;
 }
 
@@ -304,10 +324,15 @@
 /******************  Crafting Data  ******************/
 .db-item-crafting-table-container {
   margin: 10px 0 0 0;
-  max-width: 250px;
+  max-width: 100%;
+  border-radius: 11px 11px 5px 5px;
+  background-color: #2d2e29;
 }
 
 .db-item-crafting-table-header-container {
+  border-radius: 10px 10px 0 0;
+  background-color: #393939;
+  padding: 5px;
   display: flex;
 }
 
@@ -328,6 +353,7 @@
   display: flex;
   align-items: center;
   font-size: .9em;
+  padding: 0 5px 0 0;
 }
 
 .db-item-crafting-table-row-image {
@@ -345,14 +371,12 @@
 .database-item-links-container {
   border-radius: 11px 11px 5px 5px;
   background-color: #777777;
+  margin: 10px 0 0 0;
 }
 
 .database-item-links-heading {
   border-radius: 10px 10px 0 0;
-  /* background-color: #424242; */
   background-color: #393939;
-  /* background-color: #2f2f2f; */
-  /*background-color: #252525;*/
   padding: 5px;
 }
 
