@@ -15,37 +15,68 @@ const DatabaseWeaponTable = (props) => {
         <table className='db-item-weapon-table'>
           <thead>
             <tr>
-              <th colSpan='2'>Weapon Stats</th>
+              <th className='db-item-weapon-table-header-cell' colSpan='2'>Weapon Stats</th>
             </tr>
           </thead>
           <tbody className='db-item-weapon-table-body'>
             <tr className='db-item-weapon-table-body-row'>
-              <td>Dmg</td>
+              <td className='db-item-weapon-table-body-col1'>Damage</td>
               {getDamageValue(props.weaponData.damage)}
             </tr>
             <tr className='db-item-weapon-table-body-row'>
-              <td>Sneak Dmg{isRanged ? createAnnotation('1') : ''}</td>
+              <td className='db-item-weapon-table-body-col1'>Critical Damage{isRanged ? createAnnotation('1') : ''}</td>
               {getSneakDamageValue(props.weaponData.sneakAttack, props.weaponData.damage)}
             </tr>
             <tr className='db-item-weapon-table-body-row'>
-              <td>Rate (s)</td>
+              <td className='db-item-weapon-table-body-col1'>Critical Chance</td>
+              <td className='db-item-weapon-table-body-col2'>{5}</td>
+            </tr>
+            <tr className='db-item-weapon-table-body-row'>
+              <td className='db-item-weapon-table-body-col1'>Speed</td>
               {getRateValue(props.weaponData.speed)}
             </tr>
             <tr className='db-item-weapon-table-body-row'>
-              <td>DPS</td>
-              {getDPSValue(props.weaponData.dps)}
-            </tr>
-            <tr className='db-item-weapon-table-body-row'>
-              <td>Durability</td>
+              <td className='db-item-weapon-table-body-col1'>Durability</td>
               {getDurabilityValue(props.weaponData.durability, isFists)}
             </tr>
             <tr className='db-item-weapon-table-body-row'>
-              <td>Total Dmg</td>
-              {getTotalDmgValue(props.weaponData.totalDamage, isFists)}
+              <td className='db-item-weapon-table-body-col1'>Range</td>
+              <td className='db-item-weapon-table-body-col2'>{'short'}</td>
             </tr>
+            <tr className='db-item-weapon-table-body-row'>
+              <td className='db-item-weapon-table-body-col1'>Noise</td>
+              <td className='db-item-weapon-table-body-col2'>{'loud'}</td>
+            </tr>
+            <tr className='db-item-weapon-table-body-row'>
+              <td className='db-item-weapon-table-body-col1'>Stability</td>
+              <td className='db-item-weapon-table-body-col2'>{'medium'}</td>
+            </tr>
+            <tr className='db-item-weapon-table-body-row'>
+              <td className='db-item-weapon-table-body-col1'>Weight</td>
+              <td className='db-item-weapon-table-body-col2'>{'high'}</td>
+            </tr>
+            {/* <tr className='db-item-weapon-table-body-row'>
+              <td className='db-item-weapon-table-body-col1'>DPS</td>
+              {getDPSValue(props.weaponData.dps)}
+            </tr> */}
+            {/* <tr className='db-item-weapon-table-body-row'>
+              <td className='db-item-weapon-table-body-col1'>Total Dmg</td>
+              {getTotalDmgValue(props.weaponData.totalDamage, isFists)}
+            </tr> */}
           </tbody>
         </table>
       </div>
+      {/* <div>
+        <div>
+          
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+      </div> */}
       <div className='db-item-weapon-annotation-container'>
         {annotations.map((item, index) => renderAnnotationRow(item, index))}
       </div>
@@ -144,32 +175,32 @@ const getRateValue = (rawRate) => {
   )
 }
 
-const getDPSValue = (rawDps) => {
-  let dps = ''
-  let annotation = ''
+// const getDPSValue = (rawDps) => {
+//   let dps = ''
+//   let annotation = ''
 
-  if(rawDps < 0)
-    dps = '--'
-  else if('string' === typeof(rawDps) && Number(rawDps) < 0)
-    dps = '--'
-  else
-    dps = rawDps
+//   if(rawDps < 0)
+//     dps = '--'
+//   else if('string' === typeof(rawDps) && Number(rawDps) < 0)
+//     dps = '--'
+//   else
+//     dps = rawDps
 
-  if(rawDps == -1)
-    dps = 'N/A'
-  else if(rawDps == -2)
-    annotation = createAnnotation('2')
-  else if(rawDps == -3)
-    annotation = createAnnotation('3')
-  else if(rawDps == -4)
-    annotation = createAnnotation('4')
+//   if(rawDps == -1)
+//     dps = 'N/A'
+//   else if(rawDps == -2)
+//     annotation = createAnnotation('2')
+//   else if(rawDps == -3)
+//     annotation = createAnnotation('3')
+//   else if(rawDps == -4)
+//     annotation = createAnnotation('4')
 
-  return (
-    <td className='db-item-weapon-table-body-col2'>
-      {dps}{annotation}
-    </td>
-  )
-}
+//   return (
+//     <td className='db-item-weapon-table-body-col2'>
+//       {dps}{annotation}
+//     </td>
+//   )
+// }
 
 const getDurabilityValue = (rawDurability, isFists) => {
   // if we're showing fists, show the special fists annotation
@@ -208,42 +239,42 @@ const getDurabilityValue = (rawDurability, isFists) => {
   )
 }
 
-const getTotalDmgValue = (rawTotalDmg, isFists) => {
-  // if we're showing fists, show the special fists annotation
-  // no need to do all of the other stuff, just return
-  if(rawTotalDmg == -1 && true === isFists){
-    return (
-      <td className='db-item-weapon-table-body-col2'>
-        <span className='db-item-weapon-table-body-infinity'>{'\u221E'}</span>{createAnnotation('5')}
-      </td>
-    )
-  }
+// const getTotalDmgValue = (rawTotalDmg, isFists) => {
+//   // if we're showing fists, show the special fists annotation
+//   // no need to do all of the other stuff, just return
+//   if(rawTotalDmg == -1 && true === isFists){
+//     return (
+//       <td className='db-item-weapon-table-body-col2'>
+//         <span className='db-item-weapon-table-body-infinity'>{'\u221E'}</span>{createAnnotation('5')}
+//       </td>
+//     )
+//   }
 
-  let totalDmg = ''
-  let annotation = ''
+//   let totalDmg = ''
+//   let annotation = ''
 
-  if(rawTotalDmg < 0)
-    totalDmg = '--'
-  else if('string' === typeof(rawTotalDmg) && Number(rawTotalDmg) < 0)
-    totalDmg = '--'
-  else
-    totalDmg = rawTotalDmg
+//   if(rawTotalDmg < 0)
+//     totalDmg = '--'
+//   else if('string' === typeof(rawTotalDmg) && Number(rawTotalDmg) < 0)
+//     totalDmg = '--'
+//   else
+//     totalDmg = rawTotalDmg
 
-  if(rawTotalDmg == -1)
-    totalDmg = rawTotalDmg
-  else if(rawTotalDmg == -2)
-    annotation = createAnnotation('2')
-  else if(rawTotalDmg == -3)
-    annotation = createAnnotation('3')
-  else if(rawTotalDmg == -4)
-    annotation = createAnnotation('4')
+//   if(rawTotalDmg == -1)
+//     totalDmg = rawTotalDmg
+//   else if(rawTotalDmg == -2)
+//     annotation = createAnnotation('2')
+//   else if(rawTotalDmg == -3)
+//     annotation = createAnnotation('3')
+//   else if(rawTotalDmg == -4)
+//     annotation = createAnnotation('4')
 
-  return (
-    <td className='db-item-weapon-table-body-col2'>
-      {totalDmg}{annotation}
-    </td>
-  )
-}
+//   return (
+//     <td className='db-item-weapon-table-body-col2'>
+//       {totalDmg}{annotation}
+//     </td>
+//   )
+// }
 
 const renderAnnotationRow = (item, index) => {
   // locate the annotation entry in our data

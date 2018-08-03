@@ -215,7 +215,14 @@
 /******************  Weapon Data  ******************/
 .db-item-weapon-table {
   margin: 10px 0 0 0;
-  width: 250px;
+  width: 100%;
+}
+
+.db-item-weapon-table-header-cell {
+  height: 1.6em;
+  vertical-align: middle;
+  border-radius: 6px 6px 0 0;
+  background-color: #393939;
 }
 
 .db-item-weapon-table-body {
@@ -223,11 +230,17 @@
 }
 
 .db-item-weapon-table-body-row {
-  height: 21px;
+  height: 1.4em;
+  background-color: #2d2e29;
+}
+
+.db-item-weapon-table-body-col1 {
+  vertical-align: middle;
 }
 
 .db-item-weapon-table-body-col2 {
-  text-align: right;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .db-item-weapon-table-body-infinity {
