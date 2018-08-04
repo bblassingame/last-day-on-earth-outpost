@@ -23,6 +23,86 @@ export default LaunchContent
 const LaunchPageData = [
   {
     id: 0,
+    title: 'Current Update & Hidden Changes!',
+    contentItems:
+    [
+      {
+        type: 'heading',
+        headingType: 'bloody',
+        text: 'Update 1.9.3'
+      },
+      {
+        type: 'paragraph',
+        text: 'These are the items needed to create the Crossing at Crooked Creek Farm:',
+      },
+      {
+        type: 'list',
+        listItems:
+        [
+          {
+            type: 'text',
+            text: '40x <L to="/database/Iron_Bar">Iron Bar</L>',
+          },
+          {
+            type: 'text',
+            text: '100x <L to="/database/Pine_Plank">Pine Plank</L>',
+          },
+          {
+            type: 'text',
+            text: '60x <L to="/database/Stone_Brick">Stone Brick</L>',
+          },
+          {
+            type: 'text',
+            text: '60x <L to="/database/Rope">Rope</L>',
+          },
+          {
+            type: 'text',
+            text: '100x <L to="/database/Scrap_Metal">Scrap Metal</L>',
+          },
+          {
+            type: 'text',
+            text: '1x <L to="/database/Hammer">Hammer</L>',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'When you first arrive, the following items will be in the abandoned car next to the Crossing:',
+      },
+      {
+        type: 'list',
+        listItems:
+        [
+          {
+            type: 'text',
+            text: '1x <L to="/database/Energy_Drink">Energy Drink</L>',
+          },
+          {
+            type: 'text',
+            text: 'A <L to="/database/Hammer">Hammer</L>',
+          },
+          {
+            type: 'text',
+            text: '5x <L to="/database/Scrap_Metal">Scrap Metal</L>',
+          },
+          {
+            type: 'text',
+            text: 'An <L to="/database/M16">M16</L> at 60%',
+          },
+          {
+            type: 'text',
+            text: '1x <L to="/database/First_Aid_Kit">First Aid Kit</L>',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Enjoy the update and the new zone!',
+      },
+    ]
+  },
+  {
+    id: 1,
     title: 'Welcome!',
     contentItems: 
     [
@@ -82,7 +162,7 @@ const LaunchPageData = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     title: 'DEV BLOG',
     contentItems:
     [
@@ -122,7 +202,7 @@ const LaunchPageData = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: 'LDOE Communities',
     contentItems:
     [
@@ -162,7 +242,7 @@ const LaunchPageData = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: 'LDOE Videos',
     contentItems:
     [
@@ -174,26 +254,6 @@ const LaunchPageData = [
       {
         type: 'paragraph',
         text: 'There are a lot of great Youtubers for Last Day on Earth, but in my opinion the most informative Youtuber is JCF. Because his videos are consistently high quality, I have asked JCF to co-own and co-create this website with me using his influence to promote the website and his videos throughout the website to illustrate the concepts and information. In addition to this, I have customized each video so that they start exactly where it is relevant (ie. some videos start 2-3 minutes into the video) thus making his videos even more to the point than they are normally. I still recommend subscribing to JCF on YouTube to learn the newest tips as they are released.',
-      },
-    ]
-  },
-  {
-    id: 4,
-    title: 'Current Update & Hidden Changes!',
-    contentItems:
-    [
-      {
-        type: 'heading',
-        headingType: 'bloody',
-        text: 'Current Update & Hidden Changes!'
-      },
-      {
-        type: 'paragraph',
-        text: 'Update 1.9.0 & 1.9.1 are the next steps in Kefir!\'s updates to support multiplayer!  These are huge updates, and most importantly the <L to="/database/Radio_Tower">Radio Tower</L> has been introduced!',
-      },
-      {
-        type: 'youtube',
-        link: 'https://www.youtube.com/embed/7brJViDv9Ug',
       },
     ]
   },
