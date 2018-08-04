@@ -113,6 +113,14 @@ const LaunchPageData = [
         type: 'paragraph',
         text: 'We\'re hard at work getting the database updated with the new weapon modifications and stats.  There\'s still some questions about what the exact numbers are for the modifications and new stats, and the research team is hard at work to figure this stuff out.  While we do that, we\'re updating weapons to show their possible Weapon Modifications and new stats.  The data is fake right now, but you can see what we\'re planning to do if you check out a <L to="/database/AK-47">weapon</L>.',
       },
+      {
+        type: 'paragraph',
+        text: 'You can always check out JCF\'s video with all of the weapon modifications and stats while we update the site',
+      },
+      {
+        type: 'youtube',
+        link: 'https://www.youtube.com/embed/SV1d7onr-aQ',
+      },
     ]
   },
   {
