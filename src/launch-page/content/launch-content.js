@@ -29,7 +29,12 @@ const LaunchPageData = [
       {
         type: 'heading',
         headingType: 'bloody',
-        text: 'Update 1.9.3'
+        text: 'Update 1.9.3 (Plus Weapon Mods)!'
+      },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Crooked Creek Farm',
       },
       {
         type: 'paragraph',
@@ -99,6 +104,15 @@ const LaunchPageData = [
         type: 'paragraph',
         text: 'Enjoy the update and the new zone!',
       },
+      {
+        type: 'heading',
+        headingType: 'subheading',
+        text: 'Weapon Modifications',
+      },
+      {
+        type: 'paragraph',
+        text: 'We\'re hard at work getting the database updated with the new weapon modifications and stats.  There\'s still some questions about what the exact numbers are for the modifications and new stats, and the research team is hard at work to figure this stuff out.  While we do that, we\'re updating weapons to show their possible Weapon Modifications and new stats.  The data is fake right now, but you can see what we\'re planning to do if you check out a <L to="/database/AK-47">weapon</L>.',
+      },
     ]
   },
   {
@@ -163,7 +177,7 @@ const LaunchPageData = [
   },
   {
     id: 2,
-    title: 'DEV BLOG',
+    title: 'Kefir! DEV BLOGS',
     contentItems:
     [
       {
