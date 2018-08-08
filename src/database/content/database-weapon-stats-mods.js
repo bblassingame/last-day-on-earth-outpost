@@ -5,75 +5,79 @@ import DatabaseWeaponMods from './database-weapon-mods'
 // component variables
 var annotations = null
 
-const DatabaseWeaponStatsAndMods = (props) => {
+class DatabaseWeaponStatsAndMods extends React.Component {
+  constructor(props) {
+    super(props)
+    annotations = []
+    this.isRanged = this.props.weaponData.sneakAttack == -1 ? true : false
+    this.isFists = this.props.name === 'Fists' ? true : false
+  }
 
-  annotations = []
-  const isRanged = props.weaponData.sneakAttack == -1 ? true : false
-  const isFists = props.name === 'Fists' ? true : false
-
-  return (
-    <div>
+  render() {
+    return (
       <div>
-        <table className='db-item-weapon-table'>
-          <thead>
-            <tr>
-              <th className='db-item-weapon-table-header-cell' colSpan='2'>Weapon Stats</th>
-            </tr>
-          </thead>
-          <tbody className='db-item-weapon-table-body'>
-            <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>Damage</td>
-              {getDamageValue(props.weaponData.damage)}
-            </tr>
-            <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>Critical Damage{isRanged ? createAnnotation('1') : ''}</td>
-              {getSneakDamageValue(props.weaponData.sneakAttack, props.weaponData.damage)}
-            </tr>
-            <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>Critical Chance</td>
-              <td className='db-item-weapon-table-body-col2'>{5}</td>
-            </tr>
-            <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>Speed</td>
-              {getRateValue(props.weaponData.speed)}
-            </tr>
-            <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>Durability</td>
-              {getDurabilityValue(props.weaponData.durability, isFists)}
-            </tr>
-            <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>Range</td>
-              <td className='db-item-weapon-table-body-col2'>{'short'}</td>
-            </tr>
-            <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>Noise</td>
-              <td className='db-item-weapon-table-body-col2'>{'loud'}</td>
-            </tr>
-            <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>Stability</td>
-              <td className='db-item-weapon-table-body-col2'>{'medium'}</td>
-            </tr>
-            <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>Weight</td>
-              <td className='db-item-weapon-table-body-col2'>{'high'}</td>
-            </tr>
-            {/* <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>DPS</td>
-              {getDPSValue(props.weaponData.dps)}
-            </tr> */}
-            {/* <tr className='db-item-weapon-table-body-row'>
-              <td className='db-item-weapon-table-body-col1'>Total Dmg</td>
-              {getTotalDmgValue(props.weaponData.totalDamage, isFists)}
-            </tr> */}
-          </tbody>
-        </table>
+        <div>
+          <table className='db-item-weapon-table'>
+            <thead>
+              <tr>
+                <th className='db-item-weapon-table-header-cell' colSpan='2'>Weapon Stats</th>
+              </tr>
+            </thead>
+            <tbody className='db-item-weapon-table-body'>
+              <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>Damage</td>
+                {getDamageValue(this.props.weaponData.damage)}
+              </tr>
+              <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>Critical Damage{this.isRanged ? createAnnotation('1') : ''}</td>
+                {getSneakDamageValue(this.props.weaponData.sneakAttack, this.props.weaponData.damage)}
+              </tr>
+              <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>Critical Chance</td>
+                <td className='db-item-weapon-table-body-col2'>{5}</td>
+              </tr>
+              <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>Speed</td>
+                {getRateValue(this.props.weaponData.speed)}
+              </tr>
+              <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>Durability</td>
+                {getDurabilityValue(this.props.weaponData.durability, this.isFists)}
+              </tr>
+              <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>Range</td>
+                <td className='db-item-weapon-table-body-col2'>{'short'}</td>
+              </tr>
+              <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>Noise</td>
+                <td className='db-item-weapon-table-body-col2'>{'loud'}</td>
+              </tr>
+              <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>Stability</td>
+                <td className='db-item-weapon-table-body-col2'>{'medium'}</td>
+              </tr>
+              <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>Weight</td>
+                <td className='db-item-weapon-table-body-col2'>{'high'}</td>
+              </tr>
+              {/* <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>DPS</td>
+                {getDPSValue(this.props.weaponData.dps)}
+              </tr> */}
+              {/* <tr className='db-item-weapon-table-body-row'>
+                <td className='db-item-weapon-table-body-col1'>Total Dmg</td>
+                {getTotalDmgValue(this.props.weaponData.totalDamage, isFists)}
+              </tr> */}
+            </tbody>
+          </table>
+        </div>
+        <DatabaseWeaponMods weaponModificationData={this.props.weaponModificationData} />
+        <div className='db-item-weapon-annotation-container'>
+          {annotations.map((item, index) => renderAnnotationRow(item, index))}
+        </div>
       </div>
-      <DatabaseWeaponMods weaponModificationData={props.weaponModificationData} />
-      <div className='db-item-weapon-annotation-container'>
-        {annotations.map((item, index) => renderAnnotationRow(item, index))}
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 // Raw Value Meanings:
