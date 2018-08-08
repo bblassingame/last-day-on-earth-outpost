@@ -11,7 +11,7 @@ const DatabaseWeaponMods = (props) => {
         <span className='weapon-mods-mod-width'>Mod</span>
       </h2>
       <div className='weapon-mods-data-container'>
-        {renderWeaponModSelectionPanel(props.weaponModificationData)}
+        {renderWeaponModSelectionPanel(props.weaponModificationData, props.selectedType, props.selectedName)}
       </div>
     </form>
   )
@@ -24,8 +24,10 @@ const renderWeaponModSelectionPanel = (weaponModificationData, selectedType = 'M
 
   let modNames = null
   for(let i = 0 ; i < modTypes.length && typeof(modTypes) !== 'undefined' ; i++) {
-    if(modTypes[i].type === selectedType)
+    if(modTypes[i].type === selectedType) {
       modNames = modTypes[i].modNames
+      break
+    }
   }
 
   let modStats = null
@@ -35,15 +37,15 @@ const renderWeaponModSelectionPanel = (weaponModificationData, selectedType = 'M
   }
 
   let key = 0
-  elements.push(renderWeaponModTypes(modTypes, key++))
-  elements.push(renderWeaponModNames(modNames, key++))
+  elements.push(renderWeaponModTypes(modTypes, key++, selectedType))
+  elements.push(renderWeaponModNames(modNames, key++, selectedName))
   elements.push(renderWeaponModStats(modStats, key++))
 
   return elements
 }
 
-const renderWeaponModTypes = (modTypes, key) => {
-  const elements = modTypes.map((modType, index) => renderWeaponModTypeRadios(modType, index))
+const renderWeaponModTypes = (modTypes, key, selectedType) => {
+  const elements = modTypes.map((modType, index) => renderWeaponModTypeRadios(modType, index, selectedType))
   return (
     <div key={key} className='weapon-mods-types-container weapon-mods-type-width'>
       {elements}
@@ -51,12 +53,18 @@ const renderWeaponModTypes = (modTypes, key) => {
   )
 }
 
-const renderWeaponModTypeRadios = (modType, index) => {
+const renderWeaponModTypeRadios = (modType, index, selectedType) => {
   let elements = []
+  let inputRow = null
+
+  if(modType.type === selectedType)
+    inputRow = <input type='radio' name='type' id={getURLString(modType.type)} checked />
+  else
+    inputRow = <input type='radio' name='type' id={getURLString(modType.type)} />
 
   elements.push(
     <div key={index} className='weapon-mods-input-container'>
-      <input type='radio' name='type' id={getURLString(modType.type)} />
+      {inputRow}
       <label className='weapon-mods-text' htmlFor={getURLString(modType.type)}>{modType.type}</label>
     </div>
   )
@@ -64,38 +72,50 @@ const renderWeaponModTypeRadios = (modType, index) => {
   return elements
 }
 
-const renderWeaponModNames = (modNames, key) => {
+const renderWeaponModNames = (modNames, key, selectedName) => {
   return (
     <div key={key} className='weapon-mods-names-container weapon-mods-name-width'>
-      {renderWeaponModNameRadios(modNames)}
+      {renderWeaponModNameRadios(modNames, selectedName)}
     </div>
   )
 }
 
-const renderWeaponModNameRadios = (modNames) => {
+const renderWeaponModNameRadios = (modNames, selectedName) => {
   let elements = []
 
   // create the 'None' entry for the mod Names so that the user can deselect a modification
-  renderWeaponModNameRadio(elements, 'None', 'None', 0)
+  renderWeaponModNameRadio(elements, 'None', 'None', 0, selectedName)
 
   // iterate over the modification Names and add them to our list
   modNames.map((modName, index) => {
-    renderWeaponModNameRadio(elements, modName.name, getURLString(modName.name), index + 1)
+    renderWeaponModNameRadio(elements, modName.name, getURLString(modName.name), index + 1, selectedName)
   })
 
   return elements
 }
 
-const renderWeaponModNameRadio = (elements, name, urlName, index) => {
+const renderWeaponModNameRadio = (elements, name, urlName, index, selectedName) => {
+  // check whether the selected name matches the row we're rendering to know what to set the checked value
+  let inputRow = null
+  if(name === selectedName)
+    inputRow = <input type='radio' name='name' id={urlName} checked />
+  else 
+    inputRow = <input type='radio' name='name' id={urlName} />
+
+  // push a radio button row to the elements
   elements.push (
     <div key={index+1} className='weapon-mods-input-container'>
-      <input type='radio' name='name' id={urlName} />
+      {inputRow}
       <label className='weapon-mods-text' htmlFor={urlName}>{name}</label>
     </div>
   )
 }
 
 const renderWeaponModStats = (modStats, key) => {
+  // return early if the stats are null; this happens when 'None' is the selected modification Name
+  if(null === modStats || 'undefined' === typeof(modStats))
+    return null
+
   let elements = []
   modStats.map((modStat, index) => renderWeaponModStatRows(elements, modStat, index))
   return (

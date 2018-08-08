@@ -11,8 +11,17 @@ class DatabaseWeaponStatsAndMods extends React.Component {
     annotations = []
     this.isRanged = this.props.weaponData.sneakAttack == -1 ? true : false
     this.isFists = this.props.name === 'Fists' ? true : false
+
+    this.state = {
+      selectedType: this.props.weaponModificationData.modTypes[0].type,
+      selectedName: 'None',
+    }
   }
 
+  /****************************************************************************************************************************************/
+  /****************************************************************************************************************************************/
+  /*                                                     REACT LIFECYCLE METHODS                                                          */
+  
   render() {
     return (
       <div>
@@ -71,7 +80,11 @@ class DatabaseWeaponStatsAndMods extends React.Component {
             </tbody>
           </table>
         </div>
-        <DatabaseWeaponMods weaponModificationData={this.props.weaponModificationData} />
+        <DatabaseWeaponMods 
+          weaponModificationData={this.props.weaponModificationData} 
+          selectedType={this.state.selectedType}
+          selectedName={this.state.selectedName}
+        />
         <div className='db-item-weapon-annotation-container'>
           {annotations.map((item, index) => renderAnnotationRow(item, index))}
         </div>
@@ -80,6 +93,14 @@ class DatabaseWeaponStatsAndMods extends React.Component {
   }
 }
 
+/****************************************************************************************************************************************/
+/****************************************************************************************************************************************/
+/*                                                          EVENT HANDLERS                                                              */
+
+/****************************************************************************************************************************************/
+/****************************************************************************************************************************************/
+/*                                                        COMPONENT CREATION                                                            */
+  
 // Raw Value Meanings:
 // -1: not applicable for that stat
 // -2: waiting to confirm stat
@@ -305,6 +326,10 @@ const createAnnotation = (value) => {
   )
 }
 
+/****************************************************************************************************************************************/
+/****************************************************************************************************************************************/
+/*                                                        UTILITY FUNCTIONS                                                             */
+  
 const annotationData = 
 [
   ['1', 'Ranged weapons do not deal additional damage with a sneak attack'],
