@@ -11,13 +11,13 @@ const DatabaseWeaponMods = (props) => {
         <span className='weapon-mods-mod-width'>Mod</span>
       </h2>
       <div className='weapon-mods-data-container'>
-        {renderWeaponModSelectionPanel(props.weaponModificationData, props.selectedType, props.selectedName)}
+        {renderWeaponModSelectionPanel(props.weaponModificationData, props.selectedType, props.selectedName, props.onTypeSelected, props.onNameSelected)}
       </div>
     </form>
   )
 }
 
-const renderWeaponModSelectionPanel = (weaponModificationData, selectedType = 'Magazine', selectedName = 'Extended Magazine') => {
+const renderWeaponModSelectionPanel = (weaponModificationData, selectedType, selectedName, onTypeSelected, onNameSelected) => {
   let elements = []
 
   const modTypes = weaponModificationData.modTypes
@@ -37,15 +37,15 @@ const renderWeaponModSelectionPanel = (weaponModificationData, selectedType = 'M
   }
 
   let key = 0
-  elements.push(renderWeaponModTypes(modTypes, key++, selectedType))
-  elements.push(renderWeaponModNames(modNames, key++, selectedName))
+  elements.push(renderWeaponModTypes(modTypes, key++, selectedType, onTypeSelected))
+  elements.push(renderWeaponModNames(modNames, key++, selectedName, onNameSelected))
   elements.push(renderWeaponModStats(modStats, key++))
 
   return elements
 }
 
-const renderWeaponModTypes = (modTypes, key, selectedType) => {
-  const elements = modTypes.map((modType, index) => renderWeaponModTypeRadios(modType, index, selectedType))
+const renderWeaponModTypes = (modTypes, key, selectedType, onTypeSelected) => {
+  const elements = modTypes.map((modType, index) => renderWeaponModTypeRadios(modType, index, selectedType, onTypeSelected))
   return (
     <div key={key} className='weapon-mods-types-container weapon-mods-type-width'>
       {elements}
@@ -53,18 +53,16 @@ const renderWeaponModTypes = (modTypes, key, selectedType) => {
   )
 }
 
-const renderWeaponModTypeRadios = (modType, index, selectedType) => {
+const renderWeaponModTypeRadios = (modType, index, selectedType, onTypeSelected) => {
   let elements = []
-  let inputRow = null
 
+  let checkedValue = false
   if(modType.type === selectedType)
-    inputRow = <input type='radio' name='type' id={getURLString(modType.type)} checked />
-  else
-    inputRow = <input type='radio' name='type' id={getURLString(modType.type)} />
+    checkedValue = true
 
   elements.push(
     <div key={index} className='weapon-mods-input-container'>
-      {inputRow}
+      <input type='radio' name='type' id={getURLString(modType.type)} value={modType.type} onChange={onTypeSelected} checked={checkedValue} />
       <label className='weapon-mods-text' htmlFor={getURLString(modType.type)}>{modType.type}</label>
     </div>
   )
@@ -72,40 +70,38 @@ const renderWeaponModTypeRadios = (modType, index, selectedType) => {
   return elements
 }
 
-const renderWeaponModNames = (modNames, key, selectedName) => {
+const renderWeaponModNames = (modNames, key, selectedName, onNameSelected) => {
   return (
     <div key={key} className='weapon-mods-names-container weapon-mods-name-width'>
-      {renderWeaponModNameRadios(modNames, selectedName)}
+      {renderWeaponModNameRadios(modNames, selectedName, onNameSelected)}
     </div>
   )
 }
 
-const renderWeaponModNameRadios = (modNames, selectedName) => {
+const renderWeaponModNameRadios = (modNames, selectedName, onNameSelected) => {
   let elements = []
 
   // create the 'None' entry for the mod Names so that the user can deselect a modification
-  renderWeaponModNameRadio(elements, 'None', 'None', 0, selectedName)
+  renderWeaponModNameRadio(elements, 'None', 'None', 0, selectedName, onNameSelected)
 
   // iterate over the modification Names and add them to our list
   modNames.map((modName, index) => {
-    renderWeaponModNameRadio(elements, modName.name, getURLString(modName.name), index + 1, selectedName)
+    renderWeaponModNameRadio(elements, modName.name, getURLString(modName.name), index + 1, selectedName, onNameSelected)
   })
 
   return elements
 }
 
-const renderWeaponModNameRadio = (elements, name, urlName, index, selectedName) => {
+const renderWeaponModNameRadio = (elements, name, urlName, index, selectedName, onNameSelected) => {
   // check whether the selected name matches the row we're rendering to know what to set the checked value
-  let inputRow = null
+  let checkedValue = false
   if(name === selectedName)
-    inputRow = <input type='radio' name='name' id={urlName} checked />
-  else 
-    inputRow = <input type='radio' name='name' id={urlName} />
+    checkedValue = true
 
   // push a radio button row to the elements
   elements.push (
     <div key={index+1} className='weapon-mods-input-container'>
-      {inputRow}
+      <input type='radio' name='name' id={urlName} value={name} onChange={onNameSelected} checked={checkedValue} />
       <label className='weapon-mods-text' htmlFor={urlName}>{name}</label>
     </div>
   )

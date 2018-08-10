@@ -12,6 +12,9 @@ class DatabaseWeaponStatsAndMods extends React.Component {
     this.isRanged = this.props.weaponData.sneakAttack == -1 ? true : false
     this.isFists = this.props.name === 'Fists' ? true : false
 
+    this.handleTypeSelect = this.handleTypeSelect.bind(this)
+    this.handleNameSelect = this.handleNameSelect.bind(this)
+
     this.state = {
       selectedType: this.props.weaponModificationData.modTypes[0].type,
       selectedName: 'None',
@@ -84,6 +87,8 @@ class DatabaseWeaponStatsAndMods extends React.Component {
           weaponModificationData={this.props.weaponModificationData} 
           selectedType={this.state.selectedType}
           selectedName={this.state.selectedName}
+          onTypeSelected={this.handleTypeSelect}
+          onNameSelected={this.handleNameSelect}
         />
         <div className='db-item-weapon-annotation-container'>
           {annotations.map((item, index) => renderAnnotationRow(item, index))}
@@ -91,12 +96,24 @@ class DatabaseWeaponStatsAndMods extends React.Component {
       </div>
     )
   }
+
+  /****************************************************************************************************************************************/
+  /****************************************************************************************************************************************/
+  /*                                                          EVENT HANDLERS                                                              */
+
+  handleTypeSelect(event) {
+    this.setState({
+      selectedType: event.target.value,
+    })
+  }
+
+  handleNameSelect(event) {
+    this.setState({
+      selectedName: event.target.value,
+    })
+  }
+
 }
-
-/****************************************************************************************************************************************/
-/****************************************************************************************************************************************/
-/*                                                          EVENT HANDLERS                                                              */
-
 /****************************************************************************************************************************************/
 /****************************************************************************************************************************************/
 /*                                                        COMPONENT CREATION                                                            */
