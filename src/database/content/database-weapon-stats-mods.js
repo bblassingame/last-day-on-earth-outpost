@@ -15,9 +15,13 @@ class DatabaseWeaponStatsAndMods extends React.Component {
     this.handleTypeSelect = this.handleTypeSelect.bind(this)
     this.handleNameSelect = this.handleNameSelect.bind(this)
 
+    let selectedMods = initializeSelectedMods(this.props.weaponModificationData)
+    const firstMod = selectedMods.entries().next()
+
     this.state = {
-      selectedType: this.props.weaponModificationData.modTypes[0].type,
-      selectedName: 'None',
+      selectedType: firstMod.value[0],
+      selectedName: firstMod.value[1],
+      selectedMods,
     }
   }
 
@@ -104,12 +108,15 @@ class DatabaseWeaponStatsAndMods extends React.Component {
   handleTypeSelect(event) {
     this.setState({
       selectedType: event.target.value,
+      selectedName: this.state.selectedMods.get(event.target.value),
     })
   }
 
   handleNameSelect(event) {
+    let selectedMods = updateSelectedMods(this.state.selectedMods, this.state.selectedType, event.target.value)
     this.setState({
       selectedName: event.target.value,
+      selectedMods,
     })
   }
 
@@ -346,7 +353,35 @@ const createAnnotation = (value) => {
 /****************************************************************************************************************************************/
 /****************************************************************************************************************************************/
 /*                                                        UTILITY FUNCTIONS                                                             */
-  
+
+// we just initialize each modification type with 'None' when we first render the component
+const initializeSelectedMods = (weaponModificationData) => {
+  let selectedMods = new Map()
+
+  weaponModificationData.modTypes.map( modType => selectedMods.set(modType.type, 'None') )
+
+  return selectedMods
+}
+
+// iterate over the modifications and update the selected mods based on the current selected Type and newly selected Name
+const updateSelectedMods = (selectedMods, curType, newName) => {
+  let newMods = new Map()
+  let it = selectedMods.entries()
+  let entry = it.next()
+
+  // iterate over the mod Types and look for the one the user is currently working with
+  while(false === entry.done) {
+    if(entry.value[0] === curType)
+      newMods.set(curType, newName) // update the currently selected Type with the newly selected Name
+    else
+      newMods.set(entry.value[0], entry.value[1]) // add the Type and Name that are not currently being worked with
+
+    entry = it.next() // don't forget to increment the iterator or we get a fun inifinte loop
+  }
+
+  return newMods
+}
+
 const annotationData = 
 [
   ['1', 'Ranged weapons do not deal additional damage with a sneak attack'],
