@@ -25,8 +25,7 @@ const getResourceLink = (itemName) => {
           <p>LDOE Outpost</p>
         </div>
         <div className='database-item-links-scroll-item-text'>
-          <p>Resources:</p>
-          <p>{itemName}</p>
+          <p>The Best Way To Get This Item</p>
         </div>
       </div>
     </Link>
