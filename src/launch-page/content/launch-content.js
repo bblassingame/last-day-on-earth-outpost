@@ -260,7 +260,15 @@ const LaunchPageData = [
       {
         type: 'paragraph',
         text: 'JCF has a vision for creating an alliance of clans and a lot of the best players have joined him to make this happen. Clans aren’t out yet, but when they are, I want to be in that alliance.',
+      },
+      {
+        type: 'paragraph',
+        text: '<OL to="https://www.facebook.com/groups/lastdayonearthcommunity/" eventLabel="JCF Facebook">Facebook Group (LDOE Community)</OL>',
       },      
+      {
+        type: 'paragraph',
+        text: 'This group was JCF\'s first facebook community and it incredibly active. They are one of the fastest growing groups out of all of the LDOE communities.',
+      },
     ]
   },
   {
