@@ -11,13 +11,13 @@ const DatabaseWeaponMods = (props) => {
         <span className='weapon-mods-mod-width'>Mod</span>
       </h2>
       <div className='weapon-mods-data-container'>
-        {renderWeaponModSelectionPanel(props.weaponModificationData, props.selectedType, props.selectedName, props.onTypeSelected, props.onNameSelected)}
+        {renderWeaponModSelectionPanel(props.weaponModificationData, props.weaponStatsData, props.selectedType, props.selectedName, props.onTypeSelected, props.onNameSelected)}
       </div>
     </form>
   )
 }
 
-const renderWeaponModSelectionPanel = (weaponModificationData, selectedType, selectedName, onTypeSelected, onNameSelected) => {
+const renderWeaponModSelectionPanel = (weaponModificationData, weaponStatsData, selectedType, selectedName, onTypeSelected, onNameSelected) => {
   let elements = []
 
   const modTypes = weaponModificationData.modTypes
@@ -39,10 +39,13 @@ const renderWeaponModSelectionPanel = (weaponModificationData, selectedType, sel
   let key = 0
   elements.push(renderWeaponModTypes(modTypes, key++, selectedType, onTypeSelected))
   elements.push(renderWeaponModNames(modNames, key++, selectedName, onNameSelected))
-  elements.push(renderWeaponModStats(modStats, key++))
+  elements.push(renderWeaponModStats(modStats, key++, weaponStatsData))
 
   return elements
 }
+
+
+/*********************************   Weapon Types Radio Panel   *********************************/
 
 const renderWeaponModTypes = (modTypes, key, selectedType, onTypeSelected) => {
   const elements = modTypes.map((modType, index) => renderWeaponModTypeRadios(modType, index, selectedType, onTypeSelected))
@@ -69,6 +72,9 @@ const renderWeaponModTypeRadios = (modType, index, selectedType, onTypeSelected)
 
   return elements
 }
+
+
+/*********************************   Weapon Names Radio Panel   *********************************/
 
 const renderWeaponModNames = (modNames, key, selectedName, onNameSelected) => {
   return (
@@ -107,13 +113,16 @@ const renderWeaponModNameRadio = (elements, name, urlName, index, selectedName, 
   )
 }
 
-const renderWeaponModStats = (modStats, key) => {
+
+/*********************************   Weapon Stats Panel   *********************************/
+
+const renderWeaponModStats = (modStats, key, weaponStatsData) => {
   // return early if the stats are null; this happens when 'None' is the selected modification Name
   if(null === modStats || 'undefined' === typeof(modStats))
     return null
 
   let elements = []
-  modStats.map((modStat, index) => renderWeaponModStatRows(elements, modStat, index))
+  modStats.map((modStat, index) => renderWeaponModStatRows(elements, modStat, index, weaponStatsData))
   return (
     <div key={key} className='weapon-mods-mods-container weapon-mods-mod-width'>
       <div className='weapon-mods-stats-container'>
@@ -123,16 +132,30 @@ const renderWeaponModStats = (modStats, key) => {
   )
 }
 
-const renderWeaponModStatRows = (elements, modStat, index) => {
+const renderWeaponModStatRows = (elements, modStat, index, weaponStatsData) => {
+  let statData = null
+  for(let i = 0 ; i < weaponStatsData.length ; i++) {
+    if(modStat.stat === weaponStatsData[i].statName) {
+      statData = weaponStatsData[i]
+      break
+    }
+  }
+
+  let classNameValue = 'text-color-green'
+  if(modStat.statModification < 0 && statData.statIncreasePositive === true)
+    classNameValue = 'text-color-red'
+  else if(modStat.statModification > 0 && statData.statIncreasePositive === false)
+    classNameValue = 'text-color-red'
+
   elements.push (
     <p key={index} className='weapon-mods-text'>
       <span>{modStat.stat}&nbsp;</span>
-      <span>{renderWeaponModStatChange(modStat.statModification)}</span>
+      <span className={classNameValue}>{getWeaponModStatChange(modStat.statModification)}</span>
     </p>
   )
 }
 
-const renderWeaponModStatChange = (statChange) => {
+const getWeaponModStatChange = (statChange) => {
   let temp = ''
 
   for(let i = 0 ; i < Math.abs(statChange) ; i++ ) {

@@ -48,8 +48,6 @@ class DatabaseWeaponStatsAndMods extends React.Component {
   /*                                                     REACT LIFECYCLE METHODS                                                          */
   
   render() {
-    // console.log('***render***')
-    // console.log(this.state)
     const cumulativeStatChanges = this.state.cumulativeStatChanges
     return (
       <div>
@@ -63,7 +61,7 @@ class DatabaseWeaponStatsAndMods extends React.Component {
             <tbody className='db-item-weapon-table-body'>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{DAMAGE}</td>
-                {getDamageValue(this.props.weaponData.damage, cumulativeStatChanges.get(DAMAGE))}
+                {formatStatValue( DAMAGE, getDamageValue(this.props.weaponData.damage), getDamageAnnotation(this.props.weaponData.damage), cumulativeStatChanges.get(DAMAGE), this.props.weaponStatsData)}
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{CRIT_DAMAGE}{this.isRanged ? createAnnotation('1') : ''}</td>
@@ -71,7 +69,7 @@ class DatabaseWeaponStatsAndMods extends React.Component {
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{CRIT_CHANCE}</td>
-                <td className='db-item-weapon-table-body-col2'>{5}{renderWeaponModStatChange(cumulativeStatChanges.get(CRIT_CHANCE))}</td>
+                <td className='db-item-weapon-table-body-col2'>{5}{getWeaponModStatChange(cumulativeStatChanges.get(CRIT_CHANCE))}</td>
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{SPEED}</td>
@@ -83,19 +81,19 @@ class DatabaseWeaponStatsAndMods extends React.Component {
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{RANGE}</td>
-                <td className='db-item-weapon-table-body-col2'>{'short'}{renderWeaponModStatChange(cumulativeStatChanges.get(RANGE))}</td>
+                <td className='db-item-weapon-table-body-col2'>{'short'}{getWeaponModStatChange(cumulativeStatChanges.get(RANGE))}</td>
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{NOISE}</td>
-                <td className='db-item-weapon-table-body-col2'>{'loud'}{renderWeaponModStatChange(cumulativeStatChanges.get(NOISE))}</td>
+                <td className='db-item-weapon-table-body-col2'>{'loud'}{getWeaponModStatChange(cumulativeStatChanges.get(NOISE))}</td>
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{STABILITY}</td>
-                <td className='db-item-weapon-table-body-col2'>{'medium'}{renderWeaponModStatChange(cumulativeStatChanges.get(STABILITY))}</td>
+                <td className='db-item-weapon-table-body-col2'>{'medium'}{getWeaponModStatChange(cumulativeStatChanges.get(STABILITY))}</td>
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{WEIGHT}</td>
-                <td className='db-item-weapon-table-body-col2'>{'high'}{renderWeaponModStatChange(cumulativeStatChanges.get(WEIGHT))}</td>
+                <td className='db-item-weapon-table-body-col2'>{'high'}{getWeaponModStatChange(cumulativeStatChanges.get(WEIGHT))}</td>
               </tr>
               {/* <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>DPS</td>
@@ -109,7 +107,8 @@ class DatabaseWeaponStatsAndMods extends React.Component {
           </table>
         </div>
         <DatabaseWeaponMods 
-          weaponModificationData={this.props.weaponModificationData} 
+          weaponModificationData={this.props.weaponModificationData}
+          weaponStatsData={this.props.weaponStatsData}
           selectedType={this.state.selectedType}
           selectedName={this.state.selectedName}
           onTypeSelected={this.handleTypeSelect}
@@ -142,9 +141,6 @@ class DatabaseWeaponStatsAndMods extends React.Component {
     let statDecreases = new Map()
     let cumulativeStatChanges = new Map()
     updateStats(this.props.weaponModificationData, selectedMods, statIncreases, statDecreases, cumulativeStatChanges)
-    // console.log(statIncreases)
-    // console.log(statDecreases)
-    // console.log(cumulativeStatChanges)
 
     this.setState({
       selectedName: event.target.value,
@@ -160,43 +156,6 @@ class DatabaseWeaponStatsAndMods extends React.Component {
 /****************************************************************************************************************************************/
 /*                                                        COMPONENT CREATION                                                            */
   
-// Raw Value Meanings:
-// -1: not applicable for that stat
-// -2: waiting to confirm stat
-// -3: stat not in game yet; item not released
-// -4: past event item; can't find stat
-// Annotations:
-// 1: sneak attack does no extra damage due to ranged weapon
-// 2: still researching value for this property and/or item
-// 3: item or value not in game
-// 4: can't find value for this item; probably because it is a seasonal item
-const getDamageValue = (rawDmg, statChange) => {
-  let dmgValue = ''
-  let annotation = ''
-
-  if(rawDmg < 0)
-    dmgValue = '--'
-  else if('string' === typeof(rawDmg) && Number(rawDmg) < 0)
-    dmgValue = '--'
-  else
-    dmgValue = rawDmg
-
-  if(rawDmg == -1)
-    dmgValue = 'N/A'
-  else if(rawDmg == -2)
-    annotation = createAnnotation('2')
-  else if(rawDmg == -3)
-    annotation = createAnnotation('3')
-  else if(rawDmg == -4)
-    annotation = createAnnotation('4')
-
-  return (
-    <td className='db-item-weapon-table-body-col2'>
-      {dmgValue}{annotation}{renderWeaponModStatChange(statChange)}
-    </td>
-  )
-}
-
 const getSneakDamageValue = (rawSneakDmg, rawDmg, statChange) => {
   let sneakDmg = ''
   let annotation = ''
@@ -219,7 +178,7 @@ const getSneakDamageValue = (rawSneakDmg, rawDmg, statChange) => {
     
   return (
     <td className='db-item-weapon-table-body-col2'>
-      {sneakDmg}{annotation}{renderWeaponModStatChange(statChange)}
+      {sneakDmg}{annotation}{getWeaponModStatChange(statChange)}
     </td>
   )
 }
@@ -246,7 +205,7 @@ const getRateValue = (rawRate, statChange) => {
 
   return (
     <td className='db-item-weapon-table-body-col2'>
-      {rate}{annotation}{renderWeaponModStatChange(statChange)}
+      {rate}{annotation}{getWeaponModStatChange(statChange)}
     </td>
   )
 }
@@ -310,7 +269,7 @@ const getDurabilityValue = (rawDurability, isFists, statChange) => {
 
   return (
     <td className='db-item-weapon-table-body-col2'>
-      {durability}{annotation}{renderWeaponModStatChange(statChange)}
+      {durability}{annotation}{getWeaponModStatChange(statChange)}
     </td>
   )
 }
@@ -385,10 +344,94 @@ const createAnnotation = (value) => {
   )
 }
 
+const formatStatValue = (stat, value, annotation, statChange, weaponStatsData) => {
+  let statData = null
+  for(let i = 0 ; i < weaponStatsData.length ; i++) {
+    if(stat === weaponStatsData[i].statName) {
+      statData = weaponStatsData[i]
+      break
+    }
+  }
+
+  if(statChange < 0 && statData.statIncreasePositive === true) // left red
+    return (
+      <td className='db-item-weapon-table-body-col2'>
+        <span className='text-color-red position-absolute'>{getWeaponModStatChange(statChange)}&nbsp;</span>
+        <span>{value}{annotation}</span>
+      </td>
+    )
+  else if(statChange < 0 && statData.statIncreasePositive === false) // left green
+    return (
+      <td className='db-item-weapon-table-body-col2'>
+        <span className='text-color-green position-absolute'>{getWeaponModStatChange(statChange)}&nbsp;</span>
+        <span>{value}{annotation}</span>
+      </td>
+    )
+  else if(statChange > 0 && statData.statIncreasePositive === false) // right red
+    return (
+      <td className='db-item-weapon-table-body-col2'>
+        <span>{value}{annotation}</span>
+        <span className='text-color-red position-absolute'>&nbsp;{getWeaponModStatChange(statChange)}</span>
+      </td>
+    )
+  else if(statChange > 0 && statData.statIncreasePositive === true) // right green
+    return (
+      <td className='db-item-weapon-table-body-col2'>
+        <span>{value}{annotation}</span>
+        <span className='text-color-green position-absolute'>&nbsp;{getWeaponModStatChange(statChange)}</span>
+      </td>
+    )
+  else // no stat change
+    return (
+      <td className='db-item-weapon-table-body-col2'>
+        <span>{value}{annotation}</span>
+      </td>
+    )
+
+}
+
 
 /****************************************************************************************************************************************/
 /****************************************************************************************************************************************/
 /*                                                        UTILITY FUNCTIONS                                                             */
+
+// Raw Value Meanings:
+// -1: not applicable for that stat
+// -2: waiting to confirm stat
+// -3: stat not in game yet; item not released
+// -4: past event item; can't find stat
+// Annotations:
+// 1: sneak attack does no extra damage due to ranged weapon
+// 2: still researching value for this property and/or item
+// 3: item or value not in game
+// 4: can't find value for this item; probably because it is a seasonal item
+const getDamageValue = (rawDmg) => {
+  let dmgValue = ''
+
+  if(rawDmg == -1)
+    dmgValue = 'N/A'
+  else if(rawDmg < 0)
+    dmgValue = '--'
+  else if('string' === typeof(rawDmg) && Number(rawDmg) < 0)
+    dmgValue = '--'
+  else
+    dmgValue = rawDmg
+
+  return dmgValue
+}
+
+const getDamageAnnotation = (rawDmg) => {
+  let annotation = ''
+
+  if(rawDmg == -2)
+    annotation = createAnnotation('2')
+  else if(rawDmg == -3)
+    annotation = createAnnotation('3')
+  else if(rawDmg == -4)
+    annotation = createAnnotation('4')
+
+  return annotation
+}
 
 // we just initialize each modification type with 'None' when we first render the component
 const initializeSelectedMods = (weaponModificationData) => {
@@ -452,7 +495,6 @@ const updateSelectedMods = (selectedMods, curType, newName) => {
 }
 
 const updateStats = (weaponModificationData, selectedMods, statIncreases, statDecreases, cumulativeStatChanges) => {
-  // console.group('updateStats')
   let incDamage = 0
   let decDamage = 0
   let incCritDamage = 0
@@ -472,9 +514,6 @@ const updateStats = (weaponModificationData, selectedMods, statIncreases, statDe
   let incWeight = 0
   let decWeight = 0
 
-  // console.log(weaponModificationData)
-  // console.log(selectedMods)
-
   // iterate over the selected modifications and tally the stat increases and decreases
   let modsIterator = selectedMods.entries()
   let mod = modsIterator.next()
@@ -487,92 +526,72 @@ const updateStats = (weaponModificationData, selectedMods, statIncreases, statDe
     }
 
     for(let i = 0 ; i < modStats.length ; i++) {
-      // console.log(modStats[i])
       switch(modStats[i].stat) {
 
         case DAMAGE:
-          // console.log('Damage case hit')
           if(modStats[i].statModification > 0)
             incDamage += modStats[i].statModification
           else
             decDamage += modStats[i].statModification
-          // console.log('incDamage: ' + incDamage + '\r\ndecDamage: ' + decDamage)
           break
 
         case CRIT_DAMAGE:
-          // console.log('Crit. Damage case hit')
           if(modStats[i].statModification > 0)
             incCritDamage += modStats[i].statModification
           else
             decCritDamage += modStats[i].statModification
-          // console.log('incCritDamage: ' + incCritDamage + '\r\ndecCritDamage: ' + decCritDamage)
           break
 
         case CRIT_CHANCE:
-          // console.log('Crit. Chance case hit')
           if(modStats[i].statModification > 0)
             incCritChance += modStats[i].statModification
           else
             decCritChance += modStats[i].statModification
-          // console.log('incCritChance: ' + incCritChance + '\r\ndecCritChance: ' + decCritChance)
           break
 
         case SPEED:
-          // console.log('Speed case hit')
           if(modStats[i].statModification > 0)
             incSpeed += modStats[i].statModification
           else
             decSpeed += modStats[i].statModification
-          // console.log('incSpeed: ' + incSpeed + '\r\ndecSpeed: ' + decSpeed)
           break
 
         case DURABILITY:
-          // console.log('Durability case hit')
           if(modStats[i].statModification > 0)
             incDurability += modStats[i].statModification
           else
             decDurability += modStats[i].statModification
-          // console.log('incDurability: ' + incDurability + '\r\ndecDurability: ' + decDurability)
           break
 
         case RANGE:
-          // console.log('Range case hit')
           if(modStats[i].statModification > 0)
             incRange += modStats[i].statModification
           else
             decRange += modStats[i].statModification
-          // console.log('incRange: ' + incRange + '\r\ndecRange: ' + decRange)
           break
 
         case NOISE:
-          // console.log('Noise case hit')
           if(modStats[i].statModification > 0)
             incNoise += modStats[i].statModification
           else
             decNoise += modStats[i].statModification
-          // console.log('incNoise: ' + incNoise + '\r\ndecNoise: ' + decNoise)
           break
 
         case STABILITY:
-          // console.log('Stability case hit')
           if(modStats[i].statModification > 0)
             incStability += modStats[i].statModification
           else
             decStability += modStats[i].statModification
-          // console.log('incStability: ' + incStability + '\r\ndecStability: ' + decStability)
           break
 
         case WEIGHT:
-          // console.log('Damage case hit')
           if(modStats[i].statModification > 0)
             incWeight += modStats[i].statModification
           else
             decWeight += modStats[i].statModification
-          // console.log('incWeight: ' + incWeight + '\r\ndecWeight: ' + decWeight)
           break
 
         default:
-          console.log('ERROR:  Unknown stat found when updating stats')
 
       }
     }
@@ -589,11 +608,6 @@ const updateStats = (weaponModificationData, selectedMods, statIncreases, statDe
   updateStatMaps(statIncreases, statDecreases, cumulativeStatChanges, NOISE,        incNoise,       decNoise)
   updateStatMaps(statIncreases, statDecreases, cumulativeStatChanges, STABILITY,    incStability,   decStability)
   updateStatMaps(statIncreases, statDecreases, cumulativeStatChanges, WEIGHT,       incWeight,      decWeight)
-  // console.log(statIncreases)
-  // console.log(statDecreases)
-  // console.log(cumulativeStatChanges)
-
-  // console.groupEnd('updateStats')
 }
 
 const getModStatsFromWeaponModData = (weaponModificationData, mod) => {
@@ -625,7 +639,7 @@ const updateStatMaps = (statIncreases, statDecreases, cumulativeStatChanges, sta
   cumulativeStatChanges.set(stat, inc + dec)
 }
 
-const renderWeaponModStatChange = (statChange) => {
+const getWeaponModStatChange = (statChange) => {
   let temp = ''
 
   for(let i = 0 ; i < Math.abs(statChange) ; i++ ) {
