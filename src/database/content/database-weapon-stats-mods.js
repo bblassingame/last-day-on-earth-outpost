@@ -61,39 +61,39 @@ class DatabaseWeaponStatsAndMods extends React.Component {
             <tbody className='db-item-weapon-table-body'>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{DAMAGE}</td>
-                {formatStatValue( DAMAGE, getDamageValue(this.props.weaponData.damage), getDamageAnnotation(this.props.weaponData.damage), cumulativeStatChanges.get(DAMAGE), this.props.weaponStatsData)}
+                {formatStatValue(DAMAGE, getDamageValue(this.props.weaponData.damage), getDamageAnnotation(this.props.weaponData.damage), cumulativeStatChanges.get(DAMAGE), this.props.weaponStatsData)}
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{CRIT_DAMAGE}{this.isRanged ? createAnnotation('1') : ''}</td>
-                {getSneakDamageValue(this.props.weaponData.sneakAttack, this.props.weaponData.damage, cumulativeStatChanges.get(CRIT_DAMAGE))}
+                {formatStatValue(CRIT_DAMAGE, getSneakDamageValue(this.props.weaponData.sneakAttack, this.props.weaponData.damage), getSneakDamageAnnotation(this.props.weaponData.sneakAttack), cumulativeStatChanges.get(CRIT_DAMAGE), this.props.weaponStatsData)}
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{CRIT_CHANCE}</td>
-                <td className='db-item-weapon-table-body-col2'>{5}{getWeaponModStatChange(cumulativeStatChanges.get(CRIT_CHANCE))}</td>
+                {formatStatValue(CRIT_CHANCE, 5, null, cumulativeStatChanges.get(CRIT_CHANCE), this.props.weaponStatsData)}
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{SPEED}</td>
-                {getRateValue(this.props.weaponData.speed, cumulativeStatChanges.get(SPEED))}
+                {formatStatValue(SPEED, getRateValue(this.props.weaponData.speed), getRateAnnotation(this.props.weaponData.speed), cumulativeStatChanges.get(SPEED), this.props.weaponStatsData)}
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{DURABILITY}</td>
-                {getDurabilityValue(this.props.weaponData.durability, this.isFists, cumulativeStatChanges.get(DURABILITY))}
+                {formatDurabilityValue(DURABILITY, getDurabilityValue(this.props.weaponData.durability), getDurabilityAnnotation(this.props.weaponData.durability), cumulativeStatChanges.get(DURABILITY), this.props.weaponStatsData)}
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{RANGE}</td>
-                <td className='db-item-weapon-table-body-col2'>{'short'}{getWeaponModStatChange(cumulativeStatChanges.get(RANGE))}</td>
+                {formatStatValue(RANGE, 'short', null, cumulativeStatChanges.get(RANGE), this.props.weaponStatsData)}
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{NOISE}</td>
-                <td className='db-item-weapon-table-body-col2'>{'loud'}{getWeaponModStatChange(cumulativeStatChanges.get(NOISE))}</td>
+                {formatStatValue(NOISE, 'loud', null, cumulativeStatChanges.get(NOISE), this.props.weaponStatsData)}
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{STABILITY}</td>
-                <td className='db-item-weapon-table-body-col2'>{'medium'}{getWeaponModStatChange(cumulativeStatChanges.get(STABILITY))}</td>
+                {formatStatValue(STABILITY, 'medium', null, cumulativeStatChanges.get(STABILITY), this.props.weaponStatsData)}
               </tr>
               <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>{WEIGHT}</td>
-                <td className='db-item-weapon-table-body-col2'>{'high'}{getWeaponModStatChange(cumulativeStatChanges.get(WEIGHT))}</td>
+                {formatStatValue(WEIGHT, 'high', null, cumulativeStatChanges.get(WEIGHT), this.props.weaponStatsData)}
               </tr>
               {/* <tr className='db-item-weapon-table-body-row'>
                 <td className='db-item-weapon-table-body-col1'>DPS</td>
@@ -120,6 +120,7 @@ class DatabaseWeaponStatsAndMods extends React.Component {
       </div>
     )
   }
+
 
   /****************************************************************************************************************************************/
   /****************************************************************************************************************************************/
@@ -150,65 +151,12 @@ class DatabaseWeaponStatsAndMods extends React.Component {
       cumulativeStatChanges,
     })
   }
-
 }
+
+
 /****************************************************************************************************************************************/
 /****************************************************************************************************************************************/
 /*                                                        COMPONENT CREATION                                                            */
-  
-const getSneakDamageValue = (rawSneakDmg, rawDmg, statChange) => {
-  let sneakDmg = ''
-  let annotation = ''
-
-  if(rawSneakDmg < 0)
-    sneakDmg = '--'
-  else if('string' === typeof(rawSneakDmg) && Number(rawSneakDmg) < 0)
-    sneakDmg = '--'
-  else
-    sneakDmg = rawSneakDmg
-
-  if(rawSneakDmg == -1)
-    sneakDmg = rawDmg
-  else if(rawSneakDmg == -2)
-    annotation = createAnnotation('2')
-  else if(rawSneakDmg == -3)
-    annotation = createAnnotation('3')
-  else if(rawSneakDmg == -4)
-    annotation = createAnnotation('4')
-    
-  return (
-    <td className='db-item-weapon-table-body-col2'>
-      {sneakDmg}{annotation}{getWeaponModStatChange(statChange)}
-    </td>
-  )
-}
-
-const getRateValue = (rawRate, statChange) => {
-  let rate = ''
-  let annotation = ''
-
-  if(rawRate < 0)
-    rate = '--'
-  else if('string' === typeof(rawRate) && Number(rawRate) < 0)
-    rate = '--'
-  else
-    rate = rawRate
-
-  if(rawRate == -1)
-    rate = 'N/A'
-  else if(rawRate == -2)
-    annotation = createAnnotation('2')
-  else if(rawRate == -3)
-    annotation = createAnnotation('3')
-  else if(rawRate == -4)
-    annotation = createAnnotation('4')
-
-  return (
-    <td className='db-item-weapon-table-body-col2'>
-      {rate}{annotation}{getWeaponModStatChange(statChange)}
-    </td>
-  )
-}
 
 // const getDPSValue = (rawDps) => {
 //   let dps = ''
@@ -236,43 +184,6 @@ const getRateValue = (rawRate, statChange) => {
 //     </td>
 //   )
 // }
-
-const getDurabilityValue = (rawDurability, isFists, statChange) => {
-  // if we're showing fists, show the special fists annotation
-  // no need to do all of the other stuff, just return
-  if(rawDurability == -1 && true === isFists){
-    return (
-      <td className='db-item-weapon-table-body-col2'>
-        <span className='db-item-weapon-table-body-infinity'>{'\u221E'}</span>{createAnnotation('5')}
-      </td>
-    )
-  }
-
-  let durability = ''
-  let annotation = ''
-
-  if(rawDurability < 0)
-    durability = '--'
-  else if('string' === typeof(rawDurability) && Number(rawDurability) < 0)
-    durability = '--'
-  else
-    durability = rawDurability
-
-  if(rawDurability == -1)
-    durability = rawDurability
-  else if(rawDurability == -2)
-    annotation = createAnnotation('2')
-  else if(rawDurability == -3)
-    annotation = createAnnotation('3')
-  else if(rawDurability == -4)
-    annotation = createAnnotation('4')
-
-  return (
-    <td className='db-item-weapon-table-body-col2'>
-      {durability}{annotation}{getWeaponModStatChange(statChange)}
-    </td>
-  )
-}
 
 // const getTotalDmgValue = (rawTotalDmg, isFists) => {
 //   // if we're showing fists, show the special fists annotation
@@ -344,6 +255,21 @@ const createAnnotation = (value) => {
   )
 }
 
+// we have broken out the duarbility stat because we do something special whenever we show fists
+const formatDurabilityValue = (stat, value, annotation, statChange, weaponStatsData, isFists) => {
+  // if we're showing fists, show the special fists annotation
+  // no need to do all of the other stuff, just return
+  if(value == -1 && true === isFists){
+    return (
+      <td className='db-item-weapon-table-body-col2'>
+        <span className='db-item-weapon-table-body-infinity'>{'\u221E'}</span>{createAnnotation('5')}
+      </td>
+    )
+  }
+
+  return formatStatValue(stat, value, annotation, statChange, weaponStatsData)
+}
+
 const formatStatValue = (stat, value, annotation, statChange, weaponStatsData) => {
   let statData = null
   for(let i = 0 ; i < weaponStatsData.length ; i++) {
@@ -356,29 +282,41 @@ const formatStatValue = (stat, value, annotation, statChange, weaponStatsData) =
   if(statChange < 0 && statData.statIncreasePositive === true) // left red
     return (
       <td className='db-item-weapon-table-body-col2'>
-        <span className='text-color-red position-absolute'>{getWeaponModStatChange(statChange)}&nbsp;</span>
-        <span>{value}{annotation}</span>
+        <span className='db-item-weapon-table-body-span-container'>
+          <span className='text-color-red db-item-weapon-table-body-span-left'>{getWeaponModStatChange(statChange)}&nbsp;</span>
+          <span className='db-item-weapon-table-body-span-mid'>{value}{annotation}</span>
+          <span className='db-item-weapon-table-body-span-right'/>
+        </span>
       </td>
     )
   else if(statChange < 0 && statData.statIncreasePositive === false) // left green
     return (
       <td className='db-item-weapon-table-body-col2'>
-        <span className='text-color-green position-absolute'>{getWeaponModStatChange(statChange)}&nbsp;</span>
-        <span>{value}{annotation}</span>
+        <span className='db-item-weapon-table-body-span-container'>
+          <span className='text-color-green db-item-weapon-table-body-span-left'>{getWeaponModStatChange(statChange)}&nbsp;</span>
+          <span className='db-item-weapon-table-body-span-mid'>{value}{annotation}</span>
+          <span className='db-item-weapon-table-body-span-right'/>
+        </span>
       </td>
     )
   else if(statChange > 0 && statData.statIncreasePositive === false) // right red
     return (
       <td className='db-item-weapon-table-body-col2'>
-        <span>{value}{annotation}</span>
-        <span className='text-color-red position-absolute'>&nbsp;{getWeaponModStatChange(statChange)}</span>
+        <span className='db-item-weapon-table-body-span-container'>
+          <span className='db-item-weapon-table-body-span-left'/>
+          <span className='db-item-weapon-table-body-span-mid'>{value}{annotation}</span>
+          <span className='text-color-red db-item-weapon-table-body-span-right'>&nbsp;{getWeaponModStatChange(statChange)}</span>
+        </span>
       </td>
     )
   else if(statChange > 0 && statData.statIncreasePositive === true) // right green
     return (
       <td className='db-item-weapon-table-body-col2'>
-        <span>{value}{annotation}</span>
-        <span className='text-color-green position-absolute'>&nbsp;{getWeaponModStatChange(statChange)}</span>
+        <span className='db-item-weapon-table-body-span-container'>
+          <span className='db-item-weapon-table-body-span-left'/>
+          <span className='db-item-weapon-table-body-span-mid'>{value}{annotation}</span>
+          <span className='text-color-green db-item-weapon-table-body-span-right'>&nbsp;{getWeaponModStatChange(statChange)}</span>
+        </span>
       </td>
     )
   else // no stat change
@@ -387,7 +325,6 @@ const formatStatValue = (stat, value, annotation, statChange, weaponStatsData) =
         <span>{value}{annotation}</span>
       </td>
     )
-
 }
 
 
@@ -428,6 +365,90 @@ const getDamageAnnotation = (rawDmg) => {
   else if(rawDmg == -3)
     annotation = createAnnotation('3')
   else if(rawDmg == -4)
+    annotation = createAnnotation('4')
+
+  return annotation
+}
+
+const getSneakDamageValue = (rawSneakDmg, rawDmg) => {
+  let sneakDmg = ''
+
+  if(rawSneakDmg == -1)
+    sneakDmg = rawDmg
+  else if(rawSneakDmg < 0)
+    sneakDmg = '--'
+  else if('string' === typeof(rawSneakDmg) && Number(rawSneakDmg) < 0)
+    sneakDmg = '--'
+  else
+    sneakDmg = rawSneakDmg
+
+  return sneakDmg
+}
+
+const getSneakDamageAnnotation = (rawSneakDmg) => {
+  let annotation = ''
+
+  if(rawSneakDmg == -2)
+    annotation = createAnnotation('2')
+  else if(rawSneakDmg == -3)
+    annotation = createAnnotation('3')
+  else if(rawSneakDmg == -4)
+    annotation = createAnnotation('4')
+    
+  return annotation
+}
+
+const getRateValue = (rawRate) => {
+  let rate = ''
+
+  if(rawRate == -1)
+    rate = 'N/A'
+  else if(rawRate < 0)
+    rate = '--'
+  else if('string' === typeof(rawRate) && Number(rawRate) < 0)
+    rate = '--'
+  else
+    rate = rawRate
+
+  return rate
+}
+
+const getRateAnnotation = (rawRate) => {
+  let annotation = ''
+
+  if(rawRate == -2)
+    annotation = createAnnotation('2')
+  else if(rawRate == -3)
+    annotation = createAnnotation('3')
+  else if(rawRate == -4)
+    annotation = createAnnotation('4')
+
+  return annotation
+}
+
+const getDurabilityValue = (rawDurability) => {
+  let durability = ''
+
+  if(rawDurability == -1)
+    durability = rawDurability
+  else if(rawDurability < 0)
+    durability = '--'
+  else if('string' === typeof(rawDurability) && Number(rawDurability) < 0)
+    durability = '--'
+  else
+    durability = rawDurability
+
+  return durability
+}
+
+const getDurabilityAnnotation = (rawDurability) => {
+  let annotation = ''
+
+  if(rawDurability == -2)
+    annotation = createAnnotation('2')
+  else if(rawDurability == -3)
+    annotation = createAnnotation('3')
+  else if(rawDurability == -4)
     annotation = createAnnotation('4')
 
   return annotation

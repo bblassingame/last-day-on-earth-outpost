@@ -273,6 +273,25 @@ we have a single header cell so we need to set both borders, otherwise we would 
 .db-item-weapon-table-body-col2 {
   text-align: center;
   vertical-align: middle;
+  width: 60%;
+}
+
+.db-item-weapon-table-body-span-container {
+  display: flex;
+}
+
+.db-item-weapon-table-body-span-left {
+  text-align: right;
+  flex: 1;
+}
+
+.db-item-weapon-table-body-span-mid {
+  flex: 0;
+}
+
+.db-item-weapon-table-body-span-right {
+  text-align: left;
+  flex: 1;
 }
 
 .db-item-weapon-table-body-infinity {
