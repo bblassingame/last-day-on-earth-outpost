@@ -221,16 +221,184 @@ const WeaponModificationData = [
       {
         type: 'Barrel',
         modNames: [
+          {
+            name: 'Compensator',
+            modStats: [
+              {
+                stat: 'Crit. Chance',
+                statModification: 3,
+              },
+              {
+                stat: 'Durability',
+                statModification: -2,
+              },
+              {
+                stat: 'Noise',
+                statModification: 1,
+              },
+              {
+                stat: 'Stability',
+                statModification: 2,
+              },
+            ]
+          },
+          {
+            name: 'Compensator Modified',
+            modStats: [
+              {
+                stat: 'Damage',
+                statModification: 2,
+              },
+              {
+                stat: 'Durability',
+                statModification: -2,
+              },
+              {
+                stat: 'Noise',
+                statModification: 1,
+              },
+              {
+                stat: 'Stability',
+                statModification: -2,
+              },
+            ]
+          },
+          {
+            name: 'Flash Hider',
+            modStats: [
+              {
+                stat: 'Crit. Chance',
+                statModification: 1,
+              },
+              {
+                stat: 'Crit. Damage',
+                statModification: 1,
+              },
+            ]
+          },
+          {
+            name: 'Silencer',
+            modStats: [
+              {
+                stat: 'Damage',
+                statModification: 2,
+              },
+              {
+                stat: 'Crit. Chance',
+                statModification: 2,
+              },
+              {
+                stat: 'Durability',
+                statModification: -1,
+              },
+              {
+                stat: 'Range',
+                statModification: -2,
+              },
+              {
+                stat: 'Noise',
+                statModification: -2,
+              },
+            ]
+          },
         ],
       },
       {
         type: 'Stock',
         modNames: [
+          {
+            name: 'No Stock (empty)',
+            modStats: [
+              {
+                stat: 'Damage',
+                statModification: 2,
+              },
+              {
+                stat: 'Crit. Damage',
+                statModification: 1,
+              },
+              {
+                stat: 'Durability',
+                statModification: -3,
+              },
+              {
+                stat: 'Stability',
+                statModification: -3,
+              },
+            ]
+          },
+          {
+            name: 'Reinforced Stock',
+            modStats: [
+              {
+                stat: 'Damage',
+                statModification: 2,
+              },
+            ]
+          },
+          {
+            name: 'Light Stock',
+            modStats: [
+              {
+                stat: 'Crit. Chance',
+                statModification: 1,
+              },
+              {
+                stat: 'Crit. Damage',
+                statModification: 1,
+              },
+            ]
+          },
+          {
+            name: 'Tactical Stock',
+            modStats: [
+              {
+                stat: 'Crit. Chance',
+                statModification: 2,
+              },
+              {
+                stat: 'Crit. Damage',
+                statModification: 1,
+              },
+              {
+                stat: 'Speed',
+                statModification: 1,
+              },
+            ]
+          },
         ],
       },
       {
         type: 'Accessory',
         modNames: [
+          {
+            name: 'Laser Red',
+            modStats: [
+              {
+                stat: 'Crit. Damage',
+                statModification: 1,
+              },
+            ]
+          },
+          {
+            name: 'Laser Green',
+            modStats: [
+              {
+                stat: 'Crit. Chance',
+                statModification: 2,
+              },
+            ]
+          },
+          {
+            name: 'Grenade Launcher (active skill)',
+            modStats: [
+            ]
+          },
+          {
+            name: 'Knife (active skill)',
+            modStats: [
+            ]
+          },
         ],
       },
     ],
