@@ -22,6 +22,10 @@
   color: #E00000;
 }
 
+.text-color-grey {
+  color: #888888;
+}
+
 .position-absolute {
   position: absolute;
 }
