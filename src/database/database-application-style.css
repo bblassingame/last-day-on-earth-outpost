@@ -260,6 +260,23 @@ we have a single header cell so we need to set both borders, otherwise we would 
   background-color: #393939;
 }
 
+.db-item-weapon-table-header-span-container {
+  display: flex;
+  align-items: center;
+}
+
+.db-item-weapon-table-header-span-left {
+  flex: 1;
+}
+
+.db-item-weapon-table-header-span-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 5px 0 0;
+  font-size: .75em;
+}
+
 .db-item-weapon-table-body {
   font-size: .9em;
 }

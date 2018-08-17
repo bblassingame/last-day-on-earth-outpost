@@ -24,6 +24,7 @@ class DatabaseWeaponStatsAndMods extends React.Component {
 
     this.handleTypeSelect = this.handleTypeSelect.bind(this)
     this.handleNameSelect = this.handleNameSelect.bind(this)
+    this.handleShowRawStatsClicked  = this.handleShowRawStatsClicked.bind(this)
 
     let selectedMods = initializeSelectedMods(this.props.weaponModificationData)
     const firstMod = selectedMods.entries().next()
@@ -34,6 +35,7 @@ class DatabaseWeaponStatsAndMods extends React.Component {
     initializeStatChanges(statIncreases, statDecreases, cumulativeStatChanges)
 
     this.state = {
+      showRawStats: false,
       selectedType: firstMod.value[0],
       selectedName: firstMod.value[1],
       selectedMods,
@@ -57,7 +59,15 @@ class DatabaseWeaponStatsAndMods extends React.Component {
           <table className='db-item-weapon-table'>
             <thead>
               <tr>
-                <th className='db-item-weapon-table-header-cell' colSpan='2'>Weapon Stats</th>
+                <th className='db-item-weapon-table-header-cell' colSpan='2'>
+                  <span className='db-item-weapon-table-header-span-container'>
+                    <span className='db-item-weapon-table-header-span-left'>{'Weapon Stats'}</span>
+                    <span className='db-item-weapon-table-header-span-right'>
+                      <input type='checkbox' id='showRawStats' value='showRawStats' onChange={this.handleShowRawStatsClicked} checked={this.state.showRawStats} />
+                      <label htmlFor='showRawStats'>{'Show Raw Stats'}</label>
+                    </span>
+                  </span>
+                </th>
               </tr>
             </thead>
             <tbody className='db-item-weapon-table-body'>
@@ -151,6 +161,12 @@ class DatabaseWeaponStatsAndMods extends React.Component {
       statIncreases,
       statDecreases,
       cumulativeStatChanges,
+    })
+  }
+
+  handleShowRawStatsClicked() {
+    this.setState({
+      showRawStats: !this.state.showRawStats,
     })
   }
 }
